@@ -1,0 +1,16 @@
+{
+  "name": "repos-hub",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Shared internal and public hub for repository intelligence, discovery, and editorial curation.",
+  "type": "module",
+  "scripts": {
+    "compile:public": "node ./scripts/compile-public-data.mjs",
+    "build:public": "node ./scripts/build-public.mjs",
+    "build:internal": "node ./scripts/build-internal.mjs",
+    "build:all": "node ./scripts/rebuild-all.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

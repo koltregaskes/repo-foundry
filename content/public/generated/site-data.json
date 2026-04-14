@@ -1,0 +1,667 @@
+{
+  "generatedAt": "2026-04-11T21:45:00.000Z",
+  "workingTitle": "Repos Hub",
+  "strapline": "Curated open-source intelligence for AI operators, automation-heavy teams, and workflow builders.",
+  "description": "A magazine-style watchtower for trending repositories, Codex-adjacent tools, and reusable open-source patterns across AI, automation, media, and developer workflows.",
+  "publicBoundary": "The public site shows only curated, public-safe research records. Internal session notes, local paths, repo telemetry, and manager-only backlog data stay out of the public build.",
+  "repos": [
+    {
+      "slug": "open-webui-open-webui",
+      "name": "open-webui/open-webui",
+      "repoUrl": "https://github.com/open-webui/open-webui",
+      "stars": 131000,
+      "source": "GitHub verified",
+      "category": "AI command centre",
+      "tags": [
+        "AI",
+        "command centre",
+        "self-hosted",
+        "MCP"
+      ],
+      "summary": "Self-hosted multi-model AI workspace with tooling, MCP support, and strong community adoption.",
+      "whyRelevant": "Closest fit to a private AI command centre pattern we can study for orchestration, model routing, and user-facing control surfaces.",
+      "potentialUse": "private model console, session visibility, internal assistant control plane",
+      "addedAt": "2026-04-11T21:45:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "mintplex-labs-anything-llm",
+      "name": "Mintplex-Labs/anything-llm",
+      "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
+      "stars": 58100,
+      "source": "GitHub verified",
+      "category": "AI command centre",
+      "tags": [
+        "AI",
+        "productivity",
+        "knowledge",
+        "workspace"
+      ],
+      "summary": "All-in-one AI productivity workspace with privacy-first local and self-hosted deployment options.",
+      "whyRelevant": "Strong reference for turning AI chat, knowledge, and productivity workflows into one internal-facing surface.",
+      "potentialUse": "knowledge workspace, private RAG front-end, team AI launcher",
+      "addedAt": "2026-04-11T21:42:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "danny-avila-librechat",
+      "name": "danny-avila/LibreChat",
+      "repoUrl": "https://github.com/danny-avila/LibreChat",
+      "stars": 35500,
+      "source": "GitHub verified",
+      "category": "AI command centre",
+      "tags": [
+        "AI",
+        "chat",
+        "agents",
+        "self-hosted"
+      ],
+      "summary": "Multi-provider AI chat platform with agents, tool integrations, and self-hosted control features.",
+      "whyRelevant": "Useful benchmark for multi-model access, agent-facing UX, and safe self-hosted account patterns.",
+      "potentialUse": "multi-model chat surface, provider switching, internal ops console",
+      "addedAt": "2026-04-11T21:39:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": false
+    },
+    {
+      "slug": "n8n-io-n8n",
+      "name": "n8n-io/n8n",
+      "repoUrl": "https://github.com/n8n-io/n8n",
+      "stars": 184000,
+      "source": "GitHub verified",
+      "category": "Workflow automation",
+      "tags": [
+        "automation",
+        "workflow",
+        "integrations",
+        "AI"
+      ],
+      "summary": "Large, mature workflow automation platform with AI-native building blocks and broad integration coverage.",
+      "whyRelevant": "High-confidence reference for event-driven automation, approvals, scheduled work, and operational tooling.",
+      "potentialUse": "workflow automation backbone, approvals, daily sync jobs, cross-workspace automations",
+      "addedAt": "2026-04-11T21:36:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "activepieces-activepieces",
+      "name": "activepieces/activepieces",
+      "repoUrl": "https://github.com/activepieces/activepieces",
+      "stars": 21700,
+      "source": "GitHub verified",
+      "category": "Workflow automation",
+      "tags": [
+        "automation",
+        "workflow",
+        "MCP",
+        "connectors"
+      ],
+      "summary": "Open-source automation platform leaning into AI agents, MCPs, and no-code workflow assembly.",
+      "whyRelevant": "Potentially lighter-weight than n8n for internal utility workflows and newer MCP-oriented patterns.",
+      "potentialUse": "internal automations, connector library, agent-triggered ops tasks",
+      "addedAt": "2026-04-11T21:33:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": false
+    },
+    {
+      "slug": "flowiseai-flowise",
+      "name": "FlowiseAI/Flowise",
+      "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "stars": 51800,
+      "source": "GitHub verified",
+      "category": "Agent workflow builder",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "visual builder"
+      ],
+      "summary": "Visual builder for AI agents and flows with self-hosted deployment paths and strong ecosystem momentum.",
+      "whyRelevant": "Good fit for extracting graph-builder ideas, flow authoring UX, and pluggable agent node patterns.",
+      "potentialUse": "visual orchestration, internal agent-builder, prompt-to-workflow prototypes",
+      "addedAt": "2026-04-11T21:30:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "langflow-ai-langflow",
+      "name": "langflow-ai/langflow",
+      "repoUrl": "https://github.com/langflow-ai/langflow",
+      "stars": 147000,
+      "source": "GitHub verified",
+      "category": "Agent workflow builder",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "deployment"
+      ],
+      "summary": "Popular open-source tool for building and deploying AI agents and workflows.",
+      "whyRelevant": "High-signal comparator to Flowise with stronger deployment story and useful workflow packaging patterns.",
+      "potentialUse": "agent flow composition, deployable agent graphs, workflow packaging",
+      "addedAt": "2026-04-11T21:27:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "comfy-org-comfyui",
+      "name": "Comfy-Org/ComfyUI",
+      "repoUrl": "https://github.com/Comfy-Org/ComfyUI",
+      "stars": 108000,
+      "source": "GitHub verified",
+      "category": "Video and media tooling",
+      "tags": [
+        "media",
+        "video",
+        "workflow",
+        "node graph"
+      ],
+      "summary": "Node-based diffusion workflow system with strong community adoption and modular pipeline composition.",
+      "whyRelevant": "Best current open-source reference for graph-driven media workflows, reusable pipeline nodes, and creator-facing UX.",
+      "potentialUse": "media workflow design, node graph UX, modular image and video pipeline control",
+      "addedAt": "2026-04-11T21:24:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "facebookresearch-audiocraft",
+      "name": "facebookresearch/audiocraft",
+      "repoUrl": "https://github.com/facebookresearch/audiocraft",
+      "stars": 23200,
+      "source": "GitHub verified",
+      "category": "Video and music tooling",
+      "tags": [
+        "music",
+        "audio",
+        "AI",
+        "generation"
+      ],
+      "summary": "Open-source audio generation and processing toolkit featuring MusicGen and related audio research components.",
+      "whyRelevant": "Strong source repo for understanding open music generation, audio pipeline composition, and model packaging.",
+      "potentialUse": "music tooling research, audio generation experiments, future creator features",
+      "addedAt": "2026-04-11T21:21:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": false
+    }
+  ],
+  "featured": [
+    {
+      "slug": "open-webui-open-webui",
+      "name": "open-webui/open-webui",
+      "repoUrl": "https://github.com/open-webui/open-webui",
+      "stars": 131000,
+      "source": "GitHub verified",
+      "category": "AI command centre",
+      "tags": [
+        "AI",
+        "command centre",
+        "self-hosted",
+        "MCP"
+      ],
+      "summary": "Self-hosted multi-model AI workspace with tooling, MCP support, and strong community adoption.",
+      "whyRelevant": "Closest fit to a private AI command centre pattern we can study for orchestration, model routing, and user-facing control surfaces.",
+      "potentialUse": "private model console, session visibility, internal assistant control plane",
+      "addedAt": "2026-04-11T21:45:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "mintplex-labs-anything-llm",
+      "name": "Mintplex-Labs/anything-llm",
+      "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
+      "stars": 58100,
+      "source": "GitHub verified",
+      "category": "AI command centre",
+      "tags": [
+        "AI",
+        "productivity",
+        "knowledge",
+        "workspace"
+      ],
+      "summary": "All-in-one AI productivity workspace with privacy-first local and self-hosted deployment options.",
+      "whyRelevant": "Strong reference for turning AI chat, knowledge, and productivity workflows into one internal-facing surface.",
+      "potentialUse": "knowledge workspace, private RAG front-end, team AI launcher",
+      "addedAt": "2026-04-11T21:42:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "n8n-io-n8n",
+      "name": "n8n-io/n8n",
+      "repoUrl": "https://github.com/n8n-io/n8n",
+      "stars": 184000,
+      "source": "GitHub verified",
+      "category": "Workflow automation",
+      "tags": [
+        "automation",
+        "workflow",
+        "integrations",
+        "AI"
+      ],
+      "summary": "Large, mature workflow automation platform with AI-native building blocks and broad integration coverage.",
+      "whyRelevant": "High-confidence reference for event-driven automation, approvals, scheduled work, and operational tooling.",
+      "potentialUse": "workflow automation backbone, approvals, daily sync jobs, cross-workspace automations",
+      "addedAt": "2026-04-11T21:36:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "flowiseai-flowise",
+      "name": "FlowiseAI/Flowise",
+      "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "stars": 51800,
+      "source": "GitHub verified",
+      "category": "Agent workflow builder",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "visual builder"
+      ],
+      "summary": "Visual builder for AI agents and flows with self-hosted deployment paths and strong ecosystem momentum.",
+      "whyRelevant": "Good fit for extracting graph-builder ideas, flow authoring UX, and pluggable agent node patterns.",
+      "potentialUse": "visual orchestration, internal agent-builder, prompt-to-workflow prototypes",
+      "addedAt": "2026-04-11T21:30:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "langflow-ai-langflow",
+      "name": "langflow-ai/langflow",
+      "repoUrl": "https://github.com/langflow-ai/langflow",
+      "stars": 147000,
+      "source": "GitHub verified",
+      "category": "Agent workflow builder",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "deployment"
+      ],
+      "summary": "Popular open-source tool for building and deploying AI agents and workflows.",
+      "whyRelevant": "High-signal comparator to Flowise with stronger deployment story and useful workflow packaging patterns.",
+      "potentialUse": "agent flow composition, deployable agent graphs, workflow packaging",
+      "addedAt": "2026-04-11T21:27:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    },
+    {
+      "slug": "comfy-org-comfyui",
+      "name": "Comfy-Org/ComfyUI",
+      "repoUrl": "https://github.com/Comfy-Org/ComfyUI",
+      "stars": 108000,
+      "source": "GitHub verified",
+      "category": "Video and media tooling",
+      "tags": [
+        "media",
+        "video",
+        "workflow",
+        "node graph"
+      ],
+      "summary": "Node-based diffusion workflow system with strong community adoption and modular pipeline composition.",
+      "whyRelevant": "Best current open-source reference for graph-driven media workflows, reusable pipeline nodes, and creator-facing UX.",
+      "potentialUse": "media workflow design, node graph UX, modular image and video pipeline control",
+      "addedAt": "2026-04-11T21:24:00.000Z",
+      "refreshedAt": "2026-04-11T21:45:00.000Z",
+      "featured": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "ai-command-centre",
+      "name": "AI command centre",
+      "shortLabel": "AI command centre",
+      "description": "Control surfaces, model workspaces, self-hosted AI hubs, and operating consoles for agent-heavy work.",
+      "count": 3
+    },
+    {
+      "id": "workflow-automation",
+      "name": "Workflow automation",
+      "shortLabel": "Workflow automation",
+      "description": "Automation engines, approvals, schedules, connectors, and event-driven operational plumbing.",
+      "count": 2
+    },
+    {
+      "id": "agent-workflow-builder",
+      "name": "Agent workflow builder",
+      "shortLabel": "Agent builder",
+      "description": "Graph builders, orchestration canvases, and agent authoring tools that turn flows into reusable products.",
+      "count": 2
+    },
+    {
+      "id": "video-and-media-tooling",
+      "name": "Video and media tooling",
+      "shortLabel": "Media tooling",
+      "description": "Graph-based creator workflows, video tooling, and modular pipeline systems for visual output.",
+      "count": 1
+    },
+    {
+      "id": "video-and-music-tooling",
+      "name": "Video and music tooling",
+      "shortLabel": "Music tooling",
+      "description": "Audio generation, music workflows, and adjacent media systems that might become practical tooling.",
+      "count": 1
+    }
+  ],
+  "news": [
+    {
+      "id": "news-open-webui-open-webui",
+      "title": "open-webui/open-webui is trending in AI command centre",
+      "url": "https://github.com/open-webui/open-webui",
+      "source": "GitHub verified",
+      "summary": "Self-hosted multi-model AI workspace with tooling, MCP support, and strong community adoption.",
+      "relatedRepoSlugs": [
+        "open-webui-open-webui"
+      ],
+      "publishedAt": "2026-04-11T21:45:00.000Z",
+      "tags": [
+        "AI",
+        "command centre",
+        "self-hosted",
+        "MCP"
+      ]
+    },
+    {
+      "id": "news-mintplex-labs-anything-llm",
+      "title": "Mintplex-Labs/anything-llm is trending in AI command centre",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "source": "GitHub verified",
+      "summary": "All-in-one AI productivity workspace with privacy-first local and self-hosted deployment options.",
+      "relatedRepoSlugs": [
+        "mintplex-labs-anything-llm"
+      ],
+      "publishedAt": "2026-04-11T21:42:00.000Z",
+      "tags": [
+        "AI",
+        "productivity",
+        "knowledge",
+        "workspace"
+      ]
+    },
+    {
+      "id": "news-danny-avila-librechat",
+      "title": "danny-avila/LibreChat is trending in AI command centre",
+      "url": "https://github.com/danny-avila/LibreChat",
+      "source": "GitHub verified",
+      "summary": "Multi-provider AI chat platform with agents, tool integrations, and self-hosted control features.",
+      "relatedRepoSlugs": [
+        "danny-avila-librechat"
+      ],
+      "publishedAt": "2026-04-11T21:39:00.000Z",
+      "tags": [
+        "AI",
+        "chat",
+        "agents",
+        "self-hosted"
+      ]
+    },
+    {
+      "id": "news-n8n-io-n8n",
+      "title": "n8n-io/n8n is trending in Workflow automation",
+      "url": "https://github.com/n8n-io/n8n",
+      "source": "GitHub verified",
+      "summary": "Large, mature workflow automation platform with AI-native building blocks and broad integration coverage.",
+      "relatedRepoSlugs": [
+        "n8n-io-n8n"
+      ],
+      "publishedAt": "2026-04-11T21:36:00.000Z",
+      "tags": [
+        "automation",
+        "workflow",
+        "integrations",
+        "AI"
+      ]
+    },
+    {
+      "id": "news-activepieces-activepieces",
+      "title": "activepieces/activepieces is trending in Workflow automation",
+      "url": "https://github.com/activepieces/activepieces",
+      "source": "GitHub verified",
+      "summary": "Open-source automation platform leaning into AI agents, MCPs, and no-code workflow assembly.",
+      "relatedRepoSlugs": [
+        "activepieces-activepieces"
+      ],
+      "publishedAt": "2026-04-11T21:33:00.000Z",
+      "tags": [
+        "automation",
+        "workflow",
+        "MCP",
+        "connectors"
+      ]
+    },
+    {
+      "id": "news-flowiseai-flowise",
+      "title": "FlowiseAI/Flowise is trending in Agent workflow builder",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "source": "GitHub verified",
+      "summary": "Visual builder for AI agents and flows with self-hosted deployment paths and strong ecosystem momentum.",
+      "relatedRepoSlugs": [
+        "flowiseai-flowise"
+      ],
+      "publishedAt": "2026-04-11T21:30:00.000Z",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "visual builder"
+      ]
+    },
+    {
+      "id": "news-langflow-ai-langflow",
+      "title": "langflow-ai/langflow is trending in Agent workflow builder",
+      "url": "https://github.com/langflow-ai/langflow",
+      "source": "GitHub verified",
+      "summary": "Popular open-source tool for building and deploying AI agents and workflows.",
+      "relatedRepoSlugs": [
+        "langflow-ai-langflow"
+      ],
+      "publishedAt": "2026-04-11T21:27:00.000Z",
+      "tags": [
+        "AI",
+        "agents",
+        "workflow",
+        "deployment"
+      ]
+    },
+    {
+      "id": "news-comfy-org-comfyui",
+      "title": "Comfy-Org/ComfyUI is trending in Video and media tooling",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "source": "GitHub verified",
+      "summary": "Node-based diffusion workflow system with strong community adoption and modular pipeline composition.",
+      "relatedRepoSlugs": [
+        "comfy-org-comfyui"
+      ],
+      "publishedAt": "2026-04-11T21:24:00.000Z",
+      "tags": [
+        "media",
+        "video",
+        "workflow",
+        "node graph"
+      ]
+    },
+    {
+      "id": "news-facebookresearch-audiocraft",
+      "title": "facebookresearch/audiocraft is trending in Video and music tooling",
+      "url": "https://github.com/facebookresearch/audiocraft",
+      "source": "GitHub verified",
+      "summary": "Open-source audio generation and processing toolkit featuring MusicGen and related audio research components.",
+      "relatedRepoSlugs": [
+        "facebookresearch-audiocraft"
+      ],
+      "publishedAt": "2026-04-11T21:21:00.000Z",
+      "tags": [
+        "music",
+        "audio",
+        "AI",
+        "generation"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "id": "codex",
+      "name": "Codex",
+      "repoUrl": "https://github.com/openai/codex",
+      "cadence": "Weekly",
+      "notes": "Track major CLI and workflow changes that affect the way we run coding-agent sessions."
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "repoUrl": "https://github.com/google-gemini/gemini-cli",
+      "cadence": "Weekly",
+      "notes": "Watch releases, UX changes, and command behaviour shifts across the Google CLI lane."
+    },
+    {
+      "id": "open-webui",
+      "name": "Open WebUI",
+      "repoUrl": "https://github.com/open-webui/open-webui",
+      "cadence": "Weekly",
+      "notes": "High-value AI command-centre repo; monitor major workspace, tooling, and orchestration changes."
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "repoUrl": "https://github.com/n8n-io/n8n",
+      "cadence": "Weekly",
+      "notes": "Large automation platform worth watching for workflow, scheduling, and human-in-the-loop patterns."
+    },
+    {
+      "id": "flowise",
+      "name": "Flowise",
+      "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "cadence": "Biweekly",
+      "notes": "Monitor visual agent-builder patterns and deployment improvements."
+    },
+    {
+      "id": "langflow",
+      "name": "Langflow",
+      "repoUrl": "https://github.com/langflow-ai/langflow",
+      "cadence": "Biweekly",
+      "notes": "Useful comparator to Flowise for agent graph UX and packaging changes."
+    },
+    {
+      "id": "comfyui",
+      "name": "ComfyUI",
+      "repoUrl": "https://github.com/Comfy-Org/ComfyUI",
+      "cadence": "Biweekly",
+      "notes": "Track graph-based media workflow ideas relevant to future video and creator tooling."
+    }
+  ],
+  "visualisations": {
+    "categoryMix": [
+      {
+        "label": "AI command centre",
+        "value": 3
+      },
+      {
+        "label": "Workflow automation",
+        "value": 2
+      },
+      {
+        "label": "Agent workflow builder",
+        "value": 2
+      },
+      {
+        "label": "Video and media tooling",
+        "value": 1
+      },
+      {
+        "label": "Video and music tooling",
+        "value": 1
+      }
+    ],
+    "sourceMix": [
+      {
+        "label": "GitHub verified",
+        "value": 9
+      }
+    ],
+    "starBands": [
+      {
+        "label": "100k+",
+        "value": 4
+      },
+      {
+        "label": "20k-100k",
+        "value": 5
+      }
+    ],
+    "freshness": [
+      {
+        "label": "this-week",
+        "value": 9
+      }
+    ]
+  },
+  "metrics": {
+    "totalRepos": 9,
+    "featuredCount": 6,
+    "categories": 5,
+    "sources": 1,
+    "refreshedAt": "2026-04-11T21:45:00.000Z",
+    "newThisWeek": 9
+  },
+  "codexResources": [
+    {
+      "title": "Codex CLI",
+      "url": "https://github.com/openai/codex",
+      "summary": "The main Codex CLI repo worth watching for workflow changes, commands, and practical coding-agent improvements.",
+      "tags": [
+        "Codex",
+        "CLI",
+        "coding agents"
+      ]
+    },
+    {
+      "title": "Gemini CLI",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "summary": "A useful comparator for model-facing command-line workflows and operational UX decisions.",
+      "tags": [
+        "CLI",
+        "agents",
+        "comparison"
+      ]
+    },
+    {
+      "title": "Open WebUI",
+      "url": "https://github.com/open-webui/open-webui",
+      "summary": "One of the strongest open references for a private AI command centre with multi-model control surfaces.",
+      "tags": [
+        "AI workspace",
+        "self-hosted",
+        "control plane"
+      ]
+    },
+    {
+      "title": "n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "summary": "A high-signal automation reference for approvals, schedules, integrations, and operational workflows.",
+      "tags": [
+        "automation",
+        "workflows",
+        "ops"
+      ]
+    }
+  ],
+  "editorialNotes": [
+    {
+      "id": "methodology",
+      "title": "How we curate",
+      "body": "We bias towards repos that already have real traction, real stars, and a plausible path to practical reuse. The goal is not to hoard links. It is to surface work we can actually learn from or build against."
+    },
+    {
+      "id": "scope",
+      "title": "What we care about",
+      "body": "The strongest signals here sit around AI command centres, workflow automation, productivity layers, creator tooling, and the open-source infrastructure around modern coding agents."
+    },
+    {
+      "id": "boundary",
+      "title": "Why the public feed is curated",
+      "body": "The public site is intentionally lighter than the internal manager view. It keeps the useful research and leaves out workspace-specific operations, private notes, and live internal coordination."
+    }
+  ]
+}
