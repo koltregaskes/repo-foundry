@@ -1,132 +1,102 @@
-# Repos Hub — Design System
+# Repo Foundry Design System
 
-> Part of the unified Kol Tregaskes portal design system.
-> Master specification: `W:\Agent Workspace 2\docs\design\PORTAL-DESIGN-SYSTEM.md`
+> Part of the wider Kol Tregaskes hub family, but intentionally its own public-facing product.
 
-## Identity
+## Product role
 
-**Name:** Repo Foundry
-**Purpose:** Repository intelligence, discovery, and editorial curation for Kol's open-source and private repos.
-**Personality:** Technical, precise, code-focused. The repos are the building blocks of the estate — the design should feel like a well-organised code library with editorial curation.
+**Name:** Repo Foundry  
+**Purpose:** A public discovery site for high-signal open-source repositories, trend watching, category mapping, and Codex-adjacent tooling references.  
+**Tone:** Editorial, technical, and operator-minded. This should feel less like a dashboard and more like a curated foundry floor.
 
-## Theme: Emerald
+## Current direction
 
-Emerald signals growth, open source, and technical vitality — fitting for a repository collection.
+Repo Foundry already has:
 
-### Current State (needs major update)
-Currently uses a completely different design system: **light theme** with paper/cream tones (`#f5efe2`), Segoe UI + Palatino fonts, burnt orange accent (`#d8662d`). This is the furthest from the shared standard and needs the most work.
+- a shared codebase that builds both public and internal outputs
+- a dark atmospheric emerald theme
+- a magazine-style homepage
+- public pages for signals, library, news, visualisations, Codex resources, about
+- repo dossier pages
+- lane/category pages for the main public shelves
 
-Repo Foundry has a sophisticated build system (public + internal variants via `scripts/build-public.mjs` and `scripts/build-internal.mjs`) with template files in `src/templates/`. The shared CSS lives at `src/assets/shared.css`.
+The current phase is not the final beauty pass. The goal is to keep the structure strong, the routes clear, and the public/private boundary strict so a later dedicated design pass can go much further without reworking the foundations.
 
-### Target State
+## Design stance
 
-```css
-:root {
-  --bg: #08101d;
-  --bg-soft: #0d1729;
-  --panel: rgba(255, 255, 255, 0.05);
-  --panel-strong: rgba(255, 255, 255, 0.08);
-  --panel-border: rgba(255, 255, 255, 0.11);
-  --text: #f8fbff;
-  --muted: rgba(228, 236, 247, 0.74);
-  --soft: rgba(191, 206, 228, 0.74);
-  --line: rgba(255, 255, 255, 0.08);
-  --accent: #34d399;
-  --accent-strong: #d1fae5;
-  --shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
-}
-```
+### Visual language
 
-### Orb Colours
-| Orb | Colour | CSS |
-|-----|--------|-----|
-| Primary | Emerald | `rgba(52, 211, 153, 0.22)` |
-| Secondary | Blue | `rgba(59, 130, 246, 0.18)` |
-| Tertiary | Gold | `rgba(255, 210, 122, 0.12)` |
+- Dark glass panels on a deep blue-black field
+- Emerald as the primary accent, with blue and amber support tones
+- Serif display typography for headings, technical grotesk for structure and scanning
+- Atmosphere layers that create depth without turning the site into generic neon sci-fi
 
-### Background Gradient
-```css
-body {
-  background:
-    radial-gradient(circle at top left, rgba(52, 211, 153, 0.14), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.14), transparent 25%),
-    linear-gradient(180deg, #07101d 0%, #09111f 45%, #0d1729 100%);
-}
-```
+### UX stance
 
-### Primary Button
-```css
-.button--primary {
-  background: linear-gradient(135deg, #d1fae5, #34d399);
-  color: #08101d;
-}
-```
+- Newest or most important items should surface first
+- Categories should behave like real shelves, not just tags
+- Repo cards must answer three questions quickly:
+  - what it is
+  - why it matters
+  - what we might use it for
+- Public pages should read comfortably to non-coders while still feeling credible to technical users
 
-### Eyebrow Colour
-```css
-.eyebrow { color: rgba(52, 211, 153, 0.76); }
-```
+## Public route map
 
-### Status Chips (Repos-Specific)
-Repo Foundry uses status chips for repo health indicators. These need updating to dark theme:
-```css
-.status-chip { background: rgba(255,255,255,0.06); color: rgba(228,236,247,0.74); }
-.status-chip.is-green { background: rgba(52,211,153,0.16); color: #6ee7b7; }
-.status-chip.is-yellow { background: rgba(251,191,36,0.16); color: #fcd34d; }
-.status-chip.is-red { background: rgba(239,68,68,0.16); color: #fca5a5; }
-```
+- `/`
+- `/trending`
+- `/repos`
+- `/repos/:slug`
+- `/lanes`
+- `/lanes/:laneId`
+- `/news`
+- `/visualisations`
+- `/resources/codex`
+- `/about`
 
-### Pill/Tag System
-```css
-.pill { background: rgba(52,211,153,0.12); color: #6ee7b7; }
-.pill--soft, .tag-chip { background: rgba(59,130,246,0.12); color: #93c5fd; }
-```
+## Internal route map
 
-## Codex Implementation Tasks
+- `/internal`
+- `/internal/tracked-repos`
+- `/internal/backlog`
+- `/internal/sessions`
+- `/internal/ops`
+- `/internal/knowledge`
+- `/internal/cadence`
 
-### Task 1: Rewrite shared.css from light to dark theme
-- **File:** `W:\Repos\_My Open Source\repo-foundry\src\assets\shared.css`
-- **Do:** This is a complete rewrite — the light paper theme becomes the dark atmospheric theme:
-  1. Replace the entire `:root` block with the Target State variables above
-  2. Change `html` background from cream (`#f7f2e7`) to dark (`linear-gradient(180deg, #07101d, #0d1729)`)
-  3. Change `body` background gradient from orange/green radials on cream to emerald/blue radials on dark
-  4. Replace all `var(--paper)` / `var(--panel)` references: the panel is now `rgba(255,255,255,0.05)` (dark glass) instead of `rgba(255,252,245,0.92)` (cream glass)
-  5. Replace `var(--ink)` / `var(--ink-soft)` with `var(--text)` / `var(--muted)`
-  6. Replace `var(--accent)` (#d8662d burnt orange) with `#34d399` (emerald)
-  7. Replace `var(--accent-deep)` (#8f3512) with `#059669` (deep emerald)
-  8. Update all card backgrounds: `rgba(255,255,255,0.78)` → `linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03)), rgba(8,16,29,0.82)`
-  9. Update all border colours: `rgba(21,32,24,0.12)` → `rgba(255,255,255,0.11)`
-  10. Change `--body-font` from Segoe UI to `"Space Grotesk", sans-serif`
-  11. Change `--display-font` from Palatino to `"Fraunces", Georgia, serif`
-  12. Add atmosphere orb and grid classes from the Games Hub styles
-  13. Update status chip colours to dark-theme variants
-  14. Update metric card styles for dark backgrounds
-  15. Update button colours (`.button-link`) to use emerald gradient
-- **Verify:** Build and open repo-foundry. Should be a dark atmospheric site with emerald accents. Repo cards, metric grids, and navigation should all render correctly against the dark background.
-- **Effort:** 90m (this is the biggest change)
+## Boundary rules
 
-### Task 2: Update HTML templates with shared structure
-- **Files:** `W:\Repos\_My Open Source\repo-foundry\src\templates\public.mjs` and `internal.mjs`
-- **Do:**
-  1. Add Google Fonts import for Space Grotesk + Fraunces in the `<head>` section
-  2. Add atmosphere HTML (`.atmosphere` div with orbs + grid) at the start of `<body>`
-  3. Add `data-reveal` attributes on content sections
-  4. Add scroll-reveal observer script
-- **Verify:** Generated pages should show floating emerald/blue orbs and grid overlay.
-- **Effort:** 30m
+Public output may include:
 
-### Task 3: Rebuild dist from updated sources
-- Run `npm run build:all` after Tasks 1 and 2 are complete
-- **Verify:** `dist/` folder should contain updated public and internal HTML with the new dark theme.
-- **Effort:** 5m
+- repo names
+- repo URLs
+- stars
+- categories
+- tags
+- summaries
+- why-it-matters copy
+- potential-use copy
+- public-safe news items
+- public-safe category and trend snapshots
 
-## Pages (from src/templates)
-- Public version (index.html) — Repository showcase, safe for GitHub Pages
-- Internal version — Adds session data, knowledge base, operations panels
-- Detail pages — Individual repo deep dives
+Public output must never include:
 
-## Build System
-- `scripts/compile-public-data.mjs` — Compiles safe public data
-- `scripts/build-public.mjs` — Builds the GitHub Pages version
-- `scripts/build-internal.mjs` — Builds the private local version
-- `scripts/rebuild-all.mjs` — Runs all builds
+- local file paths
+- workspace-only repo status
+- manager notes
+- private handoffs
+- session state
+- backlog ownership
+- database or inbox health
+- operational startup/runtime details
+
+## Next design pass
+
+When Claude Code or a dedicated design session takes over, the likely areas to push further are:
+
+1. Hero composition and typography hierarchy
+2. Editorial rhythm on homepage and lane pages
+3. Visualisation presentation
+4. Card polish and hover behaviour
+5. Brand identity details such as logos, marks, and richer section art
+
+The structural work should already be stable enough that the next pass can focus on quality rather than repair.

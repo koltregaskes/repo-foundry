@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping with `repos-hub`.
+Thanks for helping with `repo-foundry`.
 
 ## Principles
 

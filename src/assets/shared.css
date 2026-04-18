@@ -459,7 +459,8 @@ p {
 .ops-panel,
 .knowledge-panel,
 .visual-card,
-.status-card {
+.status-card,
+.lane-panel {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-small);
@@ -481,7 +482,8 @@ p {
 .ops-panel::before,
 .knowledge-panel::before,
 .visual-card::before,
-.status-card::before {
+.status-card::before,
+.lane-panel::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
@@ -493,7 +495,8 @@ p {
 .repo-card:hover,
 .news-card:hover,
 .resource-card:hover,
-.category-card:hover {
+.category-card:hover,
+.lane-panel:hover {
   transform: translateY(-2px);
   border-color: rgba(52, 211, 153, 0.32);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
@@ -545,6 +548,31 @@ p {
   margin-top: 18px;
   color: var(--soft);
   font-size: 0.88rem;
+}
+
+.category-card--link {
+  display: block;
+  color: inherit;
+}
+
+.category-card--link:hover {
+  color: inherit;
+}
+
+.category-card__meta,
+.lane-panel__summary,
+.lane-panel__meta,
+.lane-panel__item {
+  color: var(--muted);
+}
+
+.category-card__meta {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+}
+
+.category-card--link:hover .category-card__title {
+  color: var(--accent-strong);
 }
 
 /* ── PILLS / TAGS / STATUS CHIPS ─────────────────────────── */
@@ -621,7 +649,9 @@ p {
 .dashboard-side,
 .knowledge-panel,
 .ops-panel,
-.session-card {
+.session-card,
+.lane-panel,
+.lane-panel__list {
   display: grid;
   gap: 14px;
 }
@@ -635,6 +665,45 @@ p {
 
 .stack-item--long {
   display: block;
+}
+
+.lane-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.lane-panel__header,
+.lane-panel__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.lane-panel__summary {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.lane-panel__meta {
+  font-size: 0.88rem;
+  color: var(--soft);
+}
+
+.lane-panel__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.lane-panel__item:hover {
+  color: var(--accent-strong);
 }
 
 /* ── DETAIL HERO ─────────────────────────────────────────── */
@@ -779,6 +848,7 @@ body.has-motion [data-reveal].is-visible {
   .card-grid--feature,
   .detail-grid,
   .visualisation-grid,
+  .lane-grid,
   .dashboard-grid,
   .ops-layout,
   .knowledge-layout,
@@ -804,6 +874,7 @@ body.has-motion [data-reveal].is-visible {
   .card-grid--feature,
   .detail-grid,
   .visualisation-grid,
+  .lane-grid,
   .dashboard-grid,
   .ops-layout,
   .knowledge-layout,

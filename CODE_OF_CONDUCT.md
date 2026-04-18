@@ -2,7 +2,7 @@
 
 ## Our standard
 
-We want `repos-hub` to be useful, calm, and constructive.
+We want `repo-foundry` to be useful, calm, and constructive.
 
 Please:
 

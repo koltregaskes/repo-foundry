@@ -3,6 +3,8 @@ import path from "node:path";
 import {
   buildAboutPage,
   buildCodexPage,
+  buildLaneDetailPage,
+  buildLanesPage,
   buildNewsPage,
   buildPublicHome,
   buildRepoDetailPage,
@@ -37,6 +39,7 @@ await writePage(path.join("trending", "index.html"), buildTrendingPage(siteData,
 await writePage(path.join("trending", "archive", "index.html"), buildTrendingPage(siteData, true, "../../"));
 await writePage(path.join("repos", "index.html"), buildRepoDirectoryPage(siteData, false, "../"));
 await writePage(path.join("repos", "archive", "index.html"), buildRepoDirectoryPage(siteData, true, "../../"));
+await writePage(path.join("lanes", "index.html"), buildLanesPage(siteData, "../"));
 await writePage(path.join("news", "index.html"), buildNewsPage(siteData, "../"));
 await writePage(path.join("visualisations", "index.html"), buildVisualisationsPage(siteData, "../"));
 await writePage(path.join("resources", "codex", "index.html"), buildCodexPage(siteData, "../../"));
@@ -44,6 +47,10 @@ await writePage(path.join("about", "index.html"), buildAboutPage(siteData, "../"
 
 for (const repo of siteData.repos) {
   await writePage(path.join("repos", repo.slug, "index.html"), buildRepoDetailPage(siteData, repo, "../../"));
+}
+
+for (const category of siteData.categories) {
+  await writePage(path.join("lanes", category.id, "index.html"), buildLaneDetailPage(siteData, category, "../../"));
 }
 
 await writePage("404.html", buildPublicHome(siteData, "./"));

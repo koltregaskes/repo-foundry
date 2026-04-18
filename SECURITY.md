@@ -2,7 +2,7 @@
 
 ## Reporting
 
-If you discover a security issue in `repos-hub`, please report it privately first.
+If you discover a security issue in `repo-foundry`, please report it privately first.
 
 Until a dedicated security inbox is published, do not open a public issue containing:
 

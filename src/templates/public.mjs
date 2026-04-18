@@ -8,6 +8,28 @@ function metricCard(label, value, detail = "") {
   </article>`;
 }
 
+function laneHref(category) {
+  return `lanes/${category.id}/`;
+}
+
+function reposForCategory(siteData, categoryName) {
+  return siteData.repos.filter((item) => item.category === categoryName);
+}
+
+function topTags(items, limit = 4) {
+  const counts = new Map();
+  for (const item of items) {
+    for (const tag of item.tags || []) {
+      counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+  }
+
+  return [...counts.entries()]
+    .sort((left, right) => right[1] - left[1])
+    .slice(0, limit)
+    .map(([tag]) => tag);
+}
+
 function repoCard(record) {
   return `<article class="repo-card" data-category="${record.category}" data-source="${record.source}" data-tags="${record.tags.join("|")}">
     <div class="repo-card__topline">
@@ -24,6 +46,27 @@ function repoCard(record) {
       <a class="text-link" href="${record.repoUrl}">Open repo</a>
     </div>
   </article>`;
+}
+
+function categoryCard(siteData, category, options = {}) {
+  const items = reposForCategory(siteData, category.name);
+  const lead = items[0];
+  const chips = topTags(items, 3)
+    .map((tag) => `<span class="tag-chip">${tag}</span>`)
+    .join("");
+  const cardBody = `
+    <p class="category-card__count">${category.count}</p>
+    <h3 class="category-card__title">${category.name}</h3>
+    <p class="category-card__summary">${category.description}</p>
+    ${lead ? `<p class="category-card__meta">Lead signal: ${lead.name}</p>` : ""}
+    ${chips ? `<div class="tag-row">${chips}</div>` : ""}
+  `;
+
+  if (options.linked === false) {
+    return `<article class="category-card">${cardBody}</article>`;
+  }
+
+  return `<a class="category-card category-card--link" href="${laneHref(category)}">${cardBody}</a>`;
 }
 
 function newsCard(item) {
@@ -58,11 +101,46 @@ function sectionFrame(title, description, content, actions = "") {
   </section>`;
 }
 
+function lanePanel(siteData, category) {
+  const items = reposForCategory(siteData, category.name);
+  const lead = items[0];
+  const sourceCount = new Set(items.map((item) => item.source)).size;
+  const featuredCount = items.filter((item) => item.featured).length;
+
+  return `<article class="lane-panel">
+    <div class="lane-panel__header">
+      <div>
+        <p class="section-heading__eyebrow">${category.shortLabel}</p>
+        <h3 class="repo-card__title"><a href="${laneHref(category)}">${category.name}</a></h3>
+      </div>
+      <span class="pill pill--soft">${category.count} tracked</span>
+    </div>
+    <p class="lane-panel__summary">${category.description}</p>
+    <div class="lane-panel__meta">
+      <span>${sourceCount} sources</span>
+      <span>${featuredCount} featured</span>
+      ${lead ? `<span>Lead: ${lead.name}</span>` : ""}
+    </div>
+    <div class="lane-panel__list">
+      ${items
+        .slice(0, 3)
+        .map(
+          (item) => `<a class="lane-panel__item" href="repos/${item.slug}/">
+            <span>${item.name}</span>
+            <span>${item.stars.toLocaleString()} stars</span>
+          </a>`,
+        )
+        .join("")}
+    </div>
+  </article>`;
+}
+
 function publicNav() {
   return [
     { id: "home", href: "./", label: "Home" },
     { id: "trending", href: "trending/", label: "Signals" },
     { id: "repos", href: "repos/", label: "Library" },
+    { id: "lanes", href: "lanes/", label: "Lanes" },
     { id: "news", href: "news/", label: "News" },
     { id: "visualisations", href: "visualisations/", label: "Snapshots" },
     { id: "codex", href: "resources/codex/", label: "Codex lane" },
@@ -73,15 +151,7 @@ function publicNav() {
 export function buildPublicHome(siteData, baseHref = "./") {
   const featuredCards = siteData.featured.slice(0, 4).map(repoCard).join("");
   const newsCards = siteData.news.slice(0, 4).map(newsCard).join("");
-  const categoryCards = siteData.categories
-    .map(
-      (category) => `<article class="category-card">
-        <p class="category-card__count">${category.count}</p>
-        <h3 class="category-card__title">${category.name}</h3>
-        <p class="category-card__summary">${category.description}</p>
-      </article>`,
-    )
-    .join("");
+  const categoryCards = siteData.categories.map((category) => categoryCard(siteData, category)).join("");
   const watchlistItems = siteData.watchlist
     .slice(0, 6)
     .map(
@@ -112,7 +182,7 @@ export function buildPublicHome(siteData, baseHref = "./") {
       "Foundry lanes",
       "The shelves we keep warm: control planes, workflow systems, builder tooling, media graphs, and practical operator infrastructure.",
       `<div class="card-grid card-grid--category">${categoryCards}</div>`,
-      `<a class="button-link button-link--ghost" href="trending/">View live signals</a>`,
+      `<a class="button-link button-link--ghost" href="lanes/">Browse all lanes</a>`,
     )}
     ${sectionFrame(
       "Watchlist rhythm",
@@ -216,8 +286,106 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
   });
 }
 
+export function buildLanesPage(siteData, baseHref = "../") {
+  const cards = siteData.categories.map((category) => categoryCard(siteData, category)).join("");
+  const panels = siteData.categories.map((category) => lanePanel(siteData, category)).join("");
+  const content = `
+    ${sectionFrame(
+      "Lane map",
+      "The main shelves of Repo Foundry, grouped around the kinds of systems we expect to matter in real work.",
+      `<div class="card-grid card-grid--category">${cards}</div>`,
+    )}
+    ${sectionFrame(
+      "Shelf briefings",
+      "A slightly deeper skim of each lane so the site feels like a navigable magazine instead of a flat list.",
+      `<div class="lane-grid">${panels}</div>`,
+    )}
+  `;
+
+  return buildDocument({
+    audience: "public",
+    title: `${siteData.workingTitle} | Lanes`,
+    description: "Browse Repo Foundry by category and workflow lane.",
+    currentKey: "lanes",
+    baseHref,
+    navItems: publicNav(),
+    eyebrow: "Public lane index",
+    heroTitle: "Foundry lanes",
+    heroBody: "The site is organised into warm shelves: AI command centres, workflow automation, agent builders, media tooling, and practical productivity systems.",
+    content,
+    scriptPath: "assets/public-app.js",
+  });
+}
+
+export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
+  const items = reposForCategory(siteData, category.name);
+  const lead = items[0];
+  const sources = [...new Set(items.map((item) => item.source))];
+  const featured = items.filter((item) => item.featured).slice(0, 4);
+  const tags = topTags(items, 5);
+  const relatedLanes = siteData.categories.filter((item) => item.id !== category.id).slice(0, 3);
+  const laneCards = (featured.length ? featured : items.slice(0, 6)).map(repoCard).join("");
+
+  const content = `
+    <section class="detail-hero">
+      <div class="detail-hero__meta">
+        <span class="pill">${category.name}</span>
+        <span class="pill pill--soft">${items.length} repos</span>
+      </div>
+      <h2 class="detail-hero__title">${category.name}</h2>
+      <p class="detail-hero__summary">${category.description}</p>
+      <div class="tag-row">
+        ${tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}
+      </div>
+      <div class="action-row">
+        <a class="button-link" href="repos/">Open full library</a>
+        <a class="button-link button-link--ghost" href="lanes/">Back to all lanes</a>
+      </div>
+    </section>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <p class="detail-card__eyebrow">Lead signal</p>
+        <p>${lead ? `${lead.name} is currently the strongest public signal in this lane.` : "This lane is currently waiting for its first lead signal."}</p>
+      </article>
+      <article class="detail-card">
+        <p class="detail-card__eyebrow">Source spread</p>
+        <p>${sources.length} source${sources.length === 1 ? "" : "s"} currently feed this shelf: ${sources.join(", ") || "No sources yet"}.</p>
+      </article>
+      <article class="detail-card">
+        <p class="detail-card__eyebrow">What to watch</p>
+        <p>We care most about practical reuse here: interfaces, flows, and patterns that can become real operator tooling instead of passive inspiration.</p>
+      </article>
+    </section>
+    ${sectionFrame(
+      "Lane shortlist",
+      "The current public-safe picks from this shelf, ordered from the freshest and strongest signals downward.",
+      `<div class="card-grid">${laneCards}</div>`,
+    )}
+    ${sectionFrame(
+      "Related lanes",
+      "Adjacent shelves worth checking next if you are mapping the broader ecosystem.",
+      `<div class="card-grid card-grid--category">${relatedLanes.map((item) => categoryCard(siteData, item)).join("")}</div>`,
+    )}
+  `;
+
+  return buildDocument({
+    audience: "public",
+    title: `${category.name} | ${siteData.workingTitle}`,
+    description: category.description,
+    currentKey: "lanes",
+    baseHref,
+    navItems: publicNav(),
+    eyebrow: "Public lane dossier",
+    heroTitle: category.name,
+    heroBody: "A category-level shelf inside Repo Foundry, built for browsing patterns instead of one-off repo hunting.",
+    content,
+    scriptPath: "assets/public-app.js",
+  });
+}
+
 export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
   const related = siteData.repos.filter((item) => item.slug !== repo.slug && item.category === repo.category).slice(0, 3);
+  const currentLane = siteData.categories.find((item) => item.name === repo.category);
   const content = `
     <section class="detail-hero">
       <div class="detail-hero__meta">
@@ -230,6 +398,7 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
       <div class="action-row">
         <a class="button-link" href="${repo.repoUrl}">Open repository</a>
         <a class="button-link button-link--ghost" href="repos/">Back to directory</a>
+        ${currentLane ? `<a class="button-link button-link--ghost" href="${laneHref(currentLane)}">Open this lane</a>` : ""}
       </div>
     </section>
     <section class="detail-grid">

@@ -34,6 +34,19 @@ npm run build:all
 - Public build: `W:\Repos\_My Open Source\repo-foundry\dist\public`
 - Internal runtime: `W:\Repos\_local\surfaces\repo-foundry-internal`
 
+## Public routes
+
+- `/`
+- `/trending`
+- `/repos`
+- `/repos/:slug`
+- `/lanes`
+- `/lanes/:laneId`
+- `/news`
+- `/visualisations`
+- `/resources/codex`
+- `/about`
+
 ## Public boundary
 
 The public site is generated only from allowlisted public-safe fields.
