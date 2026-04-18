@@ -34,6 +34,8 @@ await ensureDir(path.join(INTERNAL_RUNTIME_ROOT, "knowledge"));
 await ensureDir(path.join(INTERNAL_RUNTIME_ROOT, "logs"));
 
 await copyFile(path.join(process.cwd(), "src", "assets", "shared.css"), path.join(INTERNAL_RUNTIME_ROOT, "assets", "shared.css"));
+await copyFile(path.join(process.cwd(), "src", "assets", "shell.js"), path.join(INTERNAL_RUNTIME_ROOT, "assets", "shell.js"));
+await copyFile(path.join(process.cwd(), "src", "assets", "favicon.svg"), path.join(INTERNAL_RUNTIME_ROOT, "assets", "favicon.svg"));
 await copyFile(path.join(process.cwd(), "src", "assets", "internal-app.js"), path.join(INTERNAL_RUNTIME_ROOT, "assets", "internal-app.js"));
 await copyFile(path.join(process.cwd(), "src", "internal-runtime", "hub_server.py"), path.join(INTERNAL_RUNTIME_ROOT, "hub_server.py"));
 await copyFile(path.join(process.cwd(), "src", "internal-runtime", "inbox_postgres.py"), path.join(INTERNAL_RUNTIME_ROOT, "inbox_postgres.py"));
@@ -46,7 +48,7 @@ await copyIfExists(PUBLIC_DIST_ROOT, INTERNAL_RUNTIME_PUBLIC_PREVIEW);
 
 const utilityLinks = [
   { href: "/preview/index.html", label: "Public preview" },
-  { href: "https://github.com/koltregaskes/repos-hub", label: "GitHub repo" },
+  { href: "https://github.com/koltregaskes/repo-foundry", label: "GitHub repo" },
 ];
 
 const pages = [
@@ -75,11 +77,11 @@ for (const page of pages) {
 
 await writeText(
   path.join(INTERNAL_RUNTIME_ROOT, "README.md"),
-  `# Repo Hub Internal Runtime
+  `# Repo Foundry Internal Runtime
 
 Generated from the canonical shared codebase at:
 
-\`W:\\Repos\\_My Open Source\\repos-hub\`
+\`W:\\Repos\\_My Open Source\\repo-foundry\`
 
 Primary route:
 

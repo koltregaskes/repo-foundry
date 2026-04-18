@@ -44,14 +44,14 @@ export function buildInternalPage({
 
   return buildDocument({
     audience: "internal",
-    title: `${title} | Repos Hub internal`,
+    title: `${title} | Repo Foundry internal`,
     description: intro,
     currentKey: viewId,
     baseHref,
     navItems: internalNav(),
     eyebrow: "Private runtime",
-    heroTitle: "Repos Hub",
-    heroBody: "Workspace-specific repo intelligence, session state, backlog, and operational health.",
+    heroTitle: "Repo Foundry",
+    heroBody: "Workspace-specific repo intelligence, session state, backlog shaping, and operational health for the wider repo estate.",
     utilityLinks,
     content,
     pageData: { viewId, seed },

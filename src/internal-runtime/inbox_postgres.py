@@ -17,7 +17,7 @@ except ImportError:  # pragma: no cover - optional dependency
 
 DB_STATUS_CACHE_TTL_SECONDS = 15.0
 DB_STATUS_CACHE: dict[str, tuple[float, dict]] = {}
-DB_APPLICATION_NAME = "repos-hub-local"
+DB_APPLICATION_NAME = "repo-foundry-local"
 INTERNAL_INBOX_SCHEMA = "internal_inbox"
 TOOLS_MANAGER_KEY = "repos-manager"
 TOOLS_MANAGER_NAME = "Repos Manager"

@@ -17,13 +17,17 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function withBase(path) {
+  return new URL(path, document.baseURI).toString();
+}
+
 function repoCard(record) {
   return `<article class="repo-card">
     <div class="repo-card__topline">
       <span class="pill">${escapeHtml(record.category)}</span>
       <span class="pill pill--soft">${Number(record.stars || 0).toLocaleString()} stars</span>
     </div>
-    <h3 class="repo-card__title"><a href="/repos/${record.slug}/">${escapeHtml(record.name)}</a></h3>
+    <h3 class="repo-card__title"><a href="${withBase(`repos/${record.slug}/`)}">${escapeHtml(record.name)}</a></h3>
     <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
     <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
     <p class="repo-card__detail"><strong>Potential use:</strong> ${escapeHtml(record.potentialUse)}</p>

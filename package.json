@@ -1,8 +1,8 @@
 {
-  "name": "repos-hub",
+  "name": "repo-foundry",
   "version": "0.1.0",
   "private": false,
-  "description": "Shared internal and public hub for repository intelligence, discovery, and editorial curation.",
+  "description": "Shared internal and public hub for repository intelligence, discovery, and editorial curation under the Repo Foundry brand.",
   "type": "module",
   "scripts": {
     "compile:public": "node ./scripts/compile-public-data.mjs",

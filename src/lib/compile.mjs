@@ -167,8 +167,8 @@ export async function compileInternalSeed() {
 
   return {
     generatedAt: isoNow(),
-    canonicalRepoPath: "W:\\Repos\\_My Open Source\\repos-hub",
-    internalRuntimePath: "W:\\Repos\\_local\\surfaces\\repos-hub-internal",
+    canonicalRepoPath: "W:\\Repos\\_My Open Source\\repo-foundry",
+    internalRuntimePath: "W:\\Repos\\_local\\surfaces\\repo-foundry-internal",
     legacyRuntimePath: "W:\\Repos\\_local\\surfaces\\repos-hub\\local-hub",
     publicBoundary: siteMeta.publicBoundary,
     namingTrack,

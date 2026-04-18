@@ -61,11 +61,11 @@ function sectionFrame(title, description, content, actions = "") {
 function publicNav() {
   return [
     { id: "home", href: "./", label: "Home" },
-    { id: "trending", href: "trending/", label: "Trending" },
-    { id: "repos", href: "repos/", label: "Repos" },
+    { id: "trending", href: "trending/", label: "Signals" },
+    { id: "repos", href: "repos/", label: "Library" },
     { id: "news", href: "news/", label: "News" },
-    { id: "visualisations", href: "visualisations/", label: "Visualisations" },
-    { id: "codex", href: "resources/codex/", label: "Codex" },
+    { id: "visualisations", href: "visualisations/", label: "Snapshots" },
+    { id: "codex", href: "resources/codex/", label: "Codex lane" },
     { id: "about", href: "about/", label: "About" },
   ];
 }
@@ -82,35 +82,53 @@ export function buildPublicHome(siteData, baseHref = "./") {
       </article>`,
     )
     .join("");
+  const watchlistItems = siteData.watchlist
+    .slice(0, 6)
+    .map(
+      (item) => `<article class="stack-item">
+        <div>
+          <p class="stack-item__title">${item.name}</p>
+          <p class="stack-item__summary">${item.notes}</p>
+        </div>
+        <span class="pill pill--soft">${item.cadence}</span>
+      </article>`,
+    )
+    .join("");
 
   const content = `
     <section class="hero-grid">
-      ${metricCard("Tracked public repos", siteData.metrics.totalRepos, "High-signal watchlist only")}
-      ${metricCard("Featured this cycle", siteData.metrics.featuredCount, "Editorially prioritised")}
-      ${metricCard("Live categories", siteData.metrics.categories, "AI, automation, productivity, media")}
-      ${metricCard("Fresh this week", siteData.metrics.newThisWeek, "Newest additions stay on top")}
+      ${metricCard("Tracked signals", siteData.metrics.totalRepos, "Curated, public-safe shortlist")}
+      ${metricCard("Featured now", siteData.metrics.featuredCount, "First-pass dossiers worth opening")}
+      ${metricCard("Active lanes", siteData.metrics.categories, "AI, automation, media, creator systems")}
+      ${metricCard("Fresh this week", siteData.metrics.newThisWeek, "Recent additions kept hot")}
     </section>
     ${sectionFrame(
       "Featured dossiers",
-      "The strongest open-source references worth watching first.",
+      "The first shelf: high-signal repos with enough traction and relevance to deserve immediate attention.",
       `<div class="card-grid card-grid--feature">${featuredCards}</div>`,
-      `<a class="button-link" href="repos/">Browse all repos</a>`,
+      `<a class="button-link" href="repos/">Open the library</a>`,
     )}
     ${sectionFrame(
-      "Categories",
-      "The shelves we keep warm: command centres, workflows, productivity, and creator tooling.",
+      "Foundry lanes",
+      "The shelves we keep warm: control planes, workflow systems, builder tooling, media graphs, and practical operator infrastructure.",
       `<div class="card-grid card-grid--category">${categoryCards}</div>`,
-      `<a class="button-link button-link--ghost" href="trending/">Open trending feed</a>`,
+      `<a class="button-link button-link--ghost" href="trending/">View live signals</a>`,
+    )}
+    ${sectionFrame(
+      "Watchlist rhythm",
+      "A smaller monitoring rail for repos we expect to keep changing fast, especially around coding agents, automation, and orchestration.",
+      `<div class="stack-list">${watchlistItems}</div>`,
+      `<a class="button-link button-link--ghost" href="resources/codex/">Open Codex lane</a>`,
     )}
     ${sectionFrame(
       "Latest notes",
-      "Short editorial updates generated from the newest repos entering the public-safe feed.",
+      "Short public-safe updates generated from the newest repositories entering the current feed.",
       `<div class="card-grid">${newsCards}</div>`,
       `<a class="button-link button-link--ghost" href="news/">See all news</a>`,
     )}
     ${sectionFrame(
       "Codex lane",
-      "A smaller shelf for the repos and resources closest to coding-agent workflows.",
+      "A tighter shelf for repos, references, and comparator tools closest to coding-agent workflows.",
       `<div class="card-grid">${siteData.codexResources.slice(0, 3).map(resourceCard).join("")}</div>`,
       `<a class="button-link button-link--ghost" href="resources/codex/">Open Codex resources</a>`,
     )}
@@ -123,7 +141,7 @@ export function buildPublicHome(siteData, baseHref = "./") {
     currentKey: "home",
     baseHref,
     navItems: publicNav(),
-    eyebrow: "Public-facing discovery surface",
+    eyebrow: "Public-facing repo intelligence surface",
     heroTitle: siteData.workingTitle,
     heroBody: siteData.strapline,
     utilityLinks: [{ href: "about/", label: "Methodology" }],
@@ -139,7 +157,7 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
       <div class="section-heading">
         <div>
           <p class="section-heading__eyebrow">${archiveOnly ? "Archive" : "Trending now"}</p>
-          <h2 class="section-heading__title">Newest additions first, with category and source filters.</h2>
+          <h2 class="section-heading__title">Newest additions first, with category and source filters for quicker scanning.</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="trending/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="trending/archive/">Open archive</a>`}
@@ -156,9 +174,9 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
     currentKey: "trending",
     baseHref,
     navItems: publicNav(),
-    eyebrow: "Public trending feed",
-    heroTitle: archiveOnly ? "Trending archive" : "Trending repos",
-    heroBody: "New findings land at the top. Older items move into the archive instead of stretching one endless page.",
+    eyebrow: "Public signal feed",
+    heroTitle: archiveOnly ? "Signals archive" : "Live signals",
+    heroBody: "Fresh findings land at the top. Older items move into the archive instead of bloating one endless page.",
     content,
     pageData: { page: archiveOnly ? "trending-archive" : "trending", items: siteData.repos },
     scriptPath: "assets/public-app.js",
@@ -171,8 +189,8 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
     <section class="content-section">
       <div class="section-heading">
         <div>
-          <p class="section-heading__eyebrow">Directory</p>
-          <h2 class="section-heading__title">A public-safe directory of the repos we think are worth your time.</h2>
+          <p class="section-heading__eyebrow">Library</p>
+          <h2 class="section-heading__title">A public-safe directory of the repositories we think are worth your time.</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="repos/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="repos/archive/">Open archive</a>`}
@@ -185,13 +203,13 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
   return buildDocument({
     audience: "public",
     title: `${siteData.workingTitle} | Repo directory`,
-    description: "Curated repository directory.",
+    description: "Curated repository library.",
     currentKey: "repos",
     baseHref,
     navItems: publicNav(),
-    eyebrow: "Public repo directory",
-    heroTitle: "Repo directory",
-    heroBody: "Curated entries with practical summaries, why they matter, and what we think they are good for.",
+    eyebrow: "Public foundry library",
+    heroTitle: "Repository library",
+    heroBody: "Curated entries with practical summaries, why they matter, and where they might actually fit in a real workflow.",
     content,
     pageData: { page: archiveOnly ? "repos-archive" : "repos", items: siteData.repos },
     scriptPath: "assets/public-app.js",
@@ -244,7 +262,7 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
     navItems: publicNav(),
     eyebrow: "Public repo dossier",
     heroTitle: repo.name,
-    heroBody: "A public-safe dossier generated from our curated research record.",
+    heroBody: "A public-safe dossier generated from the current Repo Foundry research record.",
     content,
     scriptPath: "assets/public-app.js",
   });
@@ -265,7 +283,7 @@ export function buildNewsPage(siteData, baseHref = "../") {
     navItems: publicNav(),
     eyebrow: "Public news feed",
     heroTitle: "News and fresh notes",
-    heroBody: "A lighter editorial layer on top of the curated repo stream.",
+    heroBody: "A lighter editorial layer on top of the curated repo stream, built for quick scanning instead of endless backlog reading.",
     content,
     pageData: { page: "news", items: siteData.news },
     scriptPath: "assets/public-app.js",
@@ -277,7 +295,7 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
     <section class="content-section">
       <div class="section-heading">
         <div>
-          <p class="section-heading__eyebrow">Visualisations</p>
+          <p class="section-heading__eyebrow">Snapshots</p>
           <h2 class="section-heading__title">A lightweight view of what the public feed is currently biased towards.</h2>
         </div>
       </div>
@@ -304,7 +322,7 @@ export function buildCodexPage(siteData, baseHref = "../../") {
   const content = `
     ${sectionFrame(
       "Codex lane",
-      "A public-safe shortlist of repos closest to coding-agent workflows and adjacent orchestration patterns.",
+      "A public-safe shortlist of repos closest to coding-agent workflows, orchestration patterns, and operator-grade command surfaces.",
       `<div class="card-grid">${siteData.codexResources.map(resourceCard).join("")}</div>`,
     )}
     ${sectionFrame(
@@ -332,7 +350,7 @@ export function buildCodexPage(siteData, baseHref = "../../") {
     navItems: publicNav(),
     eyebrow: "Public resource shelf",
     heroTitle: "Codex resources",
-    heroBody: "The smaller shelf: coding-agent repos, workflow references, and command-centre comparators worth watching.",
+    heroBody: "The tighter shelf: coding-agent repos, workflow references, and command-surface comparators worth watching closely.",
     content,
     scriptPath: "assets/public-app.js",
   });
@@ -364,7 +382,7 @@ export function buildAboutPage(siteData, baseHref = "../") {
   return buildDocument({
     audience: "public",
     title: `${siteData.workingTitle} | About`,
-    description: "How the public repos hub is curated.",
+    description: "How Repo Foundry is curated.",
     currentKey: "about",
     baseHref,
     navItems: publicNav(),

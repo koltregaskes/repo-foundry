@@ -1,6 +1,6 @@
-# repos-hub
+# repo-foundry
 
-`repos-hub` is the shared codebase for the Repos Hub programme.
+`repo-foundry` is the shared codebase for the Repo Foundry programme.
 
 It produces two real outputs from one source:
 
@@ -10,7 +10,7 @@ It produces two real outputs from one source:
 ## Layout
 
 ```text
-repos-hub/
+repo-foundry/
   content/public/manual/      # public editorial seed content
   scripts/                    # compilers and build scripts
   src/assets/                 # shared CSS and browser code
@@ -31,8 +31,8 @@ npm run build:all
 
 ## Outputs
 
-- Public build: `W:\Repos\_My Open Source\repos-hub\dist\public`
-- Internal runtime: `W:\Repos\_local\surfaces\repos-hub-internal`
+- Public build: `W:\Repos\_My Open Source\repo-foundry\dist\public`
+- Internal runtime: `W:\Repos\_local\surfaces\repo-foundry-internal`
 
 ## Public boundary
 

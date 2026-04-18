@@ -1,8 +1,8 @@
 {
   "generatedAt": "2026-04-11T21:45:00.000Z",
-  "workingTitle": "Repos Hub",
-  "strapline": "Curated open-source intelligence for AI operators, automation-heavy teams, and workflow builders.",
-  "description": "A magazine-style watchtower for trending repositories, Codex-adjacent tools, and reusable open-source patterns across AI, automation, media, and developer workflows.",
+  "workingTitle": "Repo Foundry",
+  "strapline": "A sharper public foundry for high-signal repositories, workflow systems, and operator-grade open-source infrastructure.",
+  "description": "Repo Foundry is a magazine-style discovery site for repositories worth studying, shipping against, or borrowing ideas from across AI, automation, coding agents, media systems, and practical developer workflows.",
   "publicBoundary": "The public site shows only curated, public-safe research records. Internal session notes, local paths, repo telemetry, and manager-only backlog data stay out of the public build.",
   "repos": [
     {
@@ -651,17 +651,17 @@
     {
       "id": "methodology",
       "title": "How we curate",
-      "body": "We bias towards repos that already have real traction, real stars, and a plausible path to practical reuse. The goal is not to hoard links. It is to surface work we can actually learn from or build against."
+      "body": "We bias towards repos with real traction, real momentum, and a believable path to practical reuse. The goal is not to hoard links. It is to surface work we can actually learn from, build against, or operationalise."
     },
     {
       "id": "scope",
       "title": "What we care about",
-      "body": "The strongest signals here sit around AI command centres, workflow automation, productivity layers, creator tooling, and the open-source infrastructure around modern coding agents."
+      "body": "The strongest signals here sit around AI control planes, workflow automation, creator infrastructure, developer productivity, and the open-source systems shaping modern coding-agent work."
     },
     {
       "id": "boundary",
       "title": "Why the public feed is curated",
-      "body": "The public site is intentionally lighter than the internal manager view. It keeps the useful research and leaves out workspace-specific operations, private notes, and live internal coordination."
+      "body": "The public site is intentionally lighter than the internal manager view. It keeps the useful research, readable summaries, and public-safe structure while leaving out workspace operations, private notes, and live internal coordination."
     }
   ]
 }

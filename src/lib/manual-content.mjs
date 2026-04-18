@@ -1,8 +1,8 @@
 export const siteMeta = {
-  workingTitle: "Repos Hub",
-  strapline: "Curated open-source intelligence for AI operators, automation-heavy teams, and workflow builders.",
+  workingTitle: "Repo Foundry",
+  strapline: "A sharper public foundry for high-signal repositories, workflow systems, and operator-grade open-source infrastructure.",
   description:
-    "A magazine-style watchtower for trending repositories, Codex-adjacent tools, and reusable open-source patterns across AI, automation, media, and developer workflows.",
+    "Repo Foundry is a magazine-style discovery site for repositories worth studying, shipping against, or borrowing ideas from across AI, automation, coding agents, media systems, and practical developer workflows.",
   publicBoundary:
     "The public site shows only curated, public-safe research records. Internal session notes, local paths, repo telemetry, and manager-only backlog data stay out of the public build.",
 };
@@ -66,28 +66,28 @@ export const editorialNotes = [
     id: "methodology",
     title: "How we curate",
     body:
-      "We bias towards repos that already have real traction, real stars, and a plausible path to practical reuse. The goal is not to hoard links. It is to surface work we can actually learn from or build against.",
+      "We bias towards repos with real traction, real momentum, and a believable path to practical reuse. The goal is not to hoard links. It is to surface work we can actually learn from, build against, or operationalise.",
   },
   {
     id: "scope",
     title: "What we care about",
     body:
-      "The strongest signals here sit around AI command centres, workflow automation, productivity layers, creator tooling, and the open-source infrastructure around modern coding agents.",
+      "The strongest signals here sit around AI control planes, workflow automation, creator infrastructure, developer productivity, and the open-source systems shaping modern coding-agent work.",
   },
   {
     id: "boundary",
     title: "Why the public feed is curated",
     body:
-      "The public site is intentionally lighter than the internal manager view. It keeps the useful research and leaves out workspace-specific operations, private notes, and live internal coordination.",
+      "The public site is intentionally lighter than the internal manager view. It keeps the useful research, readable summaries, and public-safe structure while leaving out workspace operations, private notes, and live internal coordination.",
   },
 ];
 
 export const namingTrack = {
-  status: "pending-validation",
-  summary: "Working label stays as Repos Hub until domain and X-handle validation is complete.",
+  status: "locked",
+  summary: "Repo Foundry is the locked public and internal brand for the repo estate hub.",
   nextActions: [
-    "Generate a shortlist of names that feel credible for open-source discovery and Codex-adjacent editorial.",
-    "Validate .com availability before final branding.",
-    "Validate x.com handle availability before locking the public name.",
+    "Migrate the canonical repo and internal runtime naming to Repo Foundry.",
+    "Refresh the public site copy, metadata, and documentation around the new brand.",
+    "Carry the stronger foundry identity into the next visual design pass.",
   ],
 };

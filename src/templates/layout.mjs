@@ -39,12 +39,26 @@ export function buildDocument({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${title}</title>
     <meta name="description" content="${description}" />
+    <meta name="theme-color" content="#08101d" />
     <base href="${baseHref}" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/shared.css" />
   </head>
   <body class="${bodyClass}" data-surface="${audience}">
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere__orb atmosphere__orb--primary"></div>
+      <div class="atmosphere__orb atmosphere__orb--secondary"></div>
+      <div class="atmosphere__orb atmosphere__orb--tertiary"></div>
+      <div class="atmosphere__grid"></div>
+    </div>
     <div class="site-shell">
-      <header class="site-header">
+      <header class="site-header" data-reveal>
         <div class="site-header__band">
           <p class="site-header__eyebrow">${eyebrow}</p>
           ${utilityMarkup}
@@ -65,6 +79,7 @@ export function buildDocument({
       </main>
     </div>
     ${dataScript}
+    <script src="assets/shell.js"></script>
     <script type="module" src="${scriptPath}"></script>
   </body>
 </html>`;

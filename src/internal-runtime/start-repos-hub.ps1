@@ -1,12 +1,12 @@
 $ErrorActionPreference = 'Stop'
 
 $hubDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$port = if ($env:REPOS_HUB_PORT) { $env:REPOS_HUB_PORT } else { '4789' }
+$port = if ($env:REPO_FOUNDRY_PORT) { $env:REPO_FOUNDRY_PORT } elseif ($env:REPOS_HUB_PORT) { $env:REPOS_HUB_PORT } else { '4789' }
 $tailscaleExe = 'C:\Program Files\Tailscale\tailscale.exe'
 $logsDir = Join-Path $hubDir 'logs'
-$outLog = Join-Path $logsDir 'repos-hub.out.log'
-$errLog = Join-Path $logsDir 'repos-hub.err.log'
-$pidFile = Join-Path $logsDir 'repos-hub.pid'
+$outLog = Join-Path $logsDir 'repo-foundry.out.log'
+$errLog = Join-Path $logsDir 'repo-foundry.err.log'
+$pidFile = Join-Path $logsDir 'repo-foundry.pid'
 $waitSeconds = 120
 
 function Get-TailscaleIp {
@@ -66,7 +66,7 @@ function Stop-TrackedProcess {
         try {
             Stop-Process -Id $trackedPid -Force -ErrorAction Stop
         } catch {
-            Write-Warning "Could not stop tracked Repos Hub process ${trackedPid}: $($_.Exception.Message)"
+            Write-Warning "Could not stop tracked Repo Foundry process ${trackedPid}: $($_.Exception.Message)"
         }
     }
 
@@ -92,7 +92,7 @@ function Stop-PortListeners {
         try {
             Stop-Process -Id $listener.OwningProcess -Force -ErrorAction Stop
         } catch {
-            Write-Warning "Could not stop Repos Hub listener $($listener.OwningProcess) on $($listener.LocalAddress):${Port}"
+            Write-Warning "Could not stop Repo Foundry listener $($listener.OwningProcess) on $($listener.LocalAddress):${Port}"
         }
     }
 }
@@ -118,7 +118,7 @@ foreach ($healthUrl in $healthUrls) {
 }
 
 if ($alreadyHealthy) {
-    Write-Host "Repos Hub already running on port $port"
+    Write-Host "Repo Foundry already running on port $port"
     exit 0
 }
 
@@ -133,8 +133,8 @@ $pythonLaunch = if ($pythonCmd -eq 'py') {
 }
 
 $launchCommand = @(
-    ('$env:REPOS_HUB_PORT=''' + $port + ''''),
-    ('$env:REPOS_HUB_HOSTS=''' + ($bindHosts -join ',') + ''''),
+    ('$env:REPO_FOUNDRY_PORT=''' + $port + ''''),
+    ('$env:REPO_FOUNDRY_HOSTS=''' + ($bindHosts -join ',') + ''''),
     $pythonLaunch
 ) -join '; '
 
@@ -159,12 +159,12 @@ while ((Get-Date) -lt $deadline) {
     }
 
     if ($allHealthy) {
-        Write-Host "Repos Hub ready on port $port"
+        Write-Host "Repo Foundry ready on port $port"
         exit 0
     }
 
     if ($process.HasExited) {
-        throw "Repos Hub exited early. See $errLog."
+        throw "Repo Foundry exited early. See $errLog."
     }
 
     Start-Sleep -Seconds 2
@@ -173,7 +173,7 @@ while ((Get-Date) -lt $deadline) {
 try {
     Stop-Process -Id $process.Id -Force -ErrorAction Stop
 } catch {
-    Write-Warning "Could not stop unresponsive Repos Hub process $($process.Id): $($_.Exception.Message)"
+    Write-Warning "Could not stop unresponsive Repo Foundry process $($process.Id): $($_.Exception.Message)"
 }
 
-throw "Repos Hub health checks did not pass within the startup window. See $outLog and $errLog."
+throw "Repo Foundry health checks did not pass within the startup window. See $outLog and $errLog."

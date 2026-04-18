@@ -22,7 +22,7 @@ from inbox_postgres import load_session_updates as load_postgres_session_updates
 HUB_DIR = MODULE_DIR
 WORKSPACE_DIR = HUB_DIR.parents[2]
 LOCAL_ONLY_DIR = WORKSPACE_DIR / "_local" / "LOCAL-ONLY"
-CANONICAL_REPO_DIR = WORKSPACE_DIR / "_My Open Source" / "repos-hub"
+CANONICAL_REPO_DIR = WORKSPACE_DIR / "_My Open Source" / "repo-foundry"
 PUBLIC_PREVIEW_DIR = HUB_DIR / "public-preview"
 DATA_DIR = HUB_DIR / "data"
 REPO_INVENTORY_PATH = WORKSPACE_DIR / ".llatos" / "data" / "repo-estate-inventory.json"
@@ -34,6 +34,7 @@ SESSION_INDEX_PATH = DATA_DIR / "session-index.json"
 SESSION_UPDATES_DIR = LOCAL_ONLY_DIR / "session-updates" / "repos"
 ALLOWED_WEB_ROOTS = {
     "/internal": HUB_DIR,
+    "/repo-foundry/local-hub": HUB_DIR,
     "/repos-hub/local-hub": HUB_DIR,
     "/preview": PUBLIC_PREVIEW_DIR,
     "/repos-docs": WORKSPACE_DIR / ".llatos" / "docs",
@@ -145,7 +146,12 @@ def preferred_tailscale_ip() -> str | None:
 
 
 def resolved_hosts() -> list[str]:
-    raw_hosts = os.environ.get("REPOS_HUB_HOSTS") or os.environ.get("REPOS_HUB_HOST")
+    raw_hosts = (
+        os.environ.get("REPO_FOUNDRY_HOSTS")
+        or os.environ.get("REPO_FOUNDRY_HOST")
+        or os.environ.get("REPOS_HUB_HOSTS")
+        or os.environ.get("REPOS_HUB_HOST")
+    )
     hosts = []
     if raw_hosts:
         for item in raw_hosts.split(","):
@@ -161,7 +167,7 @@ def start_bound_server(host: str, port: int) -> tuple[ThreadingHTTPServer, threa
     server = ThreadingHTTPServer((host, port), HubHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
-    print(f"Repos Hub ready at http://{host}:{port}/repos-hub/local-hub/index.html")
+    print(f"Repo Foundry ready at http://{host}:{port}/internal/")
     return server, thread
 
 
@@ -546,7 +552,7 @@ class HubHandler(SimpleHTTPRequestHandler):
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
 
-        if parsed.path in {"/", "/hub", "/internal", "/repos-hub/local-hub", "/repos-hub/local-hub/"}:
+        if parsed.path in {"/", "/hub", "/internal", "/repos-hub/local-hub", "/repos-hub/local-hub/", "/repo-foundry/local-hub", "/repo-foundry/local-hub/"}:
             self.send_response(HTTPStatus.FOUND)
             self.send_header("Location", "/internal/")
             self.end_headers()
@@ -583,6 +589,7 @@ class HubHandler(SimpleHTTPRequestHandler):
                     "canonicalRepoPath": str(CANONICAL_REPO_DIR),
                     "internalRuntimePath": str(HUB_DIR),
                     "legacyPath": str(WORKSPACE_DIR / "_local" / "surfaces" / "repos-hub" / "local-hub"),
+                    "compatibilityPath": "/repos-hub/local-hub/",
                     "publicPreviewPath": str(PUBLIC_PREVIEW_DIR),
                 }
             )
@@ -619,7 +626,7 @@ class HubHandler(SimpleHTTPRequestHandler):
 
 
 def main() -> None:
-    port = int(os.environ.get("REPOS_HUB_PORT", "4789"))
+    port = int(os.environ.get("REPO_FOUNDRY_PORT") or os.environ.get("REPOS_HUB_PORT", "4789"))
     hosts = resolved_hosts()
     servers: dict[str, ThreadingHTTPServer] = {}
     lock = threading.Lock()
@@ -629,7 +636,7 @@ def main() -> None:
         servers[host] = server
 
     if not servers:
-        raise RuntimeError("No valid hosts to bind the repo hub.")
+        raise RuntimeError("No valid hosts to bind Repo Foundry.")
 
     stop_event = threading.Event()
     watcher = threading.Thread(

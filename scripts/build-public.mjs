@@ -27,6 +27,8 @@ await ensureDir(PUBLIC_DIST_ROOT);
 await ensureDir(path.join(PUBLIC_DIST_ROOT, "assets"));
 
 await copyFile(path.join(process.cwd(), "src", "assets", "shared.css"), path.join(PUBLIC_DIST_ROOT, "assets", "shared.css"));
+await copyFile(path.join(process.cwd(), "src", "assets", "shell.js"), path.join(PUBLIC_DIST_ROOT, "assets", "shell.js"));
+await copyFile(path.join(process.cwd(), "src", "assets", "favicon.svg"), path.join(PUBLIC_DIST_ROOT, "assets", "favicon.svg"));
 await copyFile(path.join(process.cwd(), "src", "assets", "public-app.js"), path.join(PUBLIC_DIST_ROOT, "assets", "public-app.js"));
 await writeText(path.join(PUBLIC_DIST_ROOT, ".nojekyll"), "");
 
