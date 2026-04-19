@@ -592,7 +592,7 @@
     ],
     "freshness": [
       {
-        "label": "this-week",
+        "label": "archive",
         "value": 9
       }
     ]
@@ -603,7 +603,7 @@
     "categories": 5,
     "sources": 1,
     "refreshedAt": "2026-04-11T21:45:00.000Z",
-    "newThisWeek": 9
+    "newThisWeek": 0
   },
   "codexResources": [
     {

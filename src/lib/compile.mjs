@@ -1,5 +1,7 @@
 import { readJson, slugify } from "./io.mjs";
 import {
+  ACTIVE_INTERNAL_DATA_ROOT,
+  ACTIVE_INTERNAL_ROOT,
   BACKLOG_PATH,
   KNOWLEDGE_INDEX_PATH,
   REPO_INVENTORY_PATH,
@@ -169,6 +171,8 @@ export async function compileInternalSeed() {
     generatedAt: isoNow(),
     canonicalRepoPath: "W:\\Repos\\_My Open Source\\repo-foundry",
     internalRuntimePath: "W:\\Repos\\_local\\surfaces\\repo-foundry-internal",
+    activeInternalPath: ACTIVE_INTERNAL_ROOT,
+    activeDataPath: ACTIVE_INTERNAL_DATA_ROOT,
     legacyRuntimePath: "W:\\Repos\\_local\\surfaces\\repos-hub\\local-hub",
     publicBoundary: siteMeta.publicBoundary,
     namingTrack,

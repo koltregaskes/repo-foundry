@@ -130,6 +130,45 @@ function initRepoListing(data) {
 function initVisualisations(data) {
   const root = document.getElementById("visualisationRoot");
   if (!root || !data.visualisations) return;
+  const summaryRoot = document.getElementById("visualisationSummary");
+
+  if (summaryRoot) {
+    const topCategory = [...(data.visualisations.categoryMix || [])].sort((left, right) => right.value - left.value)[0];
+    const topSource = [...(data.visualisations.sourceMix || [])].sort((left, right) => right.value - left.value)[0];
+    const freshest = [...(data.visualisations.freshness || [])].sort((left, right) => right.value - left.value)[0];
+    const summaryItems = [
+      {
+        label: "Tracked repos",
+        value: Number(data.metrics?.totalRepos || 0).toLocaleString(),
+        detail: "Current public-safe library size",
+      },
+      {
+        label: "Most active lane",
+        value: topCategory?.label || "Unknown",
+        detail: topCategory ? `${topCategory.value} repos on the warmest shelf` : "Waiting for category data",
+      },
+      {
+        label: "Primary source",
+        value: topSource?.label || "Unknown",
+        detail: topSource ? `${topSource.value} repos from the strongest input source` : "Waiting for source data",
+      },
+      {
+        label: "Freshness bias",
+        value: freshest?.label || "Unknown",
+        detail: freshest ? `${freshest.value} repos in the dominant freshness bucket` : "Waiting for freshness data",
+      },
+    ];
+
+    summaryRoot.innerHTML = summaryItems
+      .map(
+        (item) => `<article class="status-card">
+          <p class="metric-card__label">${escapeHtml(item.label)}</p>
+          <p class="status-card__value">${escapeHtml(item.value)}</p>
+          <p class="metric-card__detail">${escapeHtml(item.detail)}</p>
+        </article>`,
+      )
+      .join("");
+  }
 
   const seriesCard = (title, items) => {
     const max = Math.max(...items.map((item) => item.value), 1);

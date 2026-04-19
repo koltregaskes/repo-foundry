@@ -34,6 +34,14 @@ npm run build:all
 - Public build: `W:\Repos\_My Open Source\repo-foundry\dist\public`
 - Internal runtime: `W:\Repos\_local\surfaces\repo-foundry-internal`
 
+## Agent docs
+
+- `docs/README.md`
+- `docs/PROCESS.md`
+- `docs/AUTORESEARCH.md`
+- `docs/KNOWLEDGE-BASE.md`
+- `docs/STRUCTURE.md`
+
 ## Public routes
 
 - `/`

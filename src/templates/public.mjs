@@ -468,8 +468,27 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
           <h2 class="section-heading__title">A lightweight view of what the public feed is currently biased towards.</h2>
         </div>
       </div>
+      <div id="visualisationSummary" class="visual-summary-grid"></div>
       <div id="visualisationRoot" class="visualisation-grid"></div>
     </section>
+    ${sectionFrame(
+      "Method",
+      "These snapshots are generated from the current public-safe dataset, not from internal manager notes or private workspace telemetry.",
+      `<div class="stack-list">
+        <article class="stack-item stack-item--long">
+          <div>
+            <p class="stack-item__title">What is counted</p>
+            <p class="stack-item__summary">Repo Foundry tracks curated public-safe repo records, then groups them by lane, source, star band, and freshness so the public site can show bias and movement without leaking internal state.</p>
+          </div>
+        </article>
+        <article class="stack-item stack-item--long">
+          <div>
+            <p class="stack-item__title">Why this matters</p>
+            <p class="stack-item__summary">The point is not just pretty charts. It is to show where the current attention is going, whether the shelves are balanced, and whether the feed is actually fresh enough to be trusted.</p>
+          </div>
+        </article>
+      </div>`,
+    )}
   `;
   return buildDocument({
     audience: "public",
@@ -482,7 +501,12 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
     heroTitle: "Visualisations",
     heroBody: "A quick look at category balance, popularity bands, and how fresh the current watchlist really is.",
     content,
-    pageData: { page: "visualisations", visualisations: siteData.visualisations },
+    pageData: {
+      page: "visualisations",
+      visualisations: siteData.visualisations,
+      metrics: siteData.metrics,
+      categories: siteData.categories,
+    },
     scriptPath: "assets/public-app.js",
   });
 }

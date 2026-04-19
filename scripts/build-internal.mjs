@@ -4,10 +4,10 @@ import path from "node:path";
 import { buildInternalPage } from "../src/templates/internal.mjs";
 import { compileInternalSeed } from "../src/lib/compile.mjs";
 import {
+  ACTIVE_INTERNAL_DATA_ROOT,
+  ACTIVE_KNOWLEDGE_ROOT,
   INTERNAL_RUNTIME_PUBLIC_PREVIEW,
   INTERNAL_RUNTIME_ROOT,
-  LEGACY_INTERNAL_ROOT,
-  LEGACY_KNOWLEDGE_ROOT,
   PUBLIC_DIST_ROOT,
 } from "../src/lib/constants.mjs";
 import { copyDirectory, copyFile, ensureDir, writeText } from "../src/lib/io.mjs";
@@ -42,8 +42,8 @@ await copyFile(path.join(process.cwd(), "src", "internal-runtime", "inbox_postgr
 await copyFile(path.join(process.cwd(), "src", "internal-runtime", "sync_session_updates_to_postgres.py"), path.join(INTERNAL_RUNTIME_ROOT, "sync_session_updates_to_postgres.py"));
 await copyFile(path.join(process.cwd(), "src", "internal-runtime", "start-repos-hub.ps1"), path.join(INTERNAL_RUNTIME_ROOT, "start-repos-hub.ps1"));
 
-await copyDirectory(path.join(LEGACY_INTERNAL_ROOT, "data"), path.join(INTERNAL_RUNTIME_ROOT, "data"));
-await copyDirectory(LEGACY_KNOWLEDGE_ROOT, path.join(INTERNAL_RUNTIME_ROOT, "knowledge"));
+await copyDirectory(ACTIVE_INTERNAL_DATA_ROOT, path.join(INTERNAL_RUNTIME_ROOT, "data"));
+await copyDirectory(ACTIVE_KNOWLEDGE_ROOT, path.join(INTERNAL_RUNTIME_ROOT, "knowledge"));
 await copyIfExists(PUBLIC_DIST_ROOT, INTERNAL_RUNTIME_PUBLIC_PREVIEW);
 
 const utilityLinks = [
