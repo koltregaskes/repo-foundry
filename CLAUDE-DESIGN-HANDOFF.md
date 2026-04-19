@@ -1,6 +1,22 @@
 # Claude Design Handoff
 
-This note is for handing the Repo Foundry website over to Claude Code and the design tool for the dedicated visual pass.
+This note is for handing the Repo Foundry website over to Claude Design for the dedicated visual pass.
+
+## Paste-ready form fields
+
+### Company name and blurb
+
+Repo Foundry: a public, editorial-style website for discovering high-signal open-source repositories across AI command centres, coding-agent infrastructure, workflow automation, productivity tooling, and creator systems. It should feel like a curated magazine and repo intelligence surface rather than a generic directory.
+
+### Assets
+
+GitHub repo: `https://github.com/koltregaskes/repo-foundry`
+
+Local folder: `W:\Repos\_My Open Source\repo-foundry`
+
+### Any other notes
+
+Repo Foundry is the public-facing sibling to a private internal repo research system, but the public site is its own product. The structural phase is already in place: homepage, repo cards, lane/category pages, repo detail pages, news, visualisations, and a Codex resources section. The next pass should focus on visual design quality: stronger hero identity, more editorial homepage composition, better lane pages, stronger repo card hierarchy, and richer visualisation presentation. Keep the site dark, atmospheric, emerald-led, and editorial rather than generic SaaS or dashboard-like. Public/private boundary matters: do not expose local paths, session data, manager notes, backlog data, or internal ops state. Future features likely include better editorial/news cadence, richer visualisations, improved search/filter UX, featured collections, possible logo or brand asset work, and final domain and SEO polish.
 
 ## 1. Company name and blurb
 
@@ -154,19 +170,17 @@ Not all of this needs to happen in the design pass, but it should be kept in min
 3. Approve any big visual shift Claude proposes
 4. Provide any external references if we want the visual language to lean toward a specific publication or product family
 
-### Claude Code research note
+### Claude Design note
 
-I checked Anthropic's current official Claude Code product and docs before writing this handoff.
+I checked for an official public Claude Design documentation surface before writing this handoff. I did not find a separate public documentation set equivalent to the Claude Code docs, so I have not claimed any unsupported tool-specific behaviour beyond what is visible in the design-system flow and the attached form structure.
 
 The practical takeaway is:
 
-- Claude Code is designed to work against a real codebase, not just a prompt
-- it can read the project, edit files across multiple paths, run commands, and iterate
-- it is available across terminal, IDE, desktop, and web surfaces
-- for a design pass like this, giving Claude the actual Repo Foundry folder and repo is the right move
+- treat Claude Design as a design-system and UI pass on top of the real Repo Foundry codebase
+- give it the repo plus the local frontend folder rather than a vague brief alone
+- let it improve the visual system, hierarchy, and page composition without changing the public/private data boundary
 
-Official references:
+Relevant official Anthropic references used for verification context:
 
+- `https://www.anthropic.com/claude`
 - `https://www.anthropic.com/product/claude-code`
-- `https://code.claude.com/docs/en/overview`
-- `https://code.claude.com/docs/en/setup`
