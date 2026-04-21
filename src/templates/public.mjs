@@ -327,7 +327,13 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
   const featured = items.filter((item) => item.featured).slice(0, 4);
   const tags = topTags(items, 5);
   const relatedLanes = siteData.categories.filter((item) => item.id !== category.id).slice(0, 3);
-  const laneCardItems = featured.length ? featured : items.slice(0, 6);
+  const laneCardItems = [...items].sort((left, right) => {
+    if (left.featured !== right.featured) {
+      return left.featured ? -1 : 1;
+    }
+
+    return new Date(right.addedAt).getTime() - new Date(left.addedAt).getTime();
+  });
   const laneCards = laneCardItems.length
     ? laneCardItems.map(repoCard).join("")
     : `<p class="empty-state">No public-safe repos are currently pinned to this lane, but the shelf stays live for future additions.</p>`;
@@ -359,12 +365,12 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
       </article>
       <article class="detail-card">
         <p class="detail-card__eyebrow">What to watch</p>
-        <p>We care most about practical reuse here: interfaces, flows, and patterns that can become real operator tooling instead of passive inspiration.</p>
+        <p>${featured.length ? `${featured.length} featured pick${featured.length === 1 ? "" : "s"} lead this lane, but the full shelf stays visible below for broader comparison.` : "We care most about practical reuse here: interfaces, flows, and patterns that can become real operator tooling instead of passive inspiration."}</p>
       </article>
     </section>
     ${sectionFrame(
       "Lane shortlist",
-      "The current public-safe picks from this shelf, ordered from the freshest and strongest signals downward.",
+      "Every current public-safe repo in this lane, with featured picks floated first and the rest kept visible for proper comparison.",
       `<div class="card-grid">${laneCards}</div>`,
     )}
     ${sectionFrame(
