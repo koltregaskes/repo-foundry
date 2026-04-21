@@ -70,13 +70,21 @@ function categoryCard(siteData, category, options = {}) {
 }
 
 function newsCard(item) {
+  const highlights = Array.isArray(item.highlights) && item.highlights.length
+    ? `<div class="news-card__highlights">${item.highlights
+        .map((entry) => `<p class="news-card__highlight">${entry}</p>`)
+        .join("")}</div>`
+    : "";
+
   return `<article class="news-card">
     <div class="news-card__meta">
-      <span class="pill pill--soft">${item.source}</span>
+      <span class="pill">${item.projectName || item.sourcePlatform || item.source}</span>
+      <span class="pill pill--soft">${item.releaseTag || item.source}</span>
       <span>${new Date(item.publishedAt).toLocaleDateString()}</span>
     </div>
     <h3 class="news-card__title"><a href="${item.url}">${item.title}</a></h3>
     <p class="news-card__summary">${item.summary}</p>
+    ${highlights}
   </article>`;
 }
 
@@ -141,10 +149,8 @@ function lanePanel(siteData, category) {
 function publicNav() {
   return [
     { id: "home", href: "./", label: "Home" },
-    { id: "trending", href: "trending/", label: "Signals" },
     { id: "repos", href: "repos/", label: "Library" },
-    { id: "lanes", href: "lanes/", label: "Lanes" },
-    { id: "news", href: "news/", label: "News" },
+    { id: "news", href: "news/", label: "Updates" },
     { id: "visualisations", href: "visualisations/", label: "Snapshots" },
     { id: "codex", href: "resources/codex/", label: "Codex lane" },
     { id: "about", href: "about/", label: "About" },
@@ -153,7 +159,9 @@ function publicNav() {
 
 export function buildPublicHome(siteData, baseHref = "./") {
   const featuredCards = siteData.featured.slice(0, 4).map(repoCard).join("");
-  const newsCards = siteData.news.slice(0, 4).map(newsCard).join("");
+  const newsCards = siteData.news.length
+    ? siteData.news.slice(0, 4).map(newsCard).join("")
+    : `<p class="empty-state">Release updates will appear here once the tracked source hosts publish new versions.</p>`;
   const categoryCards = siteData.categories.map((category) => categoryCard(siteData, category)).join("");
   const watchlistItems = siteData.watchlist
     .slice(0, 6)
@@ -182,10 +190,10 @@ export function buildPublicHome(siteData, baseHref = "./") {
       `<a class="button-link" href="repos/">Open the library</a>`,
     )}
     ${sectionFrame(
-      "Foundry lanes",
-      "The shelves we keep warm: control planes, workflow systems, builder tooling, media graphs, and practical operator infrastructure.",
+      "Browse by lane",
+      "The fastest way to scan the site’s major shelves, then jump into the filtered library instead of bouncing across duplicate pages.",
       `<div class="card-grid card-grid--category">${categoryCards}</div>`,
-      `<a class="button-link button-link--ghost" href="lanes/">Browse all lanes</a>`,
+      `<a class="button-link button-link--ghost" href="repos/">Open the filtered library</a>`,
     )}
     ${sectionFrame(
       "Watchlist rhythm",
@@ -194,10 +202,10 @@ export function buildPublicHome(siteData, baseHref = "./") {
       `<a class="button-link button-link--ghost" href="resources/codex/">Open Codex lane</a>`,
     )}
     ${sectionFrame(
-      "Latest notes",
-      "Short public-safe updates generated from the newest repositories entering the current feed.",
+      "Release radar",
+      "Actual release and project update notes pulled from official source hosts, so this feed reads like news instead of recycled repo cards.",
       `<div class="card-grid">${newsCards}</div>`,
-      `<a class="button-link button-link--ghost" href="news/">See all news</a>`,
+      `<a class="button-link button-link--ghost" href="news/">Open release updates</a>`,
     )}
     ${sectionFrame(
       "Codex lane",
@@ -229,11 +237,12 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
     <section class="content-section">
       <div class="section-heading">
         <div>
-          <p class="section-heading__eyebrow">${archiveOnly ? "Archive" : "Trending now"}</p>
-          <h2 class="section-heading__title">Newest additions first, with category and source filters for quicker scanning.</h2>
+          <p class="section-heading__eyebrow">${archiveOnly ? "Archive" : "Recent additions"}</p>
+          <h2 class="section-heading__title">This is the library in a freshness-first view, kept as a focused route for people who only want the newest additions.</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="trending/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="trending/archive/">Open archive</a>`}
+          <a class="button-link button-link--ghost" href="repos/">Open full library</a>
         </div>
       </div>
       <div id="publicFilters" class="filter-bar"></div>
@@ -243,15 +252,19 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
   return buildDocument({
     audience: "public",
     title: `${siteData.workingTitle} | Trending`,
-    description: "Newest repository additions across the public-safe research feed.",
-    currentKey: "trending",
+    description: "Recent additions across the public-safe research feed.",
+    currentKey: "repos",
     baseHref,
     navItems: publicNav(),
     eyebrow: "Public signal feed",
     heroTitle: archiveOnly ? "Signals archive" : "Live signals",
-    heroBody: "Fresh findings land at the top. Older items move into the archive instead of bloating one endless page.",
+    heroBody: "A tighter freshness-first view of the library for people who care about new arrivals more than the full archive.",
     content,
-    pageData: { page: archiveOnly ? "trending-archive" : "trending", items: siteData.repos },
+    pageData: {
+      page: archiveOnly ? "trending-archive" : "trending",
+      items: siteData.repos,
+      defaults: { freshness: archiveOnly ? "archive" : "fresh", featuredOnly: false },
+    },
     scriptPath: "assets/public-app.js",
   });
 }
@@ -263,10 +276,11 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
       <div class="section-heading">
         <div>
           <p class="section-heading__eyebrow">Library</p>
-          <h2 class="section-heading__title">A public-safe directory of the repositories we think are worth your time.</h2>
+          <h2 class="section-heading__title">The main browse surface: category, source, freshness, and featured filters all live here so the site feels like one product instead of several near-duplicates.</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="repos/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="repos/archive/">Open archive</a>`}
+          <a class="button-link button-link--ghost" href="trending/">Recent additions only</a>
         </div>
       </div>
       <div id="publicFilters" class="filter-bar"></div>
@@ -282,9 +296,13 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
     navItems: publicNav(),
     eyebrow: "Public foundry library",
     heroTitle: "Repository library",
-    heroBody: "Curated entries with practical summaries, why they matter, and where they might actually fit in a real workflow.",
+    heroBody: "Curated entries with practical summaries, why they matter, where they might fit in a real workflow, and enough filtering to replace several thinner browse pages.",
     content,
-    pageData: { page: archiveOnly ? "repos-archive" : "repos", items: siteData.repos },
+    pageData: {
+      page: archiveOnly ? "repos-archive" : "repos",
+      items: siteData.repos,
+      defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
+    },
     scriptPath: "assets/public-app.js",
   });
 }
@@ -309,7 +327,7 @@ export function buildLanesPage(siteData, baseHref = "../") {
     audience: "public",
     title: `${siteData.workingTitle} | Lanes`,
     description: "Browse Repo Foundry by category and workflow lane.",
-    currentKey: "lanes",
+    currentKey: "repos",
     baseHref,
     navItems: publicNav(),
     eyebrow: "Public lane index",
@@ -384,7 +402,7 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
     audience: "public",
     title: `${category.name} | ${siteData.workingTitle}`,
     description: category.description,
-    currentKey: "lanes",
+    currentKey: "repos",
     baseHref,
     navItems: publicNav(),
     eyebrow: "Public lane dossier",
@@ -450,21 +468,24 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
 }
 
 export function buildNewsPage(siteData, baseHref = "../") {
+  const newsMarkup = siteData.news.length
+    ? siteData.news.map(newsCard).join("")
+    : `<p class="empty-state">No public release items are available yet. Run the release sync and rebuild the site to repopulate this page.</p>`;
   const content = sectionFrame(
-    "News feed",
-    "Editorial notes generated from the current public-safe research stream.",
-    `<div class="card-grid">${siteData.news.map(newsCard).join("")}</div>`,
+    "Release updates",
+    "Actual release notes and project updates from official source hosts, kept separate from the repo directory so this page reads like news.",
+    `<div class="card-grid">${newsMarkup}</div>`,
   );
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | News`,
-    description: "Latest notes from the public repo feed.",
+    title: `${siteData.workingTitle} | Updates`,
+    description: "Latest tracked releases and project updates from the public repo feed.",
     currentKey: "news",
     baseHref,
     navItems: publicNav(),
-    eyebrow: "Public news feed",
-    heroTitle: "News and fresh notes",
-    heroBody: "A lighter editorial layer on top of the curated repo stream, built for quick scanning instead of endless backlog reading.",
+    eyebrow: "Public release radar",
+    heroTitle: "Release updates",
+    heroBody: "A sharper news layer for Repo Foundry: real version drops, release notes, and project updates from GitHub, GitLab, and other source hosts.",
     content,
     pageData: { page: "news", items: siteData.news },
     scriptPath: "assets/public-app.js",

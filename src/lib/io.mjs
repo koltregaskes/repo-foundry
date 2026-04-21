@@ -12,7 +12,7 @@ export async function removeDir(targetPath) {
 export async function readJson(filePath, fallback = null) {
   try {
     const raw = await fs.readFile(filePath, "utf8");
-    return JSON.parse(raw);
+    return JSON.parse(raw.replace(/^\uFEFF/, ""));
   } catch (error) {
     if (fallback !== null) {
       return fallback;

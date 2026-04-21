@@ -4,6 +4,7 @@ import {
   ACTIVE_INTERNAL_ROOT,
   BACKLOG_PATH,
   KNOWLEDGE_INDEX_PATH,
+  NEWS_PATH,
   REPO_INVENTORY_PATH,
   RESEARCH_PATH,
   SESSION_INDEX_PATH,
@@ -36,6 +37,19 @@ function freshnessBucket(addedAt, now) {
   return "archive";
 }
 
+function sourcePlatformFromUrl(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    if (host.includes("github.com")) return "GitHub";
+    if (host.includes("gitlab.com")) return "GitLab";
+    if (host.includes("huggingface.co")) return "Hugging Face";
+    if (host.includes("codeberg.org")) return "Codeberg";
+    return host;
+  } catch {
+    return "Unknown";
+  }
+}
+
 function categoryMeta(items) {
   return Object.entries(categoryCopy)
     .map(([name, copy]) => ({
@@ -55,6 +69,7 @@ function repoRecord(item, generatedAt) {
     repoUrl: item.url || null,
     stars: Number(item.stars || 0),
     source: item.source || "Unknown",
+    sourcePlatform: item.sourcePlatform || sourcePlatformFromUrl(item.url || ""),
     category: item.category || "Productivity",
     tags: Array.isArray(item.tags) ? item.tags.map((entry) => String(entry)) : [],
     summary: item.summary || "",
@@ -66,17 +81,39 @@ function repoRecord(item, generatedAt) {
   };
 }
 
-function compileNews(records) {
-  return records.slice(0, 12).map((record) => ({
-    id: `news-${record.slug}`,
-    title: `${record.name} is trending in ${record.category}`,
-    url: record.repoUrl,
-    source: record.source,
-    summary: record.summary,
-    relatedRepoSlugs: [record.slug],
-    publishedAt: record.addedAt,
-    tags: record.tags,
-  }));
+function compileNewsItem(item, repoLookup, generatedAt) {
+  const relatedRepoSlugs = Array.isArray(item.relatedRepoSlugs)
+    ? item.relatedRepoSlugs.filter(Boolean)
+    : item.relatedRepoSlug
+      ? [item.relatedRepoSlug]
+      : [];
+  const derivedTags = relatedRepoSlugs.flatMap((slug) => repoLookup.get(slug)?.tags || []);
+  const tags = Array.isArray(item.tags) && item.tags.length ? item.tags : [...new Set(derivedTags)];
+
+  return {
+    id: item.id || `news-${slugify(item.title || item.projectName || item.url || generatedAt)}`,
+    title: item.title || item.projectName || "Release update",
+    url: item.url || item.releaseUrl || null,
+    source: item.source || item.sourcePlatform || sourcePlatformFromUrl(item.url || ""),
+    sourcePlatform: item.sourcePlatform || sourcePlatformFromUrl(item.url || ""),
+    projectName: item.projectName || relatedRepoSlugs.map((slug) => repoLookup.get(slug)?.name).find(Boolean) || "",
+    releaseTag: item.releaseTag || "",
+    kind: item.kind || "release",
+    summary: item.summary || "",
+    highlights: Array.isArray(item.highlights) ? item.highlights.slice(0, 3) : [],
+    relatedRepoSlugs,
+    publishedAt: safeDate(item.publishedAt, generatedAt),
+    tags,
+  };
+}
+
+function compileNewsFeed(newsInput, records, generatedAt) {
+  const repoLookup = new Map(records.map((record) => [record.slug, record]));
+  return (newsInput || [])
+    .map((item) => compileNewsItem(item, repoLookup, generatedAt))
+    .filter((item) => item.url && item.summary)
+    .sort((left, right) => new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime())
+    .slice(0, 12);
 }
 
 function buildVisualisations(records) {
@@ -124,8 +161,9 @@ function compileWatchlist(schedule) {
 }
 
 export async function loadInternalInputs() {
-  const [research, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory] = await Promise.all([
+  const [research, repoNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory] = await Promise.all([
     readJson(RESEARCH_PATH, { generatedAt: null, items: [], summary: {}, sources: [] }),
+    readJson(NEWS_PATH, { generatedAt: null, items: [] }),
     readJson(BACKLOG_PATH, { generatedAt: null, items: [] }),
     readJson(UPDATE_SCHEDULE_PATH, { generatedAt: null, items: [] }),
     readJson(KNOWLEDGE_INDEX_PATH, []),
@@ -133,11 +171,11 @@ export async function loadInternalInputs() {
     readJson(REPO_INVENTORY_PATH, { generatedAt: null, counts: {}, zones: {} }),
   ]);
 
-  return { research, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory };
+  return { research, repoNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory };
 }
 
 export async function compilePublicSiteData() {
-  const { research, schedule } = await loadInternalInputs();
+  const { research, repoNews, schedule } = await loadInternalInputs();
   const generatedAt = safeDate(research.generatedAt, isoNow());
   const records = (research.items || [])
     .map((item) => repoRecord(item, generatedAt))
@@ -146,7 +184,7 @@ export async function compilePublicSiteData() {
   const visualisations = buildVisualisations(records);
   const categories = categoryMeta(records);
   const featured = records.filter((item) => item.featured).slice(0, 6);
-  const news = compileNews(records);
+  const news = compileNewsFeed(repoNews.items, records, generatedAt);
   const metrics = compileMetrics(records, visualisations, generatedAt);
 
   return {

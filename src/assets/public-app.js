@@ -21,6 +21,15 @@ function withBase(path) {
   return new URL(path, document.baseURI).toString();
 }
 
+function freshnessBucket(addedAt) {
+  const parsed = new Date(addedAt || "");
+  if (Number.isNaN(parsed.getTime())) return "archive";
+  const ageDays = Math.max((Date.now() - parsed.getTime()) / 86400000, 0);
+  if (ageDays <= 1) return "today";
+  if (ageDays <= 7) return "this-week";
+  return "archive";
+}
+
 function repoCard(record) {
   return `<article class="repo-card">
     <div class="repo-card__topline">
@@ -45,6 +54,12 @@ function renderFilters(items) {
 
   const categories = ["all", ...new Set(items.map((item) => item.category))];
   const sources = ["all", ...new Set(items.map((item) => item.source))];
+  const freshnessOptions = [
+    { value: "all", label: "All freshness" },
+    { value: "fresh", label: "Fresh this week" },
+    { value: "today", label: "Today only" },
+    { value: "archive", label: "Archive only" },
+  ];
 
   container.innerHTML = `
     <input id="publicSearch" class="filter-control" type="search" placeholder="Search repos" />
@@ -54,12 +69,21 @@ function renderFilters(items) {
     <select id="publicSource" class="filter-control">
       ${sources.map((value) => `<option value="${value}">${value === "all" ? "All sources" : value}</option>`).join("")}
     </select>
+    <select id="publicFreshness" class="filter-control">
+      ${freshnessOptions.map((item) => `<option value="${item.value}">${item.label}</option>`).join("")}
+    </select>
+    <label class="filter-toggle">
+      <input id="publicFeatured" type="checkbox" />
+      <span>Featured only</span>
+    </label>
   `;
 
   return {
     search: document.getElementById("publicSearch"),
     category: document.getElementById("publicCategory"),
     source: document.getElementById("publicSource"),
+    freshness: document.getElementById("publicFreshness"),
+    featured: document.getElementById("publicFeatured"),
   };
 }
 
@@ -73,17 +97,34 @@ function initRepoListing(data) {
     search: "",
     category: "all",
     source: "all",
+    freshness: data.defaults?.freshness || "all",
+    featuredOnly: Boolean(data.defaults?.featuredOnly),
     visibleCount: latestPage ? 8 : data.items.length,
   };
+
+  if (controls?.freshness) {
+    controls.freshness.value = state.freshness;
+  }
+
+  if (controls?.featured) {
+    controls.featured.checked = state.featuredOnly;
+  }
 
   function filteredItems() {
     return data.items.filter((item) => {
       const haystack = [item.name, item.summary, item.whyRelevant, item.potentialUse, ...(item.tags || [])]
         .join(" ")
         .toLowerCase();
+      const freshness = freshnessBucket(item.addedAt);
+      const freshnessMatch = state.freshness === "all" ||
+        (state.freshness === "fresh" && (freshness === "today" || freshness === "this-week")) ||
+        freshness === state.freshness;
+
       return (!state.search || haystack.includes(state.search)) &&
         (state.category === "all" || item.category === state.category) &&
-        (state.source === "all" || item.source === state.source);
+        (state.source === "all" || item.source === state.source) &&
+        freshnessMatch &&
+        (!state.featuredOnly || Boolean(item.featured));
     });
   }
 
@@ -119,6 +160,16 @@ function initRepoListing(data) {
     });
     controls.source?.addEventListener("change", (event) => {
       state.source = event.target.value;
+      state.visibleCount = latestPage ? 8 : data.items.length;
+      render();
+    });
+    controls.freshness?.addEventListener("change", (event) => {
+      state.freshness = event.target.value;
+      state.visibleCount = latestPage ? 8 : data.items.length;
+      render();
+    });
+    controls.featured?.addEventListener("change", (event) => {
+      state.featuredOnly = event.target.checked;
       state.visibleCount = latestPage ? 8 : data.items.length;
       render();
     });

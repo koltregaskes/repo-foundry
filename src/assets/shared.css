@@ -437,6 +437,23 @@ p {
   border-color: rgba(52, 211, 153, 0.4);
 }
 
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.filter-toggle input {
+  accent-color: var(--accent);
+}
+
 /* ── CARD GRIDS ──────────────────────────────────────────── */
 
 .card-grid {
@@ -548,6 +565,31 @@ p {
   margin-top: 18px;
   color: var(--soft);
   font-size: 0.88rem;
+}
+
+.news-card__highlights {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.news-card__highlight {
+  margin: 0;
+  padding-left: 14px;
+  position: relative;
+  color: var(--soft);
+}
+
+.news-card__highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(52, 211, 153, 0.4);
 }
 
 .category-card--link {

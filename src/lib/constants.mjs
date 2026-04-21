@@ -20,6 +20,7 @@ export const ACTIVE_INTERNAL_DATA_ROOT = fs.existsSync(INTERNAL_RUNTIME_DATA_ROO
 export const SESSION_UPDATE_ROOT = path.join(WORKSPACE_ROOT, "_local", "LOCAL-ONLY", "session-updates", "repos");
 export const REPO_INVENTORY_PATH = path.join(WORKSPACE_ROOT, ".llatos", "data", "repo-estate-inventory.json");
 export const RESEARCH_PATH = path.join(ACTIVE_INTERNAL_DATA_ROOT, "repo-research.json");
+export const NEWS_PATH = path.join(ACTIVE_INTERNAL_DATA_ROOT, "repo-news.json");
 export const BACKLOG_PATH = path.join(ACTIVE_INTERNAL_DATA_ROOT, "extraction-backlog.json");
 export const UPDATE_SCHEDULE_PATH = path.join(ACTIVE_INTERNAL_DATA_ROOT, "repo-update-schedule.json");
 export const KNOWLEDGE_INDEX_PATH = path.join(ACTIVE_INTERNAL_DATA_ROOT, "knowledge-index.json");
