@@ -44,8 +44,7 @@ function categoryMeta(items) {
       shortLabel: copy.shortLabel,
       description: copy.description,
       count: items.filter((item) => item.category === name).length,
-    }))
-    .filter((item) => item.count > 0);
+    }));
 }
 
 function repoRecord(item, generatedAt) {
@@ -89,7 +88,9 @@ function buildVisualisations(records) {
         acc[key] = (acc[key] || 0) + 1;
         return acc;
       }, {}),
-    ).map(([label, value]) => ({ label, value }));
+    )
+      .map(([label, value]) => ({ label, value }))
+      .sort((left, right) => right.value - left.value || left.label.localeCompare(right.label));
 
   return {
     categoryMix: buildSeries((record) => record.category),
@@ -100,13 +101,15 @@ function buildVisualisations(records) {
 }
 
 function compileMetrics(records, visualisations, generatedAt) {
+  const todayCount = visualisations.freshness.find((entry) => entry.label === "today")?.value || 0;
+  const thisWeekCount = visualisations.freshness.find((entry) => entry.label === "this-week")?.value || 0;
   return {
     totalRepos: records.length,
     featuredCount: records.filter((record) => record.featured).length,
     categories: visualisations.categoryMix.length,
     sources: visualisations.sourceMix.length,
     refreshedAt: generatedAt,
-    newThisWeek: visualisations.freshness.find((entry) => entry.label === "this-week")?.value || 0,
+    newThisWeek: todayCount + thisWeekCount,
   };
 }
 

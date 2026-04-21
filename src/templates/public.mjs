@@ -106,6 +106,17 @@ function lanePanel(siteData, category) {
   const lead = items[0];
   const sourceCount = new Set(items.map((item) => item.source)).size;
   const featuredCount = items.filter((item) => item.featured).length;
+  const listMarkup = items.length
+    ? items
+        .slice(0, 3)
+        .map(
+          (item) => `<a class="lane-panel__item" href="repos/${item.slug}/">
+            <span>${item.name}</span>
+            <span>${item.stars.toLocaleString()} stars</span>
+          </a>`,
+        )
+        .join("")
+    : `<p class="empty-state">This lane is mapped, but no public-safe repos are currently pinned to it.</p>`;
 
   return `<article class="lane-panel">
     <div class="lane-panel__header">
@@ -122,15 +133,7 @@ function lanePanel(siteData, category) {
       ${lead ? `<span>Lead: ${lead.name}</span>` : ""}
     </div>
     <div class="lane-panel__list">
-      ${items
-        .slice(0, 3)
-        .map(
-          (item) => `<a class="lane-panel__item" href="repos/${item.slug}/">
-            <span>${item.name}</span>
-            <span>${item.stars.toLocaleString()} stars</span>
-          </a>`,
-        )
-        .join("")}
+      ${listMarkup}
     </div>
   </article>`;
 }
@@ -324,7 +327,10 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
   const featured = items.filter((item) => item.featured).slice(0, 4);
   const tags = topTags(items, 5);
   const relatedLanes = siteData.categories.filter((item) => item.id !== category.id).slice(0, 3);
-  const laneCards = (featured.length ? featured : items.slice(0, 6)).map(repoCard).join("");
+  const laneCardItems = featured.length ? featured : items.slice(0, 6);
+  const laneCards = laneCardItems.length
+    ? laneCardItems.map(repoCard).join("")
+    : `<p class="empty-state">No public-safe repos are currently pinned to this lane, but the shelf stays live for future additions.</p>`;
 
   const content = `
     <section class="detail-hero">
