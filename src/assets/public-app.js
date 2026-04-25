@@ -17,6 +17,10 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function escapeAttribute(value) {
+  return escapeHtml(value);
+}
+
 function withBase(path) {
   return new URL(path, document.baseURI).toString();
 }
@@ -30,20 +34,26 @@ function freshnessBucket(addedAt) {
   return "archive";
 }
 
+function repoImage(record) {
+  if (!record.imageUrl) return "";
+  return `<div class="repo-card__media"><img src="${escapeAttribute(record.imageUrl)}" alt="" loading="lazy" /></div>`;
+}
+
 function repoCard(record) {
   return `<article class="repo-card">
+    ${repoImage(record)}
     <div class="repo-card__topline">
       <span class="pill">${escapeHtml(record.category)}</span>
       <span class="pill pill--soft">${Number(record.stars || 0).toLocaleString()} stars</span>
     </div>
-    <h3 class="repo-card__title"><a href="${withBase(`repos/${record.slug}/`)}">${escapeHtml(record.name)}</a></h3>
+    <h3 class="repo-card__title"><a href="${escapeAttribute(withBase(`repos/${record.slug}/`))}">${escapeHtml(record.name)}</a></h3>
     <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
     <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
     <p class="repo-card__detail"><strong>Potential use:</strong> ${escapeHtml(record.potentialUse)}</p>
     <div class="tag-row">${(record.tags || []).map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
     <div class="repo-card__footer">
       <span>Added ${new Date(record.addedAt).toLocaleDateString()}</span>
-      <a class="text-link" href="${record.repoUrl}">Open repo</a>
+      <a class="text-link" href="${escapeAttribute(record.repoUrl || "#")}">Open repo</a>
     </div>
   </article>`;
 }
@@ -64,13 +74,13 @@ function renderFilters(items) {
   container.innerHTML = `
     <input id="publicSearch" class="filter-control" type="search" placeholder="Search repos" />
     <select id="publicCategory" class="filter-control">
-      ${categories.map((value) => `<option value="${value}">${value === "all" ? "All categories" : value}</option>`).join("")}
+      ${categories.map((value) => `<option value="${escapeAttribute(value)}">${escapeHtml(value === "all" ? "All categories" : value)}</option>`).join("")}
     </select>
     <select id="publicSource" class="filter-control">
-      ${sources.map((value) => `<option value="${value}">${value === "all" ? "All sources" : value}</option>`).join("")}
+      ${sources.map((value) => `<option value="${escapeAttribute(value)}">${escapeHtml(value === "all" ? "All sources" : value)}</option>`).join("")}
     </select>
     <select id="publicFreshness" class="filter-control">
-      ${freshnessOptions.map((item) => `<option value="${item.value}">${item.label}</option>`).join("")}
+      ${freshnessOptions.map((item) => `<option value="${escapeAttribute(item.value)}">${escapeHtml(item.label)}</option>`).join("")}
     </select>
     <label class="filter-toggle">
       <input id="publicFeatured" type="checkbox" />

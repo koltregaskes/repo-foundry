@@ -1,13 +1,45 @@
-import { NEWS_PATH, RESEARCH_PATH } from "../src/lib/constants.mjs";
+import path from "node:path";
+import { NEWS_PATH, PUBLIC_GENERATED_ROOT, RESEARCH_PATH } from "../src/lib/constants.mjs";
 import { readJson, slugify, writeJson } from "../src/lib/io.mjs";
 
+const NAMED_HTML_ENTITIES = {
+  amp: "&",
+  apos: "'",
+  gt: ">",
+  lt: "<",
+  nbsp: " ",
+  quot: '"',
+};
+
+function decodeHtmlEntities(value) {
+  return String(value || "").replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (match, entity) => {
+    const lowerEntity = entity.toLowerCase();
+    if (lowerEntity.startsWith("#x")) {
+      const codePoint = Number.parseInt(lowerEntity.slice(2), 16);
+      return Number.isNaN(codePoint) ? match : String.fromCodePoint(codePoint);
+    }
+    if (lowerEntity.startsWith("#")) {
+      const codePoint = Number.parseInt(lowerEntity.slice(1), 10);
+      return Number.isNaN(codePoint) ? match : String.fromCodePoint(codePoint);
+    }
+    return NAMED_HTML_ENTITIES[lowerEntity] ?? match;
+  });
+}
+
 function cleanText(value) {
-  return String(value || "")
+  return decodeHtmlEntities(String(value || ""))
+    .replace(/\r/g, "")
+    .replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, "$1")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<[^>]+>/g, " ")
     .replace(/!\[[^\]]*\]\([^)]+\)/g, "")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/`([^`]+)`/g, "$1")
-    .replace(/[*_>#]/g, "")
-    .replace(/<[^>]+>/g, "")
+    .replace(/^\s{0,3}#{1,6}\s+/gm, "")
+    .replace(/^\s{0,3}>\s?/gm, "")
+    .replace(/^\s{0,3}[-*+]\s+/gm, "")
+    .replace(/(\*\*|__)(.*?)\1/g, "$2")
+    .replace(/(\*|_)(.*?)\1/g, "$2")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -25,12 +57,27 @@ function sourcePlatformFromUrl(url) {
   }
 }
 
+function requestHeaders(url) {
+  const headers = {
+    "User-Agent": "Repo-Foundry-News-Sync",
+    Accept: "application/json",
+  };
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+
+  try {
+    if (token && new URL(url).hostname.includes("github.com")) {
+      headers.Authorization = `Bearer ${token}`;
+    }
+  } catch {
+    return headers;
+  }
+
+  return headers;
+}
+
 async function fetchJson(url) {
   const response = await fetch(url, {
-    headers: {
-      "User-Agent": "Repo-Foundry-News-Sync",
-      Accept: "application/json",
-    },
+    headers: requestHeaders(url),
   });
 
   if (!response.ok) {
@@ -105,7 +152,10 @@ function buildSummary(projectName, releaseName, highlights) {
     return `${projectName} published ${releaseName}, adding a fresh tracked release to the Repo Foundry update feed.`;
   }
 
-  const joined = highlights.slice(0, 2).join("; ");
+  const joined = highlights
+    .slice(0, 2)
+    .map((entry) => entry.replace(/[.;,:\s]+$/g, ""))
+    .join("; ");
   return `${projectName} published ${releaseName}. Highlights include ${joined}.`;
 }
 
@@ -168,10 +218,27 @@ async function fetchLatestRelease(item) {
 }
 
 const research = await readJson(RESEARCH_PATH, { items: [] });
+const previousNews = await readJson(NEWS_PATH, { generatedAt: null, items: [] });
+const previousPublicData = await readJson(path.join(PUBLIC_GENERATED_ROOT, "site-data.json"), { news: [] });
+const previousItems =
+  (previousNews.items || []).length >= (previousPublicData.news || []).length
+    ? previousNews.items || []
+    : previousPublicData.news || [];
+const previousByRepoSlug = new Map();
+
+for (const item of previousItems) {
+  for (const slug of item.relatedRepoSlugs || []) {
+    if (!previousByRepoSlug.has(slug)) {
+      previousByRepoSlug.set(slug, item);
+    }
+  }
+}
+
 const newsItems = [];
 
 for (const item of research.items || []) {
   if (!item?.url) continue;
+  const repoSlug = slugify(item.name || item.id || "");
 
   try {
     const release = await fetchLatestRelease(item);
@@ -179,6 +246,10 @@ for (const item of research.items || []) {
       newsItems.push(release);
     }
   } catch (error) {
+    const previousRelease = previousByRepoSlug.get(repoSlug);
+    if (previousRelease) {
+      newsItems.push(previousRelease);
+    }
     console.warn(`Skipping release sync for ${item.name || item.id}: ${error.message}`);
   }
 }

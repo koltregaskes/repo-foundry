@@ -1,10 +1,24 @@
 import { buildDocument } from "./layout.mjs";
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function formatDate(value) {
+  const parsed = new Date(value || "");
+  return Number.isNaN(parsed.getTime()) ? "Unknown date" : parsed.toLocaleDateString();
+}
+
 function metricCard(label, value, detail = "") {
   return `<article class="metric-card">
-    <p class="metric-card__label">${label}</p>
-    <p class="metric-card__value">${value}</p>
-    <p class="metric-card__detail">${detail}</p>
+    <p class="metric-card__label">${escapeHtml(label)}</p>
+    <p class="metric-card__value">${escapeHtml(value)}</p>
+    <p class="metric-card__detail">${escapeHtml(detail)}</p>
   </article>`;
 }
 
@@ -30,35 +44,90 @@ function topTags(items, limit = 4) {
     .map(([tag]) => tag);
 }
 
+function imageMarkup(record, className = "repo-card__media") {
+  if (!record.imageUrl) return "";
+  return `<div class="${className}"><img src="${escapeHtml(record.imageUrl)}" alt="" loading="lazy" /></div>`;
+}
+
 function repoCard(record) {
-  return `<article class="repo-card" data-category="${record.category}" data-source="${record.source}" data-tags="${record.tags.join("|")}">
+  return `<article class="repo-card" data-category="${escapeHtml(record.category)}" data-source="${escapeHtml(record.source)}" data-tags="${escapeHtml(record.tags.join("|"))}">
+    ${imageMarkup(record)}
     <div class="repo-card__topline">
-      <span class="pill">${record.category}</span>
-      <span class="pill pill--soft">${record.stars.toLocaleString()} stars</span>
+      <span class="pill">${escapeHtml(record.category)}</span>
+      <span class="pill pill--soft">${escapeHtml(record.stars.toLocaleString())} stars</span>
     </div>
-    <h3 class="repo-card__title"><a href="repos/${record.slug}/">${record.name}</a></h3>
-    <p class="repo-card__summary">${record.summary}</p>
-    <p class="repo-card__detail"><strong>Why it matters:</strong> ${record.whyRelevant}</p>
-    <p class="repo-card__detail"><strong>Potential use:</strong> ${record.potentialUse}</p>
-    <div class="tag-row">${record.tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}</div>
+    <h3 class="repo-card__title"><a href="repos/${escapeHtml(record.slug)}/">${escapeHtml(record.name)}</a></h3>
+    <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
+    <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
+    <p class="repo-card__detail"><strong>Potential use:</strong> ${escapeHtml(record.potentialUse)}</p>
+    <div class="tag-row">${record.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
     <div class="repo-card__footer">
-      <span>Added ${new Date(record.addedAt).toLocaleDateString()}</span>
-      <a class="text-link" href="${record.repoUrl}">Open repo</a>
+      <span>Added ${escapeHtml(formatDate(record.addedAt))}</span>
+      <a class="text-link" href="${escapeHtml(record.repoUrl || "#")}">Open repo</a>
     </div>
   </article>`;
+}
+
+function launchBoard(siteData) {
+  const lead = siteData.featured[0] || siteData.repos[0];
+  const latestRelease = siteData.news[0];
+  const sourceLabels = [...new Set(siteData.repos.map((item) => item.sourcePlatform || item.source).filter(Boolean))];
+
+  const metrics = [
+    ["Tracked", siteData.metrics.totalRepos],
+    ["Featured", siteData.metrics.featuredCount],
+    ["Sources", sourceLabels.length],
+    ["Updates", siteData.news.length],
+  ];
+
+  return `<section class="launch-board" aria-label="Repo Foundry launch board">
+    <article class="lead-feature">
+      ${lead ? imageMarkup(lead, "lead-feature__media") : ""}
+      <div class="lead-feature__body">
+        <p class="section-heading__eyebrow">Featured now</p>
+        <h2 class="lead-feature__title">${lead ? escapeHtml(lead.name) : "Repo Foundry"}</h2>
+        <p class="lead-feature__summary">${lead ? escapeHtml(lead.summary) : escapeHtml(siteData.description)}</p>
+        <div class="action-row">
+          ${lead ? `<a class="button-link" href="repos/${escapeHtml(lead.slug)}/">Read dossier</a>` : ""}
+          <a class="button-link button-link--ghost" href="repos/">Browse library</a>
+        </div>
+      </div>
+    </article>
+    <aside class="launch-rail" aria-label="Current signal summary">
+      <div class="launch-metrics">
+        ${metrics
+          .map(
+            ([label, value]) => `<article class="metric-card metric-card--compact">
+              <p class="metric-card__label">${escapeHtml(label)}</p>
+              <p class="metric-card__value">${escapeHtml(value)}</p>
+            </article>`,
+          )
+          .join("")}
+      </div>
+      <article class="release-note">
+        <p class="section-heading__eyebrow">Latest update</p>
+        <h3 class="release-note__title">${latestRelease ? escapeHtml(latestRelease.title) : "Release feed warming up"}</h3>
+        <p class="release-note__summary">${latestRelease ? escapeHtml(latestRelease.summary) : "Release notes appear here after the sync pipeline finds official source-host updates."}</p>
+        ${latestRelease ? `<a class="text-link" href="news/">Open updates</a>` : ""}
+      </article>
+      <div class="source-strip" aria-label="Tracked source hosts">
+        ${sourceLabels.map((label) => `<span>${escapeHtml(label)}</span>`).join("")}
+      </div>
+    </aside>
+  </section>`;
 }
 
 function categoryCard(siteData, category, options = {}) {
   const items = reposForCategory(siteData, category.name);
   const lead = items[0];
   const chips = topTags(items, 3)
-    .map((tag) => `<span class="tag-chip">${tag}</span>`)
+    .map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`)
     .join("");
   const cardBody = `
-    <p class="category-card__count">${category.count}</p>
-    <h3 class="category-card__title">${category.name}</h3>
-    <p class="category-card__summary">${category.description}</p>
-    ${lead ? `<p class="category-card__meta">Lead signal: ${lead.name}</p>` : ""}
+    <p class="category-card__count">${escapeHtml(category.count)}</p>
+    <h3 class="category-card__title">${escapeHtml(category.name)}</h3>
+    <p class="category-card__summary">${escapeHtml(category.description)}</p>
+    ${lead ? `<p class="category-card__meta">Lead signal: ${escapeHtml(lead.name)}</p>` : ""}
     ${chips ? `<div class="tag-row">${chips}</div>` : ""}
   `;
 
@@ -66,33 +135,33 @@ function categoryCard(siteData, category, options = {}) {
     return `<article class="category-card">${cardBody}</article>`;
   }
 
-  return `<a class="category-card category-card--link" href="${laneHref(category)}">${cardBody}</a>`;
+  return `<a class="category-card category-card--link" href="${escapeHtml(laneHref(category))}">${cardBody}</a>`;
 }
 
 function newsCard(item) {
   const highlights = Array.isArray(item.highlights) && item.highlights.length
     ? `<div class="news-card__highlights">${item.highlights
-        .map((entry) => `<p class="news-card__highlight">${entry}</p>`)
+        .map((entry) => `<p class="news-card__highlight">${escapeHtml(entry)}</p>`)
         .join("")}</div>`
     : "";
 
   return `<article class="news-card">
     <div class="news-card__meta">
-      <span class="pill">${item.projectName || item.sourcePlatform || item.source}</span>
-      <span class="pill pill--soft">${item.releaseTag || item.source}</span>
-      <span>${new Date(item.publishedAt).toLocaleDateString()}</span>
+      <span class="pill">${escapeHtml(item.projectName || item.sourcePlatform || item.source)}</span>
+      <span class="pill pill--soft">${escapeHtml(item.releaseTag || item.source)}</span>
+      <span>${escapeHtml(formatDate(item.publishedAt))}</span>
     </div>
-    <h3 class="news-card__title"><a href="${item.url}">${item.title}</a></h3>
-    <p class="news-card__summary">${item.summary}</p>
+    <h3 class="news-card__title"><a href="${escapeHtml(item.url || "#")}">${escapeHtml(item.title)}</a></h3>
+    <p class="news-card__summary">${escapeHtml(item.summary)}</p>
     ${highlights}
   </article>`;
 }
 
 function resourceCard(item) {
   return `<article class="resource-card">
-    <h3 class="resource-card__title"><a href="${item.url}">${item.title}</a></h3>
-    <p class="resource-card__summary">${item.summary}</p>
-    <div class="tag-row">${item.tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}</div>
+    <h3 class="resource-card__title"><a href="${escapeHtml(item.url || "#")}">${escapeHtml(item.title)}</a></h3>
+    <p class="resource-card__summary">${escapeHtml(item.summary)}</p>
+    <div class="tag-row">${item.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
   </article>`;
 }
 
@@ -100,8 +169,8 @@ function sectionFrame(title, description, content, actions = "") {
   return `<section class="content-section">
     <div class="section-heading">
       <div>
-        <p class="section-heading__eyebrow">${title}</p>
-        <h2 class="section-heading__title">${description}</h2>
+        <p class="section-heading__eyebrow">${escapeHtml(title)}</p>
+        <h2 class="section-heading__title">${escapeHtml(description)}</h2>
       </div>
       ${actions}
     </div>
@@ -118,9 +187,9 @@ function lanePanel(siteData, category) {
     ? items
         .slice(0, 3)
         .map(
-          (item) => `<a class="lane-panel__item" href="repos/${item.slug}/">
-            <span>${item.name}</span>
-            <span>${item.stars.toLocaleString()} stars</span>
+          (item) => `<a class="lane-panel__item" href="repos/${escapeHtml(item.slug)}/">
+            <span>${escapeHtml(item.name)}</span>
+            <span>${escapeHtml(item.stars.toLocaleString())} stars</span>
           </a>`,
         )
         .join("")
@@ -129,16 +198,16 @@ function lanePanel(siteData, category) {
   return `<article class="lane-panel">
     <div class="lane-panel__header">
       <div>
-        <p class="section-heading__eyebrow">${category.shortLabel}</p>
-        <h3 class="repo-card__title"><a href="${laneHref(category)}">${category.name}</a></h3>
+        <p class="section-heading__eyebrow">${escapeHtml(category.shortLabel)}</p>
+        <h3 class="repo-card__title"><a href="${escapeHtml(laneHref(category))}">${escapeHtml(category.name)}</a></h3>
       </div>
-      <span class="pill pill--soft">${category.count} tracked</span>
+      <span class="pill pill--soft">${escapeHtml(category.count)} tracked</span>
     </div>
-    <p class="lane-panel__summary">${category.description}</p>
+    <p class="lane-panel__summary">${escapeHtml(category.description)}</p>
     <div class="lane-panel__meta">
-      <span>${sourceCount} sources</span>
-      <span>${featuredCount} featured</span>
-      ${lead ? `<span>Lead: ${lead.name}</span>` : ""}
+      <span>${escapeHtml(sourceCount)} sources</span>
+      <span>${escapeHtml(featuredCount)} featured</span>
+      ${lead ? `<span>Lead: ${escapeHtml(lead.name)}</span>` : ""}
     </div>
     <div class="lane-panel__list">
       ${listMarkup}
@@ -168,21 +237,16 @@ export function buildPublicHome(siteData, baseHref = "./") {
     .map(
       (item) => `<article class="stack-item">
         <div>
-          <p class="stack-item__title">${item.name}</p>
-          <p class="stack-item__summary">${item.notes}</p>
+          <p class="stack-item__title">${escapeHtml(item.name)}</p>
+          <p class="stack-item__summary">${escapeHtml(item.notes)}</p>
         </div>
-        <span class="pill pill--soft">${item.cadence}</span>
+        <span class="pill pill--soft">${escapeHtml(item.cadence)}</span>
       </article>`,
     )
     .join("");
 
   const content = `
-    <section class="hero-grid">
-      ${metricCard("Tracked signals", siteData.metrics.totalRepos, "Curated, public-safe shortlist")}
-      ${metricCard("Featured now", siteData.metrics.featuredCount, "First-pass dossiers worth opening")}
-      ${metricCard("Active lanes", siteData.metrics.categories, "AI, automation, media, creator systems")}
-      ${metricCard("Fresh this week", siteData.metrics.newThisWeek, "Recent additions kept hot")}
-    </section>
+    ${launchBoard(siteData)}
     ${sectionFrame(
       "Featured dossiers",
       "The first shelf: high-signal repos with enough traction and relevance to deserve immediate attention.",
@@ -191,7 +255,7 @@ export function buildPublicHome(siteData, baseHref = "./") {
     )}
     ${sectionFrame(
       "Browse by lane",
-      "The fastest way to scan the site’s major shelves, then jump into the filtered library instead of bouncing across duplicate pages.",
+      "The fastest way to scan the site's major shelves, then jump into the filtered library instead of bouncing across duplicate pages.",
       `<div class="card-grid card-grid--category">${categoryCards}</div>`,
       `<a class="button-link button-link--ghost" href="repos/">Open the filtered library</a>`,
     )}
@@ -359,13 +423,13 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
   const content = `
     <section class="detail-hero">
       <div class="detail-hero__meta">
-        <span class="pill">${category.name}</span>
-        <span class="pill pill--soft">${items.length} repos</span>
+        <span class="pill">${escapeHtml(category.name)}</span>
+        <span class="pill pill--soft">${escapeHtml(items.length)} repos</span>
       </div>
-      <h2 class="detail-hero__title">${category.name}</h2>
-      <p class="detail-hero__summary">${category.description}</p>
+      <h2 class="detail-hero__title">${escapeHtml(category.name)}</h2>
+      <p class="detail-hero__summary">${escapeHtml(category.description)}</p>
       <div class="tag-row">
-        ${tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}
+        ${tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}
       </div>
       <div class="action-row">
         <a class="button-link" href="repos/">Open full library</a>
@@ -375,11 +439,11 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
     <section class="detail-grid">
       <article class="detail-card">
         <p class="detail-card__eyebrow">Lead signal</p>
-        <p>${lead ? `${lead.name} is currently the strongest public signal in this lane.` : "This lane is currently waiting for its first lead signal."}</p>
+        <p>${lead ? `${escapeHtml(lead.name)} is currently the strongest public signal in this lane.` : "This lane is currently waiting for its first lead signal."}</p>
       </article>
       <article class="detail-card">
         <p class="detail-card__eyebrow">Source spread</p>
-        <p>${sources.length} source${sources.length === 1 ? "" : "s"} currently feed this shelf: ${sources.join(", ") || "No sources yet"}.</p>
+        <p>${escapeHtml(sources.length)} source${sources.length === 1 ? "" : "s"} currently feed this shelf: ${escapeHtml(sources.join(", ") || "No sources yet")}.</p>
       </article>
       <article class="detail-card">
         <p class="detail-card__eyebrow">What to watch</p>
@@ -419,30 +483,30 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
   const content = `
     <section class="detail-hero">
       <div class="detail-hero__meta">
-        <span class="pill">${repo.category}</span>
-        <span class="pill pill--soft">${repo.stars.toLocaleString()} stars</span>
+        <span class="pill">${escapeHtml(repo.category)}</span>
+        <span class="pill pill--soft">${escapeHtml(repo.stars.toLocaleString())} stars</span>
       </div>
-      <h2 class="detail-hero__title">${repo.name}</h2>
-      <p class="detail-hero__summary">${repo.summary}</p>
-      <div class="tag-row">${repo.tags.map((tag) => `<span class="tag-chip">${tag}</span>`).join("")}</div>
+      <h2 class="detail-hero__title">${escapeHtml(repo.name)}</h2>
+      <p class="detail-hero__summary">${escapeHtml(repo.summary)}</p>
+      <div class="tag-row">${repo.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
       <div class="action-row">
-        <a class="button-link" href="${repo.repoUrl}">Open repository</a>
+        <a class="button-link" href="${escapeHtml(repo.repoUrl || "#")}">Open repository</a>
         <a class="button-link button-link--ghost" href="repos/">Back to directory</a>
-        ${currentLane ? `<a class="button-link button-link--ghost" href="${laneHref(currentLane)}">Open this lane</a>` : ""}
+        ${currentLane ? `<a class="button-link button-link--ghost" href="${escapeHtml(laneHref(currentLane))}">Open this lane</a>` : ""}
       </div>
     </section>
     <section class="detail-grid">
       <article class="detail-card">
         <p class="detail-card__eyebrow">Why it matters</p>
-        <p>${repo.whyRelevant}</p>
+        <p>${escapeHtml(repo.whyRelevant)}</p>
       </article>
       <article class="detail-card">
         <p class="detail-card__eyebrow">Potential use</p>
-        <p>${repo.potentialUse}</p>
+        <p>${escapeHtml(repo.potentialUse)}</p>
       </article>
       <article class="detail-card">
         <p class="detail-card__eyebrow">Freshness</p>
-        <p>Added ${new Date(repo.addedAt).toLocaleDateString()} and refreshed ${new Date(repo.refreshedAt).toLocaleDateString()}.</p>
+        <p>Added ${escapeHtml(formatDate(repo.addedAt))} and refreshed ${escapeHtml(formatDate(repo.refreshedAt))}.</p>
       </article>
     </section>
     ${sectionFrame(
@@ -558,10 +622,10 @@ export function buildCodexPage(siteData, baseHref = "../../") {
         .map(
           (item) => `<article class="stack-item">
             <div>
-              <p class="stack-item__title">${item.name}</p>
-              <p class="stack-item__summary">${item.notes}</p>
+              <p class="stack-item__title">${escapeHtml(item.name)}</p>
+              <p class="stack-item__summary">${escapeHtml(item.notes)}</p>
             </div>
-            <span class="pill pill--soft">${item.cadence}</span>
+            <span class="pill pill--soft">${escapeHtml(item.cadence)}</span>
           </article>`,
         )
         .join("")}</div>`,
@@ -590,8 +654,8 @@ export function buildAboutPage(siteData, baseHref = "../") {
           .map(
             (item) => `<article class="stack-item stack-item--long">
               <div>
-                <p class="stack-item__title">${item.title}</p>
-                <p class="stack-item__summary">${item.body}</p>
+                <p class="stack-item__title">${escapeHtml(item.title)}</p>
+                <p class="stack-item__summary">${escapeHtml(item.body)}</p>
               </div>
             </article>`,
           )
@@ -599,7 +663,7 @@ export function buildAboutPage(siteData, baseHref = "../") {
         <article class="stack-item stack-item--long">
           <div>
             <p class="stack-item__title">Public boundary</p>
-            <p class="stack-item__summary">${siteData.publicBoundary}</p>
+            <p class="stack-item__summary">${escapeHtml(siteData.publicBoundary)}</p>
           </div>
         </article>
       </div>

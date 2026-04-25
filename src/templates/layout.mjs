@@ -1,8 +1,24 @@
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function serializePageData(value) {
+  return JSON.stringify(value)
+    .replaceAll("&", "\\u0026")
+    .replaceAll("<", "\\u003c")
+    .replaceAll(">", "\\u003e");
+}
+
 function navMarkup(items, currentKey) {
   return items
     .map((item) => {
       const active = item.id === currentKey ? "is-active" : "";
-      return `<a class="hub-nav__link ${active}" href="${item.href}">${item.label}</a>`;
+      return `<a class="hub-nav__link ${active}" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`;
     })
     .join("");
 }
@@ -25,11 +41,11 @@ export function buildDocument({
 }) {
   const utilityMarkup = utilityLinks.length
     ? `<div class="hub-utility">${utilityLinks
-        .map((item) => `<a class="hub-utility__link" href="${item.href}">${item.label}</a>`)
+        .map((item) => `<a class="hub-utility__link" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
         .join("")}</div>`
     : "";
   const dataScript = pageData
-    ? `<script id="page-data" type="application/json">${JSON.stringify(pageData)}</script>`
+    ? `<script id="page-data" type="application/json">${serializePageData(pageData)}</script>`
     : "";
 
   return `<!DOCTYPE html>
@@ -37,50 +53,46 @@ export function buildDocument({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>${title}</title>
-    <meta name="description" content="${description}" />
-    <meta name="theme-color" content="#08101d" />
-    <base href="${baseHref}" />
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeHtml(description)}" />
+    <meta name="theme-color" content="#f3efe6" />
+    <base href="${escapeHtml(baseHref)}" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/shared.css" />
   </head>
-  <body class="${bodyClass}" data-surface="${audience}">
-    <div class="atmosphere" aria-hidden="true">
-      <div class="atmosphere__orb atmosphere__orb--primary"></div>
-      <div class="atmosphere__orb atmosphere__orb--secondary"></div>
-      <div class="atmosphere__orb atmosphere__orb--tertiary"></div>
-      <div class="atmosphere__grid"></div>
-    </div>
+  <body class="${escapeHtml(bodyClass)}" data-surface="${escapeHtml(audience)}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-backdrop" aria-hidden="true"></div>
     <div class="site-shell">
       <header class="site-header" data-reveal>
         <div class="site-header__band">
-          <p class="site-header__eyebrow">${eyebrow}</p>
+          <p class="site-header__eyebrow">${escapeHtml(eyebrow)}</p>
           ${utilityMarkup}
         </div>
         <div class="site-header__hero">
           <div>
-            <p class="site-header__audience">${audience === "public" ? "Public surface" : "Internal surface"}</p>
-            <h1 class="site-header__title">${heroTitle}</h1>
+            <p class="site-header__audience">${escapeHtml(audience === "public" ? "Public surface" : "Internal surface")}</p>
+            <h1 class="site-header__title">${escapeHtml(heroTitle)}</h1>
           </div>
-          <p class="site-header__body">${heroBody}</p>
+          <p class="site-header__body">${escapeHtml(heroBody)}</p>
         </div>
         <nav class="hub-nav" aria-label="Primary">
           ${navMarkup(navItems, currentKey)}
         </nav>
       </header>
-      <main class="site-main">
+      <main id="main" class="site-main">
         ${content}
       </main>
     </div>
     ${dataScript}
     <script src="assets/shell.js"></script>
-    <script type="module" src="${scriptPath}"></script>
+    <script type="module" src="${escapeHtml(scriptPath)}"></script>
   </body>
 </html>`;
 }

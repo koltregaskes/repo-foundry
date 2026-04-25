@@ -3,12 +3,13 @@
   "workingTitle": "Repo Foundry",
   "strapline": "A sharper public foundry for high-signal repositories, workflow systems, and operator-grade open-source infrastructure.",
   "description": "Repo Foundry is a magazine-style discovery site for repositories worth studying, shipping against, or borrowing ideas from across AI, automation, coding agents, media systems, and practical developer workflows.",
-  "publicBoundary": "The public site shows only curated, public-safe research records. Internal session notes, local paths, repo telemetry, and manager-only backlog data stay out of the public build.",
+  "publicBoundary": "The public site ships curated, public-safe repository research only. Private workspace operations, local paths, telemetry, and coordination records are excluded before build.",
   "repos": [
     {
       "slug": "gitlab-org-gitlab",
       "name": "gitlab-org/gitlab",
       "repoUrl": "https://gitlab.com/gitlab-org/gitlab",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22gitlab-org%2Fgitlab%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23181512%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7bc%22%20stroke%3D%22%23181512%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f5f0e6%22%20stroke%3D%22%23181512%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23181512%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23c7431f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7bc%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f5f0e6%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitLab%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23c7431f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EPRODUCTIVITY%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23181512%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Egitlab-org%2Fgitlab%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23181512%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E5%2C993%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23181512%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23181512%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 5993,
       "source": "GitLab verified",
       "sourcePlatform": "GitLab",
@@ -30,6 +31,7 @@
       "slug": "lobehub-lobehub",
       "name": "lobehub/lobehub",
       "repoUrl": "https://github.com/lobehub/lobehub",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22lobehub%2Flobehub%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Elobehub%2Flobehub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E75%2C427%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 75427,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -51,6 +53,7 @@
       "slug": "appflowy-io-appflowy",
       "name": "AppFlowy-IO/AppFlowy",
       "repoUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22AppFlowy-IO%2FAppFlowy%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23181512%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7bc%22%20stroke%3D%22%23181512%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f5f0e6%22%20stroke%3D%22%23181512%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23181512%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23c7431f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7bc%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f5f0e6%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23c7431f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EPRODUCTIVITY%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23181512%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EAppFlowy-IO%2FAppFlowy%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23181512%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E69%2C888%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23181512%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23181512%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 69888,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -72,6 +75,7 @@
       "slug": "usememos-memos",
       "name": "usememos/memos",
       "repoUrl": "https://github.com/usememos/memos",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22usememos%2Fmemos%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23181512%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7bc%22%20stroke%3D%22%23181512%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f5f0e6%22%20stroke%3D%22%23181512%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23181512%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23c7431f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7bc%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f5f0e6%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23c7431f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EPRODUCTIVITY%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23181512%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Eusememos%2Fmemos%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23181512%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E59%2C046%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23181512%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23181512%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 59046,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -93,6 +97,7 @@
       "slug": "suno-ai-bark",
       "name": "suno-ai/bark",
       "repoUrl": "https://github.com/suno-ai/bark",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22suno-ai%2Fbark%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EVIDEO%20AND%20MUSIC%20TOOLING%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Esuno-ai%2Fbark%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E39%2C088%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 39088,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -114,6 +119,7 @@
       "slug": "open-webui-open-webui",
       "name": "open-webui/open-webui",
       "repoUrl": "https://github.com/open-webui/open-webui",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22open-webui%2Fopen-webui%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Eopen-webui%2Fopen-webui%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E132%2C950%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 132950,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -126,7 +132,7 @@
       ],
       "summary": "Self-hosted multi-model AI workspace with tooling, MCP support, and strong community adoption.",
       "whyRelevant": "Closest fit to a private AI command centre pattern we can study for orchestration, model routing, and user-facing control surfaces.",
-      "potentialUse": "private model console, session visibility, internal assistant control plane",
+      "potentialUse": "self-hosted model console, model routing, operator dashboard patterns",
       "addedAt": "2026-04-11T21:45:00.000Z",
       "refreshedAt": "2026-04-21T17:05:00.000Z",
       "featured": true
@@ -135,6 +141,7 @@
       "slug": "mintplex-labs-anything-llm",
       "name": "Mintplex-Labs/anything-llm",
       "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22Mintplex-Labs%2Fanything-llm%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EMintplex-Labs%2Fanything-llm%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E58%2C684%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 58684,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -156,6 +163,7 @@
       "slug": "danny-avila-librechat",
       "name": "danny-avila/LibreChat",
       "repoUrl": "https://github.com/danny-avila/LibreChat",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22danny-avila%2FLibreChat%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Edanny-avila%2FLibreChat%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E35%2C823%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 35823,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -177,6 +185,7 @@
       "slug": "n8n-io-n8n",
       "name": "n8n-io/n8n",
       "repoUrl": "https://github.com/n8n-io/n8n",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22n8n-io%2Fn8n%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EWORKFLOW%20AUTOMATION%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3En8n-io%2Fn8n%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E184%2C963%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 184963,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -198,6 +207,7 @@
       "slug": "activepieces-activepieces",
       "name": "activepieces/activepieces",
       "repoUrl": "https://github.com/activepieces/activepieces",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22activepieces%2Factivepieces%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EWORKFLOW%20AUTOMATION%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Eactivepieces%2Factivepieces%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E21%2C799%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 21799,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -219,6 +229,7 @@
       "slug": "flowiseai-flowise",
       "name": "FlowiseAI/Flowise",
       "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22FlowiseAI%2FFlowise%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23121922%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d4dcea%22%20stroke%3D%22%23121922%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23edf0f5%22%20stroke%3D%22%23121922%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23121922%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%231e5aa8%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d4dcea%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23edf0f5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%231e5aa8%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAGENT%20WORKFLOW%20BUILDER%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23121922%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EFlowiseAI%2FFlowise%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23121922%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E52%2C115%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23121922%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23121922%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 52115,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -240,6 +251,7 @@
       "slug": "langflow-ai-langflow",
       "name": "langflow-ai/langflow",
       "repoUrl": "https://github.com/langflow-ai/langflow",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22langflow-ai%2Flangflow%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23121922%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d4dcea%22%20stroke%3D%22%23121922%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23edf0f5%22%20stroke%3D%22%23121922%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23121922%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%231e5aa8%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d4dcea%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23edf0f5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%231e5aa8%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAGENT%20WORKFLOW%20BUILDER%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23121922%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Elangflow-ai%2Flangflow%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23121922%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E147%2C201%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23121922%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23121922%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 147201,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -261,6 +273,7 @@
       "slug": "comfy-org-comfyui",
       "name": "Comfy-Org/ComfyUI",
       "repoUrl": "https://github.com/Comfy-Org/ComfyUI",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22Comfy-Org%2FComfyUI%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EVIDEO%20AND%20MEDIA%20TOOLING%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EComfy-Org%2FComfyUI%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E109%2C488%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 109488,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -282,6 +295,7 @@
       "slug": "facebookresearch-audiocraft",
       "name": "facebookresearch/audiocraft",
       "repoUrl": "https://github.com/facebookresearch/audiocraft",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22facebookresearch%2Faudiocraft%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EVIDEO%20AND%20MUSIC%20TOOLING%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Efacebookresearch%2Faudiocraft%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E23%2C209%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 23209,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -305,6 +319,7 @@
       "slug": "lobehub-lobehub",
       "name": "lobehub/lobehub",
       "repoUrl": "https://github.com/lobehub/lobehub",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22lobehub%2Flobehub%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Elobehub%2Flobehub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E75%2C427%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 75427,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -326,6 +341,7 @@
       "slug": "appflowy-io-appflowy",
       "name": "AppFlowy-IO/AppFlowy",
       "repoUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22AppFlowy-IO%2FAppFlowy%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23181512%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7bc%22%20stroke%3D%22%23181512%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f5f0e6%22%20stroke%3D%22%23181512%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23181512%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23c7431f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f5f0e6%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7bc%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f5f0e6%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23c7431f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EPRODUCTIVITY%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23181512%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EAppFlowy-IO%2FAppFlowy%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23181512%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E69%2C888%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23181512%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23181512%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 69888,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -347,6 +363,7 @@
       "slug": "open-webui-open-webui",
       "name": "open-webui/open-webui",
       "repoUrl": "https://github.com/open-webui/open-webui",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22open-webui%2Fopen-webui%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3Eopen-webui%2Fopen-webui%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E132%2C950%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 132950,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -359,7 +376,7 @@
       ],
       "summary": "Self-hosted multi-model AI workspace with tooling, MCP support, and strong community adoption.",
       "whyRelevant": "Closest fit to a private AI command centre pattern we can study for orchestration, model routing, and user-facing control surfaces.",
-      "potentialUse": "private model console, session visibility, internal assistant control plane",
+      "potentialUse": "self-hosted model console, model routing, operator dashboard patterns",
       "addedAt": "2026-04-11T21:45:00.000Z",
       "refreshedAt": "2026-04-21T17:05:00.000Z",
       "featured": true
@@ -368,6 +385,7 @@
       "slug": "mintplex-labs-anything-llm",
       "name": "Mintplex-Labs/anything-llm",
       "repoUrl": "https://github.com/Mintplex-Labs/anything-llm",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22Mintplex-Labs%2Fanything-llm%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23162018%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d3dec8%22%20stroke%3D%22%23162018%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23eef1e5%22%20stroke%3D%22%23162018%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23162018%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23276f4f%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23eef1e5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d3dec8%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23eef1e5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23276f4f%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAI%20COMMAND%20CENTRE%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23162018%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EMintplex-Labs%2Fanything-llm%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23162018%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E58%2C684%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23162018%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23162018%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 58684,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -389,6 +407,7 @@
       "slug": "n8n-io-n8n",
       "name": "n8n-io/n8n",
       "repoUrl": "https://github.com/n8n-io/n8n",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22n8n-io%2Fn8n%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23201711%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23ead7a7%22%20stroke%3D%22%23201711%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23f6efe0%22%20stroke%3D%22%23201711%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23201711%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23b98218%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23f6efe0%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23ead7a7%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23f6efe0%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%23b98218%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EWORKFLOW%20AUTOMATION%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23201711%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3En8n-io%2Fn8n%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23201711%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E184%2C963%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23201711%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23201711%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 184963,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -410,6 +429,7 @@
       "slug": "flowiseai-flowise",
       "name": "FlowiseAI/Flowise",
       "repoUrl": "https://github.com/FlowiseAI/Flowise",
+      "imageUrl": "data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201200%20630%22%20role%3D%22img%22%20aria-label%3D%22FlowiseAI%2FFlowise%20preview%22%3E%0A%20%20%20%20%3Crect%20width%3D%221200%22%20height%3D%22630%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2092H1200M0%20184H1200M0%20276H1200M0%20368H1200M0%20460H1200M0%20552H1200M120%200V630M240%200V630M360%200V630M480%200V630M600%200V630M720%200V630M840%200V630M960%200V630M1080%200V630%22%20stroke%3D%22%23121922%22%20stroke-opacity%3D%22.08%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2264%22%20y%3D%2264%22%20width%3D%221072%22%20height%3D%22502%22%20rx%3D%2218%22%20fill%3D%22%23d4dcea%22%20stroke%3D%22%23121922%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%22438%22%20rx%3D%228%22%20fill%3D%22%23edf0f5%22%20stroke%3D%22%23121922%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2296%22%20y%3D%2296%22%20width%3D%221008%22%20height%3D%2278%22%20fill%3D%22%23121922%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%231e5aa8%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22198%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23edf0f5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22246%22%20cy%3D%22135%22%20r%3D%2215%22%20fill%3D%22%23d4dcea%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%221080%22%20y%3D%22143%22%20fill%3D%22%23edf0f5%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20text-anchor%3D%22end%22%3EGitHub%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22262%22%20fill%3D%22%231e5aa8%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%20font-weight%3D%22800%22%20letter-spacing%3D%224%22%3EAGENT%20WORKFLOW%20BUILDER%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22352%22%20fill%3D%22%23121922%22%20font-family%3D%22Libre%20Baskerville%2C%20Georgia%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%3EFlowiseAI%2FFlowise%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22430%22%20fill%3D%22%23121922%22%20fill-opacity%3D%22.72%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2234%22%3E52%2C115%20stars%20tracked%20by%20Repo%20Foundry%3C%2Ftext%3E%0A%20%20%20%20%3Cpath%20d%3D%22M124%20474H1076%22%20stroke%3D%22%23121922%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%2218%2014%22%20opacity%3D%22.45%22%2F%3E%0A%20%20%20%20%3Ctext%20x%3D%22124%22%20y%3D%22522%22%20fill%3D%22%23121922%22%20font-family%3D%22IBM%20Plex%20Sans%2C%20Segoe%20UI%2C%20sans-serif%22%20font-size%3D%2225%22%20font-weight%3D%22700%22%3EPublic%20repository%20dossier%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
       "stars": 52115,
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
@@ -474,23 +494,49 @@
   ],
   "news": [
     {
-      "id": "release-open-webui-open-webui-v0-9-1",
-      "title": "open-webui/open-webui released v0.9.1",
-      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.1",
+      "id": "release-activepieces-activepieces-0-82-1",
+      "title": "activepieces/activepieces released 0.82.1",
+      "url": "https://github.com/activepieces/activepieces/releases/tag/0.82.1",
+      "source": "GitHub verified",
+      "sourcePlatform": "GitHub",
+      "projectName": "activepieces/activepieces",
+      "releaseTag": "0.82.1",
+      "kind": "release",
+      "summary": "activepieces/activepieces published 0.82.1. Highlights include fix: stop constantly showing failed to fetch data dialog for platform members, this didn't affect embedded users (#12792) @AbdulTheActivePiecer.",
+      "highlights": [
+        "fix: stop constantly showing failed to fetch data dialog for platform members, this didn't affect embedded users (#12792) @AbdulTheActivePiecer"
+      ],
+      "relatedRepoSlugs": [
+        "activepieces-activepieces"
+      ],
+      "publishedAt": "2026-04-24T23:54:51.000Z",
+      "tags": [
+        "release",
+        "automation",
+        "workflow",
+        "MCP",
+        "connectors"
+      ]
+    },
+    {
+      "id": "release-open-webui-open-webui-v0-9-2",
+      "title": "open-webui/open-webui released v0.9.2",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.9.2",
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
       "projectName": "open-webui/open-webui",
-      "releaseTag": "v0.9.1",
+      "releaseTag": "v0.9.2",
       "kind": "release",
-      "summary": "open-webui/open-webui published v0.9.1. Highlights include 🐛 Missing aiosqlite dependency. Fixed a startup crash (ModuleNotFoundError: No module named 'aiosqlite') when installing Open WebUI via pip or uv by adding the missing aiosqlite package to pyproject.toml. The dependency was listed in requirements.txt but not in the published package metadata, so it was not installed automatically. 23916; 🐛 Missing asyncpg dependency. Added the missing asyncpg package to pyproject.toml to prevent the same startup crash for PostgreSQL users. Like aiosqlite, it was present in requirements.txt but absent from the published package dependencies..",
+      "summary": "open-webui/open-webui published v0.9.2. Highlights include 🧠 PaddleOCR-vl document extraction. Administrators can now use PaddleOCR-vl as a content extraction engine for document processing, with configurable API URL and token settings in document retrieval configuration. #23945; 🔥 Firecrawl v2 API. Firecrawl web loading now uses the v2 API directly with proper retry logic, exponential backoff on rate limits, and configurable timeout handling, improving reliability for both cloud and self-hosted Firecrawl setups. #23934.",
       "highlights": [
-        "🐛 Missing aiosqlite dependency. Fixed a startup crash (ModuleNotFoundError: No module named 'aiosqlite') when installing Open WebUI via pip or uv by adding the missing aiosqlite package to pyproject.toml. The dependency was listed in requirements.txt but not in the published package metadata, so it was not installed automatically. 23916",
-        "🐛 Missing asyncpg dependency. Added the missing asyncpg package to pyproject.toml to prevent the same startup crash for PostgreSQL users. Like aiosqlite, it was present in requirements.txt but absent from the published package dependencies."
+        "🧠 PaddleOCR-vl document extraction. Administrators can now use PaddleOCR-vl as a content extraction engine for document processing, with configurable API URL and token settings in document retrieval configuration. #23945",
+        "🔥 Firecrawl v2 API. Firecrawl web loading now uses the v2 API directly with proper retry logic, exponential backoff on rate limits, and configurable timeout handling, improving reliability for both cloud and self-hosted Firecrawl setups. #23934",
+        "⏰ Calendar event reminder customization. Calendar events now support a configurable reminder_minutes parameter, allowing models to set custom reminder durations instead of the default 10-minute notification."
       ],
       "relatedRepoSlugs": [
         "open-webui-open-webui"
       ],
-      "publishedAt": "2026-04-21T10:45:37.000Z",
+      "publishedAt": "2026-04-24T09:56:14.000Z",
       "tags": [
         "release",
         "AI",
@@ -500,30 +546,109 @@
       ]
     },
     {
-      "id": "release-n8n-io-n8n-n8n-2-17-3",
-      "title": "n8n-io/n8n released n8n@2.17.3",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.17.3",
+      "id": "release-appflowy-io-appflowy-0-11-8",
+      "title": "AppFlowy-IO/AppFlowy released v0.11.8",
+      "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.11.8",
+      "source": "GitHub verified",
+      "sourcePlatform": "GitHub",
+      "projectName": "AppFlowy-IO/AppFlowy",
+      "releaseTag": "0.11.8",
+      "kind": "release",
+      "summary": "AppFlowy-IO/AppFlowy published v0.11.8. Highlights include Added AI Meeting transcript language support for Spanish, German, French, Italian, and Portuguese; Added default AI transcript language setting on Settings page.",
+      "highlights": [
+        "Added AI Meeting transcript language support for Spanish, German, French, Italian, and Portuguese",
+        "Added default AI transcript language setting on Settings page",
+        "Revamped Find and Replace menu with improved search navigation and replace actions"
+      ],
+      "relatedRepoSlugs": [
+        "appflowy-io-appflowy"
+      ],
+      "publishedAt": "2026-04-24T09:48:29.000Z",
+      "tags": [
+        "release",
+        "productivity",
+        "workspace",
+        "docs",
+        "AI"
+      ]
+    },
+    {
+      "id": "release-n8n-io-n8n-stable",
+      "title": "n8n-io/n8n released stable",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/stable",
       "source": "GitHub verified",
       "sourcePlatform": "GitHub",
       "projectName": "n8n-io/n8n",
-      "releaseTag": "n8n@2.17.3",
+      "releaseTag": "stable",
       "kind": "release",
-      "summary": "n8n-io/n8n published n8n@2.17.3. Highlights include core: Guard against undefined config properties in credential overwrites (28629) (5d32052); editor: Restore WASM file paths for cURL import in HTTP Request node (28619) (c15d6d0).",
+      "summary": "n8n-io/n8n published stable. Highlights include Google Gemini Node: Gemini default models update (#28939) (0c856bf).",
       "highlights": [
-        "core: Guard against undefined config properties in credential overwrites (28629) (5d32052)",
-        "editor: Restore WASM file paths for cURL import in HTTP Request node (28619) (c15d6d0)",
-        "LinkedIn Node: Update LinkedIn API version in request headers (28668) (ce7d1b7)"
+        "Google Gemini Node: Gemini default models update (#28939) (0c856bf)"
       ],
       "relatedRepoSlugs": [
         "n8n-io-n8n"
       ],
-      "publishedAt": "2026-04-20T10:11:18.000Z",
+      "publishedAt": "2026-04-24T07:57:54.000Z",
       "tags": [
         "release",
         "automation",
         "workflow",
         "integrations",
         "AI"
+      ]
+    },
+    {
+      "id": "release-langflow-ai-langflow-v1-9-1",
+      "title": "langflow-ai/langflow released 1.9.1",
+      "url": "https://github.com/langflow-ai/langflow/releases/tag/v1.9.1",
+      "source": "GitHub verified",
+      "sourcePlatform": "GitHub",
+      "projectName": "langflow-ai/langflow",
+      "releaseTag": "v1.9.1",
+      "kind": "release",
+      "summary": "langflow-ai/langflow published 1.9.1. Highlights include feat: Enhance config loading by applying GUNICORNCMDARGS before programmatic options by @severfire in https://github.com/langflow-ai/langflow/pull/12313; feat: filter out live connections from wxo adapter by @HzaRashid in https://github.com/langflow-ai/langflow/pull/12744.",
+      "highlights": [
+        "feat: Enhance config loading by applying GUNICORNCMDARGS before programmatic options by @severfire in https://github.com/langflow-ai/langflow/pull/12313",
+        "feat: filter out live connections from wxo adapter by @HzaRashid in https://github.com/langflow-ai/langflow/pull/12744",
+        "feat(deployments): filter WXO agent list to drafts when loadfromprovider=true by @HzaRashid in https://github.com/langflow-ai/langflow/pull/12745"
+      ],
+      "relatedRepoSlugs": [
+        "langflow-ai-langflow"
+      ],
+      "publishedAt": "2026-04-24T00:34:31.000Z",
+      "tags": [
+        "release",
+        "AI",
+        "agents",
+        "workflow",
+        "deployment"
+      ]
+    },
+    {
+      "id": "release-mintplex-labs-anything-llm-v1-12-1",
+      "title": "Mintplex-Labs/anything-llm released AnythingLLM v1.12.1",
+      "url": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.12.1",
+      "source": "GitHub verified",
+      "sourcePlatform": "GitHub",
+      "projectName": "Mintplex-Labs/anything-llm",
+      "releaseTag": "v1.12.1",
+      "kind": "release",
+      "summary": "Mintplex-Labs/anything-llm published AnythingLLM v1.12.1. Highlights include Gmail; Outlook.",
+      "highlights": [
+        "Gmail",
+        "Outlook",
+        "Google Calendar"
+      ],
+      "relatedRepoSlugs": [
+        "mintplex-labs-anything-llm"
+      ],
+      "publishedAt": "2026-04-22T22:41:12.000Z",
+      "tags": [
+        "release",
+        "AI",
+        "productivity",
+        "knowledge",
+        "workspace"
       ]
     },
     {
@@ -535,10 +660,10 @@
       "projectName": "lobehub/lobehub",
       "releaseTag": "v2.1.52",
       "kind": "release",
-      "summary": "lobehub/lobehub published 🚀 Release v2.1.52. Highlights include status (active | completed | archived); completedat timestamp.",
+      "summary": "lobehub/lobehub published 🚀 Release v2.1.52. Highlights include status (active | completed | archived); completed_at timestamp.",
       "highlights": [
         "status (active | completed | archived)",
-        "completedat timestamp",
+        "completed_at timestamp",
         "Indexes on status and (userid, completedat) so completion views and archival queries stay cheap"
       ],
       "relatedRepoSlugs": [
@@ -562,11 +687,11 @@
       "projectName": "usememos/memos",
       "releaseTag": "v0.27.1",
       "kind": "release",
-      "summary": "usememos/memos published v0.27.1. Highlights include mixed-case user resource names (5853) (01be01f); release: inject build version into artifacts (f8a304b).",
+      "summary": "usememos/memos published v0.27.1. Highlights include mixed-case user resource names (#5853) (01be01f); release: inject build version into artifacts (f8a304b).",
       "highlights": [
-        "mixed-case user resource names (5853) (01be01f)",
+        "mixed-case user resource names (#5853) (01be01f)",
         "release: inject build version into artifacts (f8a304b)",
-        "user resource names can be uuidv4 from idp sub claim (5856) (bbded58)"
+        "user resource names can be uuidv4 from idp sub claim (#5856) (bbded58)"
       ],
       "relatedRepoSlugs": [
         "usememos-memos"
@@ -589,9 +714,9 @@
       "projectName": "Comfy-Org/ComfyUI",
       "releaseTag": "v0.19.3",
       "kind": "release",
-      "summary": "Comfy-Org/ComfyUI published v0.19.3. Highlights include nodestextgen: Implement usedefaulttemplate for LTX by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/13451; fix(api-nodes): corrected StabilityAI price badges by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13454.",
+      "summary": "Comfy-Org/ComfyUI published v0.19.3. Highlights include nodestextgen: Implement usedefault_template for LTX by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/13451; fix(api-nodes): corrected StabilityAI price badges by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13454.",
       "highlights": [
-        "nodestextgen: Implement usedefaulttemplate for LTX by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/13451",
+        "nodestextgen: Implement usedefault_template for LTX by @rattus128 in https://github.com/Comfy-Org/ComfyUI/pull/13451",
         "fix(api-nodes): corrected StabilityAI price badges by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13454",
         "[Partner Nodes] add new \"arrow-1.1\" and \"arrow-1.1-max\" SVG models by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13447"
       ],
@@ -616,11 +741,11 @@
       "projectName": "gitlab-org/gitlab",
       "releaseTag": "v18.11.0-ee",
       "kind": "release",
-      "summary": "gitlab-org/gitlab published GitLab 18.11. Highlights include Dependency resolution for Maven and Python SBOM scanning: <codeSoftware Composition Analysis</code; Incremental scanning for Advanced SAST: <codeSAST</code.",
+      "summary": "gitlab-org/gitlab published GitLab 18.11. Highlights include Dependency resolution for Maven and Python SBOM scanning: Software Composition Analysis; Incremental scanning for Advanced SAST: SAST.",
       "highlights": [
-        "Dependency resolution for Maven and Python SBOM scanning: <codeSoftware Composition Analysis</code",
-        "Incremental scanning for Advanced SAST: <codeSAST</code",
-        "Unverified vulnerabilities (Beta): <codeSAST</code"
+        "Dependency resolution for Maven and Python SBOM scanning: Software Composition Analysis",
+        "Incremental scanning for Advanced SAST: SAST",
+        "Unverified vulnerabilities (Beta): SAST"
       ],
       "relatedRepoSlugs": [
         "gitlab-org-gitlab"
@@ -632,33 +757,6 @@
         "dev workflow",
         "CI/CD",
         "agents"
-      ]
-    },
-    {
-      "id": "release-langflow-ai-langflow-v1-9-0",
-      "title": "langflow-ai/langflow released 1.9.0",
-      "url": "https://github.com/langflow-ai/langflow/releases/tag/v1.9.0",
-      "source": "GitHub verified",
-      "sourcePlatform": "GitHub",
-      "projectName": "langflow-ai/langflow",
-      "releaseTag": "v1.9.0",
-      "kind": "release",
-      "summary": "langflow-ai/langflow published 1.9.0. Highlights include feat: traces v0 (11689); feat: schemas for pluggable deployment service (11979).",
-      "highlights": [
-        "feat: traces v0 (11689)",
-        "feat: schemas for pluggable deployment service (11979)",
-        "feat: Add Concatenate and Merge operations to DataFrame Operations (11601)"
-      ],
-      "relatedRepoSlugs": [
-        "langflow-ai-langflow"
-      ],
-      "publishedAt": "2026-04-14T22:39:46.000Z",
-      "tags": [
-        "release",
-        "AI",
-        "agents",
-        "workflow",
-        "deployment"
       ]
     },
     {
@@ -687,86 +785,6 @@
         "workflow",
         "visual builder"
       ]
-    },
-    {
-      "id": "release-appflowy-io-appflowy-0-11-7",
-      "title": "AppFlowy-IO/AppFlowy released v0.11.7",
-      "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.11.7",
-      "source": "GitHub verified",
-      "sourcePlatform": "GitHub",
-      "projectName": "AppFlowy-IO/AppFlowy",
-      "releaseTag": "0.11.7",
-      "kind": "release",
-      "summary": "AppFlowy-IO/AppFlowy published v0.11.7. Highlights include Added text and background color options to the slash menu; Revamped the database Group By menu for better user experience.",
-      "highlights": [
-        "Added text and background color options to the slash menu",
-        "Revamped the database Group By menu for better user experience",
-        "Improved database loading speed via lazy hydration, inline fields, and incremental sort"
-      ],
-      "relatedRepoSlugs": [
-        "appflowy-io-appflowy"
-      ],
-      "publishedAt": "2026-04-08T01:36:22.000Z",
-      "tags": [
-        "release",
-        "productivity",
-        "workspace",
-        "docs",
-        "AI"
-      ]
-    },
-    {
-      "id": "release-activepieces-activepieces-0-81-4",
-      "title": "activepieces/activepieces released 0.81.4",
-      "url": "https://github.com/activepieces/activepieces/releases/tag/0.81.4",
-      "source": "GitHub verified",
-      "sourcePlatform": "GitHub",
-      "projectName": "activepieces/activepieces",
-      "releaseTag": "0.81.4",
-      "kind": "release",
-      "summary": "activepieces/activepieces published 0.81.4. Highlights include feat: migration rollback system (12344) @MrChaker; fix(ui): restore project filter so admins don't see other users' personal projects (12377) @abuaboud.",
-      "highlights": [
-        "feat: migration rollback system (12344) @MrChaker",
-        "fix(ui): restore project filter so admins don't see other users' personal projects (12377) @abuaboud"
-      ],
-      "relatedRepoSlugs": [
-        "activepieces-activepieces"
-      ],
-      "publishedAt": "2026-04-05T11:21:00.000Z",
-      "tags": [
-        "release",
-        "automation",
-        "workflow",
-        "MCP",
-        "connectors"
-      ]
-    },
-    {
-      "id": "release-mintplex-labs-anything-llm-v1-12-0",
-      "title": "Mintplex-Labs/anything-llm released AnythingLLM v1.12.0",
-      "url": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.12.0",
-      "source": "GitHub verified",
-      "sourcePlatform": "GitHub",
-      "projectName": "Mintplex-Labs/anything-llm",
-      "releaseTag": "v1.12.0",
-      "kind": "release",
-      "summary": "Mintplex-Labs/anything-llm published AnythingLLM v1.12.0. Highlights include Text chat (streaming & thinking); Image understanding.",
-      "highlights": [
-        "Text chat (streaming & thinking)",
-        "Image understanding",
-        "Voice messages & Attachments"
-      ],
-      "relatedRepoSlugs": [
-        "mintplex-labs-anything-llm"
-      ],
-      "publishedAt": "2026-04-02T20:56:02.000Z",
-      "tags": [
-        "release",
-        "AI",
-        "productivity",
-        "knowledge",
-        "workspace"
-      ]
     }
   ],
   "watchlist": [
@@ -775,7 +793,7 @@
       "name": "Codex",
       "repoUrl": "https://github.com/openai/codex",
       "cadence": "Weekly",
-      "notes": "Track major CLI and workflow changes that affect the way we run coding-agent sessions."
+      "notes": "Track major CLI and workflow changes that affect the way we run coding-agent workflows."
     },
     {
       "id": "gemini-cli",
@@ -898,7 +916,7 @@
         "value": 9
       },
       {
-        "label": "today",
+        "label": "this-week",
         "value": 5
       }
     ]
@@ -967,7 +985,7 @@
     {
       "id": "boundary",
       "title": "Why the public feed is curated",
-      "body": "The public site is intentionally lighter than the internal manager view. It keeps the useful research, readable summaries, and public-safe structure while leaving out workspace operations, private notes, and live internal coordination."
+      "body": "The public site is intentionally lighter than the private working surface. It keeps the useful research, readable summaries, and public-safe structure while leaving operational notes and private coordination out of the build."
     }
   ]
 }

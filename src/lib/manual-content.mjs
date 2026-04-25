@@ -4,7 +4,7 @@ export const siteMeta = {
   description:
     "Repo Foundry is a magazine-style discovery site for repositories worth studying, shipping against, or borrowing ideas from across AI, automation, coding agents, media systems, and practical developer workflows.",
   publicBoundary:
-    "The public site shows only curated, public-safe research records. Internal session notes, local paths, repo telemetry, and manager-only backlog data stay out of the public build.",
+    "The public site ships curated, public-safe repository research only. Private workspace operations, local paths, telemetry, and coordination records are excluded before build.",
 };
 
 export const categoryCopy = {
@@ -78,7 +78,7 @@ export const editorialNotes = [
     id: "boundary",
     title: "Why the public feed is curated",
     body:
-      "The public site is intentionally lighter than the internal manager view. It keeps the useful research, readable summaries, and public-safe structure while leaving out workspace operations, private notes, and live internal coordination.",
+      "The public site is intentionally lighter than the private working surface. It keeps the useful research, readable summaries, and public-safe structure while leaving operational notes and private coordination out of the build.",
   },
 ];
 

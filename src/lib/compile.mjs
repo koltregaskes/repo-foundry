@@ -50,6 +50,51 @@ function sourcePlatformFromUrl(url) {
   }
 }
 
+function svgEscape(value) {
+  return String(value || "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function truncateLabel(value, maxLength) {
+  const text = String(value || "").trim();
+  return text.length > maxLength ? `${text.slice(0, maxLength - 1)}...` : text;
+}
+
+function repoPreviewImage(item) {
+  const palettes = [
+    { paper: "#f5f0e6", ink: "#181512", accent: "#c7431f", soft: "#ead7bc" },
+    { paper: "#eef1e5", ink: "#162018", accent: "#276f4f", soft: "#d3dec8" },
+    { paper: "#edf0f5", ink: "#121922", accent: "#1e5aa8", soft: "#d4dcea" },
+    { paper: "#f6efe0", ink: "#201711", accent: "#b98218", soft: "#ead7a7" },
+  ];
+  const repoName = item.name || item.id || "Repo Foundry";
+  const category = item.category || "Repository";
+  const source = item.sourcePlatform || sourcePlatformFromUrl(item.url || "");
+  const stars = Number(item.stars || 0).toLocaleString();
+  const palette = palettes[slugify(category).length % palettes.length];
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="${svgEscape(repoName)} preview">
+    <rect width="1200" height="630" fill="${palette.paper}"/>
+    <path d="M0 92H1200M0 184H1200M0 276H1200M0 368H1200M0 460H1200M0 552H1200M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630" stroke="${palette.ink}" stroke-opacity=".08" stroke-width="2"/>
+    <rect x="64" y="64" width="1072" height="502" rx="18" fill="${palette.soft}" stroke="${palette.ink}" stroke-width="5"/>
+    <rect x="96" y="96" width="1008" height="438" rx="8" fill="${palette.paper}" stroke="${palette.ink}" stroke-width="2"/>
+    <rect x="96" y="96" width="1008" height="78" fill="${palette.ink}"/>
+    <circle cx="150" cy="135" r="15" fill="${palette.accent}"/>
+    <circle cx="198" cy="135" r="15" fill="${palette.paper}"/>
+    <circle cx="246" cy="135" r="15" fill="${palette.soft}"/>
+    <text x="1080" y="143" fill="${palette.paper}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="30" font-weight="700" text-anchor="end">${svgEscape(source)}</text>
+    <text x="124" y="262" fill="${palette.accent}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="34" font-weight="800" letter-spacing="4">${svgEscape(truncateLabel(category.toUpperCase(), 36))}</text>
+    <text x="124" y="352" fill="${palette.ink}" font-family="Libre Baskerville, Georgia, serif" font-size="70" font-weight="700">${svgEscape(truncateLabel(repoName, 27))}</text>
+    <text x="124" y="430" fill="${palette.ink}" fill-opacity=".72" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="34">${svgEscape(stars)} stars tracked by Repo Foundry</text>
+    <path d="M124 474H1076" stroke="${palette.ink}" stroke-width="3" stroke-dasharray="18 14" opacity=".45"/>
+    <text x="124" y="522" fill="${palette.ink}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="25" font-weight="700">Public repository dossier</text>
+  </svg>`;
+
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
 function categoryMeta(items) {
   return Object.entries(categoryCopy)
     .map(([name, copy]) => ({
@@ -67,6 +112,7 @@ function repoRecord(item, generatedAt) {
     slug: slugify(repoName),
     name: repoName,
     repoUrl: item.url || null,
+    imageUrl: item.imageUrl || repoPreviewImage(item),
     stars: Number(item.stars || 0),
     source: item.source || "Unknown",
     sourcePlatform: item.sourcePlatform || sourcePlatformFromUrl(item.url || ""),
@@ -156,7 +202,7 @@ function compileWatchlist(schedule) {
     name: item.name,
     repoUrl: item.repoUrl,
     cadence: item.cadence,
-    notes: item.notes,
+    notes: String(item.notes || "").replace(/\bcoding-agent sessions\b/gi, "coding-agent workflows"),
   }));
 }
 
