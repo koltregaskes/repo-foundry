@@ -3,7 +3,9 @@ import { expect, test } from "@playwright/test";
 const baseUrl = process.env.REPO_FOUNDRY_BASE_URL || "http://127.0.0.1:54189";
 
 function route(path) {
-  return new URL(path, baseUrl).toString();
+  const cleanPath = path.replace(/^\//, "");
+  const root = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
+  return new URL(cleanPath, root).toString();
 }
 
 async function openClean(page, path, marker) {
