@@ -65,10 +65,10 @@ function truncateLabel(value, maxLength) {
 
 function repoPreviewImage(item) {
   const palettes = [
-    { paper: "#f5f0e6", ink: "#181512", accent: "#c7431f", soft: "#ead7bc" },
-    { paper: "#eef1e5", ink: "#162018", accent: "#276f4f", soft: "#d3dec8" },
-    { paper: "#edf0f5", ink: "#121922", accent: "#1e5aa8", soft: "#d4dcea" },
-    { paper: "#f6efe0", ink: "#201711", accent: "#b98218", soft: "#ead7a7" },
+    { paper: "#08111f", ink: "#eff7ff", accent: "#00e5ff", soft: "#10243d" },
+    { paper: "#07140f", ink: "#effff5", accent: "#a6ff4d", soft: "#14301f" },
+    { paper: "#12100b", ink: "#fff7df", accent: "#ffb020", soft: "#2c2412" },
+    { paper: "#0a1117", ink: "#f3fbff", accent: "#3df2c2", soft: "#132b31" },
   ];
   const repoName = item.name || item.id || "Repo Foundry";
   const category = item.category || "Repository";
@@ -84,12 +84,12 @@ function repoPreviewImage(item) {
     <circle cx="150" cy="135" r="15" fill="${palette.accent}"/>
     <circle cx="198" cy="135" r="15" fill="${palette.paper}"/>
     <circle cx="246" cy="135" r="15" fill="${palette.soft}"/>
-    <text x="1080" y="143" fill="${palette.paper}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="30" font-weight="700" text-anchor="end">${svgEscape(source)}</text>
-    <text x="124" y="262" fill="${palette.accent}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="34" font-weight="800" letter-spacing="4">${svgEscape(truncateLabel(category.toUpperCase(), 36))}</text>
-    <text x="124" y="352" fill="${palette.ink}" font-family="Libre Baskerville, Georgia, serif" font-size="70" font-weight="700">${svgEscape(truncateLabel(repoName, 27))}</text>
-    <text x="124" y="430" fill="${palette.ink}" fill-opacity=".72" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="34">${svgEscape(stars)} stars tracked by Repo Foundry</text>
+    <text x="1080" y="143" fill="${palette.paper}" font-family="Manrope, Segoe UI, sans-serif" font-size="30" font-weight="800" text-anchor="end">${svgEscape(source)}</text>
+    <text x="124" y="262" fill="${palette.accent}" font-family="IBM Plex Mono, Consolas, monospace" font-size="32" font-weight="700" letter-spacing="4">${svgEscape(truncateLabel(category.toUpperCase(), 36))}</text>
+    <text x="124" y="352" fill="${palette.ink}" font-family="Sora, Manrope, sans-serif" font-size="68" font-weight="800">${svgEscape(truncateLabel(repoName, 27))}</text>
+    <text x="124" y="430" fill="${palette.ink}" fill-opacity=".72" font-family="Manrope, Segoe UI, sans-serif" font-size="34">${svgEscape(stars)} stars tracked by Repo Foundry</text>
     <path d="M124 474H1076" stroke="${palette.ink}" stroke-width="3" stroke-dasharray="18 14" opacity=".45"/>
-    <text x="124" y="522" fill="${palette.ink}" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="25" font-weight="700">Public repository dossier</text>
+    <text x="124" y="522" fill="${palette.ink}" font-family="Manrope, Segoe UI, sans-serif" font-size="25" font-weight="800">Public repository dossier</text>
   </svg>`;
 
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;

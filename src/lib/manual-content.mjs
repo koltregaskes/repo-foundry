@@ -72,7 +72,7 @@ export const editorialNotes = [
     id: "scope",
     title: "What we care about",
     body:
-      "The strongest signals here sit around AI control planes, workflow automation, creator infrastructure, developer productivity, and the open-source systems shaping modern coding-agent work.",
+      "The strongest signals here sit around AI control planes, coding-agent CLIs, workflow automation, creator infrastructure, developer productivity, and the open-source systems shaping modern agentic work.",
   },
   {
     id: "boundary",

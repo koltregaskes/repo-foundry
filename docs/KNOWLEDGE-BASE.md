@@ -23,7 +23,7 @@ Repo Foundry is a public discovery and editorial site for strong open-source rep
 - `/lanes/:laneId`
 - `/news`
 - `/visualisations`
-- `/resources/codex`
+- `/resources/codex` legacy URL for the public CLI & Agents shelf
 - `/about`
 
 ## Internal companion

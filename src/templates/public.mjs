@@ -221,7 +221,7 @@ function publicNav() {
     { id: "repos", href: "repos/", label: "Library" },
     { id: "news", href: "news/", label: "Updates" },
     { id: "visualisations", href: "visualisations/", label: "Snapshots" },
-    { id: "codex", href: "resources/codex/", label: "Codex lane" },
+    { id: "codex", href: "resources/codex/", label: "CLI & Agents" },
     { id: "about", href: "about/", label: "About" },
   ];
 }
@@ -263,7 +263,7 @@ export function buildPublicHome(siteData, baseHref = "./") {
       "Watchlist rhythm",
       "A smaller monitoring rail for repos we expect to keep changing fast, especially around coding agents, automation, and orchestration.",
       `<div class="stack-list">${watchlistItems}</div>`,
-      `<a class="button-link button-link--ghost" href="resources/codex/">Open Codex lane</a>`,
+      `<a class="button-link button-link--ghost" href="resources/codex/">Open CLI & Agents</a>`,
     )}
     ${sectionFrame(
       "Release radar",
@@ -272,10 +272,10 @@ export function buildPublicHome(siteData, baseHref = "./") {
       `<a class="button-link button-link--ghost" href="news/">Open release updates</a>`,
     )}
     ${sectionFrame(
-      "Codex lane",
-      "A tighter shelf for repos, references, and comparator tools closest to coding-agent workflows.",
+      "CLI & Agents",
+      "A tighter shelf for Codex, coding CLIs, agent consoles, and workflow tools closest to hands-on agentic development.",
       `<div class="card-grid">${siteData.codexResources.slice(0, 3).map(resourceCard).join("")}</div>`,
-      `<a class="button-link button-link--ghost" href="resources/codex/">Open Codex resources</a>`,
+      `<a class="button-link button-link--ghost" href="resources/codex/">Open CLI & agent resources</a>`,
     )}
   `;
 
@@ -611,8 +611,8 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
 export function buildCodexPage(siteData, baseHref = "../../") {
   const content = `
     ${sectionFrame(
-      "Codex lane",
-      "A public-safe shortlist of repos closest to coding-agent workflows, orchestration patterns, and operator-grade command surfaces.",
+      "CLI & Agents",
+      "A public-safe shortlist of Codex-style CLIs, coding-agent workflows, orchestration patterns, and operator-grade command surfaces.",
       `<div class="card-grid">${siteData.codexResources.map(resourceCard).join("")}</div>`,
     )}
     ${sectionFrame(
@@ -633,14 +633,14 @@ export function buildCodexPage(siteData, baseHref = "../../") {
   `;
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Codex resources`,
-    description: "Codex-adjacent repositories and resources.",
+    title: `${siteData.workingTitle} | CLI & agent resources`,
+    description: "Coding-agent CLIs, command surfaces, and workflow resources.",
     currentKey: "codex",
     baseHref,
     navItems: publicNav(),
     eyebrow: "Public resource shelf",
-    heroTitle: "Codex resources",
-    heroBody: "The tighter shelf: coding-agent repos, workflow references, and command-surface comparators worth watching closely.",
+    heroTitle: "CLI & agent resources",
+    heroBody: "This is the CLI and command-surface shelf: Codex-style tools, coding-agent repos, workflow references, and comparators worth watching closely.",
     content,
     scriptPath: "assets/public-app.js",
   });

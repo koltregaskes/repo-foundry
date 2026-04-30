@@ -5,7 +5,7 @@
 It produces two real outputs from one source:
 
 - `internal`: the private operational surface for the Repos workspace
-- `public`: the public-facing discovery site for trending repos, news, visualisations, and Codex-adjacent resources
+- `public`: the public-facing discovery site for trending repos, news, visualisations, and CLI/agent resources
 
 ## Layout
 
@@ -52,7 +52,7 @@ npm run build:all
 - `/lanes/:laneId`
 - `/news`
 - `/visualisations`
-- `/resources/codex`
+- `/resources/codex` legacy URL for the CLI & Agents shelf
 - `/about`
 
 ## Public boundary

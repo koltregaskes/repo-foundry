@@ -55,15 +55,24 @@ export function buildDocument({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
-    <meta name="theme-color" content="#f3efe6" />
+    <meta name="theme-color" content="#070a12" />
     <base href="${escapeHtml(baseHref)}" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function () {
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem("repo-foundry-theme");
+        } catch (error) {}
+        document.documentElement.dataset.theme = stored === "light" ? "light" : "dark";
+      })();
+    </script>
     <link rel="stylesheet" href="assets/shared.css" />
   </head>
   <body class="${escapeHtml(bodyClass)}" data-surface="${escapeHtml(audience)}">
@@ -73,7 +82,10 @@ export function buildDocument({
       <header class="site-header" data-reveal>
         <div class="site-header__band">
           <p class="site-header__eyebrow">${escapeHtml(eyebrow)}</p>
-          ${utilityMarkup}
+          <div class="site-header__actions">
+            ${utilityMarkup}
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">Dark mode</button>
+          </div>
         </div>
         <div class="site-header__hero">
           <div>
