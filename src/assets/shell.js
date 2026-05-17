@@ -1,29 +1,144 @@
 (function () {
-  var themeToggle = document.querySelector("[data-theme-toggle]");
-  var storageKey = "repo-foundry-theme";
+  var skins = ["hud", "term"];
+  var accents = ["magenta", "blue", "green", "amber", "violet"];
+  var skinKey = "foundry.skin";
+  var accentKey = "foundry.accent";
+  var root = document.documentElement;
 
-  function currentTheme() {
-    return document.documentElement.dataset.theme === "light" ? "light" : "dark";
+  function isTyping(target) {
+    if (!target) return false;
+    var tag = target.tagName;
+    return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || target.isContentEditable;
   }
 
-  function applyTheme(theme) {
-    var nextTheme = theme === "light" ? "light" : "dark";
-    document.documentElement.dataset.theme = nextTheme;
-    if (themeToggle) {
-      themeToggle.textContent = nextTheme === "dark" ? "Dark mode" : "Light mode";
-      themeToggle.setAttribute("aria-pressed", nextTheme === "dark" ? "true" : "false");
+  function storedValue(key, allowed, fallback) {
+    try {
+      var stored = window.localStorage.getItem(key);
+      return allowed.includes(stored) ? stored : fallback;
+    } catch (error) {
+      return fallback;
     }
   }
 
-  applyTheme(currentTheme());
+  function applySkin(skin) {
+    var next = skins.includes(skin) ? skin : "hud";
+    root.dataset.skin = next;
+    document.querySelectorAll("[data-skin-set]").forEach(function (button) {
+      button.setAttribute("aria-pressed", button.dataset.skinSet === next ? "true" : "false");
+    });
+  }
 
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      var nextTheme = currentTheme() === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
-      try {
-        window.localStorage.setItem(storageKey, nextTheme);
-      } catch (error) {}
+  function applyAccent(accent) {
+    var next = accents.includes(accent) ? accent : "magenta";
+    root.dataset.accent = next;
+    document.querySelectorAll("[data-accent-set]").forEach(function (button) {
+      button.setAttribute("aria-pressed", button.dataset.accentSet === next ? "true" : "false");
+    });
+  }
+
+  function persist(key, value) {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch (error) {}
+  }
+
+  applySkin(storedValue(skinKey, skins, "hud"));
+  applyAccent(storedValue(accentKey, accents, "magenta"));
+
+  document.addEventListener("click", function (event) {
+    var skinButton = event.target.closest("[data-skin-set]");
+    if (skinButton) {
+      applySkin(skinButton.dataset.skinSet);
+      persist(skinKey, root.dataset.skin);
+      return;
+    }
+
+    var accentButton = event.target.closest("[data-accent-set]");
+    if (accentButton) {
+      applyAccent(accentButton.dataset.accentSet);
+      persist(accentKey, root.dataset.accent);
+      return;
+    }
+
+    if (event.target.closest("[data-shortcut-close]")) {
+      toggleHelp(false);
+    }
+  });
+
+  function focusStep(direction) {
+    var focusables = Array.from(
+      document.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'),
+    ).filter(function (node) {
+      return node.offsetParent !== null;
+    });
+    if (!focusables.length) return;
+    var current = focusables.indexOf(document.activeElement);
+    var nextIndex = current < 0 ? 0 : (current + direction + focusables.length) % focusables.length;
+    focusables[nextIndex].focus();
+  }
+
+  function toggleHelp(force) {
+    var help = document.querySelector("[data-shortcut-help]");
+    if (!help) return;
+    var show = typeof force === "boolean" ? force : help.hasAttribute("hidden");
+    if (show) {
+      help.removeAttribute("hidden");
+      help.querySelector("button")?.focus();
+    } else {
+      help.setAttribute("hidden", "");
+    }
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (isTyping(event.target)) return;
+    var key = event.key.toLowerCase();
+
+    if (key === "t") {
+      var nextSkin = root.dataset.skin === "hud" ? "term" : "hud";
+      applySkin(nextSkin);
+      persist(skinKey, nextSkin);
+      return;
+    }
+
+    var accentIndex = "12345".indexOf(event.key);
+    if (accentIndex >= 0) {
+      var nextAccent = accents[accentIndex];
+      applyAccent(nextAccent);
+      persist(accentKey, nextAccent);
+      return;
+    }
+
+    if (key === "j") {
+      event.preventDefault();
+      focusStep(1);
+      return;
+    }
+
+    if (key === "k") {
+      event.preventDefault();
+      focusStep(-1);
+      return;
+    }
+
+    if (event.key === "?") {
+      event.preventDefault();
+      toggleHelp();
+      return;
+    }
+
+    if (key === "escape") {
+      toggleHelp(false);
+    }
+  });
+
+  var form = document.querySelector("[data-contact-form]");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var status = form.querySelector("[data-contact-status]");
+      if (status) {
+        status.textContent = "Draft prepared locally. Open GitHub or email with the same public-safe note.";
+      }
     });
   }
 

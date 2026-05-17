@@ -1,25 +1,21 @@
-import { buildDocument } from "./layout.mjs";
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}
+import { absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
 
 function formatDate(value) {
   const parsed = new Date(value || "");
-  return Number.isNaN(parsed.getTime()) ? "Unknown date" : parsed.toLocaleDateString();
+  return Number.isNaN(parsed.getTime())
+    ? "Unknown date"
+    : new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(parsed);
 }
 
-function metricCard(label, value, detail = "") {
-  return `<article class="metric-card">
-    <p class="metric-card__label">${escapeHtml(label)}</p>
-    <p class="metric-card__value">${escapeHtml(value)}</p>
-    <p class="metric-card__detail">${escapeHtml(detail)}</p>
-  </article>`;
+function formatShortDate(value) {
+  const parsed = new Date(value || "");
+  return Number.isNaN(parsed.getTime())
+    ? "unknown"
+    : new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short" }).format(parsed);
+}
+
+function number(value) {
+  return Number(value || 0).toLocaleString("en-GB");
 }
 
 function laneHref(category) {
@@ -39,138 +35,155 @@ function topTags(items, limit = 4) {
   }
 
   return [...counts.entries()]
-    .sort((left, right) => right[1] - left[1])
+    .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
     .slice(0, limit)
     .map(([tag]) => tag);
 }
 
-function imageMarkup(record, className = "repo-card__media") {
-  if (!record.imageUrl) return "";
-  return `<div class="${className}"><img src="${escapeHtml(record.imageUrl)}" alt="" loading="lazy" /></div>`;
+function publicNav() {
+  return [
+    { id: "home", href: "./", label: "Home" },
+    { id: "repos", href: "repos/", label: "Library" },
+    { id: "news", href: "news/", label: "Feed" },
+    { id: "visualisations", href: "visualisations/", label: "Snapshots" },
+    { id: "codex", href: "resources/codex/", label: "CLI and agents" },
+    { id: "about", href: "about/", label: "About" },
+    { id: "contact", href: "contact/", label: "Contact" },
+  ];
 }
 
-function repoCard(record) {
-  return `<article class="repo-card" data-category="${escapeHtml(record.category)}" data-source="${escapeHtml(record.source)}" data-tags="${escapeHtml(record.tags.join("|"))}">
-    ${imageMarkup(record)}
-    <div class="repo-card__topline">
-      <span class="pill">${escapeHtml(record.category)}</span>
-      <span class="pill pill--soft">${escapeHtml(record.stars.toLocaleString())} stars</span>
-    </div>
-    <h3 class="repo-card__title"><a href="repos/${escapeHtml(record.slug)}/">${escapeHtml(record.name)}</a></h3>
-    <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
-    <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
-    <p class="repo-card__detail"><strong>Potential use:</strong> ${escapeHtml(record.potentialUse)}</p>
-    <div class="tag-row">${record.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
-    <div class="repo-card__footer">
-      <span>Added ${escapeHtml(formatDate(record.addedAt))}</span>
-      <a class="text-link" href="${escapeHtml(record.repoUrl || "#")}">Open repo</a>
+function pageSchema(type, name, description, path) {
+  return {
+    "@context": "https://schema.org",
+    "@type": type,
+    "@id": `${absoluteUrl(path)}#page`,
+    name,
+    description,
+    url: absoluteUrl(path),
+    isPartOf: { "@id": `${absoluteUrl("")}#website` },
+  };
+}
+
+function repoSchema(repo) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code`,
+    name: repo.name,
+    url: absoluteUrl(`repos/${repo.slug}/`),
+    codeRepository: repo.repoUrl || undefined,
+    programmingLanguage: repo.tags?.find((tag) => /python|typescript|javascript|rust|go|ruby/i.test(tag)) || undefined,
+    description: repo.summary,
+    dateModified: repo.refreshedAt,
+    keywords: repo.tags || [],
+  };
+}
+
+function itemListSchema(name, items, path, itemMapper) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${absoluteUrl(path)}#item-list`,
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: itemMapper(item),
+    })),
+  };
+}
+
+function tagsMarkup(tags = []) {
+  return tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("");
+}
+
+function stat(label, value, detail = "") {
+  return `<article class="stat-card">
+    <p class="eyebrow">${escapeHtml(label)}</p>
+    <p class="stat-card__value">${escapeHtml(value)}</p>
+    ${detail ? `<p class="stat-card__detail">${escapeHtml(detail)}</p>` : ""}
+  </article>`;
+}
+
+function liveDotLabel(label) {
+  return `<span class="inline-live"><span class="livedot" aria-hidden="true"></span>${escapeHtml(label)}</span>`;
+}
+
+function repoPoster(record) {
+  return `<div class="repo-poster" aria-hidden="true">
+    <span>${escapeHtml(record.category || "Repository")}</span>
+    <strong>${escapeHtml(record.name.split("/").pop() || record.name)}</strong>
+  </div>`;
+}
+
+function repoCard(record, options = {}) {
+  const compact = options.compact ? " repo-card--compact" : "";
+  const action = options.action || "Open dossier";
+  return `<article class="repo-card${compact}" data-category="${escapeAttribute(record.category)}" data-source="${escapeAttribute(record.source)}" data-tags="${escapeAttribute((record.tags || []).join("|"))}">
+    ${repoPoster(record)}
+    <div class="repo-card__body">
+      <div class="repo-card__topline">
+        <span class="pill">${escapeHtml(record.category)}</span>
+        <span class="pill pill--soft">${number(record.stars)} stars</span>
+      </div>
+      <h3 class="repo-card__title"><a href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(record.name)}</a></h3>
+      <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
+      <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
+      <div class="tag-row">${tagsMarkup(record.tags)}</div>
+      <div class="repo-card__footer">
+        <span>Checked ${escapeHtml(formatShortDate(record.refreshedAt))}</span>
+        <a class="text-link" href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(action)}</a>
+      </div>
     </div>
   </article>`;
 }
 
-function launchBoard(siteData) {
-  const lead = siteData.featured[0] || siteData.repos[0];
-  const latestRelease = siteData.news[0];
-  const sourceLabels = [...new Set(siteData.repos.map((item) => item.sourcePlatform || item.source).filter(Boolean))];
+function agentCard(record, index, selected = false) {
+  const role = record.category?.replace(/\b(and|for|the)\b/gi, "").trim() || "Repository";
+  return `<article class="agent-card ${selected ? "is-selected" : ""}" data-repo-card>
+    <a class="agent-card__link" href="repos/${escapeAttribute(record.slug)}/">
+      <span class="agent-card__id">A${String(index + 1).padStart(2, "0")}</span>
+      ${selected ? `<span class="brk brk--tl"></span><span class="brk brk--tr"></span><span class="brk brk--bl"></span><span class="brk brk--br"></span>` : ""}
+      <span class="agent-card__name">${escapeHtml(record.name.split("/").pop() || record.name)}</span>
+      <span class="agent-card__role">${escapeHtml(role)}</span>
+      <span class="agent-card__stars">${number(record.stars)} stars</span>
+    </a>
+  </article>`;
+}
 
-  const metrics = [
-    ["Tracked", siteData.metrics.totalRepos],
-    ["Featured", siteData.metrics.featuredCount],
-    ["Sources", sourceLabels.length],
-    ["Updates", siteData.news.length],
-  ];
-
-  return `<section class="launch-board" aria-label="Repo Foundry launch board">
-    <article class="lead-feature">
-      ${lead ? imageMarkup(lead, "lead-feature__media") : ""}
-      <div class="lead-feature__body">
-        <p class="section-heading__eyebrow">Featured now</p>
-        <h2 class="lead-feature__title">${lead ? escapeHtml(lead.name) : "Repo Foundry"}</h2>
-        <p class="lead-feature__summary">${lead ? escapeHtml(lead.summary) : escapeHtml(siteData.description)}</p>
-        <div class="action-row">
-          ${lead ? `<a class="button-link" href="repos/${escapeHtml(lead.slug)}/">Read dossier</a>` : ""}
-          <a class="button-link button-link--ghost" href="repos/">Browse library</a>
-        </div>
-      </div>
-    </article>
-    <aside class="launch-rail" aria-label="Current signal summary">
-      <div class="launch-metrics">
-        ${metrics
-          .map(
-            ([label, value]) => `<article class="metric-card metric-card--compact">
-              <p class="metric-card__label">${escapeHtml(label)}</p>
-              <p class="metric-card__value">${escapeHtml(value)}</p>
-            </article>`,
-          )
-          .join("")}
-      </div>
-      <article class="release-note">
-        <p class="section-heading__eyebrow">Latest update</p>
-        <h3 class="release-note__title">${latestRelease ? escapeHtml(latestRelease.title) : "Release feed warming up"}</h3>
-        <p class="release-note__summary">${latestRelease ? escapeHtml(latestRelease.summary) : "Release notes appear here after the sync pipeline finds official source-host updates."}</p>
-        ${latestRelease ? `<a class="text-link" href="news/">Open updates</a>` : ""}
-      </article>
-      <div class="source-strip" aria-label="Tracked source hosts">
-        ${sourceLabels.map((label) => `<span>${escapeHtml(label)}</span>`).join("")}
-      </div>
-    </aside>
+function telemetry(siteData, label = "Foundry feed") {
+  const sources = new Set(siteData.repos.map((item) => item.sourcePlatform || item.source).filter(Boolean));
+  return `<section class="telemetry-bar" aria-label="${escapeAttribute(label)} telemetry">
+    <div class="telemetry-bar__label">${liveDotLabel(label)}</div>
+    ${stat("Repos tracked", number(siteData.metrics.totalRepos), "Public-safe records")}
+    ${stat("Featured", number(siteData.metrics.featuredCount), "Curated shortlist")}
+    ${stat("Sources", number(sources.size), "Source hosts")}
+    ${stat("New this week", number(siteData.metrics.newThisWeek), "Not a live counter")}
   </section>`;
 }
 
-function categoryCard(siteData, category, options = {}) {
-  const items = reposForCategory(siteData, category.name);
-  const lead = items[0];
-  const chips = topTags(items, 3)
-    .map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`)
+function scoreboard(siteData) {
+  const items = siteData.repos
+    .slice(0, 10)
+    .map((repo) => `${repo.name} star signal ${number(repo.stars)}`);
+  const text = [...items, ...items]
+    .map((item) => `<span>${escapeHtml(item)}</span>`)
     .join("");
-  const cardBody = `
-    <p class="category-card__count">${escapeHtml(category.count)}</p>
-    <h3 class="category-card__title">${escapeHtml(category.name)}</h3>
-    <p class="category-card__summary">${escapeHtml(category.description)}</p>
-    ${lead ? `<p class="category-card__meta">Lead signal: ${escapeHtml(lead.name)}</p>` : ""}
-    ${chips ? `<div class="tag-row">${chips}</div>` : ""}
-  `;
 
-  if (options.linked === false) {
-    return `<article class="category-card">${cardBody}</article>`;
-  }
-
-  return `<a class="category-card category-card--link" href="${escapeHtml(laneHref(category))}">${cardBody}</a>`;
-}
-
-function newsCard(item) {
-  const highlights = Array.isArray(item.highlights) && item.highlights.length
-    ? `<div class="news-card__highlights">${item.highlights
-        .map((entry) => `<p class="news-card__highlight">${escapeHtml(entry)}</p>`)
-        .join("")}</div>`
-    : "";
-
-  return `<article class="news-card">
-    <div class="news-card__meta">
-      <span class="pill">${escapeHtml(item.projectName || item.sourcePlatform || item.source)}</span>
-      <span class="pill pill--soft">${escapeHtml(item.releaseTag || item.source)}</span>
-      <span>${escapeHtml(formatDate(item.publishedAt))}</span>
+  return `<aside class="scoreboard" aria-label="Repo Foundry scoreboard">
+    <span class="scoreboard__label">Scoreboard</span>
+    <div class="scoreboard__window">
+      <div class="ticker-track">${text}</div>
     </div>
-    <h3 class="news-card__title"><a href="${escapeHtml(item.url || "#")}">${escapeHtml(item.title)}</a></h3>
-    <p class="news-card__summary">${escapeHtml(item.summary)}</p>
-    ${highlights}
-  </article>`;
-}
-
-function resourceCard(item) {
-  return `<article class="resource-card">
-    <h3 class="resource-card__title"><a href="${escapeHtml(item.url || "#")}">${escapeHtml(item.title)}</a></h3>
-    <p class="resource-card__summary">${escapeHtml(item.summary)}</p>
-    <div class="tag-row">${item.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
-  </article>`;
+  </aside>`;
 }
 
 function sectionFrame(title, description, content, actions = "") {
-  return `<section class="content-section">
+  return `<section class="content-section" data-reveal>
     <div class="section-heading">
       <div>
-        <p class="section-heading__eyebrow">${escapeHtml(title)}</p>
-        <h2 class="section-heading__title">${escapeHtml(description)}</h2>
+        <p class="eyebrow">${escapeHtml(title)}</p>
+        <h2>${escapeHtml(description)}</h2>
       </div>
       ${actions}
     </div>
@@ -181,211 +194,334 @@ function sectionFrame(title, description, content, actions = "") {
 function lanePanel(siteData, category) {
   const items = reposForCategory(siteData, category.name);
   const lead = items[0];
-  const sourceCount = new Set(items.map((item) => item.source)).size;
-  const featuredCount = items.filter((item) => item.featured).length;
-  const listMarkup = items.length
-    ? items
-        .slice(0, 3)
-        .map(
-          (item) => `<a class="lane-panel__item" href="repos/${escapeHtml(item.slug)}/">
-            <span>${escapeHtml(item.name)}</span>
-            <span>${escapeHtml(item.stars.toLocaleString())} stars</span>
-          </a>`,
-        )
-        .join("")
-    : `<p class="empty-state">This lane is mapped, but no public-safe repos are currently pinned to it.</p>`;
+  const chips = topTags(items, 3);
 
-  return `<article class="lane-panel">
-    <div class="lane-panel__header">
-      <div>
-        <p class="section-heading__eyebrow">${escapeHtml(category.shortLabel)}</p>
-        <h3 class="repo-card__title"><a href="${escapeHtml(laneHref(category))}">${escapeHtml(category.name)}</a></h3>
-      </div>
-      <span class="pill pill--soft">${escapeHtml(category.count)} tracked</span>
+  return `<a class="lane-panel" href="${escapeAttribute(laneHref(category))}">
+    <span class="lane-panel__count">${escapeHtml(category.count)}</span>
+    <span class="lane-panel__label">${escapeHtml(category.shortLabel)}</span>
+    <strong>${escapeHtml(category.name)}</strong>
+    <span>${escapeHtml(category.description)}</span>
+    ${lead ? `<span class="lane-panel__lead">Lead signal: ${escapeHtml(lead.name)}</span>` : ""}
+    <span class="tag-row">${tagsMarkup(chips)}</span>
+  </a>`;
+}
+
+function newsCard(item) {
+  const source = item.projectName || item.sourcePlatform || item.source || "Source";
+  const highlights = Array.isArray(item.highlights) && item.highlights.length
+    ? `<div class="news-card__highlights">${item.highlights
+        .map((entry) => `<p>${escapeHtml(entry)}</p>`)
+        .join("")}</div>`
+    : "";
+
+  return `<article class="news-card" data-news-item>
+    <div class="news-card__meta">
+      <span class="pill">${escapeHtml(source)}</span>
+      <span class="pill pill--soft">${escapeHtml(formatDate(item.publishedAt))}</span>
     </div>
-    <p class="lane-panel__summary">${escapeHtml(category.description)}</p>
-    <div class="lane-panel__meta">
-      <span>${escapeHtml(sourceCount)} sources</span>
-      <span>${escapeHtml(featuredCount)} featured</span>
-      ${lead ? `<span>Lead: ${escapeHtml(lead.name)}</span>` : ""}
-    </div>
-    <div class="lane-panel__list">
-      ${listMarkup}
-    </div>
+    <h3><a href="${escapeAttribute(item.url || "news/")}">${escapeHtml(item.title)}</a></h3>
+    <p>${escapeHtml(item.summary)}</p>
+    ${highlights}
   </article>`;
 }
 
-function publicNav() {
-  return [
-    { id: "home", href: "./", label: "Home" },
-    { id: "repos", href: "repos/", label: "Library" },
-    { id: "news", href: "news/", label: "Updates" },
-    { id: "visualisations", href: "visualisations/", label: "Snapshots" },
-    { id: "codex", href: "resources/codex/", label: "CLI & Agents" },
-    { id: "about", href: "about/", label: "About" },
-  ];
+function resourceCard(item) {
+  return `<article class="resource-card">
+    <p class="eyebrow">Resource</p>
+    <h3><a href="${escapeAttribute(item.url)}">${escapeHtml(item.title)}</a></h3>
+    <p>${escapeHtml(item.summary)}</p>
+    <div class="tag-row">${tagsMarkup(item.tags)}</div>
+  </article>`;
 }
 
-export function buildPublicHome(siteData, baseHref = "./") {
-  const featuredCards = siteData.featured.slice(0, 4).map(repoCard).join("");
-  const newsCards = siteData.news.length
-    ? siteData.news.slice(0, 4).map(newsCard).join("")
-    : `<p class="empty-state">Release updates will appear here once the tracked source hosts publish new versions.</p>`;
-  const categoryCards = siteData.categories.map((category) => categoryCard(siteData, category)).join("");
-  const watchlistItems = siteData.watchlist
-    .slice(0, 6)
-    .map(
-      (item) => `<article class="stack-item">
-        <div>
-          <p class="stack-item__title">${escapeHtml(item.name)}</p>
-          <p class="stack-item__summary">${escapeHtml(item.notes)}</p>
-        </div>
-        <span class="pill pill--soft">${escapeHtml(item.cadence)}</span>
-      </article>`,
-    )
-    .join("");
+function buildHomeContent(siteData) {
+  const selected = siteData.featured[0] || siteData.repos[0];
+  const agents = [
+    selected,
+    ...siteData.repos.filter((repo) => repo.slug !== selected?.slug),
+  ].filter(Boolean).slice(0, 8);
+  const history = siteData.news.slice(0, 4);
+  const lanes = siteData.categories.map((category) => lanePanel(siteData, category)).join("");
 
-  const content = `
-    ${launchBoard(siteData)}
+  return `
+    ${telemetry(siteData, "Loadout online")}
+    <section class="home-loadout" data-reveal>
+      <div class="loadout-copy">
+        <p class="eyebrow">// loadout</p>
+        <h2>Select your weapon.</h2>
+        <p>Repo Foundry tracks public open-source signals for operators who care about coding agents, automation, command surfaces, and reusable infrastructure.</p>
+        <div class="action-row">
+          <a class="button-link" href="repos/">Lock in agent</a>
+          <a class="button-link button-link--ghost" href="news/">Open feed</a>
+        </div>
+      </div>
+      <div class="agent-grid" aria-label="Featured repository agents">
+        ${agents.map((repo, index) => agentCard(repo, index, index === 0)).join("")}
+      </div>
+      <aside class="detail-panel" aria-label="Selected repository detail">
+        <span class="brk brk--tl"></span><span class="brk brk--br"></span>
+        <p class="eyebrow">Selected A01</p>
+        <h2>${selected ? escapeHtml(selected.name) : "Repo Foundry"}</h2>
+        <p>${selected ? escapeHtml(selected.summary) : escapeHtml(siteData.description)}</p>
+        <div class="stat-lines">
+          <span><b>HP</b><i style="--bar:92%"></i></span>
+          <span><b>DMG</b><i style="--bar:88%"></i></span>
+          <span><b>SPD</b><i style="--bar:70%"></i></span>
+          <span><b>DEF</b><i style="--bar:54%"></i></span>
+        </div>
+        <p class="eyebrow">Match history</p>
+        <div class="mini-feed">
+          ${history.length
+            ? history.map((item) => `<a href="${escapeAttribute(item.url || "news/")}"><span>${escapeHtml(formatShortDate(item.publishedAt))}</span>${escapeHtml(item.title)}</a>`).join("")
+            : `<p>No public release notes are currently available.</p>`}
+        </div>
+      </aside>
+    </section>
+    ${scoreboard(siteData)}
+    ${sectionFrame(
+      "Browse by lane",
+      "Shelves for the public repo library, grouped by operator concern rather than alphabetical hoarding.",
+      `<div class="lane-grid">${lanes}</div>`,
+      `<a class="button-link button-link--ghost" href="repos/">Open library</a>`,
+    )}
     ${sectionFrame(
       "Featured dossiers",
       "The first shelf: high-signal repos with enough traction and relevance to deserve immediate attention.",
-      `<div class="card-grid card-grid--feature">${featuredCards}</div>`,
-      `<a class="button-link" href="repos/">Open the library</a>`,
+      `<div class="card-grid card-grid--feature">${siteData.featured.slice(0, 4).map((repo) => repoCard(repo)).join("")}</div>`,
+      `<a class="button-link button-link--ghost" href="trending/">Recent additions</a>`,
     )}
     ${sectionFrame(
-      "Browse by lane",
-      "The fastest way to scan the site's major shelves, then jump into the filtered library instead of bouncing across duplicate pages.",
-      `<div class="card-grid card-grid--category">${categoryCards}</div>`,
-      `<a class="button-link button-link--ghost" href="repos/">Open the filtered library</a>`,
-    )}
-    ${sectionFrame(
-      "Watchlist rhythm",
-      "A smaller monitoring rail for repos we expect to keep changing fast, especially around coding agents, automation, and orchestration.",
-      `<div class="stack-list">${watchlistItems}</div>`,
-      `<a class="button-link button-link--ghost" href="resources/codex/">Open CLI & Agents</a>`,
-    )}
-    ${sectionFrame(
-      "Release radar",
-      "Actual release and project update notes pulled from official source hosts, so this feed reads like news instead of recycled repo cards.",
-      `<div class="card-grid">${newsCards}</div>`,
-      `<a class="button-link button-link--ghost" href="news/">Open release updates</a>`,
-    )}
-    ${sectionFrame(
-      "CLI & Agents",
-      "A tighter shelf for Codex, coding CLIs, agent consoles, and workflow tools closest to hands-on agentic development.",
+      "CLI and agents",
+      "Codex-style CLIs, command surfaces, and agent workflow references closest to hands-on development.",
       `<div class="card-grid">${siteData.codexResources.slice(0, 3).map(resourceCard).join("")}</div>`,
-      `<a class="button-link button-link--ghost" href="resources/codex/">Open CLI & agent resources</a>`,
+      `<a class="button-link button-link--ghost" href="resources/codex/">Open shelf</a>`,
     )}
   `;
+}
 
+function buildFeedContent(siteData) {
+  const highlights = siteData.repos.slice(0, 3).map((repo) => repoCard(repo, { compact: true, action: "Read dossier" })).join("");
+  const stories = siteData.news.length
+    ? siteData.news.map(newsCard).join("")
+    : `<p class="empty-state">No public release items are available yet. Run the release sync and rebuild the site to repopulate this page.</p>`;
+
+  return `
+    ${telemetry(siteData, "Broadcast on-air")}
+    <section class="feed-grid" data-reveal>
+      <div class="story-stack">
+        <p class="eyebrow">// story drops</p>
+        ${stories}
+      </div>
+      <aside class="source-panel">
+        <p class="eyebrow">Highlight reel</p>
+        ${highlights}
+        <div class="source-panel__note">
+          <p class="eyebrow">Sources</p>
+          <p>Feed items use public-safe release and project update records. Unknowns stay out of the public build.</p>
+        </div>
+      </aside>
+    </section>
+    ${scoreboard(siteData)}
+  `;
+}
+
+function buildAboutContent(siteData) {
+  return `
+    <section class="about-grid" data-reveal>
+      <article class="operator-card">
+        <p class="eyebrow">// whoami</p>
+        <h2>The Operator.</h2>
+        <p>Repo Foundry is Kol Tregaskes' public repo-intelligence surface: a slower, curated layer over fast-moving open-source infrastructure.</p>
+        <p class="operator-card__status">${liveDotLabel("Company in formation")}</p>
+      </article>
+      <div class="rules-stack">
+        ${siteData.editorialNotes
+          .map(
+            (item) => `<article class="rule-card">
+              <p class="eyebrow">${escapeHtml(item.id)}</p>
+              <h3>${escapeHtml(item.title)}</h3>
+              <p>${escapeHtml(item.body)}</p>
+            </article>`,
+          )
+          .join("")}
+        <article class="rule-card">
+          <p class="eyebrow">Public boundary</p>
+          <h3>What never ships.</h3>
+          <p>${escapeHtml(siteData.publicBoundary)}</p>
+        </article>
+      </div>
+    </section>
+    ${sectionFrame(
+      "Lanes patrolled",
+      "The current public shelves are deliberately practical and biased towards systems worth studying.",
+      `<div class="lane-grid">${siteData.categories.map((category) => lanePanel(siteData, category)).join("")}</div>`,
+    )}
+  `;
+}
+
+function buildContactContent() {
+  return `
+    <section class="contact-grid" data-reveal>
+      <form class="contact-form" data-contact-form>
+        <p class="eyebrow">// comms.transmit</p>
+        <h2>Incoming.</h2>
+        <p>Send a repo signal, correction, source note, or cross-link suggestion. This static form prepares a local draft in v1; it does not send to a backend.</p>
+        <div class="form-grid">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" autocomplete="name" required />
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          <label for="contact-topic">Signal type</label>
+          <select id="contact-topic" name="topic">
+            <option>Repo suggestion</option>
+            <option>Correction</option>
+            <option>Source note</option>
+            <option>Estate cross-link</option>
+          </select>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="button-link">Transmit draft</button>
+        <p class="form-status" data-contact-status aria-live="polite"></p>
+      </form>
+      <aside class="channel-stack">
+        <article class="channel-card">
+          <p class="eyebrow">Channel</p>
+          <h3>GitHub</h3>
+          <p>Open public issues or pull requests for repository data, build output, and public site fixes.</p>
+          <a class="text-link" href="https://github.com/koltregaskes/repo-foundry">Open repo</a>
+        </article>
+        <article class="channel-card">
+          <p class="eyebrow">Ops status</p>
+          <h3>Static-first.</h3>
+          <p>No backend endpoint, no paid services, and no credentialed contact pipeline in v1.</p>
+        </article>
+        <article class="channel-card">
+          <p class="eyebrow">Transmission log</p>
+          <h3>Public-safe only.</h3>
+          <p>Please do not send secrets, credentials, private repo links, or local workspace paths.</p>
+        </article>
+      </aside>
+    </section>
+  `;
+}
+
+function buildListingContent(siteData, items, page, archiveOnly = false) {
+  const cards = items.map((repo) => repoCard(repo)).join("");
+  return `
+    <section class="content-section" data-reveal>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">${archiveOnly ? "Archive" : "Library"}</p>
+          <h2>${page === "trending" ? "A freshness-first view of the public-safe research feed." : "The main browse surface for curated repositories."}</h2>
+        </div>
+        <div class="action-row">
+          ${archiveOnly ? `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/" : "repos/"}">Back to latest</a>` : `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/archive/" : "repos/archive/"}">Open archive</a>`}
+          <a class="button-link button-link--ghost" href="${page === "trending" ? "repos/" : "trending/"}">${page === "trending" ? "Open full library" : "Recent additions"}</a>
+        </div>
+      </div>
+      <div id="publicFilters" class="filter-bar"></div>
+      <div id="publicList" class="card-grid">${cards}</div>
+    </section>
+  `;
+}
+
+export function buildPublicHome(siteData, baseHref = "./") {
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Public hub`,
+    title: `${siteData.workingTitle} | Public repo intelligence`,
     description: siteData.description,
     currentKey: "home",
     baseHref,
+    canonicalPath: "",
     navItems: publicNav(),
-    eyebrow: "Public-facing repo intelligence surface",
-    heroTitle: siteData.workingTitle,
+    eyebrow: "Public surface",
+    heroKicker: "Broadcast on-air",
+    heroTitle: "Select your weapon.",
     heroBody: siteData.strapline,
-    utilityLinks: [{ href: "about/", label: "Methodology" }],
-    content,
+    utilityLinks: [{ href: "about/", label: "Method" }],
+    content: buildHomeContent(siteData),
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      ...siteGraph(siteData),
+      pageSchema("WebPage", "Repo Foundry home", siteData.description, ""),
+      itemListSchema("Featured Repo Foundry dossiers", siteData.featured.slice(0, 6), "", (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
+    ],
   });
 }
 
 export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../") {
   const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
-  const content = `
-    <section class="content-section">
-      <div class="section-heading">
-        <div>
-          <p class="section-heading__eyebrow">${archiveOnly ? "Archive" : "Recent additions"}</p>
-          <h2 class="section-heading__title">This is the library in a freshness-first view, kept as a focused route for people who only want the newest additions.</h2>
-        </div>
-        <div class="action-row">
-          ${archiveOnly ? `<a class="button-link button-link--ghost" href="trending/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="trending/archive/">Open archive</a>`}
-          <a class="button-link button-link--ghost" href="repos/">Open full library</a>
-        </div>
-      </div>
-      <div id="publicFilters" class="filter-bar"></div>
-      <div id="publicList" class="card-grid">${items.map(repoCard).join("")}</div>
-    </section>
-  `;
+  const path = archiveOnly ? "trending/archive/" : "trending/";
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Trending`,
+    title: `${siteData.workingTitle} | ${archiveOnly ? "Signals archive" : "Live signals"}`,
     description: "Recent additions across the public-safe research feed.",
     currentKey: "repos",
     baseHref,
+    canonicalPath: path,
     navItems: publicNav(),
-    eyebrow: "Public signal feed",
-    heroTitle: archiveOnly ? "Signals archive" : "Live signals",
-    heroBody: "A tighter freshness-first view of the library for people who care about new arrivals more than the full archive.",
-    content,
+    eyebrow: "Signal feed",
+    heroKicker: "Repository radar",
+    heroTitle: archiveOnly ? "Signals archive." : "Live signals.",
+    heroBody: "A freshness-first view of the library for people who care about new arrivals more than the full archive.",
+    content: buildListingContent(siteData, items, "trending", archiveOnly),
     pageData: {
       page: archiveOnly ? "trending-archive" : "trending",
       items: siteData.repos,
       defaults: { freshness: archiveOnly ? "archive" : "fresh", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", archiveOnly ? "Repo Foundry signals archive" : "Repo Foundry live signals", "Recent additions across the public-safe research feed.", path),
+      itemListSchema("Repo Foundry signals", items, path, (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: archiveOnly ? "Signals archive" : "Live signals", path },
+    ],
   });
 }
 
 export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref = "../") {
   const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
-  const content = `
-    <section class="content-section">
-      <div class="section-heading">
-        <div>
-          <p class="section-heading__eyebrow">Library</p>
-          <h2 class="section-heading__title">The main browse surface: category, source, freshness, and featured filters all live here so the site feels like one product instead of several near-duplicates.</h2>
-        </div>
-        <div class="action-row">
-          ${archiveOnly ? `<a class="button-link button-link--ghost" href="repos/">Back to latest</a>` : `<a class="button-link button-link--ghost" href="repos/archive/">Open archive</a>`}
-          <a class="button-link button-link--ghost" href="trending/">Recent additions only</a>
-        </div>
-      </div>
-      <div id="publicFilters" class="filter-bar"></div>
-      <div id="publicList" class="card-grid">${items.map(repoCard).join("")}</div>
-    </section>
-  `;
+  const path = archiveOnly ? "repos/archive/" : "repos/";
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Repo directory`,
+    title: `${siteData.workingTitle} | Repository library`,
     description: "Curated repository library.",
     currentKey: "repos",
     baseHref,
+    canonicalPath: path,
     navItems: publicNav(),
-    eyebrow: "Public foundry library",
-    heroTitle: "Repository library",
-    heroBody: "Curated entries with practical summaries, why they matter, where they might fit in a real workflow, and enough filtering to replace several thinner browse pages.",
-    content,
+    eyebrow: "Foundry library",
+    heroKicker: "Library online",
+    heroTitle: archiveOnly ? "Library archive." : "Repository library.",
+    heroBody: "Curated entries with practical summaries, why they matter, where they fit, and filters that keep the surface useful.",
+    content: buildListingContent(siteData, items, "repos", archiveOnly),
     pageData: {
       page: archiveOnly ? "repos-archive" : "repos",
       items: siteData.repos,
       defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", "Repo Foundry repository library", "Curated repository library.", path),
+      itemListSchema("Repo Foundry repository library", items, path, (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Repository library", path },
+    ],
   });
 }
 
 export function buildLanesPage(siteData, baseHref = "../") {
-  const cards = siteData.categories.map((category) => categoryCard(siteData, category)).join("");
-  const panels = siteData.categories.map((category) => lanePanel(siteData, category)).join("");
-  const content = `
-    ${sectionFrame(
-      "Lane map",
-      "The main shelves of Repo Foundry, grouped around the kinds of systems we expect to matter in real work.",
-      `<div class="card-grid card-grid--category">${cards}</div>`,
-    )}
-    ${sectionFrame(
-      "Shelf briefings",
-      "A slightly deeper skim of each lane so the site feels like a navigable magazine instead of a flat list.",
-      `<div class="lane-grid">${panels}</div>`,
-    )}
-  `;
+  const content = sectionFrame(
+    "Lane map",
+    "The main shelves of Repo Foundry, grouped around the kinds of systems we expect to matter in real work.",
+    `<div class="lane-grid">${siteData.categories.map((category) => lanePanel(siteData, category)).join("")}</div>`,
+  );
 
   return buildDocument({
     audience: "public",
@@ -393,72 +529,46 @@ export function buildLanesPage(siteData, baseHref = "../") {
     description: "Browse Repo Foundry by category and workflow lane.",
     currentKey: "repos",
     baseHref,
+    canonicalPath: "lanes/",
     navItems: publicNav(),
-    eyebrow: "Public lane index",
-    heroTitle: "Foundry lanes",
-    heroBody: "The site is organised into warm shelves: AI command centres, workflow automation, agent builders, media tooling, and practical productivity systems.",
+    eyebrow: "Lane index",
+    heroKicker: "Lanes patrolled",
+    heroTitle: "Foundry lanes.",
+    heroBody: "The site is organised into shelves for AI command centres, workflow automation, agent builders, media tooling, and productivity systems.",
     content,
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", "Repo Foundry lanes", "Browse Repo Foundry by category and workflow lane.", "lanes/"),
+      itemListSchema("Repo Foundry lanes", siteData.categories, "lanes/", (category) => ({ "@id": `${absoluteUrl(laneHref(category))}#page` })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Lanes", path: "lanes/" },
+    ],
   });
 }
 
 export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
   const items = reposForCategory(siteData, category.name);
-  const lead = items[0];
-  const sources = [...new Set(items.map((item) => item.source))];
-  const featured = items.filter((item) => item.featured).slice(0, 4);
-  const tags = topTags(items, 5);
-  const relatedLanes = siteData.categories.filter((item) => item.id !== category.id).slice(0, 3);
-  const laneCardItems = [...items].sort((left, right) => {
-    if (left.featured !== right.featured) {
-      return left.featured ? -1 : 1;
-    }
-
-    return new Date(right.addedAt).getTime() - new Date(left.addedAt).getTime();
-  });
-  const laneCards = laneCardItems.length
-    ? laneCardItems.map(repoCard).join("")
-    : `<p class="empty-state">No public-safe repos are currently pinned to this lane, but the shelf stays live for future additions.</p>`;
-
+  const path = laneHref(category);
   const content = `
-    <section class="detail-hero">
+    <section class="detail-hero" data-reveal>
       <div class="detail-hero__meta">
         <span class="pill">${escapeHtml(category.name)}</span>
         <span class="pill pill--soft">${escapeHtml(items.length)} repos</span>
       </div>
-      <h2 class="detail-hero__title">${escapeHtml(category.name)}</h2>
-      <p class="detail-hero__summary">${escapeHtml(category.description)}</p>
-      <div class="tag-row">
-        ${tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}
-      </div>
+      <h2>${escapeHtml(category.name)}</h2>
+      <p>${escapeHtml(category.description)}</p>
+      <div class="tag-row">${tagsMarkup(topTags(items, 5))}</div>
       <div class="action-row">
         <a class="button-link" href="repos/">Open full library</a>
-        <a class="button-link button-link--ghost" href="lanes/">Back to all lanes</a>
+        <a class="button-link button-link--ghost" href="lanes/">Back to lanes</a>
       </div>
-    </section>
-    <section class="detail-grid">
-      <article class="detail-card">
-        <p class="detail-card__eyebrow">Lead signal</p>
-        <p>${lead ? `${escapeHtml(lead.name)} is currently the strongest public signal in this lane.` : "This lane is currently waiting for its first lead signal."}</p>
-      </article>
-      <article class="detail-card">
-        <p class="detail-card__eyebrow">Source spread</p>
-        <p>${escapeHtml(sources.length)} source${sources.length === 1 ? "" : "s"} currently feed this shelf: ${escapeHtml(sources.join(", ") || "No sources yet")}.</p>
-      </article>
-      <article class="detail-card">
-        <p class="detail-card__eyebrow">What to watch</p>
-        <p>${featured.length ? `${featured.length} featured pick${featured.length === 1 ? "" : "s"} lead this lane, but the full shelf stays visible below for broader comparison.` : "We care most about practical reuse here: interfaces, flows, and patterns that can become real operator tooling instead of passive inspiration."}</p>
-      </article>
     </section>
     ${sectionFrame(
       "Lane shortlist",
-      "Every current public-safe repo in this lane, with featured picks floated first and the rest kept visible for proper comparison.",
-      `<div class="card-grid">${laneCards}</div>`,
-    )}
-    ${sectionFrame(
-      "Related lanes",
-      "Adjacent shelves worth checking next if you are mapping the broader ecosystem.",
-      `<div class="card-grid card-grid--category">${relatedLanes.map((item) => categoryCard(siteData, item)).join("")}</div>`,
+      "Every current public-safe repo in this lane, with featured picks floated first.",
+      `<div class="card-grid">${items.length ? items.map((repo) => repoCard(repo)).join("") : `<p class="empty-state">No public-safe repos are currently pinned to this lane.</p>`}</div>`,
     )}
   `;
 
@@ -468,52 +578,60 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
     description: category.description,
     currentKey: "repos",
     baseHref,
+    canonicalPath: path,
     navItems: publicNav(),
-    eyebrow: "Public lane dossier",
-    heroTitle: category.name,
+    eyebrow: "Lane dossier",
+    heroKicker: "Lane selected",
+    heroTitle: `${category.name}.`,
     heroBody: "A category-level shelf inside Repo Foundry, built for browsing patterns instead of one-off repo hunting.",
     content,
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", `${category.name} | Repo Foundry`, category.description, path),
+      itemListSchema(`${category.name} repos`, items, path, (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Lanes", path: "lanes/" },
+      { name: category.name, path },
+    ],
   });
 }
 
 export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
   const related = siteData.repos.filter((item) => item.slug !== repo.slug && item.category === repo.category).slice(0, 3);
   const currentLane = siteData.categories.find((item) => item.name === repo.category);
+  const path = `repos/${repo.slug}/`;
   const content = `
-    <section class="detail-hero">
+    <section class="detail-hero dossier-hero" data-reveal>
       <div class="detail-hero__meta">
         <span class="pill">${escapeHtml(repo.category)}</span>
-        <span class="pill pill--soft">${escapeHtml(repo.stars.toLocaleString())} stars</span>
+        <span class="pill pill--soft">${number(repo.stars)} stars</span>
       </div>
-      <h2 class="detail-hero__title">${escapeHtml(repo.name)}</h2>
-      <p class="detail-hero__summary">${escapeHtml(repo.summary)}</p>
-      <div class="tag-row">${repo.tags.map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
+      <h2>${escapeHtml(repo.name)}</h2>
+      <p>${escapeHtml(repo.summary)}</p>
+      <div class="tag-row">${tagsMarkup(repo.tags)}</div>
       <div class="action-row">
-        <a class="button-link" href="${escapeHtml(repo.repoUrl || "#")}">Open repository</a>
-        <a class="button-link button-link--ghost" href="repos/">Back to directory</a>
-        ${currentLane ? `<a class="button-link button-link--ghost" href="${escapeHtml(laneHref(currentLane))}">Open this lane</a>` : ""}
+        ${repo.repoUrl ? `<a class="button-link" href="${escapeAttribute(repo.repoUrl)}">Open repository</a>` : ""}
+        <a class="button-link button-link--ghost" href="repos/">Back to library</a>
+        ${currentLane ? `<a class="button-link button-link--ghost" href="${escapeAttribute(laneHref(currentLane))}">Open lane</a>` : ""}
       </div>
     </section>
-    <section class="detail-grid">
+    <section class="detail-grid" data-reveal>
       <article class="detail-card">
-        <p class="detail-card__eyebrow">Why it matters</p>
+        <p class="eyebrow">Why it matters</p>
         <p>${escapeHtml(repo.whyRelevant)}</p>
       </article>
       <article class="detail-card">
-        <p class="detail-card__eyebrow">Potential use</p>
+        <p class="eyebrow">Potential use</p>
         <p>${escapeHtml(repo.potentialUse)}</p>
       </article>
       <article class="detail-card">
-        <p class="detail-card__eyebrow">Freshness</p>
+        <p class="eyebrow">Freshness</p>
         <p>Added ${escapeHtml(formatDate(repo.addedAt))} and refreshed ${escapeHtml(formatDate(repo.refreshedAt))}.</p>
       </article>
     </section>
-    ${sectionFrame(
-      "Related",
-      "More repos from the same shelf.",
-      `<div class="card-grid">${related.map(repoCard).join("")}</div>`,
-    )}
+    ${sectionFrame("Related", "More repos from the same shelf.", `<div class="card-grid">${related.map((item) => repoCard(item)).join("")}</div>`)}
   `;
 
   return buildDocument({
@@ -522,47 +640,65 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
     description: repo.summary,
     currentKey: "repos",
     baseHref,
+    canonicalPath: path,
     navItems: publicNav(),
-    eyebrow: "Public repo dossier",
+    eyebrow: "Repo dossier",
+    heroKicker: "Dossier loaded",
     heroTitle: repo.name,
     heroBody: "A public-safe dossier generated from the current Repo Foundry research record.",
     content,
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("ProfilePage", `${repo.name} dossier`, repo.summary, path),
+      repoSchema(repo),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Repository library", path: "repos/" },
+      { name: repo.name, path },
+    ],
   });
 }
 
 export function buildNewsPage(siteData, baseHref = "../") {
-  const newsMarkup = siteData.news.length
-    ? siteData.news.map(newsCard).join("")
-    : `<p class="empty-state">No public release items are available yet. Run the release sync and rebuild the site to repopulate this page.</p>`;
-  const content = sectionFrame(
-    "Release updates",
-    "Actual release notes and project updates from official source hosts, kept separate from the repo directory so this page reads like news.",
-    `<div class="card-grid">${newsMarkup}</div>`,
-  );
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Updates`,
+    title: `${siteData.workingTitle} | Feed`,
     description: "Latest tracked releases and project updates from the public repo feed.",
     currentKey: "news",
     baseHref,
+    canonicalPath: "news/",
     navItems: publicNav(),
     eyebrow: "Public release radar",
-    heroTitle: "Release updates",
-    heroBody: "A sharper news layer for Repo Foundry: real version drops, release notes, and project updates from GitHub, GitLab, and other source hosts.",
-    content,
+    heroKicker: "Broadcast on-air",
+    heroTitle: "Foundry Feed.",
+    heroBody: "A sharper news layer: release notes, project updates, and public repo signals kept separate from the directory.",
+    content: buildFeedContent(siteData),
     pageData: { page: "news", items: siteData.news },
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", "Repo Foundry feed", "Latest tracked releases and project updates from the public repo feed.", "news/"),
+      itemListSchema("Repo Foundry feed items", siteData.news, "news/", (item) => ({
+        "@type": "CreativeWork",
+        name: item.title,
+        url: item.url || absoluteUrl("news/"),
+        datePublished: item.publishedAt,
+      })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Feed", path: "news/" },
+    ],
   });
 }
 
 export function buildVisualisationsPage(siteData, baseHref = "../") {
   const content = `
-    <section class="content-section">
+    <section class="content-section" data-reveal>
       <div class="section-heading">
         <div>
-          <p class="section-heading__eyebrow">Snapshots</p>
-          <h2 class="section-heading__title">A lightweight view of what the public feed is currently biased towards.</h2>
+          <p class="eyebrow">Snapshots</p>
+          <h2>A lightweight view of what the public feed is currently biased towards.</h2>
         </div>
       </div>
       <div id="visualisationSummary" class="visual-summary-grid"></div>
@@ -570,32 +706,31 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
     </section>
     ${sectionFrame(
       "Method",
-      "These snapshots are generated from the current public-safe dataset, not from internal manager notes or private workspace telemetry.",
+      "These snapshots are generated from the current public-safe dataset, not from private operational material.",
       `<div class="stack-list">
         <article class="stack-item stack-item--long">
-          <div>
-            <p class="stack-item__title">What is counted</p>
-            <p class="stack-item__summary">Repo Foundry tracks curated public-safe repo records, then groups them by lane, source, star band, and freshness so the public site can show bias and movement without leaking internal state.</p>
-          </div>
+          <h3>What is counted</h3>
+          <p>Repo Foundry tracks curated public-safe repo records, then groups them by lane, source, star band, and freshness.</p>
         </article>
         <article class="stack-item stack-item--long">
-          <div>
-            <p class="stack-item__title">Why this matters</p>
-            <p class="stack-item__summary">The point is not just pretty charts. It is to show where the current attention is going, whether the shelves are balanced, and whether the feed is actually fresh enough to be trusted.</p>
-          </div>
+          <h3>Why this matters</h3>
+            <p>The point is not just pretty charts. It shows where attention is going and whether the feed is fresh enough to trust.</p>
         </article>
       </div>`,
     )}
   `;
+
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | Visualisations`,
+    title: `${siteData.workingTitle} | Snapshots`,
     description: "Category mix, source mix, star bands, and freshness across the public feed.",
     currentKey: "visualisations",
     baseHref,
+    canonicalPath: "visualisations/",
     navItems: publicNav(),
     eyebrow: "Public snapshots",
-    heroTitle: "Visualisations",
+    heroKicker: "Snapshot deck",
+    heroTitle: "Visualisations.",
     heroBody: "A quick look at category balance, popularity bands, and how fresh the current watchlist really is.",
     content,
     pageData: {
@@ -605,25 +740,41 @@ export function buildVisualisationsPage(siteData, baseHref = "../") {
       categories: siteData.categories,
     },
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", "Repo Foundry snapshots", "Category mix, source mix, star bands, and freshness across the public feed.", "visualisations/"),
+      {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "@id": `${absoluteUrl("visualisations/")}#dataset`,
+        name: "Repo Foundry public-safe repository snapshot",
+        description: "Generated category, source, star-band, and freshness summaries for the public Repo Foundry dataset.",
+        url: absoluteUrl("visualisations/"),
+        dateModified: siteData.generatedAt,
+      },
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Snapshots", path: "visualisations/" },
+    ],
   });
 }
 
 export function buildCodexPage(siteData, baseHref = "../../") {
   const content = `
     ${sectionFrame(
-      "CLI & Agents",
+      "CLI and agents",
       "A public-safe shortlist of Codex-style CLIs, coding-agent workflows, orchestration patterns, and operator-grade command surfaces.",
       `<div class="card-grid">${siteData.codexResources.map(resourceCard).join("")}</div>`,
     )}
     ${sectionFrame(
       "Watchlist",
-      "The higher-frequency repos we keep an eye on because the workflows change fast.",
+      "Higher-frequency repos we keep an eye on because the workflows change fast.",
       `<div class="stack-list">${siteData.watchlist
         .map(
           (item) => `<article class="stack-item">
             <div>
-              <p class="stack-item__title">${escapeHtml(item.name)}</p>
-              <p class="stack-item__summary">${escapeHtml(item.notes)}</p>
+              <h3>${escapeHtml(item.name)}</h3>
+              <p>${escapeHtml(item.notes)}</p>
             </div>
             <span class="pill pill--soft">${escapeHtml(item.cadence)}</span>
           </article>`,
@@ -631,55 +782,83 @@ export function buildCodexPage(siteData, baseHref = "../../") {
         .join("")}</div>`,
     )}
   `;
+
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | CLI & agent resources`,
+    title: `${siteData.workingTitle} | CLI and agent resources`,
     description: "Coding-agent CLIs, command surfaces, and workflow resources.",
     currentKey: "codex",
     baseHref,
+    canonicalPath: "resources/codex/",
     navItems: publicNav(),
-    eyebrow: "Public resource shelf",
-    heroTitle: "CLI & agent resources",
-    heroBody: "This is the CLI and command-surface shelf: Codex-style tools, coding-agent repos, workflow references, and comparators worth watching closely.",
+    eyebrow: "Resource shelf",
+    heroKicker: "Agent shelf",
+    heroTitle: "CLI and agents.",
+    heroBody: "Codex-style tools, coding-agent repos, workflow references, and comparators worth watching closely.",
     content,
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("CollectionPage", "Repo Foundry CLI and agent resources", "Coding-agent CLIs, command surfaces, and workflow resources.", "resources/codex/"),
+      itemListSchema("CLI and agent resources", siteData.codexResources, "resources/codex/", (item) => ({
+        "@type": "CreativeWork",
+        name: item.title,
+        url: item.url,
+        description: item.summary,
+      })),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "CLI and agents", path: "resources/codex/" },
+    ],
   });
 }
 
 export function buildAboutPage(siteData, baseHref = "../") {
-  const content = `
-    <section class="content-section">
-      <div class="stack-list">
-        ${siteData.editorialNotes
-          .map(
-            (item) => `<article class="stack-item stack-item--long">
-              <div>
-                <p class="stack-item__title">${escapeHtml(item.title)}</p>
-                <p class="stack-item__summary">${escapeHtml(item.body)}</p>
-              </div>
-            </article>`,
-          )
-          .join("")}
-        <article class="stack-item stack-item--long">
-          <div>
-            <p class="stack-item__title">Public boundary</p>
-            <p class="stack-item__summary">${escapeHtml(siteData.publicBoundary)}</p>
-          </div>
-        </article>
-      </div>
-    </section>
-  `;
   return buildDocument({
     audience: "public",
     title: `${siteData.workingTitle} | About`,
     description: "How Repo Foundry is curated.",
     currentKey: "about",
     baseHref,
+    canonicalPath: "about/",
     navItems: publicNav(),
     eyebrow: "Public methodology",
-    heroTitle: "About this hub",
+    heroKicker: "Operator dossier",
+    heroTitle: "The Operator.",
     heroBody: "A public-safe discovery surface built from a stricter internal research programme.",
-    content,
+    content: buildAboutContent(siteData),
     scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("AboutPage", "About Repo Foundry", "How Repo Foundry is curated.", "about/"),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "About", path: "about/" },
+    ],
+  });
+}
+
+export function buildContactPage(siteData, baseHref = "../") {
+  return buildDocument({
+    audience: "public",
+    title: `${siteData.workingTitle} | Contact`,
+    description: "Send public-safe Repo Foundry source notes, repo suggestions, and corrections.",
+    currentKey: "contact",
+    baseHref,
+    canonicalPath: "contact/",
+    navItems: publicNav(),
+    eyebrow: "Open comms",
+    heroKicker: "Incoming channel",
+    heroTitle: "Incoming.",
+    heroBody: "A static contact surface for public-safe source notes, repo suggestions, corrections, and estate cross-links.",
+    content: buildContactContent(),
+    scriptPath: "assets/public-app.js",
+    jsonLd: [
+      pageSchema("ContactPage", "Contact Repo Foundry", "Send public-safe Repo Foundry source notes, repo suggestions, and corrections.", "contact/"),
+    ],
+    breadcrumbs: [
+      { name: "Home", path: "" },
+      { name: "Contact", path: "contact/" },
+    ],
   });
 }
