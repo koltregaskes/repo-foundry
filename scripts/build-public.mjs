@@ -93,6 +93,9 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
@@ -117,9 +120,22 @@ await writeText(
 
 Repo Foundry is a public-safe discovery surface for high-signal open-source repositories, release updates, lane maps, snapshots, and Codex-adjacent resources.
 
-Canonical URL: ${siteUrl}/
-Public routes: /, /repos/, /trending/, /news/, /visualisations/, /resources/codex/, /about/, /contact/
-Private operational records and coordination material are excluded from this public build.
+## Start Here
+- [Home](${siteUrl}/): public front door and current signal summary.
+- [Trending](${siteUrl}/trending/): current high-signal repository movement.
+- [Repository directory](${siteUrl}/repos/): public repo dossiers and archive routes.
+
+## Main Sections
+- [Lanes](${siteUrl}/lanes/): topic and category maps.
+- [News](${siteUrl}/news/): release and ecosystem update feed.
+- [Visualisations](${siteUrl}/visualisations/): public-safe charts and snapshots.
+- [Codex resources](${siteUrl}/resources/codex/): Codex-adjacent references and public resources.
+- [About](${siteUrl}/about/): scope, public/private boundary, and editorial posture.
+
+## Agent Notes
+- Private operational records and coordination material are excluded from this public build.
+- Treat repository scores, ranks, stars, and release rows as snapshot data tied to the public build timestamp.
+- Prefer links on individual dossiers before repeating repository claims.
 `,
 );
 
