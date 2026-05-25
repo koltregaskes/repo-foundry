@@ -167,13 +167,46 @@ export function buildDocument({
         ${content}
       </main>
       <footer class="site-footer">
-        <p>Repo Foundry is a public-safe discovery surface for open-source repository signals.</p>
-        <div class="footer-links">
-          <a href="about/">Method</a>
-          <a href="news/">Feed</a>
-          <a href="resources/codex/">CLI and agents</a>
-          <a href="https://github.com/koltregaskes/repo-foundry">GitHub</a>
+        <div class="footer-primary">
+          <a class="footer-wordmark" href="./">repo<span>.</span>foundry</a>
+          <p>Public-safe discovery for high-signal open-source repositories, coding-agent tools, and operator-grade workflow infrastructure.</p>
         </div>
+        <section class="footer-estate-panel" aria-label="Elusion Works umbrella">
+          <div>
+            <p class="footer-estate-kicker">Umbrella home</p>
+            <a class="footer-estate-title" href="https://elusionworks.com/">Elusion Works</a>
+          </div>
+          <p>The showcase for Kol's websites, tools, games, and web experiments. Not a formal company; more like the public front door for the estate.</p>
+          <a class="footer-estate-cta" href="https://elusionworks.com/">Visit Elusion Works -&gt;</a>
+        </section>
+        <div class="footer-directory">
+          <nav class="footer-links" aria-label="Repo Foundry pages">
+            <p>Repo Foundry</p>
+            <a href="./">Home</a>
+            <a href="repos/">Library</a>
+            <a href="news/">Feed</a>
+            <a href="visualisations/">Snapshots</a>
+            <a href="resources/codex/">CLI and agents</a>
+            <a href="about/">About</a>
+            <a href="contact/">Contact</a>
+          </nav>
+          <nav class="footer-links" aria-label="Other Kol projects">
+            <p>Projects</p>
+            <a href="https://koltregaskes.com/">Kol's Korner</a>
+            <a href="https://theairesourcehub.com/">AI Resource Hub</a>
+            <a href="https://axylusion.com/">Axy Lusion</a>
+            <a href="https://ghostinthemodels.com/">Ghost in the Models</a>
+            <a href="https://koltregaskesphotography.com/">Photography</a>
+          </nav>
+          <nav class="footer-links" aria-label="Contact and source links">
+            <p>Contact</p>
+            <a href="https://github.com/koltregaskes/repo-foundry">GitHub</a>
+            <a href="https://github.com/koltregaskes">Kol on GitHub</a>
+            <a href="https://x.com/koltregaskes">X / Twitter</a>
+            <a href="https://koltregaskes.com/contact/">Contact Kol</a>
+          </nav>
+        </div>
+        <p class="footer-copyright">Repo Foundry &copy; 2026 Kol Tregaskes. Public build only; private operational material stays out of this site.</p>
       </footer>
     </div>
     <aside class="shortcut-help" hidden data-shortcut-help aria-label="Keyboard shortcuts">
