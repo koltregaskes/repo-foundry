@@ -4,7 +4,7 @@ export const siteMeta = {
   description:
     "Repo Foundry is a magazine-style discovery site for repositories worth studying, shipping against, or borrowing ideas from across AI, automation, coding agents, media systems, and practical developer workflows.",
   publicBoundary:
-    "The public site ships curated, public-safe repository research only. Private workspace operations, local paths, telemetry, and coordination records are excluded before build.",
+    "The public site ships curated, public-safe repository research only. Operational records and private coordination material are excluded before build.",
 };
 
 export const categoryCopy = {

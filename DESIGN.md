@@ -1,102 +1,65 @@
-# Repo Foundry Design System
+# Repo Foundry Design System v2
 
-> Part of the wider Kol Tregaskes hub family, but intentionally its own public-facing product.
+Status: implemented from the Wireframes v2 handoff.
+Supersedes: `design/archive/DESIGN-emerald-foundry-2026-05-17.md`.
+Source handoff:
 
-## Product role
+- `design/handoff-2026-05-16/project/handoff/DESIGN-SPEC.md`
+- `design/handoff-2026-05-16/project/handoff/TOKENS.md`
+- `design/handoff-2026-05-16/project/handoff/MOTION.md`
 
-**Name:** Repo Foundry  
-**Purpose:** A public discovery site for high-signal open-source repositories, trend watching, category mapping, and Codex-adjacent tooling references.  
-**Tone:** Editorial, technical, and operator-minded. This should feel less like a dashboard and more like a curated foundry floor.
+## Direction
 
-## Current direction
+Repo Foundry is a curated, editorial site for high-signal open-source repositories. It is not a SaaS dashboard and not a generic awesome list. The v2 direction is a dark, operator-minded repo discovery surface with two visitor-selectable skins:
 
-Repo Foundry already has:
+- HUD: the default esports/loadout surface.
+- Terminal: a dense operator-mode skin over the same content and data.
 
-- a shared codebase that builds both public and internal outputs
-- a dark atmospheric emerald theme
-- a magazine-style homepage
-- public pages for signals, library, news, visualisations, Codex resources, about
-- repo dossier pages
-- lane/category pages for the main public shelves
+The visitor can also choose one of five accents. Skin and accent choices persist in `localStorage`.
 
-The current phase is not the final beauty pass. The goal is to keep the structure strong, the routes clear, and the public/private boundary strict so a later dedicated design pass can go much further without reworking the foundations.
+## Tokens
 
-## Design stance
+The canonical token implementation lives in `src/assets/tokens.css`.
 
-### Visual language
+No component should hard-code accent colours. Components consume `var(--accent)`, `var(--accent-soft)`, `var(--accent-glow)`, and related custom properties.
 
-- Dark glass panels on a deep blue-black field
-- Emerald as the primary accent, with blue and amber support tones
-- Serif display typography for headings, technical grotesk for structure and scanning
-- Atmosphere layers that create depth without turning the site into generic neon sci-fi
+## Public routes
 
-### UX stance
-
-- Newest or most important items should surface first
-- Categories should behave like real shelves, not just tags
-- Repo cards must answer three questions quickly:
-  - what it is
-  - why it matters
-  - what we might use it for
-- Public pages should read comfortably to non-coders while still feeling credible to technical users
-
-## Public route map
+The v2 launch surface covers:
 
 - `/`
-- `/trending`
-- `/repos`
-- `/repos/:slug`
-- `/lanes`
-- `/lanes/:laneId`
-- `/news`
-- `/visualisations`
-- `/resources/codex`
-- `/about`
+- `/news/`
+- `/about/`
+- `/contact/`
 
-## Internal route map
+Existing public routes remain generated and use the v2 primitives:
 
-- `/internal`
-- `/internal/tracked-repos`
-- `/internal/backlog`
-- `/internal/sessions`
-- `/internal/ops`
-- `/internal/knowledge`
-- `/internal/cadence`
+- `/trending/`
+- `/repos/`
+- `/repos/:slug/`
+- `/lanes/`
+- `/lanes/:laneId/`
+- `/visualisations/`
+- `/resources/codex/`
 
-## Boundary rules
+## Motion
 
-Public output may include:
+Motion is short, purposeful, and never decorative for its own sake:
 
-- repo names
-- repo URLs
-- stars
-- categories
-- tags
-- summaries
-- why-it-matters copy
-- potential-use copy
-- public-safe news items
-- public-safe category and trend snapshots
+- 180-400ms UI transitions.
+- 38s scoreboard ticker.
+- Reduced-motion mode pauses or cuts non-essential movement.
+- No bounce, confetti, autoplay video, or aggressive parallax.
 
-Public output must never include:
+## Agent readiness
 
-- local file paths
-- workspace-only repo status
-- manager notes
-- private handoffs
-- session state
-- backlog ownership
-- database or inbox health
-- operational startup/runtime details
+Repo Foundry ships structured data and agent-facing basics from the public build pipeline:
 
-## Next design pass
+- `Organization` and `WebSite` on the home page.
+- `SoftwareSourceCode` on repo dossiers.
+- `Dataset` on visualisations.
+- `CollectionPage` and `ItemList` on browse surfaces.
+- `AboutPage` and `ContactPage` on the appropriate routes.
+- `sitemap.xml`, `robots.txt`, and `llms.txt` generated into `dist/public/`.
 
-When Claude Code or a dedicated design session takes over, the likely areas to push further are:
-
-1. Hero composition and typography hierarchy
-2. Editorial rhythm on homepage and lane pages
-3. Visualisation presentation
-4. Card polish and hover behaviour
-5. Brand identity details such as logos, marks, and richer section art
-
-The structural work should already be stable enough that the next pass can focus on quality rather than repair.
+See `AGENT-READINESS.md` for the release checklist.
