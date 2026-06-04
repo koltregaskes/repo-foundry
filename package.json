@@ -10,7 +10,7 @@
     "build:public": "node ./scripts/build-public.mjs",
     "build:internal": "node ./scripts/build-internal.mjs",
     "build:all": "node ./scripts/rebuild-all.mjs",
-    "test:visual": "playwright test ./tests/visual/repo-foundry.spec.js --workers=1 --browser=chromium --output=output/playwright/test-results"
+    "test:visual": "npm run build:public && playwright test ./tests/visual/repo-foundry.spec.js --workers=1 --browser=chromium --output=output/playwright/test-results"
   },
   "engines": {
     "node": ">=20"
