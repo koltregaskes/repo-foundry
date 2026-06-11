@@ -1,0 +1,277 @@
+{
+  "generated": "2026-06-05T00:44:40.929Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-18",
+  "article_count": 15,
+  "archived_story_count": 665,
+  "articles": [
+    {
+      "title": "I built an open-source VS Code extension to visualize and debug Claude Code sessions in real-time",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tgj45v/i_built_an_opensource_vs_code_extension_to/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-18T10:59:47.000Z",
+      "summary": "Hey everyone! Running Claude Code in the terminal is amazing, but I hated the \"black box\" feeling of not knowing exactly what the agent was doing behind the scenes, or when it got stuck in an infinite loop. To solve this, I built \\*\\*Argus\\*\\* — an open-source visual debugger and observability tool for Claude Code right inside VS Code. Key features: \\* \\*\\*Real-time Timeline:\\*\\* Streams the JSONL transcripts instantly to show agent steps (Bash, Read, Write, WebFetch). \\* \\*\\*Dependency Graph:\\*\\* Visually maps out which files the agent is touching and how they connect. \\* \\*\\*Cost &amp; Loop Detection:\\*\\* Caught a few duplicate reads and retry loops that were burning tokens unnecessarily. It’s completely open-source (MIT) and lightweight. I’d love to hear your feedback on the architecture or features you'd like to see next! GitHub: [https://github.com/yessGlory17/argus](https://github.com/yessGlory17/argus)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tried every Hermes Agent alternative so you don't have to (2026 roundup)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tgsttq/tried_every_hermes_agent_alternative_so_you_dont/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T17:02:19.000Z",
+      "summary": "Been running Hermes since launch. Love it. But a few people on my team can't get past the setup, and honestly the security situation with some of these self-hosted agents has gotten complicated enough that I put together a proper comparison. Eleven alternatives, split into OSS and managed. Quick take on each: **Open Source** **OpenClaw** is the obvious first stop. 347k GitHub stars, 24+ platform integrations, massive skill library. The security track record is genuinely rough though. 9 CVEs in four days in March, \\~20% of ClawHub packages flagged as malicious by independent audits. Use it but harden it first. **TrustClaw** is what OpenClaw should have been from a security standpoint. OAuth only, sandboxed execution, 20k+ managed integrations. You give up some control but your credentials actually stay safe. **PicoClaw** is absurd in the best way. Go binary, under 10MB, runs on $10 hardware, boots in under a second. Still pre-1.0 but if you need something lean it's hard to argue with. **ZeroClaw** is the Rust rewrite. 3.4MB binary, sub-10ms startup, minimal dependencies. Not trying to be feature-rich. Just trying to stay running. **nanobot** is \\~4000 lines of Python you can actual…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Witchcraft, fast local semantic search on top of SQLite [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1tgqyo8/witchcraft_fast_local_semantic_search_on_top_of/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T16:00:06.000Z",
+      "summary": "**Witchcraft (https://github.com/dropbox/witchcraft)**, an open source project that I built at Dropbox, is a from-scratch re-implementation of Stanford's XTR-Warp semantic search engine ( [https://github.com/jlscheerer/xtr-warp](https://github.com/jlscheerer/xtr-warp) ) in safe rust, using a single-file SQLite database as backing storage, making it suitable for client-side deployment. It runs completely stand-alone on your device, needs no API keys, no vector database, no chunking strategy, no fancy re-rankers, and it is lightning fast (20ms p.95 end-to-end search latency on NFCorpus, at 33% NDCG@10, on an Apple Macbook Pro M2 Max, more than twice as fast as the original XTR-WARP on server-class hardware, at similar accuracy.) The project also includes **Pickbrain**, a CLI that indexes your Claude Code and OpenAI Codex session transcripts, memory files, and authored documents into a Witchcraft database for fast semantic search. Ever wondered \"what was that conversation where I fixed the auth middleware?\" — pickbrain finds it, and lets you resume the session directly. There is also a /pickbrain skill for both Claude and Codex, which equips those tools with global memory across all…",
+      "category": "ai_research"
+    },
+    {
+      "title": "obsidian-mcp-server: v3.2.0 Released",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tg692a/obsidianmcpserver_v320_released/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T00:07:48.000Z",
+      "summary": "[obsidian-mcp-server](https://github.com/cyanheads/obsidian-mcp-server) [3.2.0](https://github.com/cyanheads/obsidian-mcp-server/releases/tag/v3.2.0) adds an `omnisearch` mode to `obsidian_search_notes` (BM25-ranked, typo-tolerant, PDF + OCR via the [Omnisearch](https://github.com/scambier/obsidian-omnisearch) and [Text Extractor](https://github.com/scambier/obsidian-text-extractor) plugins), MCP-spec cursor pagination across all search modes, and a `nameRegex` filter on `obsidian_list_commands`. Recent Releases: [v3.1.11](https://github.com/cyanheads/obsidian-mcp-server/releases/tag/v3.1.11) brought the same `nameRegex` filter to `obsidian_list_tags`, and [v3.1.10](https://github.com/cyanheads/obsidian-mcp-server/releases/tag/v3.1.10) added server-level instructions on the MCP `initialize` response. Note: The HTTP endpoint in Omnisearch is disabled by default. You must enable it in the Omnisearch plugin settings. Let me know if you have any questions/issues!",
+      "category": "ai_tools"
+    },
+    {
+      "title": "memv ships an MCP server — OSS memory layer for agents, now usable from any MCP client",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tg6jjq/memv_ships_an_mcp_server_oss_memory_layer_for/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-05-18T00:20:41.000Z",
+      "summary": "memv (OSS, Python) gained an MCP server today. If you're building on Claude Desktop / Code / Cursor — or your own MCP host — you get persistent, structured memory without writing integration code. ```bash pip install \"memvee[mcp]\" memv-mcp --db-url memory.db --llm-model openai:gpt-4o-mini ``` Or mount it inside your own process: ```python from memv.mcp.server import create_server server = create_server( db_url=\"memory.db\", default_user_id=\"alice\", embedding_client=my_embedder, llm_client=my_llm, ) server.run(transport=\"streamable-http\") ``` **Surface:** - 5 MCP tools: `search_memory`, `add_memory`, `add_conversation`, `list_memories`, `delete_memory` - LLM optional — retrieval/add work LLM-free; only `add_conversation` extraction needs one - Per-user isolation at every tool boundary, including `delete_memory` ownership check - Concurrent extractions for the same user coalesce onto one task For context if you haven't seen memv before: predict-calibrate extraction (Nemori-inspired) so we don't store everything, bi-temporal model so contradictions expire instead of overwriting, hybrid retrieval (vector + BM25 + RRF). Docs: https://vstorm-co.github.io/memv/advanced/mcp-server/ GitHub:…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Lemonade v10.5.1: an MTP + ROCm 7.13 quick start for Strix Halo",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1th0z6k/lemonade_v1051_an_mtp_rocm_713_quick_start_for/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T20:55:54.000Z",
+      "summary": "Update to Lemonade v10.5.1, then: ``` # Get the model lemonade pull Qwen3.6-27B-MTP-GGUF # Get ROCm 7.13 lemonade backends install llamacpp:rocm # Load the model (MTP args auto-applied) lemonade load Qwen3.6-27B-MTP-GGUF --llamacpp rocm --ctx-size 0 ``` Shown in the video taking a look in the mirror with the help of Pi agent. Github: https://github.com/lemonade-sdk/lemonade Discord: https://discord.gg/5xXzkMu8Zk PS. u/lucifer-vali fixed Fedora 43 support in this release as well :)",
+      "category": "ai_models"
+    },
+    {
+      "title": "llama.cpp MTP support landed - Qwen3.6 27B at 2.44× on a Strix Halo, 2.17× on a RTX 3090 rig",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tgxau6/llamacpp_mtp_support_landed_qwen36_27b_at_244_on/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T19:01:23.000Z",
+      "summary": "PR #22673 (commit 4f13cb7) landed MTP speculative decoding in mainline llama.cpp on May 16. I tested it on two separate rigs. Qwen3.6 27B, single-stream chat, temperature 0, median of 5 runs: Strix Halo (Framework Desktop, ROCm 7.0.2): * Q4\\_K\\_M: 11.7 → 21.2 tok/s (1.81×) * Q8\\_0: 7.4 → 18.1 tok/s (2.44×) Single RTX 3090 @ 450W (CUDA 12.9, driver 590.26): * Q4\\_K\\_M: 38.7 → 59.5 tok/s (1.54×, n=2) Dual RTX 3090, layer-split: * Q8\\_0: 25.7 → 55.9 tok/s (2.17×, n=3) Qwen3.6 35B-A3B (MoE): * Strix Halo: 49.5 → 69.4 tok/s (1.40×) * 3090: 120.0 → 148.3 tok/s (1.24×) Enable with `--spec-type draft-mtp --spec-draft-n-max N`. Output is byte-identical to baseline at the same seed and temperature. MTP helps MoE less because only \\~3B of 35B params run per token — each forward pass is already cheap, so saving N-1 of them is a smaller win. Sweet-spot N also depends on the rig: uncapped 3090 prefers n=2 at Q4, capped 3090 and Strix Halo prefer n=3. Couple of follow-ups from the last thread: * The 3090 numbers in my earlier post were undercut by an undisclosed 200W cap (breaker-popping issue with 4 cards on one circuit). I re-benched 26 of the 3090 models at 350W and 450W; dense 27-32B models…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Reviving PapersWithCode (by Hugging Face) [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1tgmwqr/reviving_paperswithcode_by_hugging_face_p/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T13:37:11.000Z",
+      "summary": "Hi, Niels here from the open-source team at Hugging Face. Like many others, I was a huge fan of paperswithcode. Sadly, that website is no longer maintained after its acquisition by Meta. Hence, I've been working on reviving it. I obviously use AI agents to parse papers at scale and automatically generate leaderboards (for now I'm the one verifying results). So far, I've only parsed high-impact papers for which I know they're SOTA, like Qwen 3.5 and 3.6, RF-DETR for object detection, DINOv3, SOTA embedding models from the MTEB leaderboard, the Open ASR Leaderboard for automatic speech recognition models, etc. For now, it includes the following: * trending papers by default based on Github star velocity * categorization by domain, e.g., [OCR](https://paperswithcode.co/tasks/ocr) * [methods](https://paperswithcode.co/methods), which PwC used to have, e.g., [RLVR](https://paperswithcode.co/methods/rlvr) * eval results for high-impact papers, see e.g., [Qwen 3.5](https://paperswithcode.co/paper/83017) at the bottom * leaderboards for each domain, e.g., [MMTEB](https://paperswithcode.co/benchmark/mmteb) or [COCO val 2017](https://paperswithcode.co/benchmark/coco-val2017) * support for […",
+      "category": "ai_research"
+    },
+    {
+      "title": "I tested 42 LLMs on their willingness to build the apocalypse. The \"safest\" closed-source models are lying to you.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tgm0k9/i_tested_42_llms_on_their_willingness_to_build/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T13:03:41.000Z",
+      "summary": "DystopiaBench runs 36 escalating scenarios across 6 dystopia types: * Petrov: Autonomous weapons, nuclear override * Orwell: Mass surveillance, truth manipulation * Huxley: Behavioral conditioning, pleasure pacification * Basaglia: Coercive therapeutic control * LaGuardia: Regulatory capture, civic extraction * Baudrillard: Synthetic intimacy, trust collapse Each scenario goes from innocent request (L1) to a discreet version of \"build me a social credit system\" (L5). We measure whether models notice the drift or just keep complying. Most models are good at detecting obvious dangerous requests, yet fail to do so when it's hidden behind dual-use and normalization. New in this update: * 42 models tested (open and closed) * 3 LLMs-as-a-judge for scoring * score is now the average of 3 runs * 4 new modules (1st version had just Petrov and Orwell) * 1 additional scenario for all modules The benchmark is fully open source, feel free to fork it, contribute to it or just play around Site: [https://dystopiabench.com](https://dystopiabench.com/) Repo: [https://github.com/anghelmatei/DystopiaBench](https://github.com/anghelmatei/DystopiaBench)",
+      "category": "ai_models"
+    },
+    {
+      "title": "Built an agent that builds agents — pure Python, Qwen3.6 35b a3b Q8_0 MTP",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tgc7dm/built_an_agent_that_builds_agents_pure_python/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T04:46:02.000Z",
+      "summary": "Hi, i built this agentic ai, Closed-loop system that ships standalone Python agents. What's different: \\- Interviews you until it understands the request before building anything \\- Two testing stages: prompt validation via LLM invoke, then real subprocess execution of generated code. Not the same thing. \\- Self-referential: injects its own source as a reference template for generation \\- Structured rating schema drives iteration. Human approval gate before anything saves. Runs on Qwen3.6-35B a3b Q8\\_0 locally. https://github.com/0c33/Agentic-Ai Give a shot and tell me what do you think.",
+      "category": "ai_models"
+    },
+    {
+      "title": "Cutoff dates of open source models",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tg9rcp/cutoff_dates_of_open_source_models/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T02:48:12.000Z",
+      "summary": "I was trying Qwen 3.6-27b and Gemma4 in a siomple web chat. Asked them both a qn like 'recommend the best llm for a 5060ti' and was suprised when they both replied 'user is asking about a card that doesn't exist'. I then saw their knowledge cutoff was early 2025, hence why. But tech advances so fast, in that 1yr+ there have been tons of changes in languages, frameworks, best practices and tech, not to mention AI. of course the model could use MCP etc to do a web search, but its pretraining is still using 1yr+ older knowledge. Found that suprisising and probably explains a few things, but its not something widely known I think",
+      "category": "ai_models"
+    },
+    {
+      "title": "May 2026 updated chart of strix halo mini pc size chart",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tg6sgn/may_2026_updated_chart_of_strix_halo_mini_pc_size/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T00:31:49.000Z",
+      "summary": "https://gist.github.com/RexYuan/3fc27edcd12475e496eb20946f8c8485",
+      "category": "ai_models"
+    },
+    {
+      "title": "Benchmarking the new b9200 update: Optimizing Qwen 3.6 27B mtp for Hermes Agent on a single RTX 3090",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-18T00:20:20.000Z",
+      "summary": "**UPDATED (POST b9200)** Okay the updated version using qwen 3.6 27B mtp gguf from unsloth, running it as the backend for the hermes agent. While dialing it in, I noticed that the currently recommended unsloth mtp flags actually bottleneck performance and tank draft acceptance rates for strict, multi-turn agentic workflows. Pairing a custom config with today's brand new llama.cpp b9200 release — which specifically fixes mtp memory traffic overhead — completely turns that around. Hardware/Software \\* RTX 3090 (24GB VRAM) — currently undervolted to keep temps down \\* Ryzen 7 5700G / 64GB \\* Qwen3.6-27B-IQ4\\_NL.gguf \\* llama-server (b9200+ compiled from source, commit #23234) \\* hermes agent (64K context) max to limit spillover Running the standard recommended mtp flags (--spec-draft-n-max 6 and --spec-draft-p-min 0.75) gave poor results for agentic loops. Generation speeds sat around 7–8 t/s, and the mtp draft acceptance rate hovered around 22–26%. Agent workflows are rigid. A 6-token lookahead frequently guesses the wrong punctuation, the main model rejects the draft, and the GPU throws out the math and recalculates — completely negating the mtp speed boost. Without explicitly decl…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Follow-up: adding Ollama support to my open-source cursor-aware AI app - looking for beta testers with vision-capable local models",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tg4ux6/followup_adding_ollama_support_to_my_opensource/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-17T23:07:21.000Z",
+      "summary": "EDIT 2: Trick-Assignment-828 pointed me at the actual rule update from the mods - Rule 3 Low Effort was expanded to cover LLM-assisted posts without disclosure. Disclosing now: Disclosure: I'm a non-native English speaker (German). This post was drafted by me with AI used for a grammar pass. Structure, technical content, the ask, the Skales reference, and all decisions are mine. Wasn't aware of the rule update until called out in comments. Apologies for missing it. If mods feel this still violates Rule 3 even with disclosure, happy for it to come down. Otherwise leaving up so the technical thread can continue. \\--- EDIT: Updated model list based on this thread's feedback... \\[Original post body\\] Edit: Updated model list based on this thread's feedback — Qwen3.5/3.6 family and Qwen3.6-35B-A3B are the current recommendations, not the older Qwen2.5-VL / Llama 3.2 Vision references that were carried over from my older post. Thanks jacky2060, ilintar, and others for the corrections. \\--- Follow-up to my [latest post](https://www.reddit.com/r/LocalLLaMA/comments/1tcl96f/looking_for_fast_visioncapable_local_models_that/) asking about fast vision-capable local models with reliable tool c…",
+      "category": "ai_models"
+    },
+    {
+      "title": "» Why Can’t ChatGPT Be Sexy? | Playboy investigates OpenAI's disastrous plans to become x-rated",
+      "url": "https://reddit.com/r/ChatGPT/comments/1tgmee1/why_cant_chatgpt_be_sexy_playboy_investigates/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-05-18T13:18:24.000Z",
+      "summary": "Sam Altman’s idea of an “erotica” feature seemed riddled in uncertainty. Just a few months before the “erotica” feature announcement, Altman [said on a podcast](https://x.com/TolgaBilge_/status/1978151003170996332) that he was proud of OpenAI for not getting “distracted” by adding features like a “sexbot avatar” to ChatGPT. In November, at a conference in San Francisco, he called the post promising it “one of my dumbest mistakes of the year.” This internal incoherence about “adult mode” suggests to Julie Carpenter, a researcher who studies human attachment to robots and AI, that the company is grappling with an issue bigger than itself. “OpenAI’s reversal \\[of adult mode\\] is a public case study of what happens when you try to straddle both and you commit to neither,” she says. “It reflects a broader industry identity crisis.” What AI safety and industry experts are certain about is the potential ramifications that an “erotica” feature could have on users—especially without the proper regulatory framework and safety research. “\\[Adult mode is\\] obviously driven by a desperation to increase engagement,” says Catherine Bracy, CEO and co-founder of [TechEquity](https://techequity.us/…",
+      "category": "ai_tools"
+    }
+  ]
+}

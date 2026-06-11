@@ -1,0 +1,267 @@
+{
+  "generated": "2026-06-05T00:44:36.788Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-29",
+  "article_count": 15,
+  "archived_story_count": 700,
+  "articles": [
+    {
+      "title": "Qwen Code v0.15.5 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.5",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-29T09:54:18.000Z",
+      "summary": "## What's Changed\n* mcp config as cli by @eliird in https://github.com/QwenLM/qwen-code/pull/1279\n* fix(cli): refresh static header on model switch by @pomelo-nwu in https://github.com/QwenLM/qwen-code/pull/3667\n* feat(core): wire background shells into the task_stop tool by @wenshao in https://github.com/QwenLM/qwen-code/pull/3687\n* feat(skills): add tmux-real-user-testing skill for readable TUI test logs by @pomelo-nwu in https://github.com/QwenLM/qwen-code/pull/3577\n* feat(cli): wire backgrou",
+      "category": "ai_tools"
+    },
+    {
+      "title": "LosslessCut v3.68.0 released",
+      "url": "https://github.com/mifi/lossless-cut/releases/tag/v3.68.0",
+      "source": "GitHub Releases · LosslessCut",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-01-29T16:54:17.000Z",
+      "summary": "⚠️ **Warning:** The keyboard handling has changed as of v3.67.0 and later. If you after upgrading to this version ever revert to a version prior to v3.67.0, you **will lose your keyboard bindings**. Also there's an issue with migrating certain shortcuts with some keyboard layouts to the new version. See [TLDR here.](https://github.com/mifi/lossless-cut/issues/2671#issuecomment-3727638311)\r\n\r\nNote: there's a bug with the [app size of this version being larger](https://github.com/mifi/lossless-cut",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Converting Claude Code into the most intelligent Deep Research Agent",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sz9ib0/converting_claude_code_into_the_most_intelligent/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T19:47:38.000Z",
+      "summary": "Over the past several weeks, I've been working on HyperResearch, a Claude Code skill harness that converts CC into the most intelligent deep research framework out there.\n\nHyperResearch surpasses OpenAI, Google, and NVIDIA's offerings in the agentic search space based on DeepResearch Bench. It's open-source, installable with a single command, and uses your CC subscription, so you don't have to pay for OpenAI or Gemini Pro.\n\nIt uses a 16-step pipeline that creates a searchable, persistent knowled",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SAP npm Packages Compromised: 1.2 Million Monthly Installs Affected",
+      "url": "https://x.com/safedepio/status/2049489220625215578",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T14:44:20.783Z",
+      "summary": "Four SAP npm packages with 1.2 million monthly installs were compromised in a supply chain attack via a developer's GitHub account.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Higgsfield MCP Is Now Inside OpenClaw, Hermes Agent, and NemoClaw",
+      "url": "https://x.com/Maginative/status/2049200033665569020",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T14:44:20.783Z",
+      "summary": "Higgsfield MCP launched inside OpenClaw, Hermes Agent, and NemoClaw, enabling end-to-end content creation including video generation within a single agent session.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI has now confirmed the new model selector in the composer via updated ChatGPT release notes, with thinking effort controls moved into the model picker for Thinking and Pro models, available on web for Plus, Pro, and Business users",
+      "url": "https://x.com/btibor91/status/2049370789300891838",
+      "source": "X / @btibor91",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T06:10:46.000Z",
+      "summary": "OpenAI has now confirmed the new model selector in the composer via updated ChatGPT release notes, with thinking effort controls moved into the model picker for Thinking and Pro models, available on web for Plus, Pro, and Business users",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Copilot just 9x'd Sonnet and 27x'd Opus and teams have no idea",
+      "url": "https://reddit.com/r/ChatGPT/comments/1syqa2v/copilot_just_9xd_sonnet_and_27xd_opus_and_teams/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.91,
+      "date": "2026-04-29T06:07:17.000Z",
+      "summary": "The multiplier table GitHub quietly updated last week is the first visible crack in a subsidy model that was never sustainable.\n\nQuick context for anyone unfamiliar: Copilot plans give you a monthly pool of \"premium requests.\" Each model has a multiplier that determines how fast you drain it. Until recently, Opus 4.6 had a 3x multiplier. It's now 27x. Sonnet 4.6 went from 1x to 9x.\n\nBut the multiplier table is just the symptom. The actual disease is that the AI companies have been eating the dif",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The 5-question filter I run every agent launch through (so you can stop reading release notes)",
+      "url": "https://natesnewsletter.substack.com/p/the-5-question-filter-i-run-every",
+      "source": "Nate's Newsletter",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.76,
+      "date": "2026-04-29T18:00:33.666Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.64.0 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.64.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.76,
+      "date": "2026-04-29T13:35:40.000Z",
+      "summary": "## Changelog\n### New!\n* a4488ca06a3e0f7427fc2979b54aeb3877272e72: feat(ui): switch to hyper theme when provider hyper is chosen (@meowgorithm)\n### Fixed\n* 4d16e96bd30016f674f162fc47128d3c108353eb: fix(app): replace single events channel with pubsub.Broker for fan-out (#2663) (@taigrr)\n* 38a846d334f55c83e170e87a0a65bcdd00c8b4a3: fix(hooks): recompile matchers after config reload (@meowgorithm)\n* 2be20248403dc5d2470c3e73a86a04eb40224322: fix(hyper): re-auth at selection time to ensure provider ava",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Fully 3D-modeled Raspberry Pi 5 enclosure made 100% through Claude's Blender MCP, zero manual modeling",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sz748q/fully_3dmodeled_raspberry_pi_5_enclosure_made_100/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-29T18:23:09.000Z",
+      "summary": "So I've been experimenting with Claude's new Blender MCP integration and decided to push it to its limits with a real engineering project: a complete, print-ready enclosure for the Raspberry Pi 5, modeled entirely through AI prompts, no hands on keyboard in Blender at all.\n\n**What Claude did autonomously:**\n\n* Researched and confirmed the official Raspberry Pi 5 mechanical dimensions from the datasheet (85×56mm PCB, exact mounting hole positions at 3.5/61.5 × 3.5/52.5mm)\n* Mapped every port and ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Your Claude Code project dashboard is now on the Mac App Store",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1symv0c/your_claude_code_project_dashboard_is_now_on_the/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-29T03:13:42.000Z",
+      "summary": "Follow up to my .story/ post last week. The Mac companion is now live on the Mac App Store, free.\n\nApp Store: [https://apps.apple.com/us/app/storybloq/id6761348691](https://apps.apple.com/us/app/storybloq/id6761348691)\n\nQuick recap if you missed the original.  \nStorybloq is a project tracker that lives in `.story/` inside your repo.\n\nTickets, issues, roadmap phases, lessons, session handovers. All JSON and markdown, editable in any text editor, git-trackable. The CLI and MCP server expose it to ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel CLI @vercel/python-workers@0.0.19 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/%40vercel/python-workers%400.0.19",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-29T20:39:18.000Z",
+      "summary": "### Patch Changes\n\n-   b357f9d: Align queue deployment pinning with the TypeScript SDK by distinguishing automatic pinning, explicit deployment IDs, and explicit unpinned sends.\n-   fddd88c: [vercel-workers] payload type validation\n-   fb68ac6: Add explicit Python queue worker retry and acknowledgement directives. Workers can now return or raise `RetryAfter` and `Ack` to control retry and acknowledgement behavior.\n",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Goose v1.33.1 released",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.33.1",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-29T06:55:32.000Z",
+      "summary": "## 🐛 **Bug Fixes**\n\n- Remove Windows CUDA build variant from release pipeline [#8895](https://github.com/aaif-goose/goose/pull/8895)\n- Windows CLI updates now use standard asset instead of CUDA variant [#8895](https://github.com/aaif-goose/goose/pull/8895)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I built a Kanban board for Claude Code so I can run agent sessions straight from cards",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sye8bs/i_built_a_kanban_board_for_claude_code_so_i_can/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.54,
+      "date": "2026-04-28T21:04:05.000Z",
+      "summary": "I've been running 4-5 Claude Code sessions in parallel and kept losing track - which terminal had the auth work, which one was the bug fix, what's actually done.\n\nSo I added a Kanban board to **Vibeyard** (an open-source IDE I'm building for Claude Code).                                                        \n\nEach card is a task. Click run → it spins up a Claude session scoped to that task. When Claude finishes, the card moves itself to Done.\n\nIt turned Claude from \"a terminal I talk to\" into ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Are we underweighting execution benchmarks when we talk about open-source frontier models?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1szb07b/are_we_underweighting_execution_benchmarks_when/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-29T20:41:38.000Z",
+      "summary": "A lot of open-source model discussion still centers on broad IQ-style evals or raw one-turn quality. What feels underdiscussed to me is whether execution-heavy evaluation is becoming its own frontier.\n\n\n\nLing-2.6-1T being open-sourced on Hugging Face today is one reason I’m thinking about this. Its stated profile is unusually explicit: precise instruct execution, strong results on execution-heavy / agentic tasks, low token overhead, and long-context task handling.\n\n\n\nIf more frontier open models",
+      "category": "creative_tools"
+    }
+  ]
+}

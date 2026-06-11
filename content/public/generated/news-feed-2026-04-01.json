@@ -1,0 +1,237 @@
+{
+  "generated": "2026-06-05T00:44:31.699Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-01",
+  "article_count": 15,
+  "archived_story_count": 894,
+  "articles": [
+    {
+      "title": "Agent-Infra Releases AIO Sandbox: An All-in-One Runtime for AI Agents with Browser, Shell, Shared Filesystem, and MCP",
+      "url": "https://www.marktechpost.com/2026/03/29/agent-infra-releases-aio-sandbox-an-all-in-one-runtime-for-ai-agents-with-browser-shell-shared-filesystem-and-mcp/",
+      "source": "MarkTechPost",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:35:03.720Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "MiniMax Releases M2.1: An Enhanced M2 Version with Features like Multi-Coding Language Support, API Integration, and Improved Tools for Structured Coding",
+      "url": "https://www.marktechpost.com/2025/12/25/minimax-releases-m2-1-an-enhanced-m2-version-with-features-like-multi-coding-language-support-api-integration-and-improved-tools-for-structured-coding/",
+      "source": "MarkTechPost",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:35:03.743Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "UT Austin and ServiceNow Research Team Releases AU-Harness: An Open-Source Toolkit for Holistic Evaluation of Audio LLMs",
+      "url": "https://www.marktechpost.com/2025/09/14/ut-austin-and-servicenow-research-team-releases-au-harness-an-open-source-toolkit-for-holistic-evaluation-of-audio-llms/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:35:03.737Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "How to Design a Fully Functional Enterprise AI Assistant with Retrieval Augmentation and Policy Guardrails Using Open Source AI Models",
+      "url": "https://www.marktechpost.com/2025/10/22/how-to-design-a-fully-functional-enterprise-ai-assistant-with-retrieval-augmentation-and-policy-guardrails-using-open-source-ai-models/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:35:03.735Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "How I contributed a new model to the Transformers library using Codex     1 day ago •  34",
+      "url": "https://huggingface.co/blog/nielsr/contributing-to-transformers-with-codex",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:34:55.910Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Improve coding agents’ performance with Gemini API Docs MCP and Agent Skills.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-docsmcp-agent-skills/",
+      "source": "Google AI Blog",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-04-01T09:34:55.903Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Tsinghua and Ant Group Researchers Unveil a Five-Layer Lifecycle-Oriented Security Framework to Mitigate Autonomous LLM Agent Vulnerabilities in OpenClaw",
+      "url": "https://www.marktechpost.com/2026/03/18/tsinghua-and-ant-group-researchers-unveil-a-five-layer-lifecycle-oriented-security-framework-to-mitigate-autonomous-llm-agent-vulnerabilities-in-openclaw/",
+      "source": "MarkTechPost",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.98,
+      "date": "2026-04-01T09:35:03.741Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "AgentScope 1.0: A Developer-Centric Framework for Building Agentic\n  Applications",
+      "url": "https://paperswithcode.com/papers/2508.16279",
+      "source": "Papers With Code",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-01T09:35:05.228Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "🤖 AI Agents Weekly: AI Labor Market Impacts, Google Workspace CLI, GPT-5.4, Exa Deep, and More",
+      "url": "https://nlp.elvissaravia.com/p/ai-agents-weekly-ai-labor-market",
+      "source": "NLP News (Elvis Saravia)",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-01T09:35:05.138Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "Speaking of VoxtralResearchVoxtral TTS: A frontier, open-weights text-to-speech model that’s fast, instantly adaptable, and produces lifelike speech for voice agents.\nMar 23, 2026Mistral AI",
+      "url": "https://mistral.ai/news/voxtral-tts",
+      "source": "Mistral AI Blog",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9,
+      "date": "2026-04-01T09:35:04.497Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Forge: Scalable Agent RL Framework and Algorithm     Feb 13 •  143",
+      "url": "https://huggingface.co/blog/MiniMax-AI/forge-scalable-agent-rl-framework-and-algorithm",
+      "source": "Hugging Face Blog",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-01T09:34:55.946Z",
+      "summary": null,
+      "category": "ai_models"
+    },
+    {
+      "title": "Mar 18     MiniMax 2.7: GLM-5 at 1/3 cost SOTA Open Model          \nShow details",
+      "url": "https://news.smol.ai/issues/26-03-18-not-much",
+      "source": "Smol AI News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-01T09:34:58.142Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open-Source &amp; Democratised AI",
+      "url": "https://www.artificialintelligence-news.com/categories/ai-and-us/open-source-democratised-ai/",
+      "source": "AI News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8599999999999999,
+      "date": "2026-04-01T09:34:54.224Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "EmDash – A spiritual successor to WordPress that solves plugin security",
+      "url": "https://blog.cloudflare.com/emdash-wordpress/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.83,
+      "date": "2026-04-01T16:14:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "📡 Model Context Protocol (MCP) 101",
+      "url": "https://www.rohan-paul.com/p/model-context-protocol-mcp-101",
+      "source": "Rohan Paul",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-01T09:35:06.133Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

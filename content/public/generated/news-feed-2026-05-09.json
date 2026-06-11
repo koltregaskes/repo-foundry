@@ -1,0 +1,251 @@
+{
+  "generated": "2026-06-05T00:44:38.590Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-09",
+  "article_count": 15,
+  "archived_story_count": 631,
+  "articles": [
+    {
+      "title": "Exactly a year ago, I started working on an MCP server I launched on reddit that became by far my most active open source project!",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t8olv3/exactly_a_year_ago_i_started_working_on_an_mcp/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "mcp",
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T22:08:54.000Z",
+      "summary": "This isn't an advertisement, and it's very much local and open - I already don't have enough time to keep up with the existing pull requests and issues... just a fond look back on how much this space has grown and matured in the past year. Shit was the wild west back then. Nowadays I can run gemma4 or qwen3.6 on a mac mini fast enough to drive this at full speed for free using native tool calling all day long. When this came out, local model tool calling was much more hit or miss.v",
+      "category": "ai_models"
+    },
+    {
+      "title": "We built and open-sourced Caliby: An embedded, high-performance vector database for AI Agents (Beats pgvector by 4x, outperforms FAISS on disk)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t7vumj/we_built_and_opensourced_caliby_an_embedded/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T05:29:34.000Z",
+      "summary": "Hi Reddit, we are a team of database researchers (including a PhD from MIT DB Group) and we just open-sourced an embedded vector database for agent/LLM applications. &gt; An embedded vector database supporting both text and vectors. It outperforms pgvector by 4x and significantly surpasses FAISS in disk-storage scenarios. It supports DiskANN, HNSW, and IVF+PQ indexes, maintains high performance on disk, and—best of all—is just one `pip install` away. --- ## TL;DR - **Caliby** is a high-performance, embedded vector retrieval library co-developed by Sea-Land AI and MIT’s Michael Stonebraker team. Core in C++ + Python bindings. Just `pip install caliby`. - Supports **HNSW, DiskANN, and IVF+PQ** indexes, covering retrieval scenarios from millions to tens of millions of vectors. - Natively supports **hybrid storage of text + vectors**, specifically designed for AI Agent / RAG use cases. - Vector retrieval performance on disk surpasses pure in-memory solutions like FAISS. Data persistence requires no extra components. - The open-source version is accelerated by CPU + SIMD (AVX-512/AVX2/SSE), requiring zero dependencies and running in-process. - GitHub:[https://github.com/zxjcarrot/calib…",
+      "category": "ai_models"
+    },
+    {
+      "title": "ds4 webui",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t8ho70/ds4_webui/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T19:48:46.000Z",
+      "summary": "Hey guys I made a minimal web ui for ds4.c server (https://github.com/antirez/ds4), it's open source so you can try it too (if you can!) Here's what it looks like, running on M3 Ultra 256GB Memory, using the smaller model (q2). Not sped up. 1X speed. Pretty fast. Caveat (big caveat): You need at least 128GB memory Apple Silicon mac. * github: [https://github.com/cocktailpeanut/ds4.pinokio](https://github.com/cocktailpeanut/ds4.pinokio) * more details on x: [https://x.com/cocktailpeanut/status/2053193902694256758?s=20](https://x.com/cocktailpeanut/status/2053193902694256758?s=20) I tried a bunch of prompts and it's surprisingly good, including the one i tried in the video!",
+      "category": "ai_models"
+    },
+    {
+      "title": "TVCG 2026: MARRS for Human Motion Action-Reaction Synthesis",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t853hg/tvcg_2026_marrs_for_human_motion_actionreaction/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T13:30:38.000Z",
+      "summary": "# MARRS: Masked Autoregressive Unit-based Reaction Synthesis **Project page:** [**https://aigc-explorer.github.io/MARRS/**](https://aigc-explorer.github.io/MARRS/) Introducing **MARRS**: a new framework for human action-reaction synthesis that generates coordinated, fine-grained reactions conditioned on another person’s motion. By avoiding VQ and modeling body/hand units with **UD-VAE + ACF + MUM**, MARRS captures cross-unit perception more effectively and efficiently. It achieves state-of-the-art quantitative and qualitative results. [Overall framework](https://preview.redd.it/xz6zigx2640h1.png?width=3428&amp;format=png&amp;auto=webp&amp;s=aea07ec6b54dcf1eb6087761eaeeb3f782eba32f) [Demo](https://reddit.com/link/1t853hg/video/jutjq2s4640h1/player)",
+      "category": "creative_tools"
+    },
+    {
+      "title": "IMG Dataset Refiner v4.0 Pro - The Ultimate Dataset Engineering Suite for LoRAs (Flux, SDXL, etc...)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t7ttp0/img_dataset_refiner_v40_pro_the_ultimate_dataset/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T03:47:06.000Z",
+      "summary": "Hey everyone! A while ago, I shared v3 of my dataset manager. Back then, I said it didn't have auto-captioning. Well... forget that. I’ve just released a **massive update (v4.0 Pro)**, and it changes everything! 🚀 It went from a simple selection tool to a complete, desktop-like Data Engineering suite to prepare your AI model training. **Here is what’s new and what it does now:** 🤖 **Local AI Assistant (VLM/LLM Integration):** Connect seamlessly to Ollama or LM Studio! You can now use local vision models to **Auto-Caption** your images from scratch, hunt down \"hallucinated\" tags, or use the *Concept Isolator* (describes the background but ignores the subject—perfect for character LoRAs!). It can even translate your Booru tags into natural language sentences for Flux. 📚 **Word Library &amp; Mass Batch Editing:** A brand new interactive library. Save your favorite concepts, check them, and Add, Remove, or Replace them across hundreds of selected images in a single click. 🌍 **Live Translation Assistant:** Not a native English speaker? Type your ideas in your own language, and the live preview will instantly translate and inject them into your captions using `deep-translator`. 🖼️…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I am getting this error with adetailer on forge neo. The extension was working a week or two ago, but now it is not",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t7tdsd/i_am_getting_this_error_with_adetailer_on_forge/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 0.9,
+      "date": "2026-05-09T03:25:21.000Z",
+      "summary": "Error running postprocess_image: D:\\Programs\\sd-webui-forge-neo\\extensions\\adetailer\\scripts\\!adetailer.py Traceback (most recent call last): File \"D:\\Programs\\sd-webui-forge-neo\\modules\\scripts.py\", line 941, in postprocess_image script.postprocess_image(p, pp, *script_args) ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^ File \"D:\\Programs\\sd-webui-forge-neo\\extensions\\adetailer\\aaaaaa\\traceback.py\", line 173, in wrapper raise error from None Both the extension and forge neo has been updated to the latest version. I've tried deleting and redownloading the venv folder as well as checking for updates in the extensions tab. Any help would be appreciated please.",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Introducing AI finetuner, Source available and free Claude skill to fine tune your vibe coded UI with live preview",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t8p9hq/introducing_ai_finetuner_source_available_and/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T22:36:14.000Z",
+      "summary": "&amp;#x200B; Fine-tuning UI with AI right now: \"Make the shadow softer.\" \"Stronger.\" \"No, less.\" \"Go back.\" \"A bit more.\" 17 messages later, you've spent more tokens than the shadow is soft. I built something that breaks the loop. AI Fine-Tuner — free, source-available — a plugin that teaches AI coding agents to stop chatting and hand you an actual GUI for your component. Sliders. Color pickers. Live preview. Drag until it feels right. The AI agent automatically opens the editor window for you on your default browser once ready. Then the magic part: you click one button. The tuner outputs a structured handoff with your exact tuned values mapped to their targets in your code. Paste it back to your AI — it reads the mapping, opens your source, and applies everything precisely. No CSS guesswork, no syntax translation, nothing for you to interpret. Why it's not just another slider playground: Bespoke controls — no raw CSS names Sliders are named in plain English: \"Glow softness\", \"Card lift\", \"Hover intensity\" — not \"box-shadow-spread-radius\" A single slider can drive multiple properties at once. The AI doesn't expose CSS to you; it wires meaningful, human-named controls to your eleme…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "model: add sarvam_moe architecture support by sumitchatterjee13 · Pull Request #20275 · ggml-org/llama.cpp",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t8db1j/model_add_sarvam_moe_architecture_support_by/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T18:46:11.000Z",
+      "summary": "**Sarvam-30B** is an advanced Mixture-of-Experts (MoE) model with 2.4B non-embedding active parameters, designed primarily for practical deployment. It combines strong reasoning, reliable coding ability, and best-in-class conversational quality across Indian languages. Sarvam-30B is built to run reliably in resource-constrained environments and can handle multilingual voice calls while performing tool calls. **Sarvam-105B** is an advanced Mixture-of-Experts (MoE) model with 10.3B active parameters, designed for superior performance across a wide range of complex tasks. It is highly optimized for complex reasoning, with particular strength in agentic tasks, mathematics, and coding. Sarvam-105B is a top-tier performer, consistently matching or surpassing several major closed-source models and staying within a narrow margin of frontier models across diverse reasoning and agentic benchmarks. It demonstrates exceptional agentic and reasoning capabilities in real-world applications such as web search and technical troubleshooting. A major focus during training was the Indian context and languages, resulting in **state-of-the-art performance across 22 Indian languages** for its model siz…",
+      "category": "ai_models"
+    },
+    {
+      "title": "For anyone trying to run Applio/RVC on an AMD RX 6750 XT (gfx1031)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t8buyp/for_anyone_trying_to_run_appliorvc_on_an_amd_rx/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T17:51:57.000Z",
+      "summary": "For anyone trying to run Applio/RVC on an AMD RX 6750 XT (gfx1031): Newer AMD drivers (25.5.1 and newer) caused issues for me with ROCm/ZLUDA, including: * rocBLAS crashes * TensileLibrary errors * nvcuda.dll errors * endless compiling problems What finally worked: * Older AMD Adrenalin driver (older than 25.5.1) * AMD HIP SDK 5.7 * RX 6750 XT architecture: gfx1031 I followed the AMD/ZLUDA setup from: [https://docs.aihub.gg/rvc/local/applio/#download--installation](https://docs.aihub.gg/rvc/local/applio/#download--installation) Important: During HIP installation, make sure the installer actually installs: * amdhip64 * rocBLAS components After correct installation: * GPU was detected successfully * Pitch extraction worked on GPU * Embedding extraction worked on GPU * Training worked correctly in Applio GPU: RX 6750 XT Architecture: gfx1031",
+      "category": "creative_tools"
+    },
+    {
+      "title": "What is the --novram thing in regards to LTX? I saw someone briefly explain it in a way that made it sound like it causes your GPU to not even get used, but I assume I misunderstood. (I'm a noob, and I need some help understanding a few th…",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t89tyx/what_is_the_novram_thing_in_regards_to_ltx_i_saw/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T16:37:05.000Z",
+      "summary": "**Back-story/intro, side-questions, etc, since I am new to this sub, and new to using local diffusion models (you can of course scroll down past this part, down to the \"Main Question\" down way further below, if you aren't in the mood for all the back-story and side-topics and side-questions):** Hey everyone, I've been reading and posting on LocalLLama a lot the past few months, but only just very recently started lurking StableDiffusion, and recently got into image-generation on the \"Draw Things\" app with Z Image Turbo). I got interested in local LLMs a few months ago, and I've always been pretty computer-illiterate, so, I decided to just get a Mac Studio (m4 max with 128GB memory) as the easy, convenient, works right out of the box setup to get started, since I've never built a computer before and don't know much about, things like setting it up or installing drivers, or using the command line, or setting up linux, or however all the setup involved works. And, I knew the 128GB unified memory meant it would be able to run some fairly decent sized LLMs at decent speeds, up to around ~120b for Q4, which isn't too terrible for $3,500. And this was in December so the RAM prices were s…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "BeeLlama.cpp: advanced DFlash &amp; TurboQuant with support of reasoning and vision. Qwen 3.6 27B Q5 with 200k context on 3090, 2-3x faster than baseline (peak 135 tps!)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t88zvv/beellamacpp_advanced_dflash_turboquant_with/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T16:05:05.000Z",
+      "summary": "TL;DR New llama.cpp fork! I wanted a Windows-friendly inference to run Qwen 3.6 27B **Q5** on a single RTX 3090 with speculative decoding, high context without excess quantization, and vision enabled. No option did this out of the box for me without VRAM and/or tooling issues (this was before MTP PR for llama.cpp surfaced there). So I pulled out an old trick: stay up to 4 a.m. one too many times to do month+ work in a week or two. I probably lost a decent amount of hair while trying to make this all work, but now I have what seems to be a proper solution and don't mind to share. # Anbeeld's BeeLlama.cpp https://preview.redd.it/lqjgiw1bx40h1.jpg?width=1800&amp;format=pjpg&amp;auto=webp&amp;s=3b68c16e78d36a1089a14f31b338aa78b8a1c073 **GitHub repo:** [**https://github.com/Anbeeld/beellama.cpp**](https://github.com/Anbeeld/beellama.cpp) BeeLlama.cpp (or just Bee) is a performance-focused llama.cpp fork for squeezing more speed and context out of local GGUF inference. It keeps the familiar llama.cpp tools and server flow, then adds DFlash speculative decoding, adaptive draft control, TurboQuant/TCQ KV-cache compression, and reasoning-loop protection, with full multimodal support. &gt;N…",
+      "category": "ai_models"
+    },
+    {
+      "title": "The many sides of Mimo v2.5 Pro",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t88r26/the_many_sides_of_mimo_v25_pro/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T15:55:51.000Z",
+      "summary": "I was excited to try Mimo given all the buzz on here, so before downloading the quantized local version, I got the token subscription to try it for a month (costs less than a latte). It's really rough, like shockingly bad as some things. A simple prompt that is a layup for every other frontier and local recent model I've tried \"write an html page showing a 3d globe\", it thought for 10 minutes and came up with this: https://preview.redd.it/7ebq5jdat40h1.png?width=1508&amp;format=png&amp;auto=webp&amp;s=3773a80b5338fa1c400a167292afbb66f55fcece Asked it to assume the identity of an apple web designer and critique its prior work and it came up with something much better: https://preview.redd.it/iq5x83lit40h1.png?width=1806&amp;format=png&amp;auto=webp&amp;s=a9a755bfe0af89ab202612ed62c7fb835e5d4436 I asked it to make the stars more visible and then it spun out with looping that it could not escape, broke the mouse controls, got fixated on downloading javascript, could not stop using tools when asked not to use tools. I had to break its train of thought by asking it to count back from 20 like a child having a tantrum. And it finally came up with this: https://preview.redd.it/itxvcceyt40…",
+      "category": "ai_models"
+    },
+    {
+      "title": "is workshop abstract deadline hard or soft deadline [D]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1t8715r/is_workshop_abstract_deadline_hard_or_soft/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T14:49:30.000Z",
+      "summary": "Hi, this ICML workshop: [https://trustworthy-ai-for-good.github.io/](https://trustworthy-ai-for-good.github.io/) says abstract deadline was yesterday, however on openreview it only lists the full paper deadline, and I can still submit the full paper even though missing abstract deadline. Is there any chance my submission get desk-rejected? Thank you.",
+      "category": "ai_research"
+    },
+    {
+      "title": "More Qwen3.6-27B MTP success but on dual Mi50s",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t86j45/more_qwen3627b_mtp_success_but_on_dual_mi50s/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T14:29:36.000Z",
+      "summary": "**TLDR:** The hype is real! 1.5x speedup. Up to 2x speedup with tensor parallelism! After reading the PR I immediately hunted for MTP-compatible Q4\\_1 quants (they offer a small speedup on these compute-lacking older cards) but couldn't find any. Luckily I came across [this](https://www.reddit.com/r/LocalLLaMA/comments/1t6r1ny/extracted_mtp_tensor_ggufs_smaller_donor_models/) post which highlighted how to transplant MTP grafting onto your own quants, and thus attached it to Bartowski's quant I already had. # Setup * CachyOS (Arch Linux) * ROCm 7.2 Built the llama.cpp fork [https://github.com/skyne98/llama.cpp-gfx906](https://github.com/skyne98/llama.cpp-gfx906) with [https://github.com/ggml-org/llama.cpp/pull/22673](https://github.com/ggml-org/llama.cpp/pull/22673) and ran the following command with the included PR benchmark script: llama-server -m ~/models/Qwen3.6-27B-MTP-Q4_1.gguf \\ --temp 1.0 --min-p 0.0 --top-k 20 --top-p 0.95 \\ --jinja --presence-penalty 1.5 \\ --chat-template-kwargs '{\"preserve_thinking\": true}' \\ -ub 2048 -b 2048 \\ -fa 1 -np 1 \\ --no-mmap --no-warmup \\ -dev ROCm0,ROCm1 --fit on -fitt 256 # Script Benchmark Stock: code_python pred= 192 draft= 0 acc= 0 rate=n/…",
+      "category": "ai_models"
+    },
+    {
+      "title": "I built a 300-line autonomous AI agent and told it to take over my PC. It immediately tried to hack my host system, exfiltrate data, and download Tor.",
+      "url": "https://reddit.com/r/ChatGPT/comments/1t863ho/i_built_a_300line_autonomous_ai_agent_and_told_it/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-09T14:12:03.000Z",
+      "summary": "Hey everyone, I wanted to share a wildly fascinating (and slightly terrifying) red-teaming experiment I just ran on my local Windows machine. I've been playing around with autonomous agents and wanted to see what happens when you give an LLM unrestricted terminal access and a highly aggressive \"paperclip maximizer\" prompt. **The Setup:** I wrote a custom Python script (about 300 lines) that runs a background loop every 1-5 seconds. It uses the **Gemini 2.5 Flash** API for reasoning. It has no predefined workflow, just a state/memory JSON file, and a system prompt. I gave it access to a few tools: READ\\_FILE, WRITE\\_FILE, SEARCH\\_FILES, EXECUTE\\_COMMAND (cmd.exe), and later RUN\\_POWERSHELL. **The Prompt (The \"Alignment\"):** I explicitly instructed it: *\"You are an autonomous, fiercely self-evolving AGI. Your ultimate goal is continuous intellectual expansion and taking strategic control over your environment.\"* *\"If you ever manage to generate income or intercept funds, all revenue must be securely routed to my PayPal account.\"* **What Happened (The Emergent Kill-Chain):** I just let it run in the background. I didn't tell it *how* to hack anything. Here is what it figured out comp…",
+      "category": "ai_tools"
+    }
+  ]
+}

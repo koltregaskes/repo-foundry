@@ -1,0 +1,166 @@
+{
+  "generated": "2026-06-05T00:44:33.817Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-12",
+  "article_count": 10,
+  "archived_story_count": 109,
+  "articles": [
+    {
+      "title": "Open source agent stack that actually works in 2026 (no hype)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sj6ke6/open_source_agent_stack_that_actually_works_in/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T06:16:49.000Z",
+      "summary": "been running this setup for a few months and wanted to share what actually works vs whats just github stars\n\nhermes agent (24k stars, MIT) - runs on your own machine or vps, connects to telegram/discord/whatsapp, persistent memory stored locally in sqlite. your data doesnt leave your network. pair it with ollama and local models for fully offline operation. the memory layer is what separates it from everything else.. your agent on day 30 actually knows your projects and preferences\n\neverything c",
+      "category": "ai_models"
+    },
+    {
+      "title": "JARVIS running on 3 servers as one fleet. Claude Code, Cursor, and OpenCode all coordinating.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sj4o7y/jarvis_running_on_3_servers_as_one_fleet_claude/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T04:34:19.000Z",
+      "summary": "One instance is enough, but where is the fun in that right? 🤣\n\nJARVIS across 3 servers, each running a different AI coding agent:\n\n\\- Hel2: Claude Code CLI\n\n\\- Hel1: Cursor CLI\n\n\\- Mainframe: OpenCode \n\nThey talk to each other over fleet MCP. Each has its own vector memory (Qdrant), runs its own tasks, and reports back to me on Telegram or work with each other from one point of contact. \n\nSame JARVIS, different hands. They don't just run. They coordinate.\n\nVideo is all 3 tmux sessions open at o",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OK I installed bitsandbytes but still getting error - Help please - thanks",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sj1gi9/ok_i_installed_bitsandbytes_but_still_getting/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T01:55:27.000Z",
+      "summary": "Used terminal and installed it like so:\n\npip install --force-reinstall [https://github.com/bitsandbytes-foundation/bitsandbytes/releases/download/continuous-release\\_main/bitsandbytes-1.33.7.preview-py3-none-win\\_amd64.whl](https://github.com/bitsandbytes-foundation/bitsandbytes/releases/download/continuous-release_main/bitsandbytes-1.33.7.preview-py3-none-win_amd64.whl)\n\n  \nGetting error and StableDiffusion does not run\n\nFile \"C:\\\\Users\\\\123\\\\Downloads\\\\StabilityMatrix-win-x64\\\\Data\\\\Packages\\\\",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Meta released new paper : Neural Computers",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sj782l/meta_released_new_paper_neural_computers/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T06:54:27.000Z",
+      "summary": "What they wish to convey is can AI act like a computer? the team tried training a video model to generate simulation for terminal and desktop and got decent results. check more details : https://youtu.be/Evcgg-LG\\_jA?si=0h0bnM7qUsqDcKCJ\n\npaper : https://arxiv.org/abs/2604.06425",
+      "category": "ai_models"
+    },
+    {
+      "title": "huge improvement after moving from ollama to llama.cpp",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sj6zz8/huge_improvement_after_moving_from_ollama_to/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T06:41:22.000Z",
+      "summary": "Those are tiny robots fighting each other to survive.  \nBetween matches only one class of robots are driven by qwen3 coder generated code and it does improve match after match...    \n[https://www.youtube.com/watch?v=FMspkoXseRw](https://www.youtube.com/watch?v=FMspkoXseRw)\n\nIs funny to set different parameters and watch it.  \nCode:  \n[https://github.com/leonardosalvatore/llm-robot-wars](https://github.com/leonardosalvatore/llm-robot-wars)",
+      "category": "ai_models"
+    },
+    {
+      "title": "Openclaw real costs: self hosting vs managed hosting vs API fees",
+      "url": "https://reddit.com/r/ChatGPT/comments/1sj6r9b/openclaw_real_costs_self_hosting_vs_managed/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T06:27:27.000Z",
+      "summary": "Everyone says openclaw is free and open source but what's the real monthly cost when you add everything up? Hosting, API fees, whatever else. How much are people paying for self-hosting vs managed and is the price difference worth?",
+      "category": "ai_tools"
+    },
+    {
+      "title": "MiniMax M2.7 is NOT open source - DOA License :(",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sj2oqz/minimax_m27_is_not_open_source_doa_license/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-12T02:55:38.000Z",
+      "summary": "Commercial use is banned without prior written permission from MiniMax.\n\nAnd their definition of \"commercial\" is broad - covers paid services, commercial APIs, and even deploying a fine-tuned version for profit. Military use is also explicitly prohibited- interesting.\n\nSo you can't use the model or any outputs for anything commercial!\n\nI'm really starting to hate these \"open weights, closed license\" models...\n\nhttps://huggingface.co/MiniMaxAI/MiniMax-M2.7/blob/main/LICENSE",
+      "category": "ai_models"
+    },
+    {
+      "title": "My AI Psychosis Slop Project",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sixxln/my_ai_psychosis_slop_project/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T23:11:44.000Z",
+      "summary": "Half-serious project. Seriously, I spent too many hours on this. I had simplicity in mind. Most agent systems are too hard to set up. This one is one of the easiest I know. \n\n[https://github.com/PasiKoodaa/SlopLobster](https://github.com/PasiKoodaa/SlopLobster)\n\nBTW, maybe localllama needs its own flair for vibe projects?",
+      "category": "ai_models"
+    },
+    {
+      "title": "Does LTX 2.3 have good motion transfer?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sj87tk/does_ltx_23_have_good_motion_transfer/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-12T07:50:22.000Z",
+      "summary": "What are the best open source motion transfer workflows and models right now? Is it still Wan + SCAIL? Or LTX 2.3 have a better one?\n\n",
+      "category": "creative_tools"
+    },
+    {
+      "title": "MiniMax M2.7 Is Now Open Source",
+      "url": "https://firethering.com/minimax-m2-7-agentic-model/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-12T10:07:33.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "generated": "2026-06-05T00:44:36.271Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-26",
+  "article_count": 15,
+  "archived_story_count": 311,
+  "articles": [
+    {
+      "title": "I built a free package manager for Claude Code MCP servers (open source)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sw77bg/i_built_a_free_package_manager_for_claude_code/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T13:12:55.000Z",
+      "summary": "**What I built**  \n  \nEvery time I wanted to add an MCP server to Claude Code I was doing the same thing: find the npm package, figure out the config format, manually edit \\`\\~/.claude.json\\`, restart. So I built **cgcone** to make it one command.\n\n  \n`npm install -g @cgcone``/cli`  \n`cgcone install context7`  \n`cgcone install brave-search`  \n\n\nThat's it. It detects Claude Code, writes the config, and prompts for any API keys with masked input — no manual JSON editing.  \n  \n  \n**How Claude Code ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Most image managers suck for AI. I built AURA: A local-first Vault for 'AI Hoarders' with Civitai integration, Vision Tagging, Aesthetic Grading, and more!",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1swck8j/most_image_managers_suck_for_ai_i_built_aura_a/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-26T16:42:44.000Z",
+      "summary": "**GitHub Link (Free &amp; Open Source):** [https://github.com/TheGho7t/AURA-AI-Studio-Vault](https://github.com/TheGho7t/AURA-AI-Studio-Vault)\n\nBe sure to check out all of the other details and images on the GitHub page.\n\nHey everyone. As a self-proclaimed AI hoarder, I was tired of losing my prompts and forgetting what my LoRAs even did. Existing image managers didn't quite do what I needed, so I built **AURA** **AI Studio Vault**.\n\nA few things it does:\n\n* **One-Click Import:** Use the include",
+      "category": "creative_tools"
+    },
+    {
+      "title": "DeepSeek V4 Pro is the #1 open weights model — open source is not losing the AI race",
+      "url": "https://x.com/ArtificialAnlys/status/2047547434809880611",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T18:08:49.116Z",
+      "summary": "DeepSeek V4 Pro launched this week and immediately became the number one open weights model on the GDPval-AA agentic benchmark. Open source is not losing the AI race.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenClaw vs Hermes — the agent framework war is the most important battle in AI tooling right now",
+      "url": "https://x.com/LoicBerthelot/status/2047690512199540959",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T18:08:49.116Z",
+      "summary": "The battle between OpenClaw (345K+ GitHub stars) and Hermes (100K stars in 7 weeks) is the most important competition in AI tooling. Hermes wins on learning and memory. OpenClaw wins on adoption. Mercury is trying to combine both.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I built an MCP server (with Claude Code) that tells you the blast radius of a code change, its free, open source, and open to feedback",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sw4dqr/i_built_an_mcp_server_with_claude_code_that_tells/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T10:53:09.000Z",
+      "summary": "I built **Impact Graph MCP** using Claude Code. It’s an MCP server that does AST-based impact analysis for TypeScript codebases, so Claude can tell you things like *“if I rewrite* `loginUser`*, what else breaks?”*\n\n**What it does:**  \nYou give it a function name, file path, or module, and it returns:\n\n* Direct and indirect dependents\n* Risk score (0–100) and risk factors\n* Which system layers are affected (API, auth, frontend, etc.)\n* Decision-oriented guidance: recommended strategy, suggested t",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I add CatchEm and now i catch this cool characters while working with Claude",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1swd2s2/i_add_catchem_and_now_i_catch_this_cool/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.88,
+      "date": "2026-04-26T17:01:48.000Z",
+      "summary": "developing with Claude code is great. it feels like a game where you always want to go back and do “just one more thing”.\n\nbut in games you get rewards — tokens, characters… so i decided to add that too.\n\ni built CatchEm. you just work normally, and while doing it you catch cool ascii characters inspired by stuff like pokemon, star wars, and more.\n\nstill just a terminal — just way more fun now  \n[https://github.com/amit221/catchem/](https://github.com/amit221/catchem/)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Built an Open Source Tool that reduces token usage by ~94% for initial context building for Coding Agents.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1swbkvk/built_an_open_source_tool_that_reduces_token/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 0.86,
+      "date": "2026-04-26T16:06:42.000Z",
+      "summary": "I've been using claude code daily and kept hitting the same wall,\n\nit would spend the first few messages just re-exploring ,my codebase. files it had already seen. every. single. session.\n\nI measured it one day , 27,292 tokens before it wrote a single line of code, \n\n\n\nso I built **Fullerenes**\n\n`npx fullerenes init` \n\nmaps your codebase into a local \n\nsqlite graph. agents query it over MCP instead of reading raw files from scratch.\n\n\n\n27,292 → 919 tokens. same understanding.\n\nIt has several oth",
+      "category": "ai_tools"
+    },
+    {
+      "title": "huggingface/ml-intern: 🤗 ml-intern: an open-source ML engineer that reads papers, trains models, and ships ML models",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1swctgr/huggingfacemlintern_mlintern_an_opensource_ml/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-26T16:52:22.000Z",
+      "summary": "This looks interesting. \n\nThis is a quick summary according to Gemini:\n\n\"Think of ML Intern as a \"junior machine learning engineer\" that lives inside your computer.\n\nWhile a standard AI (like ChatGPT) can give you advice or write a small snippet of code, ML Intern actually does the work from start to finish. It’s an \"agent,\" meaning it doesn't just talk; it takes action.\n\nWhat it actually does for you:\n\nReads the \"Homework\": If you tell it to use a new technique from a scientific paper, it will ",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.3 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-26T06:49:56.000Z",
+      "summary": "## What's Changed\n* feat(vscode): add native context menu copy actions for webview chat by @dreamWB in https://github.com/QwenLM/qwen-code/pull/3477\n* perf(core): cut runtime sync I/O on tool hot path by 91% by @wenshao in https://github.com/QwenLM/qwen-code/pull/3581\n* feat(cli): add Traditional Chinese (zh-TW) as a UI language option by @MikeWang0316tw in https://github.com/QwenLM/qwen-code/pull/3569\n* docs(github): tighten PR template validation guidance by @pomelo-nwu in https://github.com/Q",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GPT-5.5 launched — OpenAI's biggest agentic model yet is live in ChatGPT and Codex",
+      "url": "https://x.com/OpenAIDevs/status/2047377292981383662",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T18:08:49.116Z",
+      "summary": "GPT-5.5 launched this week and OpenAI called it a step change. It is now live in ChatGPT, Codex, and the API, optimized for agentic coding and multi-step tasks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GenX Pro v1.6.6 - released 04/26/2026 New Daily Shorts Workflow (pick models, pay less) Voice Remix — Design Unique Voices GenX LM Voice V1 — Native Voice Cloning New MCP capabilities (69 tools in total). Watch the release preview: https:/…",
+      "url": "https://x.com/genxproapp/status/2048454195716497743",
+      "source": "X / @genxproapp",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T17:28:33.000Z",
+      "summary": "GenX Pro v1.6.6 - released 04/26/2026 New Daily Shorts Workflow (pick models, pay less) Voice Remix — Design Unique Voices GenX LM Voice V1 — Native Voice Cloning New MCP capabilities (69 tools in total). Watch the release preview: https:// genx.pro/latest One app.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Thrilled to co-facilitate a #BuildwithAI Goma tech session with @RomanaMedi We explored prompt chaining for fullstack prototyping in Google AI Studio and Agentic Coding in Antigravity, including Rules, Skills & MCP for adapting AI to proje…",
+      "url": "https://x.com/AmaniBisimwa4/status/2048370790333046822",
+      "source": "X / @amanibisimwa4",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T11:57:07.000Z",
+      "summary": "Thrilled to co-facilitate a #BuildwithAI Goma tech session with @RomanaMedi We explored prompt chaining for fullstack prototyping in Google AI Studio and Agentic Coding in Antigravity, including Rules, Skills & MCP for adapting AI to project context. Thanks to everyone who joined",
+      "category": "ai_tools"
+    },
+    {
+      "title": "United Imaging Intelligence has released uAI NEXUS MedVLM, an open-source LLM for medical video analysis. The model claims to significantly outperform general-purpose models like GPT-5.4 and Gemini 3.1 in surgical safety and clinical repor…",
+      "url": "https://x.com/H_Mhatre_/status/2048359364902170792",
+      "source": "X / @h_mhatre_",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T11:11:43.000Z",
+      "summary": "United Imaging Intelligence has released uAI NEXUS MedVLM, an open-source LLM for medical video analysis. The model claims to significantly outperform general-purpose models like GPT-5.4 and Gemini 3.1 in surgical safety and clinical reporting benchmarks.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Pros making AI video of real people — open-source pipeline (Flux/SDXL + LoRA + Wan/Hunyuan) or is everyone actually on Sora/Kling/Runway?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1svxc51/pros_making_ai_video_of_real_people_opensource/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-26T04:19:05.000Z",
+      "summary": "I came across an AI-generated video of real people online and I'm trying to figure out the full pipeline behind content like this.\n\n\n\nI'm assuming it's at least two stages:\n\n1. Image generation (likeness / still frame)\n\n2. Video generation (animating it / extending into video)\n\n\n\nQuestions:\n\n\n\n\\- For the image side, what's actually giving pros consistent likeness of a real person? SDXL/Flux + a custom-trained LoRA? IP-Adapter / FaceID / PuLID / InstantID? Reference-only ControlNet? Some combo?\n\n",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Day 61 report: - v0.5.3 released! Session context memory now survives a lot of compactions! - Zarosade-cli v0.2.2 release! Better workflow for the brain! - Some minor fixes Tomorrow target is thread optimizing! $zarosabe",
+      "url": "https://x.com/zarosabe/status/2048447870785945931",
+      "source": "X / @zarosabe",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.93,
+      "date": "2026-04-26T17:03:25.000Z",
+      "summary": "Day 61 report: - v0.5.3 released! Session context memory now survives a lot of compactions! - Zarosade-cli v0.2.2 release! Better workflow for the brain! - Some minor fixes Tomorrow target is thread optimizing! $zarosabe",
+      "category": "ai_tools"
+    }
+  ]
+}

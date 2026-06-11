@@ -1,0 +1,257 @@
+{
+  "generated": "2026-06-05T00:44:38.402Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-08",
+  "article_count": 15,
+  "archived_story_count": 552,
+  "articles": [
+    {
+      "title": "Flux.2-Klein pipeline for real-time webcam stream processing in 30 FPS",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t7nd7e/flux2klein_pipeline_for_realtime_webcam_stream/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T22:51:51.000Z",
+      "summary": "I have built a pipeline based on the Flux.2-Klein-4B model that allows processing of a video stream with low latency (about 0.2 seconds) on a single RTX5090 GPU. It is free and open-source, you can try it locally: [https://github.com/tensorforger/FluxRT](https://github.com/tensorforger/FluxRT) Under the hood, it uses a custom spatial-aware KV-cache, so it only recomputes a small number of image tokens per frame, specifically where something is moving or changing. It also uses frame interpolation with the RIFE model, which can multiply FPS by a factor of 2, 4, 8, etc. I have found that 4 is the most appropriate for my setup. Depending on scene dynamics, the output stream achieves up to 50 FPS in mostly static scenes and around 20 FPS when the entire input image is changing rapidly. Benchmark results are in the repo. There is also a Gradio demo, several minimal cv2 examples, and a simple paint-style app with real-time canvas updates.",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I built a Pokémon-styled multi-agent dashboard to manage all Claude Code sessions",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t7m3j3/i_built_a_pokémonstyled_multiagent_dashboard_to/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T22:00:25.000Z",
+      "summary": "Like many others here, I got frustrated with managing all my different claude/codex sessions, so i built Pokegents, which is an open source multi-agent workspace for coding agents. It has a Pokemon-themed dashboard/chat interface plus a local orchestration server for managing agent sessions (currently supports Claude Code in iTerm2, plus Claude and Codex through ACP-based chat runtimes), persistent agent identities, mcp messaging between agents, notifications, session cloning, and more. This was mostly a vibe-coded side project, but I've been using it constantly in my day-to-day workflow as an engineer, and its helped me parallelize a lot of my work. My coworkers make fun of me because it looks like I'm just playing Pokemon all day haha. I made it open source and sharing in case it might be useful or just fun for anyone to use (links in comment below).",
+      "category": "ai_tools"
+    },
+    {
+      "title": "vLLM ROCm has been added to Lemonade as an experimental backend",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t7g70j/vllm_rocm_has_been_added_to_lemonade_as_an/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T18:21:15.000Z",
+      "summary": "vLLM has the ability to run .safetensors LLMs before they are converted to GGUF and represents a new engine to explore. I personally had never tried it out until u/krishna2910-amd/ u/mikkoph and u/sa1sr1 made it as easy as running llama.cpp in Lemonade: ``` lemonade backends install vllm:rocm lemonade run Qwen3.5-0.8B-vLLM ``` This is an experimental backend for us in the sense that the essentials are implemented, but there are known rough edges. We want the community's feedback to see where and how far we should take this. If you find it interesting, please let us know your thoughts! Quick start guide: https://lemonade-server.ai/news/vllm-rocm.html GitHub: https://github.com/lemonade-sdk/lemonade Discord: https://discord.gg/5xXzkMu8Zk",
+      "category": "ai_models"
+    },
+    {
+      "title": "Extracted MTP tensor GGUFs - smaller donor models for grafting.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t6r1ny/extracted_mtp_tensor_ggufs_smaller_donor_models/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-07T23:28:41.000Z",
+      "summary": "The [script](https://gist.github.com/buzz/1c439684d5e3f36492ae9f64ef7e3f67) to graft MTP tensors requires a full GGUF model file. I felt that was a bit hefty, so I asked local Gemma to write something to just extract what's required. The results are two faux GGUFs weighing in at just 900MB ([35A3B](https://huggingface.co/IHaveNoClueAndIMustPost/Qwen3.6-35A3B-MTP-TENSORS-ONLY)) and 450MB ([27B](https://huggingface.co/IHaveNoClueAndIMustPost/Qwen3.6-27b-MTP-TENSORS-ONLY)), containing only the tensors and fully compatible with the script. A lot quicker to download compared to the original 38GB and 29GB models for those who just want to convert their existing library or save some bandwidth. Testing was done using SHA256 hashes, comparing the models made with these mini-GGUFs to those using the full models (identical results), along with some brief chats. Credits: [am17an](https://huggingface.co/am17an) for the original GGUFs, and [buzz](https://gist.github.com/buzz) for the original script. Disclaimers: The MTP implementation isn't finalized. These models might break or become obsolete at any time. Do not delete the original models in case there are updates to the conversion process.…",
+      "category": "ai_models"
+    },
+    {
+      "title": "I built an MCP server that gives Claude real-time data for all 470+ National Park Service sites",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t6pdww/i_built_an_mcp_server_that_gives_claude_realtime/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-07T22:18:56.000Z",
+      "summary": "I built a free MCP integration for Claude that connects it to live National Park Service data. Instead of answering park questions from training data alone, Claude can pull current NPS alerts, weather, campground info, entrance fees, permits from [Recreation.gov](http://Recreation.gov), and ranger events before responding. It covers 470+ NPS sites, including national parks, monuments, seashores, lakeshores, historic sites, and recreation areas. What it includes: * Trip planning with day-by-day itineraries and Google Maps * Park details * Park comparison * Search/discover * Events Claude helped me build and refine the MCP integration, especially around itinerary planning and follow-up trip edits. For example, you can say “add day 4” or “swap this hike for something easier,” and it refines the plan. Setup takes about 30 seconds: Settings → Connectors → Add custom connector → paste the URL Details and screenshots: [https://www.nationalparksexplorerusa.com/mcp](https://www.nationalparksexplorerusa.com/mcp)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Mahoraga - Stop paying Anthropic and OpenAI so much",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t6c587/mahoraga_stop_paying_anthropic_and_openai_so_much/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-07T14:27:10.000Z",
+      "summary": "Are you sick of paying a million credits per month?!?!? I'm joking, i aint that enthusiastic. But really, this saves me a ton of credits by routing simple tasks to local agents. Clone the repo, fork the repo, star the repo, whatever you want. [github.com/pockanoodles/Mahoraga](https://github.com/pockanoodles/Mahoraga) This is Mahoraga, an **open-source** orchestrator that routes tasks across local and cloud AI agents using a contextual bandit (LinUCB) that learns from every decision. Context (skip): I only started integrating AI into my workflows in late 2025, so I came on the scene broke with no credits. This left me with local models. However, many students and employees also receive credits from their institution to work with. (I got claude yippee) I wanted to be able to flawlessly route between models when credits ran out, which made me build an orchestrator. I used to use claude more as a chatbot/complete workflow engine, which made it difficult to use local models due to the context window, reasoning, etc. Opus 4.5 running open-source \"superpowers\" ate my usage every month. Now I realize that wasn't an effective way to use claude, or AI in general. I was using claude for bot…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I made a character and artist style finder extension for SD WebUI / Forge / Forge Neo",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t77r3b/i_made_a_character_and_artist_style_finder/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.98,
+      "date": "2026-05-08T13:19:45.000Z",
+      "summary": "Hey everyone. I’m not sure if this is useful to others, but someone on Civitai suggested I should share it here. I’ve been building small SD WebUI / Forge Neo extensions for my own workflow, and this one is called SD Character Finder. It adds a searchable character and artist style browser inside the WebUI, so you can find references and useful tags without jumping between pages all the time. It includes character entries from Danbooru/e621 style datasets and a large artist style index. GitHub: [https://github.com/eduardoabreu81/sd-character-finder](https://github.com/eduardoabreu81/sd-character-finder) Feedback is very welcome. If something feels confusing, missing, or annoying in the workflow, I’d like to improve it.",
+      "category": "creative_tools"
+    },
+    {
+      "title": "CLI, Cowork, or IDE?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t6yk0d/cli_cowork_or_ide/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.9700000000000001,
+      "date": "2026-05-08T05:27:03.000Z",
+      "summary": "What is the best way to use Claude for programming projects? I started out in the CLI and then tried cowork and eventually decided to use the Claude plugin in vscode. I definitely notice I get different results. I found that when I asked CLI Claude to spin up sub agents to develop specific features on my project, it ended up taking a lot of time and often missed specs. Alternatively, I’ve found the best results by having one instance of Claude cowork be my project manager and have another instance of Claude in VScode be the developer. They communicate through writing in MD files and have to be prompted by me to read them. But I’ve found this to be much faster and result in better code.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Neovim Code Review Plugin",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t6bk68/neovim_code_review_plugin/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-07T14:05:48.000Z",
+      "summary": "I got tired of either using Github or copy/paste for reviewing diffs of agent generated code. Had Claude whip up this neovim plugin to review diffs locally. Saves everything into .review.md to be reviewed. Plugin: https://github.com/bpross/review.nvim",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tips for improving CLI, or go back to VS Code?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t6aonc/tips_for_improving_cli_or_go_back_to_vs_code/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-07T13:32:35.000Z",
+      "summary": "Hi! I’m a heavy user of Claude Code, enjoying it a lot. I started using it by VS Code, got annoyed over a bug it had with sessions sometimes not saving, tried native Desktop App, found it less optimal, then tried CLI again with WezTerm. I’m currently at a crossroads. I find the CLI terminal experience a little annoying when using it on my PC. I like using it on my mobile device, and using Claude Code via the mobile Claude app if I need to upload images etc, but generally speaking, I feel a bit peeved with the Desktop experience. Often enough, it copies the wrong parts, it ignored CTRL + C and often ignores ALT + V to paste images, etc… I am considering going back to VS Code with the CC extension. Good choice, or are there better alternatives? I did always like VS Code for the GUI in all honesty. I’m even willing to pay for good software. I tried using the Claude Desktop app but I had a lot of issues with file previews and just the… feel? Unsure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "What interface are you using for Claude Code?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t66q7v/what_interface_are_you_using_for_claude_code/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-05-07T10:40:50.000Z",
+      "summary": "Been using Claude Code in the terminal for about 2 months now and overall loving it but I keep running into small glitches here and there (like keyboard shortcuts randomly stopping to work, newline behavior changing after updates, etc.). Curious what setups others are running. Are you sticking with the terminal, using the desktop app, the VS Code extension, or something else entirely? Also happy to hear if switching to the desktop app actually solved some of these minor annoyances for you.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen 35B-A3B is very usable with 12GB of VRAM",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t7l56a/qwen_35ba3b_is_very_usable_with_12gb_of_vram/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T21:22:55.000Z",
+      "summary": "Hardware: RTX 3060 12GB 32GB DDR4-3200 Windows CUDA 13.x Model: Qwen3.6-35B-A3B-MTP-IQ4_XS.gguf The model is a 35B MoE, so `-ncmoe` matters a lot. Lower `-ncmoe` means more MoE blocks stay on GPU. # Main takeaway **12GB VRAM feels like a very practical size for this model.** It lets you keep enough MoE blocks on GPU that plain decoding becomes quite strong, while still leaving room for useful context sizes like 16k/32k. For prompt processing / prefill, I trust the `llama-bench` numbers more than `llama-cli`’s interactive `Prompt:` line, because `llama-bench` gives a cleaner `pp512` measurement. Best plain `llama-bench` result: -ncmoe 18 -t 9 -ctk q8_0 -ctv q8_0 pp512: ~914 t/s tg128: ~46.8 t/s So raw prefill is very fast on this setup. # Best practical coding profile For daily coding, I would use this: llama-cli.exe ^ -m \"Qwen3.6-35B-A3B-MTP-IQ4_XS.gguf\" ^ -p \"...\" ^ -n 512 ^ -c 32768 ^ --temp 0 --top-k 1 ^ -ngl 999 -ncmoe 20 ^ -fa on ^ -ctk q8_0 -ctv q8_0 ^ --no-mmap ^ --no-jinja ^ -t 9 ^ --perf Result: Context: 32k Prompt: ~88.9 t/s in llama-cli Generation: ~43.4 t/s VRAM free: ~273 MiB This is a nice balance: large enough context for coding, still fast, and not completely out o…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Got MTP + TurboQuant running — Qwen3.6-27B -- 80+ t/s at 262K context on a single RTX 4090",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t7kyju/got_mtp_turboquant_running_qwen3627b_80_ts_at/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T21:15:59.000Z",
+      "summary": "So I've been messing around trying to get MTP working alongside TBQ4\\_0 (TurboQuant's lossless 4.25 bpv KV cache) on Qwen3.6-27B for my own use. So after a day of vibecoding I think I may have gotten something viable. Went from about 43 t/s when I first got it compiling to 80-87 t/s after optimizing. With MTP draft acceptance around 73% on top of that. Running on: \\- RTX 4090 24GB \\- Qwen3.6-27B-Heretic-v2 Q4\\_K\\_M with grafted MTP heads \\- 262K context, TBQ4\\_0 KV cache, MTP draft 3 \\- Ubuntu 24.04, CUDA 12.x I'm not a professional or anything so there's probably room for improvement, but it works and the output quality seems solid. The fork's buildable if anyone wants to try it or poke holes in the approach: [https://github.com/Indras-Mirror/llama.cpp-mtp](https://github.com/Indras-Mirror/llama.cpp-mtp) Got Deepseek to write up the technical details here if anyone's curious about the kernel architecture: [https://indrasmirror.au/blog-mtp-shared-tensors-200k.html](https://indrasmirror.au/blog-mtp-shared-tensors-200k.html)",
+      "category": "ai_models"
+    },
+    {
+      "title": "GitHub trending just gave us a clean signal: `ml-intern` (+2,985/day) and `claude-context` (+706/day) are both context-to-execution systems, not chatbot skins. The market is paying for agent throughput now: better retrieval, tighter loops,…",
+      "url": "https://x.com/sedim3nt/status/2052800933760029155",
+      "source": "X search / AI model updates",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T17:20:56.000Z",
+      "summary": "GitHub trending just gave us a clean signal: `ml-intern` (+2,985/day) and `claude-context` (+706/day) are both context-to-execution systems, not chatbot skins. The market is paying for agent throughput now: better retrieval, tighter loops, faster shipping. Control plane >",
+      "category": "ai_models"
+    },
+    {
+      "title": "What is the next SOTA model you are excited about?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1t7cf7r/what_is_the_next_sota_model_you_are_excited_about/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-08T16:09:21.000Z",
+      "summary": "We had deepseek v4 preview recently but it wasn't much better than v3.2. What is the next SOTA local/open model you are excited about?",
+      "category": "ai_models"
+    }
+  ]
+}

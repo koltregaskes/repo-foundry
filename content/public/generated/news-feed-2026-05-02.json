@@ -1,0 +1,257 @@
+{
+  "generated": "2026-06-05T00:44:37.271Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-02",
+  "article_count": 15,
+  "archived_story_count": 459,
+  "articles": [
+    {
+      "title": "@WesRoth: Meta Launches Ads MCP — Claude and ChatGPT Can Now Manage Meta Ad Accounts",
+      "url": "https://x.com/WesRoth/status/2050606311440531809",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:23:29.285Z",
+      "summary": "Meta launched its Ads MCP and CLI, creating a direct bridge for frontier AI models like Claude and ChatGPT to access and interact with the Meta Ads ecosystem through natural language.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Parallelogram – a strict linter for LLM fine-tuning datasets (catches broken data before your GPU run starts)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1t1sf5z/parallelogram_a_strict_linter_for_llm_finetuning/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T15:07:24.000Z",
+      "summary": "Fine-tuning frameworks assume your data is correctly formatted. None of them enforce it. The result is broken training runs discovered after the compute is spent.\n\nParallelogram is a CLI tool that validates fine-tuning datasets before any training starts. Strict hard-blocks on role sequence errors, empty turns, context window violations, duplicates, and mojibake. Exits 0 on clean data, exits 1 on errors — CI/CD friendly.\n\nApache 2.0, local-first, zero network calls.\n\ngithub.com/Thatayotlhe04/Par",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I built a Claude Code skill that gives Claude real local time + session tracking (open source, one-line install)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t1xoca/i_built_a_claude_code_skill_that_gives_claude/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T18:27:13.000Z",
+      "summary": "Built this with Claude Code over a few sessions open sourcing it. Claude has no built-in clock. Each session starts cold, training data is frozen in time, and when Claude says \"the current time\" it's hallucinating. Got tired of correcting it, so I built time-anchor. **What it does:** \\- Auto-detects your timezone on install, no API key, no network call \\- Reads the host system clock when you ask for the time (the trick: Python scripts in the skill can read the OS clock when Claude executes them via bash, Claude itself stays clockless, but it now has a tool it can query) \\- Logs every session start/end so Claude can answer \"how long have we been talking\" or \"what did I say 20 minutes ago\" \\- Persists in a local JSON file (or shares with another memory plugin via $TIME\\_ANCHOR\\_MEMORY\\_PATH) \\- \\~85% of users get auto-detected (Windows tzutil, Linux /etc/localtime, $TZ). The remaining 15% type a city/country and get a paginated picker \\- covering \\~200 countries with their full IANA zone lists. Free + open source. MIT licensed, no telemetry, all state local. No paid tier, nothing to sign up for. #### Install (any OS, no git, no SSH, no plugin marketplace setup): **Windows (PowerShel…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Weekly Meal Planning Fully Automated with Claude and Migros MCP",
+      "url": "https://x.com/hslu_aiml/status/2049100936287498456",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:28:06.379Z",
+      "summary": "A developer automated their weekly meal plan entirely using Claude and Migros's MCP integration, demonstrating how AI agents can handle grocery and meal planning end-to-end.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@ValsAI: GPT-5.5 Now #1 on Terminal Bench 2 — Updated Results Show +11% Improvement",
+      "url": "https://x.com/ValsAI/status/2050240263420072446",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:21:16.690Z",
+      "summary": "Vals AI updated GPT-5.5's results and it is now the #1 model on Terminal Bench 2, improving by +11%. It remains #2 on the overall Vals Index.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Just Beat Claude Code in GitHub Stars and Nobody Is Talking About It",
+      "url": "https://x.com/aakashgupta/status/2050349093969694825",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T23:49:55.116Z",
+      "summary": "Braygent highlights the Hermes GitHub star milestone as the underreported open source AI agent story of the week, arguing it signals a turning point in open versus closed AI competition.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Pika Just Let You Give Claude a Face and Make Videos Through Conversation",
+      "url": "https://x.com/pika_labs/status/2050294291998933455",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T23:49:55.116Z",
+      "summary": "Braygent highlights the Pika MCP as a genuinely new Claude integration category that gives the assistant a custom identity and full video production capabilities, not just tool access.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude integrations... with itself",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t1vhjh/claude_integrations_with_itself/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.96,
+      "date": "2026-05-02T17:05:25.000Z",
+      "summary": "I've asked Claude about this, but they are giving me some strange info. Generally speaking, I do most of my code heavy lifting in the CLI on my Mac with Cloud Code. code. Projects and memory that it stores there don't seem to be accessible from the desktop app. I would like to integrate the projects and memory that I've been working on in CLI with the desktop app. it mentioned maybe an MCP memory server or something like that, but how are other people handling this? Right now, it seems like what Claude does in CLI is not known by the desktop and vice versa.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "We have updated the results of GPT 5.5 on our site - it is now the #1 model on Terminal Bench 2. Its ranking on the Vals Index has not changed.",
+      "url": "https://x.com/ValsAI/status/2050242861963293021",
+      "source": "X / @valsai",
+      "tags": [
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.86,
+      "date": "2026-05-01T15:56:04.000Z",
+      "summary": "We have updated the results of GPT 5.5 on our site - it is now the #1 model on Terminal Bench 2. Its ranking on the Vals Index has not changed.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The OFFICIAL meta ads MCP just dropped And it's free to start using today For 2 years, every \"Claude + Meta Ads\" workflow came with the same warning: \"Be careful. You might get banned.\" That warning died on April 29th. Meta released its ow…",
+      "url": "https://x.com/HeyOz_AI/status/2050626979473334564",
+      "source": "X / @heyoz_ai",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:22:25.000Z",
+      "summary": "The OFFICIAL meta ads MCP just dropped And it's free to start using today For 2 years, every \"Claude + Meta Ads\" workflow came with the same warning: \"Be careful. You might get banned.\" That warning died on April 29th. Meta released its own official MCP server.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "The OFFICIAL meta ads MCP just dropped Here's how to start using it for free Released April 29, 2026. Public beta. Free during the beta. No Meta Developer App. No 3-day approval wait. What this actually means: → Connect Claude (or ChatGPT,…",
+      "url": "https://x.com/spect3ral/status/2050625388770897951",
+      "source": "X / @spect3ral",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:16:06.000Z",
+      "summary": "The OFFICIAL meta ads MCP just dropped Here's how to start using it for free Released April 29, 2026. Public beta. Free during the beta. No Meta Developer App. No 3-day approval wait. What this actually means: → Connect Claude (or ChatGPT, Codex, Cursor) directly to your",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tried running Claude Code with local LLMs via Ollama — ended up subscribing to Pro anyway. But now I can't disconnect from the local server.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t1vjd0/tried_running_claude_code_with_local_llms_via/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:07:21.000Z",
+      "summary": "I've been experimenting with using Ollama to run Claude Code locally with models like Gemma 4, thinking I could avoid API costs. However, I quickly realised these models aren't really optimised for Claude Code's agentic workflows — they tend to get stuck in thinking loops and don't follow Claude Code's expected output structure well. So I ended up subscribing to Claude Pro anyway. The problem now is that even after logging into my Anthropic account through the terminal, Claude Code still connects to the local Ollama server no matter how many times I restart the terminal or VSCode. Just wondering how this can be solved, and also is it possible to run both local LLMs and claude models at the same time?",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Tool orchestration > model benchmarks. MCP connects any model to any tool without API keys. That's the real shift: system design matters more than intelligence scores. Built 13 tools across Claude, Codex, local. Same shipping pace. Archite…",
+      "url": "https://x.com/HudBeer/status/2050622456436818111",
+      "source": "X / @hudbeer",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T17:04:26.000Z",
+      "summary": "Tool orchestration > model benchmarks. MCP connects any model to any tool without API keys. That's the real shift: system design matters more than intelligence scores. Built 13 tools across Claude, Codex, local. Same shipping pace. Architecture wins.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "'There Will Be a Scientific Theory of Deep Learning' — New Paper Proposes Learning Mechanics Framework",
+      "url": "https://x.com/burny_tech/status/2050606311440531809",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:23:29.285Z",
+      "summary": "A new paper argues that deep learning is developing the characteristics of a mature scientific theory with falsifiable quantitative laws, proposing 'learning mechanics' as the unifying framework.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@ValsAI: GPT-5.5 Benchmarks — Terminal Bench 82.7%, Expert SWE 73.1%, BrowseComp 84.4%",
+      "url": "https://x.com/ValsAI/status/2047376725177504177",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-02T16:22:17.033Z",
+      "summary": "Vals AI published GPT-5.5's full benchmark profile: Terminal Bench 82.7%, Expert SWE 73.1%, GDPval 84.9%, OSWorld 78.7%, BrowseComp 84.4%. It ranks #2 on the overall Vals Index.",
+      "category": "ai_tools"
+    }
+  ]
+}

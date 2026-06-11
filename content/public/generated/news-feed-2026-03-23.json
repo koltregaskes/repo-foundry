@@ -1,0 +1,70 @@
+{
+  "generated": "2026-06-05T00:44:29.930Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-03-23",
+  "article_count": 4,
+  "archived_story_count": 82,
+  "articles": [
+    {
+      "title": "Local Stack Archived their GitHub repo and requires an account to run",
+      "url": "https://github.com/localstack/localstack",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-23T18:57:08.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "GitHub appears to be struggling with measly three nines availability",
+      "url": "https://www.theregister.com/2026/02/10/github_outages/",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-23T10:39:39.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Trivy under attack again: Widespread GitHub Actions tag compromise secrets",
+      "url": "https://socket.dev/blog/trivy-under-attack-again-github-actions-compromise",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-22T09:45:14.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The way CTRL-C in Postgres CLI cancels queries is incredibly hack-y",
+      "url": "https://neon.com/blog/ctrl-c-in-psql-gives-me-the-heebie-jeebies",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-20T13:21:51.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

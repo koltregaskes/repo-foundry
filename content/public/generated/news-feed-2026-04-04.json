@@ -1,0 +1,40 @@
+{
+  "generated": "2026-06-05T00:44:32.321Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-04",
+  "article_count": 2,
+  "archived_story_count": 236,
+  "articles": [
+    {
+      "title": "@synthwavedd — GPT Image 2 Stealth Launched — Significant Quality Upgrade for All ChatGPT Users",
+      "url": "https://x.com/synthwavedd/status/2040442540508287101",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-04T16:20:03.318Z",
+      "summary": "@synthwavedd reports GPT Image 2 has been stealth launched on ChatGPT — all image generations now routing to the new model. A significant quality upgrade with no announcement.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "RAG-Anything: All-in-One RAG Framework",
+      "url": "https://paperswithcode.com/papers/2510.12323",
+      "source": "Papers With Code",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.76,
+      "date": "2026-04-04T06:00:23.350Z",
+      "summary": null,
+      "category": "ai_research"
+    }
+  ]
+}

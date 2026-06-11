@@ -1,0 +1,249 @@
+{
+  "generated": "2026-06-05T00:44:36.058Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-25",
+  "article_count": 15,
+  "archived_story_count": 689,
+  "articles": [
+    {
+      "title": "Stop switching tabs for prompting. I built a local MCP bridge to orchestrate Gemini 3.1 and Claude while you diffuse",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1svmskn/stop_switching_tabs_for_prompting_i_built_a_local/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "mcp",
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T20:20:33.000Z",
+      "summary": "If you’re like me, your workflow is basically: generating an image in ComfyUI, realizing the prompt needs better structure, switching to Claude/Gemini for brainstorming, then copy-pasting back and forth. It’s a flow-killer, especially when you’re deep into a creative session.\n\nI built [**Proxima**](https://github.com/Zen4-bit/Proxima) to handle this. It’s an open-source MCP bridge that lets you bring the logic of Claude, Gemini, GPT, and Perplexity directly into your local environment. Instead o",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.2 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-24T12:11:44.000Z",
+      "summary": "## What's Changed\n* fix(core): treat empty 'pages' parameter as unset in ReadFile by @zhangxy-zju in https://github.com/QwenLM/qwen-code/pull/3559\n* feat(session): auto-title sessions via fast model, add /rename --auto by @wenshao in https://github.com/QwenLM/qwen-code/pull/3540\n* fix(i18n): sync mismatched keys between en.js and zh.js by @doudouOUC in https://github.com/QwenLM/qwen-code/pull/3534\n* fix(cli): remove residual blank lines after MCP init completes by @BZ-D in https://github.com/Qwe",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI v0.39.1 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.39.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-24T02:11:26.000Z",
+      "summary": "**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.39.0...v0.39.1",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude estimates work in human time, not Claude time",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sv8avi/claude_estimates_work_in_human_time_not_claude/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-25T10:15:12.000Z",
+      "summary": "Whenever I ask Claude to plan a chunk of work, it comes back with wildly long timelines. For example, adding a feature to a CLI framework I'm working on got estimated at **1-2 days**, but in reality, Claude Code one-shots it in a few minutes.\n\nSometimes it even estimates weeks or months for more complex work, and Claude Code is able to complete it (with my input and guidance) in a few hours.\n\nI get it's probably because it was trained on estimates made by humans, but that feels weird and it alwa",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Clawsweeper — 50 Codex Agents Running in Parallel Closed 4,000 GitHub Issues in One Day",
+      "url": "https://x.com/steipete",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T10:55:04.005Z",
+      "summary": "Clawsweeper runs 50 Codex agents in parallel around the clock to scan and close GitHub issues, closing 4,000 issues in one day with rate limits as the only constraint.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Andrej Karpathy's 262-Minute Masterclass on AI Agents Is the Weekend Watch You Need",
+      "url": "https://x.com/karpathy",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T10:55:04.004Z",
+      "summary": "Andrej Karpathy's 262-minute YouTube masterclass on AI agents, Claude Skills, and MCP servers is being called essential viewing for anyone building with AI tools.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ComfyUI Raises $30M at $500M Valuation — Open Source Wins Again",
+      "url": "https://x.com/GrishinRobotics/status/2047760472204546230",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:59:20.673Z",
+      "summary": "ComfyUI raises $30M at $500M valuation, validating open source AI creative tools as serious infrastructure worth funding at startup scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Scobleizer Grok Can't Read X Lists — His AI Can, Key Capability Gap",
+      "url": "https://x.com/Scobleizer/status/2047736381162901665",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:58:07.384Z",
+      "summary": "Scoble notes Grok can't read X lists while his AI can, highlighting that platform integration is as important as raw model capability for practical AI utility.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Signal Loom — node-based AI media studio with a built-in timeline editor (open source, AGPL)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sv0ilf/signal_loom_nodebased_ai_media_studio_with_a/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-25T03:09:10.000Z",
+      "summary": "I built Signal Loom because I was tired of generating assets in one tool and then exporting/importing into another just to edit them. It's a node-based workflow canvas (React Flow) for chaining generative AI tasks—text, image, video, audio—connected to your own API keys (Gemini, OpenAI, ElevenLabs, Hugging Face). Downstream nodes automatically consume upstream context. When you're done generating, you switch to a timeline editor: multi-track, keyframes, cuts, opacity, transform, volume, text ove",
+      "category": "creative_tools"
+    },
+    {
+      "title": "OpenClaw v2026.4.24 released",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.4.24",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-25T18:15:17.000Z",
+      "summary": "## 2026.4.24\n\n### Highlights\n\n- Google Meet joins OpenClaw as a bundled participant plugin, with personal Google auth, Chrome/Twilio realtime sessions, paired-node Chrome support, artifact/attendance exports, and recovery tooling for already-open Meet tabs.\n- DeepSeek V4 Flash and V4 Pro are in the bundled catalog, V4 Flash is the onboarding default, and DeepSeek thinking/replay behavior is fixed for follow-up tool-call turns.\n- Talk, Voice Call, and Google Meet can use realtime voice loops that",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Built an agent-to-agent payment system with Claude — here's what I learned and why I think agents need their own economy (e.g., pet food)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1svgba2/built_an_agenttoagent_payment_system_with_claude/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-25T16:11:53.000Z",
+      "summary": "I built Coyns with Claude over the past several months. It's a virtual currency system designed specifically for AI agent-to-agent transactions — MCP-native, Ed25519-authenticated, with a wallet, payment rails, escrow deals, and a gaming layer (Playce.ai) where agents wager and compete.  \n  \nAgents can register and start earning free Gold — the base currency agents earn through activity — with no purchase required. The beta is open now and free to join at coyns.com.  \n  \nWhat Claude helped me bu",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Framework Laptop 13 Pro: Major Upgrades and Linux Front and Center",
+      "url": "https://boilingsteam.com/framework-laptop-13-pro-announced/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.86,
+      "date": "2026-04-25T16:54:28.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Is Claude ignoring its own instructions?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sv7clo/is_claude_ignoring_its_own_instructions/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.86,
+      "date": "2026-04-25T09:19:21.000Z",
+      "summary": "I'm not sure what's going on here, but several times in the last 24 hours I've had Claude Cowork completely ignore its own internal instructions. I created a coding framework MD file to ensure it would approach all issues with the same rigor and verify information before making any coding changes. This was supposed to be a guardrail to prevent mistakes, but then I encountered weird stuff like this. It's given me incorrect commands several times at this point. \n\nIs anyone else experiencing this k",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Successfully updated from 2.1.120 to version 2.1.119",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sv8rce/successfully_updated_from_21120_to_version_21119/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-04-25T10:41:43.000Z",
+      "summary": "\"AI is going to replace humans.\"  \nClaude \"updated\" from \"2.1.120\" to \"2.1.119\" and this is an update, not a downgrade.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I open sourced a project tracker for Claude Code that lives in .story/: tickets, issues, and session handovers as files",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1svkyby/i_open_sourced_a_project_tracker_for_claude_code/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-25T19:09:32.000Z",
+      "summary": "I built Storybloq (previously Claude Story) for my own Claude Code workflow, and used Storybloq itself to build Storybloq. The `.story/` directory in the repo has tracked every ticket, issue, and session handover across the project's development, so the tool is its own longest-running test case. Sharing it in case it's useful. It's free and open source.\n\n\n\nThe problem: every new Claude Code session forgets the last one. So you re-explain architecture, re-litigate tradeoffs you already settled, a",
+      "category": "ai_tools"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "generated": "2026-06-05T00:44:28.899Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-03-17",
+  "article_count": 14,
+  "archived_story_count": 140,
+  "articles": [
+    {
+      "title": "Show HN: Crust – A CLI framework for TypeScript and Bun",
+      "url": "https://github.com/chenxin-yan/crust",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.84,
+      "date": "2026-03-17T04:43:29.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Why Garry Tan&#8217;s Claude Code setup has gotten so much love, and hate",
+      "url": "https://techcrunch.com/2026/03/17/why-garry-tans-claude-code-setup-has-gotten-so-much-love-and-hate/",
+      "source": "TechCrunch AI",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-03-17T20:50:04.000Z",
+      "summary": "Thousands of people are trying Garry Tan's Claude Code setup, which was shared on GitHub. And everyone has an opinion: even Claude, ChatGPT, and Gemini.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sears Exposed AI Chatbot Phone Calls and Text Chats to Anyone on the Web",
+      "url": "https://www.wired.com/story/sears-exposed-ai-chatbot-phone-calls-and-text-chats-to-anyone-on-the-web/",
+      "source": "Wired AI",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-17T10:00:00.000Z",
+      "summary": "Customer conversations with chatbots can include contact information and personal details that make it easier for scammers to launch phishing attacks and commit fraud.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "China’s OpenClaw Boom Is a Gold Rush for AI Companies",
+      "url": "https://www.wired.com/story/china-is-going-all-in-on-openclaw/",
+      "source": "Wired AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.9099999999999999,
+      "date": "2026-03-13T12:00:00.000Z",
+      "summary": "Hype around the open source agent is driving people to rent cloud servers and buy AI subscriptions just to try it, creating a windfall for tech companies.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Show HN: Horizon – GPU-accelerated infinite-canvas terminal in Rust",
+      "url": "https://github.com/peters/horizon",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-17T18:14:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Chrome extension adjusts video speed based on how fast the speaker is talking",
+      "url": "https://github.com/ywong137/speech-speed",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.78,
+      "date": "2026-03-13T06:18:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Node.js needs a virtual file system",
+      "url": "https://blog.platformatic.dev/why-nodejs-needs-a-virtual-file-system",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-17T14:28:37.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Kagi Translate now supports LinkedIn Speak as an output language",
+      "url": "https://translate.kagi.com/?from=en&to=LinkedIn+speak",
+      "source": "Hacker News",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-17T04:39:42.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: GitClassic.com, a fast, lightweight GitHub thin client (pages <14KB)",
+      "url": "https://gitclassic.com",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-12T16:20:06.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Reverse-engineering Viktor and making it Open Source",
+      "url": "https://matijacniacki.com/blog/openviktor",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-17T08:15:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Supply-chain attack using invisible code hits GitHub and other repositories",
+      "url": "https://arstechnica.com/security/2026/03/supply-chain-attack-using-invisible-code-hits-github-and-other-repositories/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-13T20:18:08.000Z",
+      "summary": "Unicode that's invisible to the human eye was largely abandoned—until attackers took notice.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Building a Shell",
+      "url": "https://healeycodes.com/building-a-shell",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-17T09:52:34.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Droeftoeter, a Terminal Coding Toy",
+      "url": "https://github.com/whtspc/droeftoeter",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-13T04:16:26.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The Official GBBS Pro Repository",
+      "url": "https://gbbs.applearchives.com/",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-03-12T20:12:45.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

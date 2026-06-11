@@ -1,0 +1,253 @@
+{
+  "generated": "2026-06-05T00:44:40.131Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-15",
+  "article_count": 15,
+  "archived_story_count": 629,
+  "articles": [
+    {
+      "title": "Anthropic built the agentic features. Now they're billing them separately.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tdjx4f/anthropic_built_the_agentic_features_now_theyre/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "agentic_framework",
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "agentic_framework",
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T03:08:21.000Z",
+      "summary": "Starting June 15, Claude subscribers get a separate monthly credit for Agent SDK and `claude -p` usage: $200/mo for Max 20x, $100 for Max 5x, $20 for Pro. Once you burn through it, programmatic usage stops unless you've opted into extra usage billing at API rates. Your interactive Claude Code and chat usage stays on the subscription pool, untouched. I spent the last day digging into the community reaction across Reddit, GitHub, HN, and tech press. Tracked roughly 120 distinct opinions. Here's what I found. **The sentiment split** - About 60% negative (credit is too small, feels like a value regression) - About 25% pragmatic (\"this was inevitable, the old model was broken\") - About 15% neutral to supportive (\"interactive use is untouched, this is fair\") Theo Browne (T3.gg) put it bluntly: anyone using T3 Code, Conductor, Zed, or `claude -p` in CI scripts had their effective usage cut by 25x. He said he now has to make the Claude Code experience on T3 Code \"significantly worse.\" Ben Hylak (co-founder of Raindrop.ai) responded: \"This is either really silly, or shows how bad of a spot Anthropic is in re: GPUs.\" Theo also said: \"Framing this as a free credit instead of a regression for…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Got Claude Max from office for VS Code usage — what’s the best setup, workflow, and hidden tricks?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1te36bt/got_claude_max_from_office_for_vs_code_usage/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T17:30:17.000Z",
+      "summary": "Our office recently gave us access to Claude Max plan, mainly for using inside Visual Studio Code VS Code. I mostly work on web development, debugging, refactoring, API integration, SQL queries, and large codebase understanding. Right now I’m just using it like a normal chatbot, so I feel like I’m massively underusing it 😅 Wanted to know from experienced users: What’s your best VS Code setup with Claude? Any must-have extensions/tools/workflows? Best way to handle large repositories/context limits? How do you structure prompts for better code output? Any tricks for debugging, refactoring, architecture planning, or documentation generation? Is MCP worth setting up? If yes, what servers/tools are actually useful? Any productivity hacks most beginners don’t know? Would love to hear real-world workflows instead of generic AI tips.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude for Healthcare launched in January — but medical imaging is the obvious gap. Anyone else noticing?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1te160m/claude_for_healthcare_launched_in_january_but/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T16:19:44.000Z",
+      "summary": "I’m a radiology resident in Istanbul, also building medical AI fine-tunes on the side (bone age estimation, fluoroscopy catheter orientation, a Turkish radiology report LLM). When Claude for Healthcare launched in January, I dug into the announcement. The architecture is impressive — CMS, ICD-10, PubMed connectors, HIPAA infrastructure, prior auth and chart review workflows. But it’s entirely text + workflow. Zero imaging. This is interesting because radiology is arguably where medical AI has the most mature, FDA-cleared products today. Yet Claude’s healthcare push doesn’t touch it. Two reads: 1. Strategic choice — Anthropic is betting on orchestration over vertical vision models. The expectation might be: Claude orchestrates, external vision specialists (MedGemma, proprietary models) get called as tools/MCP servers. 2. Genuine gap — imaging just isn’t on the roadmap yet. Either way, the imaging-as-MCP-server pattern feels underexplored. Anyone building in this direction? Especially curious if anyone’s exposed a fine-tuned medical vision model as an MCP server that Claude can call.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[Long-term user report] Claude Code quality in May 2026 : the April postmortem didn’t fix everything, and the token inflation makes it worse",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tdxwgx/longterm_user_report_claude_code_quality_in_may/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T14:24:12.000Z",
+      "summary": "I’ve been using Claude since the early days, across every model Anthropic released. I’m writing this not out of rage but because the pattern deserves documentation. **What Anthropic officially acknowledged (April 23 postmortem)** Three product-layer changes degraded Claude Code between March and April 2026 : a reasoning effort downgrade (high → medium, March 4), a caching bug that wiped session thinking every turn (March 26), and a verbosity prompt that caused a 3% quality drop (April 16). Fixed in v2.1.116 on April 20. Source : [anthropic.com/engineering/april-23-postmortem](http://anthropic.com/engineering/april-23-postmortem) **What is still happening in May** The April fix addressed the harness. It did not address what came after : **- Opus 4.7 regression :** launched April 16, ongoing complaints about instruction-following, edit-first behavior, and increased hedging. No official changelog or acknowledgment as of May 15. Source : multiple Reddit/HN threads, StartupFortune coverage. **- Token inflation v2.1.100+ :** source analysis comparing v2.1.98 vs v2.1.100 measured \\~40% more tokens billed for identical workloads (20 196 more tokens, 978 fewer bytes sent). GitHub issue #46…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub - pwilkin/openmoss: OpenMOSS pure C++ pipeline based on GGML",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tdwo1f/github_pwilkinopenmoss_openmoss_pure_c_pipeline/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T13:38:59.000Z",
+      "summary": "I'm uploading a full GGML-based pipeline for OpenMOSS (https://huggingface.co/OpenMOSS-Team/MOSS-TTS) that I've vibe-coded for myself in case someone else finds it useful. TTS models are notoriously annoying to set up due to the entire Python ecosystem, so I decided I'd make it a bit simpler. Both server mode and single-shot cli mode are supported here. Why OpenMOSS? For me, the reason was that it's one of the few TTS models that can deal well with languages outside the typical \"English/Chinese\" duet - namely Polish. Maybe someone else will find it useful as well.",
+      "category": "ai_models"
+    },
+    {
+      "title": "I built a free Google search MCP that actually works(searching, fetching, with PDF)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tdw4us/i_built_a_free_google_search_mcp_that_actually/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T13:18:10.000Z",
+      "summary": "✅ Actually works (tested 6 free MCPs, all failed) ✅ Search + URL extract in one MCP (replaces the usual search MCP + fetch MCP combo) ✅ Academic PDFs auto-handled (arxiv / biorxiv / Nature / OpenReview / NeurIPS / JMLR / PMLR / Springer / PubMed→PMC) ✅ Tiered extraction: `mode: \"abstract\"` returns \\~1500 chars per result for cheap relevance triage before paying for full bodies ✅ Auto-bootstrap on first run (no manual `npm run bootstrap` step anymore) ✅ Auto CAPTCHA recovery (Chrome opens, human solves once, retries) ✅ No API key, no proxies, no solver **4 tools** * `search` SERP only * `search_parallel` N queries concurrently * `extract(url, mode?)` `full` / `abstract` / `metadata`. PDF detected via Content-Type, `%PDF` magic, `citation_pdf_url` meta, and per-domain rules * `search_extract(query, mode?)` defaults to `abstract`, so a 5-result survey costs \\~7.5k chars instead of 40k **Why abstract mode** The old `search_extract` always fetched full bodies great for one URL, wasteful when you just want to know which of 5 results is worth reading. Abstract mode pulls PDF page 1 or HTML meta description (\\~1500 chars), letting the agent triage relevance, then call `extract` with `mode…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Built a tool that publishes HTML artifacts securely behind company auth",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tdudtk/built_a_tool_that_publishes_html_artifacts/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T12:07:44.000Z",
+      "summary": "Hey! Built [display.dev](http://display.dev) with a friend to make sharing Claude-generated HTML artifacts secure and easy between teammembers. Basically, it lets agents publish artifacts, you get back a URL. Your teammates can access it via Google/Microsoft SSO or with one-time passwords, and collaborate with inline comments. Works in CLI, or via MCP or web app. It's first purpose is to help teams collaborate better, but it's also useful for people who just want to share their artifacts with the public (optional visibility setting), or consultants/freelancers who want to share their work with clients. For larger teams, there are neat features like audit logs and stats, too. Anyway, let me know what you think - there's a free tier, of course.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Llama-Studio, WebUI for llama-server Management",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tdefy6/llamastudio_webui_for_llamaserver_management/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-14T23:09:05.000Z",
+      "summary": "Hey all, I have built myself a WebUI for configuring and managing llama-server sessions, and want to share the code and concept. Python and a bit of JS. Hack away! Local only. https://github.com/m94301/llama-studio The major use case is running various instances of llama-server on fixed ports to act as infrastructure for home development (and entertainment) frameworks. Read: Fiddling with settings, comparing experimental builds to mainline, and optimizing. Also good for everyday fooling around. Configs are saved per model in a json, consisting of all launch args and optional paths for custom llama-server. I have a launch arg browser with search using the current llama-server's actual -help output. I hate forgetting a launch arg format and having to open a new terminal to do -help. Spec MTP what? Draft type who? Launch to choice of GPU, monitor VRAM, load, and temp. And a somewhat rudimentary VRAM calculator to help estimate what fits where when using what quant. Last, a reasonable mobile interface to run tests and fool with config on phone when in a basement or IT closet. Show and hide logs, start, stop, change config. Less keystrokes on tiny phone keyboards. Sanity +100.",
+      "category": "ai_models"
+    },
+    {
+      "title": "Open-weights vs. closed models: Nano Banana Pro was nerf'ed",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tecqkx/openweights_vs_closed_models_nano_banana_pro_was/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T23:27:46.000Z",
+      "summary": "Companies think that they can nerf the model and people won't notice. Here is exhibit 1: Nano Banana Pro has fallen far from the tree. In our independent evaluation, Nano Banana Pro's image generation capability as of recently is worse than FLUX.2 \\[dev\\] and far from GPT-Image 2 Low. Just a reminder that no weights, not your models. https://preview.redd.it/kqon8d0jyd1h1.png?width=2212&amp;format=png&amp;auto=webp&amp;s=61f3ced9f3b8f6d497d482494117e18c514bb6f3 You can explore our full calibration test set at [https://tests.drawthings.ai/generate](https://tests.drawthings.ai/generate) and [https://tests.drawthings.ai/edit](https://tests.drawthings.ai/edit). We will release the score on our full private test set soon. # 1. Charts **Top: Nano Banana Pro** **Bottom: GPT-Image 2 Low** Prompt: &gt;A pie chart showing browser market share: Chrome 65%, Safari 20%, Firefox 10%, Other 5%. Each section should be appropriately sized and labeled with the browser name and percentage. Nano Banana Pro no longer seems able to make a simple labeled chart reliably. https://preview.redd.it/q67mipl5yd1h1.png?width=1024&amp;format=png&amp;auto=webp&amp;s=4e8d0024331dfd906cda3da5e3cc307b6aec1f9e https:/…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "AllenAI has been iterating on their MolmoAct2 models for robotics",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1te9unl/allenai_has_been_iterating_on_their_molmoact2/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T21:30:46.000Z",
+      "summary": "r/AllenAI is cooking with MolmoAct2, a 5B vision-language-action model for robot control. They keep releasing new fine-tunes on different kinds of robotics datasets, including (but not limited to, and they keep releasing new ones): * https://huggingface.co/allenai/MolmoAct2-LIBERO - general robotics tasks * https://huggingface.co/allenai/MolmoAct2-DROID - interactive robotics tasks * https://huggingface.co/allenai/MolmoAct2-BimanualYAM - absolute joint-pose control * https://huggingface.co/allenai/MolmoAct2-SO100_101 - also absolute joint-pose control AllenAI has released these as ***fully open source*** models, publishing not only their weights but also their **complete** training datasets (including pretraining), their training software source code, and technical papers describing the theory, training, and assessments of these models. If anyone is fiddling with robots controlled via LLM inference, you should give MolmoAct2 models a look.",
+      "category": "ai_models"
+    },
+    {
+      "title": "[Release] Nexidion – A private knowledge vault with an autonomous local AI background worker.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1te9381/release_nexidion_a_private_knowledge_vault_with/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T21:01:57.000Z",
+      "summary": "Hello, After almost two years of on-and-off development, 5 complete architectural rewrites, and hitting a few brick walls, I’m finally open-sourcing a project I built to scratch my own privacy-paranoia itch: **Nexidion**. **GitHub Repo:** [https://github.com/HabermannR/Nexidion](https://github.com/HabermannR/Nexidion) There are a lot of \"second brain\" apps out there, but I didn't want to rely on a third-party cloud, and I definitely didn't want to send my sensitive notes to closed APIs. More importantly, I didn't just want a standard chat window tacked onto a text editor. ### The Local LLM Angle: Autonomous Background Worker Nexidion is a hierarchical Markdown note-taking app with a built-in, optional **autonomous background worker** designed specifically to plug into local OpenAI-compatible endpoints (llama.cpp, Ollama, LM Studio, etc.). Instead of just chatting with your notes, you can select a massive batch of nodes/folders and dispatch the agent to do actual work: * *\"Reorganize these messy notes into hierarchical folders by topic.\"* * *\"Summarize these subtrees.\"* * *\"Extract all action items from these meeting notes.\"* **The safety net:** Letting an LLM autonomously organize…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Gemma4 26b MoE running in MLX with turboquant (and custom kernel)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1te6os6/gemma4_26b_moe_running_in_mlx_with_turboquant_and/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T19:34:12.000Z",
+      "summary": "TL;DR I spent a few crazy evenings this past week seeing if I could get Gemma4 running with proper turbo quant and rotating KV cache support. The answer was yes, and I'm now able to run Gemma4 26b on my MacBook Air M5 at 128k context with 4 concurrent batches 😄 At 8k context running with no mmap, it beats llama.cpp at prompt processing, generation speed, and runtime memory: |backend|model|bpw|pp tok/s|gen tok/s|runtime mem| |:-|:-|:-|:-|:-|:-| |llama.cpp|IQ4\\_XS + q4\\_0 KV + flash-attn|4.25|260.6|14.66|16.0 GB| |MLX (ours)|nvfp4 + polar2|4.5|348.4|17.15|15.22 GB| It took a lot of hand-tuning to get to this speed, including a custom kernel for the SWA layers in order to get the actual runtime 2bit memory savings that enable higher batch sizes whilst staying close to full fp16 prompt processing speed The prompt processing speed scales relatively well with batch size - the major gains though are in the text generation - running a 512 token-long prompt on a 32 GB M5: |B|pp tok/s|gen tok/s| |:-|:-|:-| |1|353|16.0| |4|429|24.9| |8|451|32.4| |16|451|44.2| |32|450|48.0| |64|448|54.6| |128|440|54.0| If you want to download it and serve it yourself, you can open a terminal to a directory y…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Orthrus-Qwen3-8B : up to 7.8×tokens/forward on Qwen3-8B, frozen backbone, provably identical output distribution",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1te5xpu/orthrusqwen38b_up_to_78tokensforward_on_qwen38b/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T19:07:16.000Z",
+      "summary": "* Code: [https://github.com/chiennv2000/orthrus](https://github.com/chiennv2000/orthrus) * Paper: [https://arxiv.org/abs/2605.12825](https://arxiv.org/abs/2605.12825) * HF: [https://huggingface.co/chiennv/Orthrus-Qwen3-1.7B](https://huggingface.co/chiennv/Orthrus-Qwen3-1.7B) ; [https://huggingface.co/chiennv/Orthrus-Qwen3-4B](https://huggingface.co/chiennv/Orthrus-Qwen3-4B) ; [https://huggingface.co/chiennv/Orthrus-Qwen3-8B](https://huggingface.co/chiennv/Orthrus-Qwen3-8B) * Disclosure: co-author. Idea: Inject a trainable diffusion attention module into each layer of a frozen AR Transformer. Both heads share one KV cache. Diffusion head projects K=32 tokens in parallel; AR head verifies in a second pass and accepts the longest matching prefix. Output distribution is provably identical to the base model. Results: * Up to 7.8× TPF, \\~6× wall-clock on MATH-500. * 16% of params trained, &lt;1B tokens, 24h on 8×H200. * vs. diffusion LMs (Dream, Fast-dLLM-v2, SDAR, Mercury, Gemini Diffusion): they modify base weights and lose accuracy (Fast-dLLM-v2: -11 pts on MATH-500). Orthrus freezes the backbone; accuracy matches Qwen3-8B exactly. * vs. Speculative Decoding (EAGLE-3, DFlash): No ext…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Orthrus: Memory-Efficient Parallel Token Generation via Dual-View Diffusion [R]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1te2x04/orthrus_memoryefficient_parallel_token_generation/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T17:21:21.000Z",
+      "summary": "* Paper: [https://arxiv.org/abs/2605.12825](https://arxiv.org/abs/2605.12825) * Code: [https://github.com/chiennv2000/orthrus](https://github.com/chiennv2000/orthrus) * Disclosure: co-author. Idea: Inject a trainable diffusion attention module into each layer of a frozen AR Transformer. Both heads share one KV cache. Diffusion head projects K=32 tokens in parallel; AR head verifies in a second pass and accepts the longest matching prefix. Output distribution is provably identical to the base model. Results: * Up to 7.8× TPF, \\~6× wall-clock on MATH-500. * 16% of params trained, &lt;1B tokens, 24h on 8×H200. * vs. diffusion LMs (Dream, Fast-dLLM-v2, SDAR, Mercury, Gemini Diffusion): they modify base weights and lose accuracy (Fast-dLLM-v2: -11 pts on MATH-500). Orthrus freezes the backbone; accuracy matches Qwen3-8B exactly. * vs. Speculative Decoding (EAGLE-3, DFlash): No external drafter, no separate cache, and zero Time-To-First-Token (TTFT) penalty because we don't have to initialize and sync a separate drafter model. KV overhead is O(1) (\\~4.5 MiB flat). Acceptance length on MATH-500: 11.7 vs. 7.9 (DFlash) vs. 3.5 (EAGLE-3). * Single-step denoising beats multi-step (6.35 vs. 3…",
+      "category": "ai_research"
+    },
+    {
+      "title": "Beta testers wanted: MCP server that cuts Claude Code token burn 45–72% on architectural questions (TS/Python/Go)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tdy7ww/beta_testers_wanted_mcp_server_that_cuts_claude/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-05-15T14:35:49.000Z",
+      "summary": "Claude Code learns your codebase by brute force every session. A single architectural question such as; \"Where does request validation happen?\" can chew through 40+ tool calls and 100k tokens reconstructing context. Worse, the architectural decisions that *govern* your code, your ADRs, design docs, \"we did it this way because\" reasoning are completely invisible to it. Claude will happily propose changes that break constraints you wrote down two months ago. I built an MCP server that pre-computes a structured atlas of your codebase (LSP symbols + ADRs + git history + test associations) and serves it to Claude in a fraction of the calls via compact chunks at execution time. Internal benchmarks show **45–72% token reduction on architectural-intent prompts**, replicated across TypeScript (hono), Python (httpx), and Go (cobra) targets. Methodology is paired-mode LLM-judge with pre-registered thresholds. Full rubric and benchmarks repo are public. I also saw cleaner scope adherence and better design choices when implementing new features, driven by the `impact_of_change` tool surfacing constraints before Claude proposes work. v1.0.0 is planned to ship next week. Before then I hoped to f…",
+      "category": "ai_tools"
+    }
+  ]
+}

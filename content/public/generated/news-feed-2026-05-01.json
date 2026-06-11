@@ -1,0 +1,263 @@
+{
+  "generated": "2026-06-05T00:44:37.128Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-01",
+  "article_count": 15,
+  "archived_story_count": 600,
+  "articles": [
+    {
+      "title": "Built + open sourced anti-slopsquatting CLI",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t0ltr5/built_open_sourced_antislopsquatting_cli/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-01T06:56:08.000Z",
+      "summary": "TL;DR: built an open source CLI that scans your repository's manifest (package.json, requirements.txt, go.mod) files for indicators of slopsquatting or other supply chain attack indicators.\n\nRepo: https://github.com/zhendahu/dep-doctor\n\nThere's been a ton of supply chain attacks recently ([Axios](https://github.com/axios/axios/issues/10636), [LiteLLM](https://www.trendmicro.com/en_us/research/26/c/inside-litellm-supply-chain-compromise.html), [Trivy](https://www.paloaltonetworks.com/blog/cloud-s",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Whohas – Command-line utility for cross-distro, cross-repository package search",
+      "url": "https://github.com/whohas/whohas",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.99,
+      "date": "2026-05-01T15:01:08.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Mobile App with Clade",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t0obje/mobile_app_with_clade/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-05-01T09:19:51.000Z",
+      "summary": "Just a quick question. Is building a mobile app like this actually a legit approach? I recently came across someone building fairly complex web apps, for example a geo quiz with full database integration, using this workflow: He generates all the HTML, CSS and JS through Claude (the AI), deploys it to Netlify, connects a database like Supabase or Firebase, and then uses \"Add to Homescreen\" so it looks and feels like a native mobile app. No framework, no GitHub repo, no CI/CD, no app store. And h",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turbo v2.9.7 released",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.9.7",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-05-01T02:50:31.000Z",
+      "summary": "<!-- Release notes generated using configuration in .github/release.yml at v2.9.7 -->\n\n## What's Changed\n### eslint\n* chore: Upgrade dependencies to resolve their known vulnerabilities by @anthonyshew in https://github.com/vercel/turborepo/pull/12604\n### Examples\n* feat(sandbox): Bump @vercel/sandbox from v1 to beta by @marc-vercel in https://github.com/vercel/turborepo/pull/12595\n* chore: Update examples to Turbo 2.9.6 by @cursor[bot] in https://github.com/vercel/turborepo/pull/12600\n* examples",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meta released their Ads MCP and CLI today – if you use Claude or ChatGPT you should install this asap (resources in comments). What makes this annou This is the kind of move that separates the builders from the watchers.",
+      "url": "https://x.com/yunara97/status/2050108352550592636",
+      "source": "X / @yunara97",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T07:01:35.000Z",
+      "summary": "Meta released their Ads MCP and CLI today – if you use Claude or ChatGPT you should install this asap (resources in comments). What makes this annou This is the kind of move that separates the builders from the watchers.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Agent Is Now in LM Studio — The Open-Source Agent Ecosystem Is Growing Fast",
+      "url": "https://x.com/NousResearch/status/2049878944007041210",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T02:15:34.945Z",
+      "summary": "Hermes Agent's integration with LM Studio brings it to one of the most popular local model runners. The open-source agent ecosystem is maturing quickly.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Found Zero day Claude Desktop + Chromium bug need to know where to submit report.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t0u20d/found_zero_day_claude_desktop_chromium_bug_need/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-05-01T13:52:27.000Z",
+      "summary": "Looking for official link / process to submit a vulnerability report for a high-risk official Claude Desktop + Chrome extension + native host + Cowork/MCP configuration that can become RAT-equivalent if a session, prompt chain, same-user process, or enabled extension is abused. \n\nPlease let me know where I can submit this report.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel CLI @vercel/python-workers@0.0.21 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/%40vercel/python-workers%400.0.21",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-05-01T22:29:33.000Z",
+      "summary": "### Patch Changes\n\n-   6935baa: Refactor Python queue sdk into `_queue/`\n-   574c9f1: [vercel-workers] Replaces retention_seconds and delay_seconds with retention and delay which support timedelta, e.g retention=timedelta(hours=6)\n",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I built a practical guide for running real businesses with Claude (based on 35+ founder stories)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1t0in32/i_built_a_practical_guide_for_running_real/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-05-01T04:07:58.000Z",
+      "summary": "I read through 35+ Reddit threads of people actually building and running businesses with Claude — from local service agencies to solo SaaS founders.\n\nI distilled the best patterns, frameworks, and hard lessons into one repo:\n\n[**https://github.com/Abhisheksinha1506/ClaudeBusiness**](https://github.com/Abhisheksinha1506/ClaudeBusiness)\n\n# What’s inside:\n\n* Agentic Entrepreneurship Framework (Vibe → Value)\n* How top founders structure persistent memory &amp; daily workflows\n* Service business vs ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "You can now connect your Meta ads to Claude via MCP. Really good workflow I've been testing (with Higgsfield): > Analyse ad account top performers > Use Claude to come up with variations > Generate them in Higgsfield (statics) > Animate th…",
+      "url": "https://x.com/_stephenbishop_/status/2050263244020015404",
+      "source": "X / @_stephenbishop_",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T17:17:04.000Z",
+      "summary": "You can now connect your Meta ads to Claude via MCP. Really good workflow I've been testing (with Higgsfield): > Analyse ad account top performers > Use Claude to come up with variations > Generate them in Higgsfield (statics) > Animate them > Re-launch on Meta",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CapCut Integration in Creative Workflows — AI Video Editing at Consumer Scale",
+      "url": "https://x.com/capcutapp",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:45:55.101Z",
+      "summary": "CapCut remains one of the most widely adopted AI video editing tools globally, offering sophisticated AI features including background removal, effects, and template-based content creation through a consumer-accessible mobile interface.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "FeatherlessAI $20M — Serverless Open Model Platform for Enterprise Infrastructure",
+      "url": "https://x.com/FeatherlessAI",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:45:53.114Z",
+      "summary": "FeatherlessAI raised $20M to build a serverless open-model inference platform supporting 30,000+ open-weight models as a vendor-neutral enterprise AI infrastructure layer. AMD Ventures led the round, reflecting AMD's ecosystem investment strategy.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "GitHub Copilot Sign-Ups Paused — AI Coding Demand Overloads Even Microsoft-Scale Infrastructure",
+      "url": "https://x.com/thenewstack",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T14:45:53.113Z",
+      "summary": "GitHub paused Copilot sign-ups because AI coding demand is overwhelming compute infrastructure at Microsoft-scale. The bottleneck illustrates the extraordinary capacity requirements of serving AI coding assistance at mass adoption scale.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ElevenLabs dropped ElevenMusic, Mistral launched Vibe remote agents, Google added file creation to Gemini, OpenAI released a Cybersecurity Action Plan, and the U.S. is probing Anysphere and Airbnb over Chinese AI use. The AI space moves at…",
+      "url": "https://x.com/TheMindRound/status/2050113747864223855",
+      "source": "X / @themindround",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T07:23:01.000Z",
+      "summary": "ElevenLabs dropped ElevenMusic, Mistral launched Vibe remote agents, Google added file creation to Gemini, OpenAI released a Cybersecurity Action Plan, and the U.S. is probing Anysphere and Airbnb over Chinese AI use. The AI space moves at ludicrous speed. One Tuesday's product",
+      "category": "ai_tools"
+    },
+    {
+      "title": "the PocketOS incident scared the entire industry into shipping safety features in 72 hours. this week - Anthropic launched Claude Security that scans your codebase for vulnerabilities and auto-patches them. - Cursor droped a security revie…",
+      "url": "https://x.com/trikcode/status/2050113594830774423",
+      "source": "X / @trikcode",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-01T07:22:24.000Z",
+      "summary": "the PocketOS incident scared the entire industry into shipping safety features in 72 hours. this week - Anthropic launched Claude Security that scans your codebase for vulnerabilities and auto-patches them. - Cursor droped a security review agent the same day. Nothing",
+      "category": "ai_tools"
+    }
+  ]
+}

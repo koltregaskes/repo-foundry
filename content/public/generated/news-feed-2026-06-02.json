@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-05T00:44:45.591Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-06-02",
+  "article_count": 1,
+  "archived_story_count": 241,
+  "articles": [
+    {
+      "title": "GitHub Copilot App",
+      "url": "https://github.com/features/preview/github-app",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.82,
+      "date": "2026-06-02T17:58:55.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

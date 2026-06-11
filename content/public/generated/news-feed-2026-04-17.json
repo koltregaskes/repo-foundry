@@ -1,0 +1,267 @@
+{
+  "generated": "2026-06-05T00:44:34.586Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-17",
+  "article_count": 15,
+  "archived_story_count": 370,
+  "articles": [
+    {
+      "title": "OpenAI Codex Just Got Its Biggest Update Yet",
+      "url": "https://reddit.com/r/ChatGPT/comments/1sno26n/openai_codex_just_got_its_biggest_update_yet/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T02:27:24.000Z",
+      "summary": "OpenAI says Codex now works in the app, IDE, terminal, web, GitHub, iOS, and Slack.   \n  \nRecent upgrades bundled a new GPT-5.3-Codex model for agentic coding, a rebuilt CLI, an IDE extension for VS Code-compatible editors, faster cloud task performance via container caching, automated code review, an in-app browser for rendered pages, and computer use for macOS apps.   \n  \nApril 2026 added three more shifts: a token-based credit billing model, a new $100 Pro tier with up to 10x Plus usage, and ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI v0.38.2 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.38.2",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-04-17T18:38:59.000Z",
+      "summary": "## What's Changed\n* fix(patch): cherry-pick 14b2f35 to release/v0.38.1-pr-24974 to patch version v0.38.1 and create version 0.38.2 by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/25585\n\n\n**Full Changelog**: https://github.com/google-gemini/gemini-cli/compare/v0.38.1...v0.38.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel CLI vercel@51.6.1 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4051.6.1",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-17T02:34:08.000Z",
+      "summary": "### Patch Changes\n\n-   Updated dependencies \\[[`055f6239a4fe763b9f3b33cfbb5baa2e0e214767`](https://github.com/vercel/vercel/commit/055f6239a4fe763b9f3b33cfbb5baa2e0e214767)]:\n    -   @vercel/build-utils@13.18.0\n    -   @vercel/backends@0.1.0\n    -   @vercel/python@6.34.0\n    -   @vercel/elysia@0.1.68\n    -   @vercel/express@0.1.78\n    -   @vercel/fastify@0.1.71\n    -   @vercel/go@3.5.0\n    -   @vercel/h3@0.1.77\n    -   @vercel/hono@0.2.71\n    -   @vercel/hydrogen@1.3.6\n    -   @vercel/koa@0.1.51",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.60.0 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.60.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T16:55:33.000Z",
+      "summary": "# Secret release\r\n\r\nYou're not supposed to read through the changelog below.\r\n\r\n## Changelog\r\n### New!\r\n* ea86101bf6c61ee05ca3e887ea65d2f5ff9e68d7: feat(hyper): use openai-compatible endpoint for hyper (#2640) (@andreynering)\r\n\r\n---\r\n\r\n<details>\r\n<summary>Verifying the artifacts</summary>\r\n\r\nFirst, download the [`checksums.txt` file](https://github.com/charmbracelet/crush/releases/download/v0.60.0/checksums.txt) and the [`checksums.txt.sigstore.json` file](https://github.com/charmbracelet/crush/",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Adapt: open-source memory that rewrites its own structure when your data surprises it",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1so002u/adapt_opensource_memory_that_rewrites_its_own/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T12:48:26.000Z",
+      "summary": "TypeScript library I've been building. The thing I want feedback on: when the memory keeps dismissing data it shouldn't, or queries keep coming back empty, it restructures itself;splits overloaded learners, merges redundant ones, grows new ones for domains nobody configured.   \n  \nWorks with any Vercel AI SDK provider, so Ollama / LM Studio / llama.cpp plus hosted.   \n  \nObserve and synthesize are separate LLM calls, so you can run a 7B for observe (the high-volume path) and a bigger model for s",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic's AI protocol has critical flaw affecting 200,000 servers",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1snx2nw/anthropics_ai_protocol_has_critical_flaw/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T10:29:36.000Z",
+      "summary": "https://www.infosecurity-magazine.com/news/systemic-flaw-mcp-expose-150/\n\nSecurity researchers at OX Security disclosed on Tuesday what they describe as a critical, systemic vulnerability in Anthropic's Model Context Protocol, an open-source standard that allows AI models to connect to external data sources and systems. The flaw could enable arbitrary command execution on any vulnerable system, potentially exposing sensitive user data, internal databases, API keys, and chat histories across more",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Has anyone found a way to get the Pro model to work properly with GitHub MCP?",
+      "url": "https://reddit.com/r/ChatGPT/comments/1snvqvc/has_anyone_found_a_way_to_get_the_pro_model_to/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "mcp",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T09:14:06.000Z",
+      "summary": "The \"thinking\" model handles tool calls just fine, but the Pro mode seems to keep throwing 404 errors?",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I'm so sick of coding and agents",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1snv8as/im_so_sick_of_coding_and_agents/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T08:44:46.000Z",
+      "summary": "This is an unhelpful rant, but it's been getting to me. I don't code. I don't care about python. I don't know and don't care how agents work and what they do. I don't build websites and I couldn't care less about github integration\n\nI write. Something LLMs should theoretically be really focused on and decent at. I write a lot for my job, and I do a lot of creative writing. And no one seems to care about this anymore. It's notable that during the release of Gemma 4 - the one 'model family' people",
+      "category": "ai_models"
+    },
+    {
+      "title": "ComfyUI-HY-World2",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1snstos/comfyuihyworld2/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T06:27:10.000Z",
+      "summary": "I’ve decided to release my HY-World integration for ComfyUI: [https://github.com/AHEKOT/ComfyUI\\_HYWorld2](https://github.com/AHEKOT/ComfyUI_HYWorld2)\n\nThe project includes nodes for HY-WorldMirror and HY-World2\n\nThe solution isn’t very stable yet, and there are several reasons for this:\n\n1. HY-World2 isn’t quite what it claims to be. At the moment, they’ve only released one part of it – the Gaussian Splatting generation and 3D models. You will NOT get those beautiful results from the videos, wi",
+      "category": "creative_tools"
+    },
+    {
+      "title": "[Resource] Anima Style Explorer: A free web tool for ComfyUI styles + Open Source MooshieUI Desktop Client",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1snkume/resource_anima_style_explorer_a_free_web_tool_for/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T00:03:20.000Z",
+      "summary": "I wanted to share a project I have been building for the community called Anima. It is a completely free web-based style explorer designed to help you discover and visualize different aesthetic prompts and configurations for your Stable Diffusion generations without guesswork.\n\nWeb Version: [https://anima.mooshieblob.com/](https://anima.mooshieblob.com/)\n\n**MooshieUI Integration (Open Source)**\n\nFor those who prefer a local workflow, I have also integrated this into MooshieUI. This is a custom, ",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Anthropic ships so fast, they don't bother updating documentation anymore",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1soaldj/anthropic_ships_so_fast_they_dont_bother_updating/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.88,
+      "date": "2026-04-17T19:14:27.000Z",
+      "summary": "Anthropic is shipping so fast that their documentation is completely out of date now.\n\nI setup an automatic system of finding documentation gaps for each of their release notes.\n\nI've noticed that since February 12th (or so) Anthropic just stopped caring and they do the bare minimum now.\n\nI have around 250 open github issues that I frequency (every couple of days) check to see if anything is fixed in their documentation (code.claude.com) and features that they shipped about 2 months ago are stil",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel CLI vercel@51.7.0 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4051.7.0",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-17T22:38:37.000Z",
+      "summary": "### Minor Changes\n\n-   [detect-services] If a vercel.toml exists, update the vercel.toml ([#15895](https://github.com/vercel/vercel/pull/15895))\n\n-   Use correct filename in messages when config file is not vercel.json ([#15893](https://github.com/vercel/vercel/pull/15893))\n\n-   [services] move Python workers to v2beta triggers with private routing ([#15920](https://github.com/vercel/vercel/pull/15920))\n\n### Patch Changes\n\n-   Include `action` and `resource` fields from API 403 responses in non-",
+      "category": "ai_tools"
+    },
+    {
+      "title": "CadQuery is an open-source Python library for building 3D CAD models",
+      "url": "https://cadquery.github.io/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-14T23:20:39.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Intel Arc Pro B70 Open-Source Linux Performance Against NVIDIA RTX &amp; AMD Radeon AI PRO Review",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1soe0nm/intel_arc_pro_b70_opensource_linux_performance/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T21:20:59.000Z",
+      "summary": "The R9700 is about 30% more than the B70, but it's more than 30% better. Overall, I rather have a R9700 than a B70.\n\n",
+      "category": "ai_models"
+    },
+    {
+      "title": "SmolLM2-135M-Q8 @ ~7 tok/s in ROBLOX Native",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sodplp/smollm2135mq8_7_toks_in_roblox_native/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-17T21:09:38.000Z",
+      "summary": "Weights are downloaded from Github on load via HTTPService; inference pipeline is fully running in lua/on Roblox’s servers @ 7 tok/s decode. You could  theoretically serialize the weights, store them ingame, and run inference on your Client, which would make this truly LocalLLaMA.\n\nFrom my testing, Luau seems to max at around 2.6 billion operations / second per CPU core, for int8 matrix math. I attempted both splitting work across the cores and Q4 quantization, but the introduced overheads actua",
+      "category": "ai_models"
+    }
+  ]
+}

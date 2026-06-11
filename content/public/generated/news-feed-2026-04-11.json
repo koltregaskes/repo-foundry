@@ -1,0 +1,255 @@
+{
+  "generated": "2026-06-05T00:44:33.672Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-11",
+  "article_count": 15,
+  "archived_story_count": 346,
+  "articles": [
+    {
+      "title": "Labs for Claude Certified Architect Foundations Exam",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sip8jd/labs_for_claude_certified_architect_foundations/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T17:28:37.000Z",
+      "summary": "While preparing for the exam I engineered 6 labs, one per scenario, covering all 5 domains and all 30 task statements. Each one walks you through building working, runnable code step by step, for hands-on practice with the architectures the exam covers.\n\n* Lab 01 - Customer Support Resolution Agent\n* Lab 02 - Code Generation Workflows\n* Lab 03 - Multi-Agent Research System\n* Lab 04 - Developer Productivity Agent\n* Lab 05 - CI/CD Integration\n* Lab 06 - Structured Data Extraction\n\n[https://github.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "How I made my Claude multimodal — now I just feed it videos",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1simmfx/how_i_made_my_claude_multimodal_now_i_just_feed/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T15:49:48.000Z",
+      "summary": "Claude + Qwen API\n\nFigured out (with Claude's help) how to set up a bridge to Qwen 3.5 Omni Plus API so that Claude calls it on its own — sends the video with a prompt, iterates on the result, and comes back with a report or action.\n\nNow I just drop a video straight into Claude and get back what I need.\n\nPackaged it as a plugin for easy setup.\n\ngithub.com/kirillbrsnkv/give-claude-eyes",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Update: the open-source 62K multimodal prompt injection dataset now has GCG suffixes, multi-turn orchestration, indirect injection, tool abuse, and more (v2 + v3 added overnight)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1siilrp/update_the_opensource_62k_multimodal_prompt/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T13:06:26.000Z",
+      "summary": "Posted here yesterday about the v1 cross-modal dataset. One of you suggested adding GCG adversarial suffixes and multi-turn attack coverage. That feedback turned into v2 and v3 being built and shipped within 24 hours. The dataset has gone from 47K to 62K samples.\n\nHuggingFace: https://huggingface.co/datasets/Bordair/bordair-multimodal\nGitHub: https://github.com/Josh-blythe/bordair-multimodal-v1/\nMIT licensed.\n\nThe repo's also picked up early interest from engineers at NVIDIA, PayPal, NetApp, and",
+      "category": "ai_models"
+    },
+    {
+      "title": "update on my ai waifu app, can use web search react to images even picture of herself",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sige8s/update_on_my_ai_waifu_app_can_use_web_search/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T11:19:52.000Z",
+      "summary": "using qwen 3 VL for the llm and the vision (really good for recognize popular characters and even recognize their appearances)\n\nusing SerpApi for the web search\n\nthe tts is using omnivoice tts (support 600+ languages) that i make a custom api that i recently open source it, get it here: [https://github.com/aziib/omnivoice-tts-api](https://github.com/aziib/omnivoice-tts-api)\n\nmy ai waifu project stil in work in progress, i just hope there is free web search api, SerpApi has some search limit usag",
+      "category": "ai_models"
+    },
+    {
+      "title": "I built an open-source platform to manage multiple coding agents – recursive split panes, shared content folder, and a per-project wiki",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sidojq/i_built_an_opensource_platform_to_manage_multiple/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T08:42:01.000Z",
+      "summary": "If you run multiple agent CLIs daily, you've probably hit the same pain points I have:\n\n1. Too many terminal windows — impossible to find the one you need\n2. Tmux commands are clunky — switching sessions is awkward, easy to jump to the wrong window, and you can't even scroll with your mouse\n3. Sharing files between agents means manually copying everything into the project folder\n\nI looked around at open-source agent management platforms and couldn't find one that fit my workflow. So I took the b",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open-source skill for training CV models without the usual pain",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sicnyn/opensource_skill_for_training_cv_models_without/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T07:42:13.000Z",
+      "summary": "I've spent the last 3 years training CV models. Over time you learn the mistakes. Now Claude does all the heavy lifting, but it hasn't learned them yet. It needs guardrails.\n\nCV-Stack encodes this into a reusable skill: setting up compute, connecting to data, auditing your pipeline for mismatches, and logging, all from a blank slate.\n\nStill early. Would love feedback on what's missing, broken, or annoying. Contributions welcome.\n\n[https://github.com/andlyu/cv-train-stack](https://github.com/andl",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Unsloth updated all Gemma-4 uploads",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sia1w6/unsloth_updated_all_gemma4_uploads/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T05:14:00.000Z",
+      "summary": "https://preview.redd.it/2h8fqazyuhug1.png?width=2276&amp;format=png&amp;auto=webp&amp;s=12e4085c542b8b0c07ba908c736800a1922d95af\n\nYou should redownload, as they include the updated chat template (see https://huggingface.co/google/gemma-4-26B-A4B-it/commit/75802dbc9d0627b5f8de15ee607b01dffda24492)\n\n...and maybe some other updates.\n\nGood to see the Unsloth team supporting the Gemma-4 release like this.  \nThank you for your service!",
+      "category": "ai_models"
+    },
+    {
+      "title": "Sanity check on Milla Jovovich's MemPalace: Mixed metrics, bypassed judges, and that 96.6% LongMemEval score",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1si5lc4/sanity_check_on_milla_jovovichs_mempalace_mixed/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T01:35:50.000Z",
+      "summary": "Disclosure up front: I work on a different open-source memory system (bitterbot-desktop, \\~125 stars vs MemPalace's \\~40k so calibrate accordingly). We're trying to solve the same problem from different angles, and I went and read MemPalace's benchmark code specifically because their headline number is so much higher than the rest of the field, and I wanted to understand the gap.\n\nWhat I found left me genuinely uncertain about how to read it, and I'd like a sanity check from people who know Long",
+      "category": "ai_models"
+    },
+    {
+      "title": "I automated most of my job",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1shngqm/i_automated_most_of_my_job/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T14:03:08.000Z",
+      "summary": "I'm a software engineer with 11 yoe. I automated about 80% of my job with claude cli and a super simple dotnet console app.\n\nThe workflow is super simple:\n\n1. dotnet app calls our gitlab api for issues assigned to me\n\n2. if an issue is found it gets classified → simple prompt that starts claude code with the repo and all image attachments incl. the issue description\n\n3. if the result is that the issue is not ready for development, an answer is posted to my gitlab (i currently just save a draft a",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I built a notification tool for Claude Code, hit 374 downloads, then found out notifications were broken the whole time — v1.1.0 is out",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1siexm7/i_built_a_notification_tool_for_claude_code_hit/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.96,
+      "date": "2026-04-11T09:58:19.000Z",
+      "summary": "  \nBuilt with Claude Code, specifically for Claude Code users. Free, open source, MIT.  \n  \nWhat it does  \n  \nu/daik0z/claude-notify adds a Stop hook to \\~/.claude/settings.json. When Claude Code finishes a task, you get a push notification — desktop, mobile via ntfy, or any webhook. The body summarizes what happened: \"3 files edited · 2 commands  \n\".  \n  \nnpm install -g u/daik0z/claude-notify  \nclaude-notify setup  \n  \nWhat I learned from 374 downloads  \n  \nI sat down to stress-test it and foun",
+      "category": "ai_tools"
+    },
+    {
+      "title": "FT - China’s Alibaba shifts towards revenue over open-source AI",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sip3hd/ft_chinas_alibaba_shifts_towards_revenue_over/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T17:23:20.000Z",
+      "summary": "[https://www.ft.com/content/b39da303-3188-447b-8b65-3dd8dad8b59a?syn-25a6b1a6=1t](https://www.ft.com/content/b39da303-3188-447b-8b65-3dd8dad8b59a?syn-25a6b1a6=1t)\n\n  \nIs it true?",
+      "category": "ai_models"
+    },
+    {
+      "title": "Claude Code has become unusable. I already canceled my own max subscription for my consulting business and will now instruct my biggest client to sever ties with Anthropic as well",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1siol9d/claude_code_has_become_unusable_i_already/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T17:04:18.000Z",
+      "summary": "See this github issue for context: [https://github.com/anthropics/claude-code/issues/42796](https://github.com/anthropics/claude-code/issues/42796)\n\nI worked around the breaking changes by:\n\n* Disabling automatic updates\n* Removing the latest version from all of my work machines\n* Downloading the usable version that released prior to the breaking changes that Anthropic began releasing in February (v2.1.63)\n* Forcing the effort level to max in .claude/settings.json\n* Forcefully disabling adaptive",
+      "category": "ai_tools"
+    },
+    {
+      "title": "FlashAttention (FA1–FA4) in PyTorch - educational implementations focused on algorithmic differences [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sim6y1/flashattention_fa1fa4_in_pytorch_educational/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T15:33:13.000Z",
+      "summary": "I recently updated my FlashAttention-PyTorch repo so it now includes educational implementations of FA1, FA2, FA3, and FA4 in plain PyTorch.\n\nThe main goal is to make the progression across versions easier to understand from code.\n\nThis is not meant to be an optimized kernel repo, and it is not a hardware-faithful recreation of the official implementations. The point is to expose the algorithmic ideas and design changes without immediately going deep into CUDA/Hopper/Blackwell-specific details.\n",
+      "category": "ai_research"
+    },
+    {
+      "title": "I built a structured reasoning framework for Claude — because \"good output\" isn't enough",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sil0me/i_built_a_structured_reasoning_framework_for/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T14:46:51.000Z",
+      "summary": "**I built a structured reasoning framework for Claude — because \"good output\" isn't enough**\n\nI kept running into the same problem: Claude gives a great answer, but I have no idea how it got there. Same prompt, different results. Complex tasks where I couldn't tell if the reasoning actually held up.\n\nSo I built CRC — Complex Reasoning Compiler. It's a 6-step Claude Skill that forces reasoning to be auditable, teachable, and human-controlled.\n\nThe core idea:\n\n* Every complex task goes through a f",
+      "category": "ai_tools"
+    },
+    {
+      "title": "RL Environments for Language Models: I built a hands-on free course",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sik181/rl_environments_for_language_models_i_built_a/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-11T14:07:10.000Z",
+      "summary": "🌱 Course: [https://github.com/anakin87/llm-rl-environments-lil-course](https://github.com/anakin87/llm-rl-environments-lil-course) |  \n🎥 Video: [https://www.youtube.com/watch?v=71V3fTaUp2Q](https://www.youtube.com/watch?v=71V3fTaUp2Q)\n\nI've been deep into RL for LLMs lately.\n\nOver the past year, we've seen a shift in LLM Post-Training.  \nPreviously, Supervised Fine-Tuning was the most important part: making models imitate curated Question-Answer pairs.\n\nNow we also have Reinforcement Learning ",
+      "category": "ai_models"
+    }
+  ]
+}

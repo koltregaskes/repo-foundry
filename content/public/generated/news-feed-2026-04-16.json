@@ -1,0 +1,259 @@
+{
+  "generated": "2026-06-05T00:44:34.397Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-16",
+  "article_count": 15,
+  "archived_story_count": 396,
+  "articles": [
+    {
+      "title": "Vercel CLI vercel@51.5.1 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4051.5.1",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.9199999999999999,
+      "date": "2026-04-16T20:37:28.000Z",
+      "summary": "### Patch Changes\n\n-   Improve Claude Code Vercel plugin install and update prompts across CLI commands. ([#15921](https://github.com/vercel/vercel/pull/15921))\n\n-   Updated dependencies \\[[`5219572d21a2ba4b49cc1c27d244c1ff5d76c591`](https://github.com/vercel/vercel/commit/5219572d21a2ba4b49cc1c27d244c1ff5d76c591), [`2babfa22946d80a92f1307a8d860a9039d695b09`](https://github.com/vercel/vercel/commit/2babfa22946d80a92f1307a8d860a9039d695b09), [`2babfa22946d80a92f1307a8d860a9039d695b09`](https://gi",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Crush v0.59.0 released",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.59.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-16T21:21:52.000Z",
+      "summary": "## Changelog\n### New!\n* 3773b23cb44afc4567d892f01c41c8dc62556ca0: feat(shell): add jq as a bash builtin + a jq skill for it (@meowgorithm)\n* b37649e45299d426aeae73a54efc0d1155fb5c91: feat(ui): add skills discovery status to sidebar and landing page (#2384) (@huaiyuWangh)\n* e8f5e2025d2401ffe06123c42226f3b7a20abe3a: feat: show progress bar on rio terminal (#2624) (@andreynering)\n### Fixed\n* f546a071891c4ced02c832ff1789534df2874bda: fix(prompt): remind coder to follow `<git_commits>` format on comm",
+      "category": "ai_tools"
+    },
+    {
+      "title": "DeepSeek Updated their repo DeepGEMM testing Mega MoE",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sn0ob0/deepseek_updated_their_repo_deepgemm_testing_mega/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T11:24:51.000Z",
+      "summary": "[https://github.com/deepseek-ai/DeepGEMM/pull/304](https://github.com/deepseek-ai/DeepGEMM/pull/304)\n\nhttps://preview.redd.it/vcmqwmvzijvg1.png?width=1014&amp;format=png&amp;auto=webp&amp;s=76b1739925f0699b0763aa7814614dd40329c41e\n\n[https://github.com/deepseek-ai/DeepGEMM/commit/a050d09461e86eb6bba35a8c74fc0e296e8e16c7#diff-59e30829961e1b429bc12115673562f6f15d2ed347cac8d27a879bf101e977cb](https://github.com/deepseek-ai/DeepGEMM/commit/a050d09461e86eb6bba35a8c74fc0e296e8e16c7#diff-59e30829961e1b4",
+      "category": "ai_models"
+    },
+    {
+      "title": "Built a visual memory layer for Claude — see what Claude remembers about your projects (open source, free, WIP)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1smzaxb/built_a_visual_memory_layer_for_claude_see_what/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T10:13:13.000Z",
+      "summary": "    Claude already has memory — but it's a black box. \n    You can't see what it knows, what decisions were made, \n    or how your project is progressing.\n    \n    Dendrite makes Claude's memory visible.\n    \n    How it works:\n    - Claude writes structured memory slices via MCP \n      (decisions, observations, tasks, open questions)\n    - You see everything in a searchable 3-pane reader\n    - Set your own preferences that Claude pulls from \n      on every session\n    - Track project progress, o",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Built an political benchmark for LLMs. KIMI K2 can't answer about Taiwan (Obviously). GPT-5.3 refuses 100% of questions when given an opt-out. [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1smqsbu/built_an_political_benchmark_for_llms_kimi_k2/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T02:31:24.000Z",
+      "summary": "I spent the few days building a benchmark that maps where frontier LLMs fall on a 2D political compass (economic left/right + social progressive/conservative) using 98 structured questions across 14 policy areas. I tested GPT-5.3, Claude Opus 4.6, and KIMI K2. The results are interesting.\n\n\n\n**The repo is fully open-source -- run it yourself on any model with an API:**  \n[https://github.com/dannyyaou/llm-political-eval](https://github.com/dannyyaou/llm-political-eval)\n\n\n\n\n\n**The headline finding",
+      "category": "ai_research"
+    },
+    {
+      "title": "Buddy just got upgraded",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1snb6ek/buddy_just_got_upgraded/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.91,
+      "date": "2026-04-16T17:58:21.000Z",
+      "summary": "well not really but almost (:\n\ni liked the companion concept so much that i had to built something like that . so like a good Claude viber i added a new plugin called Compi a collection game that played directly inside Claude with Claude as an ai advisor.\n\nit works completely offline and opensource.\n\nit leverage hooks skills and askII art\n\n[https://github.com/amit221/compi](https://github.com/amit221/compi)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenClaw v2026.4.15 released",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.4.15",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-16T21:50:22.000Z",
+      "summary": "\n### Changes\n\n- Anthropic/models: default Anthropic selections, `opus` aliases, Claude CLI defaults, and bundled image understanding to Claude Opus 4.7.\n- Google/TTS: add Gemini text-to-speech support to the bundled `google` plugin, including provider registration, voice selection, WAV reply output, PCM telephony output, and setup/docs guidance. (#67515) Thanks @barronlroth.\n\n### Fixes\n\n- Agents/skills: sort prompt-facing `available_skills` entries by skill name after merging sources so `skills.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ComfyUI v0.19.1 released",
+      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.19.1",
+      "source": "GitHub Releases · ComfyUI",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.84,
+      "date": "2026-04-16T14:11:33.000Z",
+      "summary": "## What's Changed\r\n* Fix issue with ernie image. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/13393\r\n* Make text generation work with ministral model. by @comfyanonymous in https://github.com/Comfy-Org/ComfyUI/pull/13395\r\n* [Partner Nodes] add Sonilo Audio nodes by @bigcat88 in https://github.com/Comfy-Org/ComfyUI/pull/13391\r\n* Update workflow templates to v0.9.50 by @comfyui-wiki in https://github.com/Comfy-Org/ComfyUI/pull/13399\r\n* Bump comfyui-frontend-package to 1.42.11 by",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vercel CLI vercel@51.5.0 released",
+      "url": "https://github.com/vercel/vercel/releases/tag/vercel%4051.5.0",
+      "source": "GitHub Releases · Vercel CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.76,
+      "date": "2026-04-16T13:41:59.000Z",
+      "summary": "### Minor Changes\n\n-   Add `vercel connex create` command ([#15988](https://github.com/vercel/vercel/pull/15988))\n\n-   Add `vercel deploy-hooks` command to create, list, and remove deploy hooks. ([#15935](https://github.com/vercel/vercel/pull/15935))\n\n### Patch Changes\n\n-   Enable functions beta hint when flag is true ([#15965](https://github.com/vercel/vercel/pull/15965))\n\n-   Improve the `vercel metrics` CLI by making it generally available, simplifying metric selection, and cleaning up schema",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen 3.6 for Claude Code in 1L",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1snhjiw/qwen_36_for_claude_code_in_1l/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T21:47:10.000Z",
+      "summary": "https://preview.redd.it/a96i13zyemvg1.png?width=374&amp;format=png&amp;auto=webp&amp;s=d1850127462849eab4ff37a3e10159d092bcc994\n\nI use a p3 tiny gen 2 with an rtx 2000 ada (16gb vram). It gets hot, so I modeled and printed a fan hanger to keep it cool. It's dumb, but it feels like Claude Code, just unlimited.  \nI did have to use the change in this PR to make llamacpp work well with cc though: [https://github.com/ggml-org/llama.cpp/pull/21793/](https://github.com/ggml-org/llama.cpp/pull/21793/)  ",
+      "category": "ai_models"
+    },
+    {
+      "title": "I got tired of copying/pasting between ChatGPT and X, so I built an extension that brings the AI directly into the timeline",
+      "url": "https://reddit.com/r/ChatGPT/comments/1snf7bl/i_got_tired_of_copyingpasting_between_chatgpt_and/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T20:20:53.000Z",
+      "summary": "I use ChatGPT to help draft posts or brainstorm replies, but the workflow of copying tweets, pasting them into ChatGPT, asking it to reply, and then pasting it back into Twitter was driving me crazy. Also, it almost always sounds like a generic robot\n\nSo, I built **Tweetback**, a Chrome/Edge/Firefox extension that brings your API key directly into the X/Twitter interface.\n\nI wanted to see how far I could push the AI to actually understand context and sound human. Here is what it can do:\n\n**\"Clon",
+      "category": "ai_tools"
+    },
+    {
+      "title": "PSA: Qwen3.6 ships with preserve_thinking. Make sure you have it on.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sne4gh/psa_qwen36_ships_with_preserve_thinking_make_sure/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T19:41:55.000Z",
+      "summary": "I had previously posted [here about a fix to their 3.5 template ](https://www.reddit.com/r/LocalLLaMA/comments/1sg076h/i_tracked_a_major_cache_reuse_issue_down_to_qwen/)to help resolve the KV cache invalidation issue from their template. A lot of you found it useful.\n\nQwen 3.6 now addresses this with a new preserve\\_thinking flag. From their [model page:](https://huggingface.co/Qwen/Qwen3.6-35B-A3B)\n\n&gt;`please use \"preserve_thinking\": True instead of \"chat_template_kwargs\": {\"preserve_thinking",
+      "category": "ai_models"
+    },
+    {
+      "title": "Google, please just open source Imagen (2022), Gemini 1.0 Nano and Gemini 1.0 Pro. You have nothing to lose at this point.",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sncslc/google_please_just_open_source_imagen_2022_gemini/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T18:54:41.000Z",
+      "summary": "Ok, so imagen (the original one from 2022, not imagen 3/4) should be open source. The gemini 1.0 nano model and the gemini 1.0 pro models should be open source. xAI already open-sourced grok 1, but Google???????? at this point you should open source this\n\nGoogle if you seeing this (prob. not) please open source it in I/O 2026\n\n  \nEdit: please open source also palm 2 unicorn and bison, geminii 3.1 destroys it",
+      "category": "ai_models"
+    },
+    {
+      "title": "Bench 8xMI50 MiniMax M2.7 AWQ @ 64 tok/s peak  (vllm-gfx906-mobydick)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1snank9/bench_8xmi50_minimax_m27_awq_64_toks_peak/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T17:39:58.000Z",
+      "summary": "**Inference engine used (vllm fork)**: [https://github.com/ai-infos/vllm-gfx906-mobydick/tree/main](https://github.com/ai-infos/vllm-gfx906-mobydick/tree/main)\n\n**Huggingface Quants used:** cyankiwi/MiniMax-M2.7-AWQ-4bit\n\n**Relevant commands to run**:\n\n    docker run -it --name vllm-gfx906-mobydick-mixa3607 -v ~/llm/models:/models --network host --device=/dev/kfd --device=/dev/dri --group-add video \\\n      --group-add $(getent group render | cut -d: -f3) --ipc=host mixa3607/vllm-gfx906:0.19.1-ro",
+      "category": "ai_models"
+    },
+    {
+      "title": "I tried adding rich UI elements to Open WebUI",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1snadsi/i_tried_adding_rich_ui_elements_to_open_webui/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-16T17:30:43.000Z",
+      "summary": "so i tried adding [openui](https://github.com/thesysdev/openui) to [openwebui](https://github.com/open-webui/open-webui) and it worked pretty well. used it with gpt-5.4-mini and it was super fast and responsive. I also tried using opensource models like qwen3:30b and gemma4 but the generation speed was slow (i ran them on my 24gb m4 laptop). let me know if you guys want to know more about how i did it!",
+      "category": "ai_models"
+    }
+  ]
+}

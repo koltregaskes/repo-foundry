@@ -1,0 +1,104 @@
+{
+  "generated": "2026-06-05T00:44:44.802Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-30",
+  "article_count": 6,
+  "archived_story_count": 214,
+  "articles": [
+    {
+      "title": "Show HN: VT Code – open-source terminal coding agent in Rust",
+      "url": "https://github.com/vinhnx/VTCode",
+      "source": "Hacker News",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.82,
+      "date": "2026-05-30T03:07:25.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "ChatGPT — Release Notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes#:~:text=May%2028%2C%202026,models%20are%20sunset.",
+      "source": "The Verge AI",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.76,
+      "date": "2026-05-30T05:18:42.413Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Oura Ring 5 Launches — 40% Smaller Than Ring 4, Blood Pressure Monitoring, Ships June 4 at $399",
+      "url": "https://ouraring.com/blog/oura-ring-5",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T23:40:17.517Z",
+      "summary": "Oura launched Ring 5, the world's smallest smart ring at 40% smaller than Ring 4, starting at 2 grams. New features include blood pressure change monitoring, sleep apnea detection, and an AI health coach. Ships June 4, $399.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Kore: Binary File Format Optimized for Modern Data Systems (Open Source)",
+      "url": "https://github.com/arunkatherashala/Kore",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.8899999999999999,
+      "date": "2026-05-30T20:54:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Testing the WWI concrete ships and WWII concrete barges",
+      "url": "https://thecretefleet.com/blog/f/testing-the-wwi-concrete-ships-and-wwii-concrete-barges",
+      "source": "Hacker News",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-29T12:00:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Tsplat – Run Gaussian splatting in your terminal",
+      "url": "https://github.com/darshanmakwana412/tsplat",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.71,
+      "date": "2026-05-28T12:15:55.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

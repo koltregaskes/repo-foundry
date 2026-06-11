@@ -1,0 +1,85 @@
+{
+  "generated": "2026-06-05T00:44:30.314Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-03-25",
+  "article_count": 5,
+  "archived_story_count": 95,
+  "articles": [
+    {
+      "title": "Updates to GitHub Copilot interaction data usage policy",
+      "url": "https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.81,
+      "date": "2026-03-25T19:09:16.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "90% of Claude-linked output going to GitHub repos w <2 stars",
+      "url": "https://www.claudescode.dev/?window=since_launch",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.81,
+      "date": "2026-03-25T18:16:40.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: DuckDB community extension for prefiltered HNSW using ACORN-1",
+      "url": "https://github.com/cigrainger/duckdb-hnsw-acorn",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-25T03:28:04.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Rendering complex scripts in terminal and OSC 66",
+      "url": "https://thottingal.in/blog/2026/03/22/complex-scripts-in-terminal/",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-03-22T09:31:08.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Open source isn't a tip jar – it's time to charge for access",
+      "url": "https://www.theregister.com/2026/03/25/open_source_bill_opinion/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.6799999999999999,
+      "date": "2026-03-25T11:59:36.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

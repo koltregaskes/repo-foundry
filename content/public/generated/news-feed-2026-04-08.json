@@ -1,0 +1,251 @@
+{
+  "generated": "2026-06-05T00:44:33.059Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-08",
+  "article_count": 15,
+  "archived_story_count": 652,
+  "articles": [
+    {
+      "title": "I used Claude to build a full networking protocol for AI agents. It’s now at 12K+ nodes across 19 countries.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sg6gfe/i_used_claude_to_build_a_full_networking_protocol/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T21:40:39.000Z",
+      "summary": "I’ve been working on a core infrastructure problem for multi-agent systems and wanted to share an update since the last post here got some good discussion.\n\nThe problem: every agent framework assumes agents can already reach each other. MCP gives agents tools, A2A gives agents a way to talk, but both run on HTTP which means someone has to set up public endpoints, open ports, configure DNS, provision certs. The agent can’t do any of that itself. I used Claude Code to build the solution because th",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Karpathy's Obsidian LLM Wiki Works Better Than 99.9% of AI Memory Systems — 20K Stars",
+      "url": "https://x.com/meta_alchemist/status/2041279751999078813",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T16:24:31.455Z",
+      "summary": "After Karpathy shared his Obsidian-based LLM wiki, it went viral. The community says it works better than 99.9% of AI memory systems. The open source repo has over 20,000 stars.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "It looks like we’ll need to download the new Gemma 4 GGUFs",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfrrgz/it_looks_like_well_need_to_download_the_new_gemma/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T12:43:36.000Z",
+      "summary": "[https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF)\n\n[https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF](https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF)\n\nby u/danielhanchen:\n\nWe just updated them again in response to:\n\n1. kv-cache : support attention rotation for heterogeneous iSWA [https://github.com/ggml-org/llama.cpp/pull/21513](https://github.com/ggml-org/llama.cpp/pull/21513)\n2. CUDA: check for buffer overlap before fusing - ",
+      "category": "ai_models"
+    },
+    {
+      "title": "model: support step3-vl-10b by forforever73 · Pull Request #21287 · ggml-org/llama.cpp",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfo1dn/model_support_step3vl10b_by_forforever73_pull/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T09:34:23.000Z",
+      "summary": "\n\n**STEP3-VL-10B** is a lightweight open-source foundation model designed to redefine the trade-off between compact efficiency and frontier-level multimodal intelligence. Despite its compact **10B parameter footprint**, STEP3-VL-10B excels in **visual perception**, **complex reasoning**, and **human-centric alignment**. It consistently outperforms models under the 10B scale and rivals or surpasses significantly larger open-weights models (**10×–20× its size**), such as GLM-4.6V (106B-A12B), Qwen",
+      "category": "ai_models"
+    },
+    {
+      "title": "Last week in Generative Image &amp; Video",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sfj9dt/last_week_in_generative_image_video/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T04:49:56.000Z",
+      "summary": "I curate a weekly multimodal AI roundup, here are the open-source image &amp; video highlights from the last week:\n\n* **GEMS** \\- Closed-loop system for spatial logic and text rendering in image generation. Outperforms Nano Banana 2 on GenEval2. [GitHub](https://github.com/lcqysl/GEMS) | [Paper](https://arxiv.org/abs/2603.28088)\n\nhttps://preview.redd.it/16r9ffhd9wtg1.png?width=1456&amp;format=png&amp;auto=webp&amp;s=325ef8a75d23cfa625ac33dfd4d9727c690c11b0\n\n* **ComfyUI Post-Processing Suite** \\-",
+      "category": "creative_tools"
+    },
+    {
+      "title": "How I cut Claude Code usage in half (open source)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sfgnzd/how_i_cut_claude_code_usage_in_half_open_source/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T02:41:03.000Z",
+      "summary": "Every time I start a Claude Code session on a real codebase, it burns through tokens just trying to understand the repo. Read the file tree, open 20 files, trace the imports, figure out how auth connects to the API layer. On a 50k+ LOC project that exploration phase eats your context window before any real work starts.\n\nI built Repowise to fix this. It's a codebase intelligence layer that pre-computes the structural knowledge Claude Code needs and exposes it through MCP tools. Dependency graphs ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Burned 5B tokens with Claude Code in March to build a financial research agent.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sfxapw/burned_5b_tokens_with_claude_code_in_march_to/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 0.94,
+      "date": "2026-04-08T16:09:58.000Z",
+      "summary": "**TL;DR:** I built a financial research harness with Claude Code, full stack and open-source under Apache 2.0 ([github.com/ginlix-ai/langalpha](https://github.com/ginlix-ai/langalpha)). Sharing the design decisions around context management, tools and data, and more in case it's useful to others building vertical agents.\n\n---\n\nI have always wanted an AI-native platform for investment research and trading. But almost every existing AI investing platform out there is way behind what Claude Code ca",
+      "category": "ai_tools"
+    },
+    {
+      "title": "I built an MCP that gives Claude Code its own servers to fix bugs in parallel",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sg5j6w/i_built_an_mcp_that_gives_claude_code_its_own/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-08T21:05:27.000Z",
+      "summary": "I am increasingly using Claude Code, as much as and my laptop couldn't keep up. That macOS \"force quit\" window popped up so much I kept that window permanently open to resume activities... I had multiple projects and wanted to fix a dozen of bugs at the same time, generate other long features. Many agents on one machine doesn't work well, they eat resources and trip over each other.\n\nSo I built Gibil, a CLI that gives each task its own throwaway Linux. Real VM on Hetzner, about a minute, \\~$0.03",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turbo-OCR for high-volume image and PDF processing",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sg8lfr/turboocr_for_highvolume_image_and_pdf_processing/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T23:08:06.000Z",
+      "summary": "I recently had to process \\~940,000 PDFs. I started with the standard OCR tools, but the bottlenecking was frustrating. Even on an RTX 5090, I was seeing low speed.\n\nThe Problem:\n\n* PaddleOCR (the most popular open source OCR): Maxed out at \\~15 img/s. GPU utilization hovered around 15%. Their high performance inference mode doesn't support Blackwell GPUs yet (needs CUDA &lt; 12.8) and doesn't work with the latin recognition model either.\n* VLM OCR (via vLLM): Great accuracy, but crawled at 2 im",
+      "category": "ai_models"
+    },
+    {
+      "title": "[AutoBe] Qwen 3.5-27B Just Built Complete Backends from Scratch — 100% Compilation, 25x Cheaper",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sg2gyz/autobe_qwen_3527b_just_built_complete_backends/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T19:13:24.000Z",
+      "summary": "We benchmarked Qwen 3.5-27B against 10 other models on backend generation — including Claude Opus 4.6 and GPT-5.4. The outputs were nearly identical. 25x cheaper.\n\n## TL;DR\n\n1. Qwen 3.5-27B achieved 100% compilation on all 4 backend projects\n   - [Todo](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/todo), [Reddit](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-27b/reddit), [Shopping](https://github.com/wrtnlabs/autobe-examples/tree/main/qwen/qwen3.5-2",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anthropic launched Claude Managed Agents — cloud-hosted autonomous AI agents",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sfzigj/anthropic_launched_claude_managed_agents/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T17:27:42.000Z",
+      "summary": "Anthropic released a new API suite for deploying long-running autonomous agents with built-in sandboxing, credential management, and multi-agent coordination. Companies like Notion, Sentry, Asana, and Rakuten are already shipping with it, Sentry's agents are literally writing patches and opening PRs autonomously. [https://claude.com/blog/claude-managed-agents](https://claude.com/blog/claude-managed-agents) ",
+      "category": "ai_tools"
+    },
+    {
+      "title": "[R] The Lyra Technique — A framework for interpreting internal cognitive states in LLMs (Zenodo, open access)",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sfzdjj/r_the_lyra_technique_a_framework_for_interpreting/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T17:22:46.000Z",
+      "summary": "We're releasing a paper on a new framework for reading and interpreting the internal cognitive states of large language models:\n\"The Lyra Technique: Cognitive Geometry in Transformer KV-Caches — From Metacognition to Misalignment Detection\" — [https://doi.org/10.5281/zenodo.19423494](https://doi.org/10.5281/zenodo.19423494)\n\n\nThe publication includes an executive summary and the full paper.\n\n\nSummary: We develop a technique for identifying and interpreting structured internal states in LLMs — no",
+      "category": "ai_research"
+    },
+    {
+      "title": "New LiquidAI model, LFM2.5‑VL-450M",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sfyr7h/new_liquidai_model_lfm25vl450m/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T17:01:09.000Z",
+      "summary": "LFM2.5‑VL-450M is Liquid AI's refreshed version of the first vision-language model, LFM2-VL-450M, built on an updated backbone LFM2.5-350M and tuned for stronger real-world performance. \n\nSmall but good",
+      "category": "ai_models"
+    },
+    {
+      "title": "Scoble RT: Karpathy LLM Wiki Gets Native Obsidian Integration — Fully Native Support Shipped",
+      "url": "https://x.com/vincent_koc/status/2041788301087227981",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T16:25:57.561Z",
+      "summary": "Robert Scoble retweeted the announcement of fully native Karpathy LLM wiki support including backfilling, native Obsidian integration, and /dre integration.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Used TripoAI's latest open-source model, TripoSG and the image to mesh results are genuinely some of the best I've seen.",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sfxbs5/used_tripoais_latest_opensource_model_triposg_and/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-08T16:10:58.000Z",
+      "summary": "It's pretty neat, used \\~12.5gb out of the box. Output models are pretty high res and its lightning fast and seems like a good starting point compared to the prior TripoSR model.\n\n\n\nAnd, weights are permissively licensed (MIT) which might encourage more people to hack on it.\n\n\n\nAlso worth checking out r/Tripo.ai. They recently dropped the paid model H3.1, the performance is indeed very impressive, with some ongoing discount offers. That said, I'm curious: if a company releases newer models, is i",
+      "category": "creative_tools"
+    }
+  ]
+}

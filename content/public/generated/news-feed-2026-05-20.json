@@ -1,0 +1,259 @@
+{
+  "generated": "2026-06-05T00:44:41.325Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-20",
+  "article_count": 15,
+  "archived_story_count": 630,
+  "articles": [
+    {
+      "title": "Put your spare Claude cycles on night shift: help review open-source packages",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tizbag/put_your_spare_claude_cycles_on_night_shift_help/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "open_source",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-05-20T21:15:12.000Z",
+      "summary": "Hello, I’m building Thirdpass, a tool/service for coordinating collaborative package review to reduce software supply-chain risk. The basic idea: there are far too many packages for humans to manually review, but lots of us now have AI coding agents sitting around with spare capacity. Thirdpass tries to turn that into useful coverage by assigning packages/files to review, collecting the results, and cross ref against local project dependencies. It currently supports packages from: - crates.io - PyPI - npm - Ansible Galaxy I added a “night shift” mode, so you can point Claude at the shared review backlog and let it work through package reviews continuously: ``` thirdpass review-any --nightshift ``` The reviews are first-pass supply-chain reviews: suspicious install scripts, unexpected network behavior, credential handling, sketchy build steps, weird package metadata, and so on. Partial coverage still helps. I’m looking for people who want to: - run the CLI and donate spare Claude tokens to secure OSS - improve the review prompts/agent workflow - build more registry extensions I started this project years ago after thinking a lot about `cargo-crev` and collaborative review. My curre…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Re. what ever happened to Cohere’s Command-A series of models?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tizmar/re_what_ever_happened_to_coheres_commanda_series/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T21:25:50.000Z",
+      "summary": "Hey everyone, Nick Frosst here from Cohere. A few months ago Aidan (my cofounder) [left a comment](https://www.reddit.com/r/LocalLLaMA/comments/1rf8nou/comment/o8rkdrf/) in here about our Command series and how we were working on some more powerful, open-weights models behind the scenes. We just launched Command A+ and we wanted to share it with you guys. TLDR is we built a really efficient model. It’s our first MoE model, which is exciting. There’s obvs work to do on top-line performance but it’s easily looking like one of the fastest and most responsive models in our category. We also pulled off some incredible quantization work so it runs really well on even 1 or 2 GPUs. Like with R7B, we really prioritized making the model practical, so smaller teams and devs could realistically use it to build the kind of agents we ship for our platform customers. That’s also why it’s under Apache 2.0. Just total, near unfettered access to a pretty awesome model. We’re enterprise-first but honestly, we get so much out of our open-source community that makes us more innovative and creative. The feedback you give will almost certainly influence how we think about models and product going forwar…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Announcing the release of Stable Audio 3!",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tiq820/announcing_the_release_of_stable_audio_3/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T16:07:01.000Z",
+      "summary": "Taken straight from the HarmonAI discord server. We're excited to announce the launch of Stable Audio 3, our new family of text-to-audio models for music and sound effects, including new *open-weights models*! We're releasing three models today on Hugging Face as well as a GitHub repo specifically tailored to Stable Audio 3 inference, as well as LoRA fine-tuning. * Stable Audio 3 Small Music ([https://huggingface.co/stabilityai/stable-audio-3-small-music](https://huggingface.co/stabilityai/stable-audio-3-small-music)) * Stable Audio 3 Small SFX ([https://huggingface.co/stabilityai/stable-audio-3-small-sfx](https://huggingface.co/stabilityai/stable-audio-3-small-sfx)) * Stable Audio 3 Medium ([https://huggingface.co/stabilityai/stable-audio-3-medium](https://huggingface.co/stabilityai/stable-audio-3-medium)) Stable Audio 3 GitHub: [https://github.com/Stability-AI/stable-audio-3](https://github.com/Stability-AI/stable-audio-3) The Medium model generates music and sound effects with lengths up to **six minutes and twenty seconds**, inferencing in a matter of seconds on NVIDIA GPUs. The Small models make music and sound effects (respectively) with lengths up to **two minutes**, and ca…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Antigravity unifies its agentic surfaces under a single platform incorporating Antigravity 2.0 desktop app, CLI, SDK, and IDE for consistent access across environments",
+      "url": "https://www.digg.com/ai/xizlma81",
+      "source": "Digg AI",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T06:02:26.989Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Claude Code plugins a risk to local ecosystem?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1ti4jrq/claude_code_plugins_a_risk_to_local_ecosystem/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-19T23:47:40.000Z",
+      "summary": "There's an increasingly popular way to ship complex extensions for agentic work, that is specific to Claude Code, which is Code plugins. For example here's [deep-wiki](https://github.com/microsoft/skills/tree/main/.github/plugins/deep-wiki) by Microsoft, a plugin to create a wiki from analyzing your project's repo. There's a lot in there. It's far more powerful than a skill, it can let the user do manual activation via slash commands (/deep-wiki:generate, /deek-wiki:ask, etc), it can spawns different subagent profiles depending on the task requested, plus whatever else Anthropic comes up with later on. TLDR of plugins (LLM generated): *A skill is a single capability: one SKILL.md file with a name, a description, and a prompt body that the model auto-invokes when the description matches the user's request. A plugin is a distribution unit — a directory with a plugin.json manifest that bundles together multiple capabilities of different kinds: skills (auto-invoked), slash commands (explicitly invoked under a /plugin-name:command namespace), and subagents (spawned with their own context). So skills and plugins aren't alternatives at the same level — a plugin is the package, and skills…",
+      "category": "ai_models"
+    },
+    {
+      "title": "i miss the person i was before ai tools and side projects",
+      "url": "https://reddit.com/r/ChatGPT/comments/1tihmey/i_miss_the_person_i_was_before_ai_tools_and_side/",
+      "source": "Reddit r/ChatGPT",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.91,
+      "date": "2026-05-20T10:30:35.000Z",
+      "summary": "had a completely normal saturday planned until claude hit the daily limit and suddenly i remembered i have hobbies, sunlight, and people who know me outside github commits and runable prompts. the funniest part is i still ended up opening cursor 20 minutes later just to check one thing. ai tools were supposed to save time. somehow i’m working on side projects at 2:14am eating dry maggi in front of a glowing terminal. SEND HELP(OR ATLEAST SOME MAGGI)",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Remove-AI-Watermarks – CLI and library for removing AI watermarks from images",
+      "url": "https://github.com/wiltodelta/remove-ai-watermarks",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.88,
+      "date": "2026-05-19T22:30:31.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Prompt Holder – a Chrome extension for saving and reusing prompts, snippets, notes, and images",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1ti5323/prompt_holder_a_chrome_extension_for_saving_and/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-20T00:09:58.000Z",
+      "summary": "Hi everyone - I made Prompt Holder, a free Chrome extension for saving and reusing prompts, snippets, notes, and images. https://preview.redd.it/m3k0ifjmn62h1.png?width=1280&amp;format=png&amp;auto=webp&amp;s=710bdc0eafe995f5458c0db2c089ac5f322aae01 It works like a “smart prompt notebook” that stays available while you browse. You can use it for Stable Diffusion prompts, ComfyUI prompts, ChatGPT prompts, coding snippets, writing templates, negative prompts, LoRA notes, image references, or any reusable text you don’t want to keep searching for. Chrome Web Store: [https://chromewebstore.google.com/detail/prompt-holder/nadgecmmejpfcllfgpngfglcheloblbh](https://chromewebstore.google.com/detail/prompt-holder/nadgecmmejpfcllfgpngfglcheloblbh) GitHub: [https://github.com/Merserk/Prompt-Holder](https://github.com/Merserk/Prompt-Holder) Main features: \\- Save and organize prompts, snippets, notes, and templates \\- Add images to prompts for visual references \\- Use it from the popup, side panel, or full dashboard \\- Copy or paste saved prompts quickly \\- Import/export your library as JSON \\- Optional Dropbox backup \\- Local-first storage by default, no account required Feedback, bug report…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Pixel-space AsymFLUX.2 klein ComfyUI release &amp; SFT variants",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tiwswq/pixelspace_asymflux2_klein_comfyui_release_sft/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.78,
+      "date": "2026-05-20T19:49:30.000Z",
+      "summary": "ComfyUI extension &amp; workflows: [https://github.com/Lakonik/ComfyUI-piFlow](https://github.com/Lakonik/ComfyUI-piFlow) HF demo: [https://huggingface.co/spaces/Lakonik/AsymFLUX.2-klein](https://huggingface.co/spaces/Lakonik/AsymFLUX.2-klein) Models: [https://huggingface.co/Lakonik/AsymFLUX.2-klein-9B](https://huggingface.co/Lakonik/AsymFLUX.2-klein-9B) [https://huggingface.co/Lakonik/AsymFLUX.2-klein-9B-collection](https://huggingface.co/Lakonik/AsymFLUX.2-klein-9B-collection) Hi folks! Here's the official release of AsymFLUX.2 klein extension for ComfyUI. It's an [asymmetric flow model](https://hanshengchen.com/asymflow/) adapter finetuned from FLUX.2 klein Base 9B, which generates pixels in Oklab color space without any VAE. Three variants are included: * **AsymFLUX.2 klein 9B** * The base adapter. The most raw, realistic and versatile model. * Results are highly diverse and creative. * Minimal aesthetic bias. Requires careful prompting to achieve certain styles. * Text rendering and anatomy (e.g., fingers) are not very good, since the original model (FLUX.2 klein Base 9B) is not good at these aspects. * **AsymFLUX.2 klein 9B SFT Z-Image Turbo** and **AsymFLUX.2 klein 9B SFT F…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "open source Gemini CLI",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.74,
+      "date": "2026-05-20T18:00:39.277Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "After a year in Claude Code, the thing slowing me down turned out to be me",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ti8cwr/after_a_year_in_claude_code_the_thing_slowing_me/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-05-20T02:31:50.000Z",
+      "summary": "I have used Claude Code daily for about a year. I kept assuming the way to get faster was a better model or a sharper prompt. It was neither. The slow part was me, and I had stopped noticing. There is an old xkcd (#1205, \"Is It Worth the Time?\") that charts how long you can spend automating a task before the automation costs more than it saves. It assumes the expensive part of automating is you, sitting down to build the thing. That assumption is dead. An agent writes the script in the time it takes to describe it. So almost everything is worth automating now, and the only real skill left is noticing what to automate. It sorted into four categories for me. Each one has a \"tell,\" a thing you catch yourself doing: - Connect: you're copy-pasting between tools, alt-tabbing, ferrying data by hand. Fix is an MCP server or a CLI so the agent reaches the source itself. - Encode: you're running the same sequence of steps again. Fix is a script or a skill. - Teach: you're typing the same instructions or context again. Fix is putting it in CLAUDE.md or a skill. - Parallelize: you're sitting and watching one agent work. Fix is running several. The last one was the big one. When an agent is ge…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Build 9254 fixes my TG regression and adds PDL for NVIDIA GPUs",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tj393d/build_9254_fixes_my_tg_regression_and_adds_pdl/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T23:46:41.000Z",
+      "summary": "I was seeing TG regression on both mtp and non models with the last few builds and had to fall back to b9202 but I just ran the new b9254 and TG has been restored with a bonus 3% uplift on 2x5060ti 16gb on tensor split. I ran cmake with the PDL flag to give it a shot. I'm going to test without it soon to compare but I'm getting consistent results 3k PP &amp; 127 tg/s on qwen3.6-35b-a3b-Q4\\_K\\_XL Conversation # [**aendk**](https://github.com/aendk)commented[3 weeks ago](https://github.com/ggml-org/llama.cpp/pull/22522#issue-4351486947) # Overview [Programmatic Dependent Launch](https://docs.nvidia.com/cuda/cuda-programming-guide/04-special-topics/programmatic-dependent-launch.html) (PDL) is a CUDA optimization for newer NVIDIA GPUs (CC &gt;= 90; does not include Ada). It enables overlapping execution of CUDA kernels of the same CUDA stream. Like CUDA graphs, it reduces kernel launch overhead on the device. The benefits of both are additive (PDL + CG &gt; CG &gt; PDL). This can best be seen visually in this Nsight Systems screenshot of a single CUDA stream; kernels which should normally be strictly ordered are run concurrently: [](https://private-user-images.githubusercontent.com/47…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Try ik_llama.cpp with MTP if you have limited VRAM. You will be pleasantly surprised!",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tj2gya/try_ik_llamacpp_with_mtp_if_you_have_limited_vram/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T23:14:29.000Z",
+      "summary": "Had been getting [great MTP performance](https://www.reddit.com/r/LocalLLaMA/comments/1t82zxv/80_toksec_and_128k_context_on_12gb_vram_with/) with llama.cpp on my RTX 4070 Super 12GB (75-80 tok/s), until they actually merged the MTP PR. Then, performance tanked (65-70 tok/s) and was barely above non-MTP. I then decided to try out [ik\\_llama.cpp](https://github.com/ikawrakow/ik_llama.cpp) since it also supports MTP. I did not expect such a huge speed difference! Here's my latest [mtp-bench.py](https://gist.github.com/am17an/228edfb84ed082aa88e3865d6fa27090/) results with [byteshape](https://huggingface.co/byteshape)'s [Qwen3.6-35B-A3B-IQ4\\_XS-4.19bpw.gguf](https://huggingface.co/byteshape/Qwen3.6-35B-A3B-MTP-GGUF): ❯ ./mtp-bench.py code_python pred= 192 draft= 135 acc= 122 rate=0.904 tok/s=105.1 code_cpp pred= 192 draft= 136 acc= 120 rate=0.882 tok/s=110.3 explain_concept pred= 192 draft= 133 acc= 116 rate=0.872 tok/s=109.0 summarize pred= 56 draft= 38 acc= 37 rate=0.974 tok/s=122.3 qa_factual pred= 192 draft= 141 acc= 127 rate=0.901 tok/s=116.0 translation pred= 192 draft= 143 acc= 113 rate=0.790 tok/s=104.1 creative_short pred= 192 draft= 133 acc= 118 rate=0.887 tok/s=109.4 stepwi…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Cohere releases Command A+, its most advanced large language model optimized to run efficiently on limited hardware while delivering high performance and available as open-source software — The launch targets developers and organizations with constrained compute resources.",
+      "url": "https://www.digg.com/ai/tvrhpn35?rank=1",
+      "source": "Digg AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T18:00:28.460Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cohere releases Command A+, its most advanced large language model optimized to run efficiently on limited hardware while delivering high performance and available as open-source software",
+      "url": "https://www.digg.com/ai/tvrhpn35",
+      "source": "Digg AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-20T18:00:28.444Z",
+      "summary": null,
+      "category": "ai_tools"
+    }
+  ]
+}

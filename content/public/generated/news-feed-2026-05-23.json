@@ -1,0 +1,257 @@
+{
+  "generated": "2026-06-05T00:44:42.702Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-23",
+  "article_count": 15,
+  "archived_story_count": 332,
+  "articles": [
+    {
+      "title": "Open-source devtool for AI agent projects [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1tle50x/opensource_devtool_for_ai_agent_projects_p/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "agentic_framework",
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "agentic_framework",
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T11:40:19.000Z",
+      "summary": "Hi everyone, We are building **AgentLantern**, an open-source devtool for AI agent projects. The idea is simple: as agent-based projects grow, it becomes harder to understand how agents, tasks, tools, and configuration files are connected. **AgentLantern** aims to make these projects easier to document, analyze, validate, and visualize. I started with CrewAI support, but the goal is to progressively extend **AgentLantern** to other agent frameworks. **AgentLantern** currently provides three main features: * **Lantern Docs**: generates browsable documentation from source code and configuration files, without LLM calls or API keys. * **Lantern Lint**: statically checks agent projects to detect design or configuration issues before runtime. * **Lantern Play**: runs the project and opens a pixel-art runtime viewer to observe agents working, delegating, calling tools, and producing outputs. The project is still early, and I’m mainly looking for feedback from people building with AI agents, multi-agent systems, or devtools. here is a demo video showing the execution of a multi-agent system: [3\\_mins\\_Video](https://www.youtube.com/watch?v=Rklr86AiKuk) Docs: [https://brellsanwouo.github.…",
+      "category": "ai_research"
+    },
+    {
+      "title": "GPT 5.5 \"secret sauce\" is just having the thinking be some stupid caveman mode?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tljrtk/gpt_55_secret_sauce_is_just_having_the_thinking/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T15:38:11.000Z",
+      "summary": "I think I had GPT-5.5 leak its trace during a normal conversation, and it really reads like the caveman mode fad from a few months back. Maybe we can achieve better token efficiency by taking some high-quality thinking trace from an open model, \"caveman-izing\" it, and fine-tuning on it. Here is the full log of GPT-5.5 going insane: https://gist.github.com/aussetg/20747ae00df17992acb4ebdfcd8d8d88 EDIT: Ok people I got it the first time",
+      "category": "ai_models"
+    },
+    {
+      "title": "Apex-Testing: real-world, real repos, agentic coding benchmark (Update)",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tlh4vq/apextesting_realworld_real_repos_agentic_coding/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T13:54:08.000Z",
+      "summary": "**BIG Apex-Testing update!** [https://www.apex-testing.org/](https://www.apex-testing.org/) **The Real-World Agentic Coding** benchmark has been (95%) updated with all recent models! This is based on 65-70 **actual private github repos** made especially to test proper agentic coding capabilities of models. **For those who don't know about the project and see it for the first time, here's the excerpt from the website:** \"**What is APEX Testing?** Every week there's a new model that's \"the best ever.\" Every provider promises 10x performance at a fraction of the cost. Benchmarks get cherry-picked, their demos get curated, influencers get paid and people keep falling for it. APEX exists because I got tired of the hype and the intentional benchmaxxing. Models get dropped into real codebases with real bugs and real feature requests, and they have to figure it out like a developer would. 70 tasks across 8 categories, all based on work you'd actually encounter on the job. You get to see what actually works and what's just marketing.\" **What's included currently in metrics:** \\- Avg Cost \\- Avg Time \\- Scoring based off each category/difficulty \\- ELO-based Leaderboard (see details on the…",
+      "category": "ai_models"
+    },
+    {
+      "title": "LLaMa.cpp basic question",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tlat5r/llamacpp_basic_question/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T08:35:22.000Z",
+      "summary": "I'm trying to install LLaMa with PI agent. I ran curl -fsSL https://pi.dev/install.sh | sh export PATH=\"/home/user/.local/share/pi-node/node-v22.22.3-linux-x64/bin:$PATH pi install npm:pi-llama.cpp ​ These commands installed pi, added them to path and then I lastly installed an extension that supposedly allows PI agent to connect to my llama models (was that safe or is there a safer way of doing it?). Lastly I ran `yay llama.cpp-vulkan` to install llama.cpp-vulkan.​ Unlike Ollama where I can just get models super easily I have no clue how to get them here. I googled it and asked ChatGPT but I still am so confused. Am I missing something? How do I do it?",
+      "category": "ai_models"
+    },
+    {
+      "title": "Spice: We built an open-sourced decision layer that sits above your AI agents (controls agent actions before execution) [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1tl7yrx/spice_we_built_an_opensourced_decision_layer_that/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T05:59:22.000Z",
+      "summary": "Hi guys, been exploring here for a while, wanted to share something we've been working on. It's called [Spice](https://github.com/Dyalwayshappy/Spice), an open-source decision layer above agents. We have tons of great execution agents now — Claude Code, Codex, hermes, etc. They're good at doing stuff. But they're terrible at deciding WHAT to do and WHEN to do it. Right now the \"decision\" layer is basically you typing a prompt. The agent doesn't know your context, your priorities, your constraints. It just does whatever you tell it. **What Spice does:** It's a lightweight runtime that acts as a \"brain\" above your agents. Instead of you deciding what to delegate, Spice observes your context, detects conflicts, simulates options, and dispatches tasks to the right agent. **The core loop: perception → state model → simulation → decision → execution → reflection** https://preview.redd.it/n4yjzd27ut2h1.png?width=2862&amp;format=png&amp;auto=webp&amp;s=e8714266698dfd5387042f72b27a14f0a9941177 It allows AI systems to: * understand context (Decision relevant state) * reason about possible futures (simulation) * make structured decisions (decision) * delegate actions to agents (execution) *…",
+      "category": "ai_research"
+    },
+    {
+      "title": "meituan-longcat/LongCat-Video-Avatar-1.5 · Hugging Face",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tl4wpi/meituanlongcatlongcatvideoavatar15_hugging_face/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T03:27:39.000Z",
+      "summary": "# 🚀 Model Introduction We are excited to announce the release of LongCat-Video-Avatar 1.5, an upgraded open-source framework that prioritizes extreme empirical optimization and production-readiness for audio-driven human video generation. Built upon the LongCat-Video foundation model, v1.5 delivers highly stable, commercial-grade avatar video synthesis supporting native tasks including Audio-Text-to-Video (AT2V), Audio-Text-Image-to-Video (ATI2V), and Video Continuation, with seamless compatibility for both single-stream and multi-stream audio inputs. # [](https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5#key-features)Key Features * 🌟 **Upgraded Audio Encoder (Whisper-Large):**: Replaces Wav2Vec2 with Whisper-Large, yielding significantly smoother and more natural lip dynamics. * 🌟 **Production-Ready Stability**: Achieves accurate lip-synchronization, full-body temporal stability, and robust long-video generation with strict identity consistency. * 🌟 **Stylized Domain Generalization**: Robustly generalizes to anime, animals, and complex real-world conditions such as multi-person interactions and object handling. * 🌟 **Efficient 8-Step Inference**: Advanced DMD2-…",
+      "category": "ai_models"
+    },
+    {
+      "title": "IMG Dataset Refiner v4.3 Pro is here! 🚀 The ultimate dataset prep tool for LoRAs",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tl36zc/img_dataset_refiner_v43_pro_is_here_the_ultimate/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T02:09:01.000Z",
+      "summary": "Hey everyone! A while back I shared v3 of my dataset tool. It was a great visual manager and balancer, but as I said back then: it didn't have auto-captioning. Well, that has completely changed! Welcome to v4.3 Pro. The project has taken a massive leap forward and is now a complete, professional *Data Engineering* suite for your AI model training (Flux, SD3, SDXL, etc.). **What's new?** 🤖 **Full AI Integration:** Local AI (LM Studio/Ollama) &amp; Cloud APIs (Claude, Gemini, OpenAI) to auto-caption, translate, and even hunt down visual hallucinations. 🪄 **Smart AI Recipe Generation:** It automatically analyzes your entire dataset and generates the perfect keyword \"recipe\" (pinning your Trigger Word to the top) for Civitai! 📚 **Mass Batch Editor:** Add, remove, or replace specific tags across a huge selection of images in a single click. 🧹 **Built-in Pre-processing:** Visual duplicate finder, Smart Face Cropping, and mass high-quality resizing. ⚡ **Lightning Fast UI:** Native drag-and-drop for Windows folders, side toggles for a bigger workspace, and real-time translation. It's still the \"recipe book for your LoRAs\", and it's still 100% Open-Source! I've even added 1-click Windo…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "VNCCS PoseStudio BIG UPDATE 0.4.19",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tli8j5/vnccs_posestudio_big_update_0419/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.87,
+      "date": "2026-05-23T14:37:59.000Z",
+      "summary": "Hey there, it's AHEKOT! Today is a big day, because [VNCCS Pose Studio](https://github.com/AHEKOT/ComfyUI_VNCCS_Utils) just got even better! You've been asking me for a long time to add some features, and I've finally added them :3 1. Now VNCCS Pose Studio can capture a pose for a character directly from any image! It uses the awesome SAM3d Body functionality to do this, so the poses are as accurate as possible! 2. Plus, you can now collect poses into pose libraries, publish them on HuggingFace, and share them with each other! Just add a repository in the settings, and everything downloads automatically! 3. There are even more model deformation settings! Pose Studio is ready for even the boldest experiments. 4. The updated Lora for QIE2511 delivers the coolest results. Full support for character asymmetry and excellent preservation of the original style. 5. Test Lora for Klein9b. It might not be as cool as the QIE2511 version, but it runs almost 10 times faster! I hope you’re happy with the update! Feel free to share your suggestions for what you’d like to see in future versions (except for multiple characters at once—I know you want that, and I think we can work on it). And don’t…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "got tired of claude code forgetting everything every session, built VIR for it",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tlcai2/got_tired_of_claude_code_forgetting_everything/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-05-23T10:00:52.000Z",
+      "summary": "Every session i'm debugging something, figuring out a pattern, making some decision with claude that took us 30 minutes to think through. Then i close the terminal and it's just gone. Next day i'm asking the same questions about the same codebase. I was already tracking stuff manually. CLAUDE.md per project, lessons.md, handoff.md, tasks/ folders. But i'd only write down maybe 5% of what was actually useful. The real reasoning was always still buried in the transcripts. Looked in \\~/.claude/projects one day. 226 jsonl files sitting there. Months of work, none of it being used. So i built vir. It reads your sessions in the background, classifies them (pattern / gotcha / decision / tool), distills the useful stuff into an obsidian vault. Then exposes the vault as an mcp server so claude can query it mid-session, basically giving claude code memory across sessions. You can also query it yourself if you're curious what's in there: \\`\\`\\` vir query \"what gotchas have i hit with auth\" \\`\\`\\` There's stuff in those transcripts you'll never reread manually. Vir surfaces it. Ran it on my own 226 sessions: 126 notes out, 0.91 avg confidence, across 8 projects. Local-first, runs on mac/linux…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Four calls became one: letting the agent author tools mid-session",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1tl91km/four_calls_became_one_letting_the_agent_author/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-05-23T06:57:08.000Z",
+      "summary": "MCP in practice is a connector marketplace, not a runtime. You pick servers up front, the agent inherits a fixed catalog, and turn 1 looks the same as turn 200. The session conforms to the toolset. That ordering is backwards. Most non-trivial work surfaces a tool-shaped gap halfway through. The general catalog gets there in five calls. A bespoke wrapper gets there in one and survives into the next session. The question is whether the agent can close that gap without leaving the conversation. Yesterday I was chasing a flaky recipe. Four calls, every time: query traces, grep for the name, sort by timestamp, diff the two most recent failures. The agent noticed on the third repetition and wrote `findFlakyRecipeRuns(name)` into a watched plugin directory — a wrapper around the existing tools that returns the diff directly. Next turn, one call. By the end of the session there were four of these. I wouldn't have specified any of them in advance; all of them match the shape of the work. The literature calls this a self-modifying execution environment. It's been a footnote because five things have to be true together: 1. The agent writes a tool definition. 2. The runtime registers it witho…",
+      "category": "ai_tools"
+    },
+    {
+      "title": "What features do you wish ComfyUI or A1111 had?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tllp2t/what_features_do_you_wish_comfyui_or_a1111_had/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T16:52:11.000Z",
+      "summary": "TL;DR: I’m building a local orchestration layer on top of ComfyUI, A1111, and Easy Diffusion that manages workflows, prompt generation, tagging, scoring, and generation history to figure out which models/LoRAs/settings actually produce the best results over time. What next features would you find useful? A little while ago I asked people what features they liked most in their local AI image/video UI setups. Since then I’ve kept building my own local orchestration app around ComfyUI, Easy Diffusion, and Automatic1111, and it has evolved into more of a full workflow layer than I originally planned. I’ll eventually open source it, so I’d love feedback from people who spend a lot of time with local generation tools. The idea is basically this: Instead of using one UI directly for everything, the app sits on top of multiple local backends and manages the overall generation workflow, history, orchestration, and review process. Right now it supports: * launching/stopping backends from inside the app * choosing which backend to use per run * queued multi-run jobs * image + video generation workflows * selecting saved ComfyUI workflows * centralized gallery/history across all runs * per-im…",
+      "category": "creative_tools"
+    },
+    {
+      "title": "GitHub - ForgeFlash: A clean, minimal frontend for Stable Diffusion WebUI Forge — inspired by Fooocus's streamlined workflow but with direct access to the controls that actually matter.",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1tll04p/github_forgeflash_a_clean_minimal_frontend_for/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T16:25:40.000Z",
+      "summary": "Hi all. My workflow usually includes quick drafting with Fooocus and/or WebUI before committing to batch generation in ComfyUI, and while I enjoy the streamlined approach of Fooocus, the missing hi-res/upscale etc is a drag. And WebUI sometimes feels a bit too busy for when I just want to 'prompt and go'. So I created this very simple new UI which sits between the two philosophically. You need Forge running, but the UI itself is very streamlined HTML/JS/CSS file leveraging Forge in API mode. The Readme covers all the details and modifying the hard coded parts is quite simple. Just launch forge with API parameters and open the web page in your browser, it will point to [http://127.0.0.1:7860](http://127.0.0.1:7860) by default and get your installed checkpoints etc. PNG metadata stripping also included. Any comments and feedback welcome, as I do have some ideas for further development, but intend to keep it lightweight and easy to approach.",
+      "category": "creative_tools"
+    },
+    {
+      "title": "club-rdna16: practical 16GB AMD/Radeon local LLM testing repo",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1tl4o1m/clubrdna16_practical_16gb_amdradeon_local_llm/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-23T03:16:23.000Z",
+      "summary": "Following on from club-5060ti, I’ve been doing some testing with my desktop AMD GPU and wanted to make a similar repo for 16GB Radeon cards. Repo: https://github.com/5p00kyy/club-rdna16 Pages/results: https://5p00kyy.github.io/club-rdna16/ The first test machine is an RX 6900 XT 16GB running llama.cpp with ROCm/HIP. I’ve mainly been testing Qwen3.6 27B and Qwen3.6 35B-A3B using the Unsloth MTP GGUFs, currently using the UD-IQ3\\_XXS model quant with q8 KV cache. The repo is meant to be practical rather than a synthetic leaderboard. I’m trying to capture the stuff that actually matters when someone wants to run a model locally: \\- exact llama.cpp launch profiles \\- context length that actually fits \\- KV cache settings \\- short prompt throughput \\- long-context retrieval checks \\- AMD power profile notes \\- ROCm/HIP setup details \\- result templates for other Radeon users A few early findings from the RX 6900 XT: \\- Qwen3.6 35B-A3B has been the strongest practical result so far on this card. \\- 131k context with q8 KV works well as a stable non-MTP profile. \\- 100k context with q8 KV and MTP also works, but needs careful settings. \\- Some profiles that answer short prompts fine stil…",
+      "category": "ai_models"
+    },
+    {
+      "title": "Braygent post idea 7: We just launched EXPLAIN ANALYZE, a podcast from @MotherDuck",
+      "url": "https://t.co/YzNjUFV93C",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-22T23:11:52.666Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Braygent post idea 3: Last month we launched Project Glasswing, our collaborative AI cybersecurity initiative",
+      "url": "https://x.com/AnthropicAI",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-22T23:11:52.665Z",
+      "summary": "A Braygent style posting idea with the required why and post framing.",
+      "category": "ai_tools"
+    }
+  ]
+}

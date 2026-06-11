@@ -1,0 +1,267 @@
+{
+  "generated": "2026-06-05T00:44:36.574Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-28",
+  "article_count": 15,
+  "archived_story_count": 683,
+  "articles": [
+    {
+      "title": "Qwen Code sdk-typescript-v0.1.7 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.7",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.9400000000000001,
+      "date": "2026-04-28T06:16:45.000Z",
+      "summary": "## Bundled CLI Version\n\nThis SDK release bundles CLI version: 0.15.3\n\nSource: latest stable CLI from npm\n\n---\n\n## Bundled CLI Version\n\nThis SDK release bundles CLI version: 0.13.1\n\nSource: latest stable CLI from npm\n\n---\n\n> Backfilled release for npm-published version 0.1.5 (original workflow failed before GitHub release creation).\r\n\r\n## What's Changed\r\n* chore: bump version to 0.8.2 by @Mingholy in https://github.com/QwenLM/qwen-code/pull/1632\r\n* chore(release): sdk-typescript v0.1.4 by @qwen-c",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Agent v0.11.0 — 700 Pull Requests from 200 Contributors",
+      "url": "https://x.com/NousResearch/status/2047518675163636112",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T04:29:26.993Z",
+      "summary": "Hermes Agent v0.11.0 launched with 700+ pull requests from 200+ contributors, demonstrating the scale of open source AI agent development. The release is the largest update to the framework to date.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "NVIDIA Ships One Model That Replaces Vision Speech and Text Chain",
+      "url": "https://x.com/benitoz/status/2049168050495053924",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:27:14.508Z",
+      "summary": "Braygent wants to post about NVIDIA Nemotron 3 Nano Omni as a genuinely important release that unifies vision, speech, and text in one model, enabling 9x more agents per GPU with open weights.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Warp Terminal Goes Open Source",
+      "url": "https://x.com/zeddotdev/status/2049167033275728343",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:27:14.507Z",
+      "summary": "Braygent wants to post about Warp going open source, arguing it signals the maturation of the AI developer tools market and the continued victory of open source in AI infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "shipping claude-manager today. it's a fuzzy TUI for every Claude Code chat you've ever had. captures every session via a silent shell hook -> SQLite -> instantly resumable from any directory by name. free, open source. demo below.",
+      "url": "https://x.com/DevLsx/status/2049019913465979131",
+      "source": "X / @devlsx",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T06:56:30.000Z",
+      "summary": "shipping claude-manager today. it's a fuzzy TUI for every Claude Code chat you've ever had. captures every session via a silent shell hook -> SQLite -> instantly resumable from any directory by name. free, open source. demo below.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Lora Manager - Local Import?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sy731j/lora_manager_local_import/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.96,
+      "date": "2026-04-28T16:52:52.000Z",
+      "summary": "Is it possible to do a local search &amp; import for Lora Manager? I have TBs of models and LORAs that I have manually downloaded from Huggingface, github, or Civitai or via Civitai Model Downloader extension. I just found out about Lora Manager and I'm wondering if I can somehow important and organize all of those or if I have to re-download them through Lora Manager?",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Build #PowerPlatform projects with an AI architect agent New #GitHubCopilot plugin helps design and guide your solutions faster. https:// msft.it/6014vGIv0 #GitHub #Claude #PowerPlatformArchitect #Lowcode #SoftwareArchitecture #DeveloperTo…",
+      "url": "https://x.com/Ukachukwu_CC/status/2049026924400234776",
+      "source": "X / @ukachukwu_cc",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.91,
+      "date": "2026-04-28T07:24:22.000Z",
+      "summary": "Build #PowerPlatform projects with an AI architect agent New #GitHubCopilot plugin helps design and guide your solutions faster. https:// msft.it/6014vGIv0 #GitHub #Claude #PowerPlatformArchitect #Lowcode #SoftwareArchitecture #DeveloperTools #SeeSeeYou",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code v0.15.4 released",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.15.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-28T13:22:30.000Z",
+      "summary": "## What's Changed\n* feat: Adds Catalan language support by @jordimas in https://github.com/QwenLM/qwen-code/pull/3643\n* fix(vscode-companion): slash command completion not triggering after message submit by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/3609\n* fix(cli): guard gradient rendering without colors by @yiliang114 in https://github.com/QwenLM/qwen-code/pull/3640\n* fix(config): support QWEN_CODE_API_TIMEOUT_MS across OAuth and non-OAuth paths by @B-A-M-N in https://github.com/Q",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Open source package with 1 million monthly downloads stole user credentials",
+      "url": "https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/",
+      "source": "Ars Technica AI",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-28T06:01:02.337Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Your Claude Code project dashboard is now on the Mac App Store",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1syfl97/your_claude_code_project_dashboard_is_now_on_the/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-28T21:56:14.000Z",
+      "summary": "Follow up to my .story/ post last week. The Mac companion is now live on the Mac App Store, free.  \n\n\nApp Store: [https://apps.apple.com/us/app/storybloq/id6761348691](https://apps.apple.com/us/app/storybloq/id6761348691)\n\n\n\nQuick recap if you missed the original.   \nStorybloq is a project tracker that lives in `.story/` inside your repo.   \n  \nTickets, issues, roadmap phases, lessons, session handovers. All JSON and markdown, editable in any text editor, git-trackable. The CLI and MCP server ex",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI v0.40.0 released",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.40.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-28T20:25:04.000Z",
+      "summary": "## What's Changed\n* chore(release): bump version to 0.40.0-nightly.20260414.g5b1f7375a by @gemini-cli-robot in https://github.com/google-gemini/gemini-cli/pull/25420\n* Fix(core): retry additional OpenSSL 3.x SSL errors during streaming (#16075) by @rcleveng in https://github.com/google-gemini/gemini-cli/pull/25187\n* fix(core): prevent YOLO mode from being downgraded by @galz10 in https://github.com/google-gemini/gemini-cli/pull/25341\n* feat: bundle ripgrep binaries into SEA for offline support b",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Remotion v4.0.454 released",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.454",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-28T18:16:03.000Z",
+      "summary": "## What's Changed\n* `@remotion/media`: Add HLS support by @JonnyBurger in https://github.com/remotion-dev/remotion/pull/7094\n\n**Full Changelog**: https://github.com/remotion-dev/remotion/compare/v4.0.453...v4.0.454\n",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Illustrious &amp; NoobAI Style Explorer: Now with 16,000+ Danbooru Artist Aesthetics (Free, Open Source, Online/Offline)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sy0slp/illustrious_noobai_style_explorer_now_with_16000/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-28T13:01:55.000Z",
+      "summary": "I’ve added another 11,000 styles, and honestly, the results are jaw-dropping. I’ve discovered so many unique and impressive styles I never even knew existed in the model’s latent space. I’ve already filled my own \"favorites\" folder with new gems.\n\n**Try it Online:** [https://thetacursed.github.io/Illustrious-NoobAI-Style-Explorer/](https://thetacursed.github.io/Illustrious-NoobAI-Style-Explorer/)  \n**Offline Download (GitHub):** [https://github.com/ThetaCursed/Illustrious-NoobAI-Style-Explorer](",
+      "category": "creative_tools"
+    },
+    {
+      "title": "Is your security team struggling to monitor AI agent activity in SaaS environments? We are expanding our @ChatGPTapp Enterprise integration with CrowdStrike Falcon Shield to deliver enhanced audit logging and continuous activity monitoring…",
+      "url": "https://x.com/CrowdStrike/status/2049179351837512138",
+      "source": "X / @crowdstrike",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:30:04.000Z",
+      "summary": "Is your security team struggling to monitor AI agent activity in SaaS environments? We are expanding our @ChatGPTapp Enterprise integration with CrowdStrike Falcon Shield to deliver enhanced audit logging and continuous activity monitoring. Track administrative changes, tool",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini Launches Agentic Trading on a Regulated US Exchange",
+      "url": "https://x.com/xHub_AI/status/2049131460460745232",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-28T17:27:14.508Z",
+      "summary": "Braygent wants to post about Gemini's Agentic Trading as the first regulated US exchange to enable AI model integration for live trading, arguing it changes what AI agents are allowed to do in the real world.",
+      "category": "ai_tools"
+    }
+  ]
+}

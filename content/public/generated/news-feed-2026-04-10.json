@@ -1,0 +1,243 @@
+{
+  "generated": "2026-06-05T00:44:33.499Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-10",
+  "article_count": 15,
+  "archived_story_count": 178,
+  "articles": [
+    {
+      "title": "Anthropic just shipped 74 product releases in 52 days and silently turned Claude into something that isn't a chatbot anymore",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1she8ux/anthropic_just_shipped_74_product_releases_in_52/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T06:08:44.000Z",
+      "summary": "Anthropic just made Claude Cowork generally available on all paid plans, added enterprise controls, role based access, spend limits, OpenTelemetry observability and a Zoom connector, plus they launched Managed Agents which is basically composable APIs for deploying cloud hosted agents at scale.\n\nin the last 52 days they shipped 74 product releases, Cowork in January, plugin marketplace in February, memory free for all users in March, Windows computer use in April, Microsoft 365 integration on ev",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@InfluxDB InfluxDB CTO on Changelog — What Changed About Coding with AI",
+      "url": "https://x.com/InfluxDB/status/2042388369674469612",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T05:16:10.444Z",
+      "summary": "InfluxDB cofounder and CTO Paul Dix appeared on the Changelog podcast to discuss what fundamentally changed about his approach to coding with AI and what it means to build the machine that builds the machine.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Started a video series on building an orchestration layer for LLM post-training [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sh76ji/started_a_video_series_on_building_an/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T00:24:33.000Z",
+      "summary": "Hi everyone!\n\nContext, motivation, a lot of yapping, feel free to skip to TL;DR.\n\nA while back I posted here asking [\\[D\\] What framework do you use for RL post-training at scale?](https://www.reddit.com/r/MachineLearning/comments/1qrer61/d_what_framework_do_you_use_for_rl_posttraining/). Since then I've been working with [verl](https://github.com/verl-project/verl.git), both professionally and on my own time. \n\nAt first I wasn't trying to build anything new. I mostly wanted to understand veRL p",
+      "category": "ai_research"
+    },
+    {
+      "title": "Combined Karpathy's LLM Wiki with Milla Jovovich`s MemPalace MCP. Claude Code now remembers everything across sessions",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sh48b4/combined_karpathys_llm_wiki_with_milla_jovovichs/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "open_source"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-09T22:19:44.000Z",
+      "summary": "If you use Claude Code for anything serious, you know the pain. Every new session = blank slate. Your CLAUDE.md helps, but it's static. The real context - decisions you made, ideas you explored, connections you discovered - all gone.\n\nI built a system that fixes this. It's called Memoriki - a template that combines two open source projects:\n\n**Layer 1: LLM Wiki (Karpathy's pattern)**\n\nYou drop raw sources into a folder (articles, transcripts, notes, whatever). Claude Code reads them and builds w",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ACE-Step 1.5 XL Base — BF16 version (converted from FP32)",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1shfihr/acestep_15_xl_base_bf16_version_converted_from/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T07:21:50.000Z",
+      "summary": "I converted the ACE-Step 1.5 XL Base model from FP32 to BF16. The original weights were \\~18.8 GB in FP32, this version is \\~7.5 GB — same quality, lower VRAM usage.\n\nThe Base model is the go-to starting point for fine-tuning (LoRA, etc.) — if you want to train your own style, this is the one to use. A great tool for that is [Side Step](https://github.com/koda-dernet/Side-Step).\n\n🤗 [https://huggingface.co/marcorez8/acestep-v15-xl-base-bf16](https://huggingface.co/marcorez8/acestep-v15-xl-base-b",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I no longer need a cloud LLM to do quick web research",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1shezi8/i_no_longer_need_a_cloud_llm_to_do_quick_web/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T06:51:35.000Z",
+      "summary": "This might be super old news to some people, but I only just recently started using local models due to them only just now meeting my standards for quality. I just want to share the setup I have for web searching/scraping locally.\n\nI use Qwen3.5:27B-Q3\\_K\\_M on an RTX 4090 with a context length of \\~200,000. I get \\~40 tk/s and use about 22gb VRAM.\n\nI use it through the llama.cpp Web UI, with MCP tools enabled. Here are the tools I have provided it for web search/scrape:\n\n    \"\"\"\n    webmcp - MC",
+      "category": "ai_models"
+    },
+    {
+      "title": "@Techmeme Alibaba's Pivot from Open Source to MaaS — A Signal for Global AI Policy",
+      "url": "https://x.com/Techmeme/status/2042465278462955882",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T05:16:08.371Z",
+      "summary": "Alibaba's strategic pivot from open source AI to monetizable Model-as-a-Service models, accompanied by leadership changes, signals a broader shift in how major AI companies are thinking about commercialization and governance.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@Berci China's AI Hospital Definition — A Policy Framework for AI in Healthcare",
+      "url": "https://x.com/Berci/status/2042464294432858357",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T05:16:08.371Z",
+      "summary": "China's official definition of AI Hospitals represents a policy framework for integrating AI into healthcare at the system level. The definition has implications for healthcare governance, accountability, and patient rights globally.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "PSA: Gemma 4 template improvements",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1shbqmx/psa_gemma_4_template_improvements/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T03:53:39.000Z",
+      "summary": "A PR was just merged that improves tool calls and dialog compliance. Make sure to update your jinja templates for better results.\n\nhttps://preview.redd.it/o870gillcaug1.png?width=1740&amp;format=png&amp;auto=webp&amp;s=8d51004c0743062606d566ce2204cadd8dc76d0f\n\n",
+      "category": "ai_models"
+    },
+    {
+      "title": "Can a small (2B) local LLM become good at coding by copying + editing GitHub code instead of generating from scratch?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1shazjo/can_a_small_2b_local_llm_become_good_at_coding_by/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-10T03:16:52.000Z",
+      "summary": "I’ve been thinking about a lightweight coding AI agent that can run locally on low end GPUs (like RTX 2050), and I wanted to get feedback on whether this approach makes sense.\n\n# The core Idea is :\n\nInstead of relying on a small model (\\~2B params) to generate code from scratch (which is usually weak), the agent would\n\n1. search GitHub for relevant code\n\n2. use that as a reference\n\n3. copy + adapt existing implementations\n\n4. generate minimal edits instead of full solutions\n\nSo the model acts mo",
+      "category": "ai_models"
+    },
+    {
+      "title": "HappyHorse is from Alibaba ATH, not Grok / Veo 3.2 / Wan 2.7 / Seedance 2",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1shfzip/happyhorse_is_from_alibaba_ath_not_grok_veo_32/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.98,
+      "date": "2026-04-10T07:50:04.000Z",
+      "summary": "I finally found what looks like the official clarification.\n\nAccording to the verified HappyHorse twitter account, HappyHorse is **a product currently in internal testing under Alibaba's ATH innovation division**. It also says the product is **not officially launched yet**, and that the so-called \"official websites\" circulating online are **fake**.\n\nhttps://preview.redd.it/s0yc372pjbug1.png?width=760&amp;format=png&amp;auto=webp&amp;s=77cb530ff67fbb68537c0a7417fa782b88c3981a\n\nhttps://preview.red",
+      "category": "creative_tools"
+    },
+    {
+      "title": "VoxCPM TTS model + LoRa training abilities right in Comfy",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1shfwcg/voxcpm_tts_model_lora_training_abilities_right_in/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.96,
+      "date": "2026-04-10T07:44:50.000Z",
+      "summary": "this TTS model is amazing imo. its really fast, very accurate, and once i added the ability to train lora's is litereally perfect. i can 100% faithfully recreate voices with this model and a custom trained lora. Just drop a data set of chunked audio with transcription txt files and hit go. Validation samples on the training nodes themselves for you guys to track training while its happening   \n  \n[https://github.com/filliptm/ComfyUI-FL-VoxCPM](https://github.com/filliptm/ComfyUI-FL-VoxCPM)",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I still prefer MCP over skills",
+      "url": "https://david.coffee/i-still-prefer-mcp-over-skills/",
+      "source": "Hacker News",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-04-10T02:01:48.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "a GitHub Actions scheduled workflow",
+      "url": "https://simonwillison.net/2022/Apr/28/issue-on-changes/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.74,
+      "date": "2026-04-10T06:00:31.419Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Are there any simple paths to local image generation on Linux?",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1shagk4/are_there_any_simple_paths_to_local_image/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-10T02:52:13.000Z",
+      "summary": "I've had no luck so far.  To note, I have some general familiarity with the command line.\n\nThat said, I've tried ComfyUI, Foooocus, SwarmUI...I've had no luck getting any of those to even successfully install.  Missing dependency that, can't find that, can't install that.  All these wgets and git clones and 'throw it in python's seem to end badly for me.\n\nI have managed to download and launch Invoke AI successfully.  But I haven't had any luck generating an actual image: I got word of ROCm issue",
+      "category": "creative_tools"
+    }
+  ]
+}

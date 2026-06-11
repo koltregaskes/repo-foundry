@@ -1,0 +1,259 @@
+{
+  "generated": "2026-06-05T00:44:33.319Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-04-09",
+  "article_count": 15,
+  "archived_story_count": 616,
+  "articles": [
+    {
+      "title": "I built a multi-agent coordination plugin for Claude Code using Royal Navy procedures. 237 stars later I'm still not sure if the metaphor is genius or unhinged.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sgx5i0/i_built_a_multiagent_coordination_plugin_for/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-09T17:59:55.000Z",
+      "summary": "So earlier this year Anthropic shipped the experimental Agent Teams feature. I'd spent the Christmas break reading about the Gas Town vision and was properly excited to try it. Agent Teams felt like Claude Code's version of a mini Gas Town.\n\nThen I actually used it. Agent one rewrote a module. Agent two rewrote that module's tests. Agent three updated the integration layer that depended on both. Nobody told agent three about the interface changes from agents one and two.\n\nThree pieces of perfect",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hermes Agent Is Displacing OpenClaw — And Nobody Is Talking About It",
+      "url": "https://x.com/ghumare64/status/2042234817358462986",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T14:33:10.226Z",
+      "summary": "Hermes Agent is quietly displacing OpenClaw as the dominant open-source AI agent framework, with a new memory plugin and viral tutorials driving adoption. The architectural difference is fundamental.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenWork, an opensource Claude Cowork alternative, is silently relicensing under a commercial license",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sgnppg/openwork_an_opensource_claude_cowork_alternative/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T12:05:50.000Z",
+      "summary": "OpenWork is a locally hosted AI agent harness that was presented as a MIT-licensed opensource Claude Cowork alternative based on opencode.\n\nJust a heads up for any user of the app that it has silently relicensed some components under a commercial license and modified the overall project's MIT license to limit its reach (which I am not even sure makes it a MIT license anymore).\n\nMore details here: https://github.com/different-ai/openwork/issues/1412\n\nNote that as a fellow opensource developer mys",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenWork, an opensource Claude Code alternative, is silently relicensing under a commercial license",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sgm9d1/openwork_an_opensource_claude_code_alternative_is/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T10:54:02.000Z",
+      "summary": "OpenWork is locally hosted AI agent harness that was presented as a MIT-licensed opensource Claude Cowork alternative based on opencode.\n\nJust a heads up for any user of the app that it has silently relicensed some components under a commercial license and modified the overall project's MIT license to limit its reach (which I am not even sure makes it a MIT license anymore).\n\nMore details here: https://github.com/different-ai/openwork/issues/1412\n\nNote that as a fellow opensource developer mysel",
+      "category": "ai_models"
+    },
+    {
+      "title": "Parax: Parametric Modeling in JAX + Equinox [P]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sgm0ne/parax_parametric_modeling_in_jax_equinox_p/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T10:41:00.000Z",
+      "summary": "Hi everyone!\n\nJust wanted to share my Python project [Parax](https://github.com/gvcallen/parax) \\- an add-on on top of the [Equinox](https://github.com/patrick-kidger/equinox) library catering for parameter-first modeling in JAX.\n\nFor our scientific applications, we found that we often needed to attach metadata to our parameter objects, such as marking them as fixed or attached a prior probability distribution. Further, we often needed to manipulate these parameters in very deep hierarchies, whi",
+      "category": "ai_research"
+    },
+    {
+      "title": "[P] turboquant-pro autotune: One command finds the optimal compression for your vector database [R]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sgh53u/p_turboquantpro_autotune_one_command_finds_the/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T05:52:28.000Z",
+      "summary": "We just shipped an autotune CLI for [turboquant-pro](https://github.com/ahb-sjsu/turboquant-pro) — it connects to your PostgreSQL database, samples embeddings, sweeps 12 compression configurations, and tells you exactly which one to use.\n\n```bash\nturboquant-pro autotune \\\n  --source \"dbname=mydb user=me\" \\\n  --table chunks --column embedding \\\n  --min-recall 0.95\n```\n\n**10 seconds later:**\n\n```\nEvaluating 12 configurations...\n              Config   Ratio   Cosine   Recall   Var%   Time\n---------",
+      "category": "ai_research"
+    },
+    {
+      "title": "[P] TurboQuant Pro: Open-source vector compression toolkit — 5-42x smaller embeddings with 0.97+ recall [R]",
+      "url": "https://reddit.com/r/MachineLearning/comments/1sgg21y/p_turboquant_pro_opensource_vector_compression/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T04:53:07.000Z",
+      "summary": "**TL;DR**: We built an open-source toolkit that compresses high-dimensional vectors (embeddings, KV cache, anything in pgvector/FAISS) by 5-42x while maintaining 0.95+ cosine similarity. Benchmarked 6 methods on 2.4M real embeddings. MIT licensed.\n\n**GitHub**: https://github.com/ahb-sjsu/turboquant-pro  \n**Install**: `pip install turboquant-pro`\n\n## The Problem\n\nVector databases are eating RAM. If you're running RAG with BGE-M3 (1024-dim float32), each embedding is 4KB. At 1M vectors that's 4GB ",
+      "category": "ai_research"
+    },
+    {
+      "title": "FlowInOne - A new Multimodal image model . Released on Huggingface",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sh04s4/flowinone_a_new_multimodal_image_model_released/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.8600000000000001,
+      "date": "2026-04-09T19:45:25.000Z",
+      "summary": "Model: [https://huggingface.co/CSU-JPG/FlowInOne](https://huggingface.co/CSU-JPG/FlowInOne)  \nGithub: [https://github.com/CSU-JPG/FlowInOne](https://github.com/CSU-JPG/FlowInOne)  \nPaper: [https://arxiv.org/pdf/2604.06757](https://arxiv.org/pdf/2604.06757) \n\nFlowInOne, a framework that reformulates multimodal generation as a **purely visual flow**, converting all inputs into visual prompts and enabling a clean **image-in, image-out** pipeline governed by a single flow matching model. This vision",
+      "category": "creative_tools"
+    },
+    {
+      "title": "I made an open source alternative to Higgsfield AI",
+      "url": "https://reddit.com/r/StableDiffusion/comments/1sgrgef/i_made_an_open_source_alternative_to_higgsfield_ai/",
+      "source": "Reddit r/StableDiffusion",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "importance": 0.78,
+      "date": "2026-04-09T14:37:42.000Z",
+      "summary": "I made an open source alternative to Higgsfield AI so that you can run 200+ models with BYOK without subscription \n\nSharing project link below\n\nhttps://github.com/Anil-matcha/Open-Higgsfield-AI",
+      "category": "creative_tools"
+    },
+    {
+      "title": "your claude doesn't need a better memory, it needs a self-evolving knowledge base",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sgr5zz/your_claude_doesnt_need_a_better_memory_it_needs/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "developer_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-04-09T14:27:00.000Z",
+      "summary": "https://i.redd.it/57wdspbqc6ug1.gif\n\nAndrej Karpathy recently shared his setup for building a personal LLM knowledge base - raw docs, LLM compiles them into a structured wiki, then queries the wiki for answers.\n\nI've been building something similar for the past year, except it's not a set of scripts - it's a plugin you can install in 2 minutes.\n\nThe idea: every conversation you have in claude (Desktop, claude code or any MCP-compatible tool like codex, cursor) gets compacted into a memory episod",
+      "category": "ai_tools"
+    },
+    {
+      "title": "My buddy vanished in v2.1.97. So I moved her into the MacBook notch permanently.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1sghe00/my_buddy_vanished_in_v2197_so_i_moved_her_into/",
+      "source": "Reddit r/ClaudeAI",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-04-09T06:06:21.000Z",
+      "summary": "My legendary dragon had been silently judging my variable names for a week.\n\nThen v2.1.97 dropped. \"Unknown skill: buddy.\" Anthropic closed the GitHub issue as not-planned — called it an April Fools feature.\n\nI closed my terminal, opened Xcode, and started building.  \n\n\nBuddi is a macOS notch app. Your buddy lives in the MacBook notch and animates based on what Claude Code is actually doing — working, reading, sleeping, erroring out. Not buried in a terminal. Above your screen, always there.\n\nWh",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dynamic few-shot retrieval on Apple's on-device 3B LLM: 40% → 70%+ on shell commands",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sgxo6d/dynamic_fewshot_retrieval_on_apples_ondevice_3b/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T18:17:58.000Z",
+      "summary": "I've been poking at Apple's on-device 3B model (via FoundationModels on Tahoe) to see where its ceiling sits on code-adjacent tasks. Tested shell command generation as a concrete benchmark (100 prompts, \\~10 approaches)\n\nhttps://i.redd.it/ferxmyorh7ug1.gif\n\nBare model: \\~40% correct. Mostly flags and some command hallucinations. Feeding documentation as context didn't help. Not man pages, not tldr as docs, not self-critique loops. All within noise of baseline, and self-critique was actively wors",
+      "category": "ai_models"
+    },
+    {
+      "title": "OpenAI pauses UK data centre deal over energy costs and regulationThe project was part of a package of tech investment promising the UK could become an AI superpower.See more",
+      "url": "https://www.bbc.com/news/articles/clyd032ej70o",
+      "source": "BBC AI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T18:00:10.184Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "I benchmarked 42 STT models on medical audio with a new Medical WER metric — the leaderboard completely reshuffled",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sgtrgc/i_benchmarked_42_stt_models_on_medical_audio_with/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T16:00:16.000Z",
+      "summary": "**TL;DR:** I updated my medical speech-to-text benchmark to **42 models** (up from 31 in v3) and added a new metric: **Medical WER (M-WER)**.\n\nStandard WER treats every word equally. In medical audio, that makes little sense — **“yeah” and “amoxicillin” do not carry the same importance**.\n\nSo for v4 I re-scored the benchmark using only **clinically relevant words**: drugs, conditions, symptoms, anatomy, and clinical procedures. I also broke out **Drug M-WER** separately, since medication names a",
+      "category": "ai_models"
+    },
+    {
+      "title": "Anyone know if there are actual products built around Karpathy’s LLM Wiki idea?",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1sgtpsg/anyone_know_if_there_are_actual_products_built/",
+      "source": "Reddit r/LocalLLaMA",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-04-09T15:58:36.000Z",
+      "summary": "I’m talking about the whole loop of:  \nsources → compile → structured wiki → query → update → richer wiki  \ninstead of the usual RAG setup\n\nMost of what I’m seeing are just experiments or DIY setups. The only thing I’ve found so far that feels close is this:  \n[https://github.com/atomicmemory/llm-wiki-compiler](https://github.com/atomicmemory/llm-wiki-compiler)\n\nCurious if there are any more polished tools or products doing this? Would love recommendations 🙏",
+      "category": "ai_models"
+    }
+  ]
+}

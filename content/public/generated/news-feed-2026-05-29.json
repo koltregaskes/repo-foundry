@@ -1,0 +1,239 @@
+{
+  "generated": "2026-06-05T00:44:44.613Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-05-29",
+  "article_count": 15,
+  "archived_story_count": 468,
+  "articles": [
+    {
+      "title": "Runway Exposes Gen-4.5, Kling, and GPT Image 2 via MCP — Creative Models Now Callable Inside Claude, Cursor, and Replit Agents",
+      "url": "https://x.com/runtimewire/status/2059782827927810437",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T12:05:45.033Z",
+      "summary": "Runway plugged its creative model suite into Claude, ChatGPT, Cursor, and Replit via MCP, making image and video generation callable directly inside AI agent workflows. Runway Gen-4.5, Kling, and GPT Image 2 are all exposed through the integration.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models",
+      "url": "https://paperswithcode.com/papers/2605.30263",
+      "source": "Papers With Code",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 0.9,
+      "date": "2026-05-29T15:24:25.298Z",
+      "summary": null,
+      "category": "ai_research"
+    },
+    {
+      "title": "X Square Robot Releases Open-Source WALL-WM World Model For Embodied AI",
+      "url": "https://www.digg.com/ai/v4d0ka2f",
+      "source": "Digg AI",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T15:24:17.045Z",
+      "summary": null,
+      "category": "ai_tools"
+    },
+    {
+      "title": "Kling AI Skill Launches for Agent Workflows — Text-to-Video, 4K Images, and Cross-Scene Consistency in Claude and Cursor",
+      "url": "https://x.com/MayorKingAI/status/2044455291664695688",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T12:05:45.033Z",
+      "summary": "Kling AI launched a dedicated Skill for AI agent workflows, enabling text/image to video generation, 4K image generation, style transfer, and cross-scene consistency with custom elements. Works natively with Claude, Cursor, Copilot, Codex, and OpenClaw.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "100% AI Product Videos Made in Under 5 Minutes Achieve Commercial Quality — Realism Framework Hits New Threshold",
+      "url": "https://x.com/Mho_23/status/2048507307466658062",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T12:05:45.033Z",
+      "summary": "AI-generated product videos made in under 5 minutes are reaching commercial marketing quality, with a realism framework demonstrating results compelling enough for real product ads. The UGC video format has become the clearest commercial use case for AI video generation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Garry Tan Endorses Hermes Agent Stack — YC President's 600-Like Post Signals Mainstream Adoption",
+      "url": "https://x.com/garrytan/status/2052434681363321056",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "Y Combinator President Garry Tan publicly endorsed his OpenClaw/Hermes Agent setup as significantly improved, with the post generating 600+ likes. The endorsement signals that open-source agent coordination has crossed from early adopter into mainstream developer infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "AMD Instinct MI350P Ships with 144GB HBM3E in PCIe Form Factor — Enterprise AI Inference Without Custom Rack Requirements",
+      "url": "https://x.com/keennay/status/2052387750725206157",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-29T12:02:13.220Z",
+      "summary": "AMD's Instinct MI350P brings 144GB HBM3E at 4TB/s bandwidth in a PCIe Gen 5 form factor for standard enterprise server deployment, creating a new market segment for serious AI inference without custom rack infrastructure.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Motion Launches Motion API — Connect the AI Motion Design Tool Directly Into Claude, Codex, OpenClaw, and Hermes",
+      "url": "https://x.com/_adishj/status/2060028771399500237",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:59:08.283Z",
+      "summary": "Motion released the Motion API, enabling one-click integration of the AI motion design tool directly into Claude, Codex, OpenClaw, Hermes, and other AI frameworks. Agents can now generate motion design content as part of automated creative workflows.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Paris 2.0 — World's First Decentralized Trained Video Model Outperforms Monolithic Baseline by 2x on Same Compute",
+      "url": "https://x.com/bidhan/status/2060043273545429503",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Paris 2.0 launched as the first video generation model trained through decentralized training rather than centralized infrastructure. On the same data and compute budget as a monolithic model, Paris 2.0 scored approximately 2x better on FVD benchmark.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Reactor Exits Stealth with $59M from Lightspeed — Building Infrastructure for the World Model Era with Real-Time AI Video",
+      "url": "https://x.com/reactorworld/status/2060015607928819876",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Reactor launched publicly with $59M from Lightspeed and calls itself the platform for the World Model era — AI infrastructure for real-time video generation at near-zero latency. Robert Scoble retweeted the announcement immediately after launch.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Hexo Releases SIA — Open-Source Self-Improving AI That Updates Its Own Weights During Goal Pursuit",
+      "url": "https://x.com/kunalbhatia91/status/2060013228231725092",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:54:34.974Z",
+      "summary": "Hexo released SIA, an open-source Self-Improving AI that achieves goals through recursive self-improvement — updating its own capabilities as it works toward a goal, not just calling tools with fixed capabilities. The announcement earned 221 likes and 80,000 views.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Linear Launches Diffs — AI-Guided Code Review and PR Management Directly Inside Linear",
+      "url": "https://x.com/linear/status/2060048202796040655",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:49:05.507Z",
+      "summary": "Linear introduced Diffs, bringing code review and pull request management directly inside the Linear project management tool. Features include realtime updates, AI-guided reviews in beta, iteration with coding agents, and threaded comments — keeping engineering review in the same tool as project planning.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Shift Launches in NYC — AI Economy Startup Offers Free Home Cleaning to Bridge Today's Economy to the AI Abundance Era",
+      "url": "https://x.com/bercankilic/status/2060043312606638245",
+      "source": "Aligned News (Scoble)",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 1,
+      "date": "2026-05-28T17:49:05.507Z",
+      "summary": "Shift launched in New York City with a mission to bridge the current economy into the AI economy where goods, services, and leisure become affordable through AI. The launch includes free home cleaning as the entry product.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "It's hard to justify buying a Framework 12",
+      "url": "https://www.jeffgeerling.com/blog/2026/its-hard-to-justify-framework-12/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.86,
+      "date": "2026-05-29T14:55:31.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: AISlop, a CLI for catching AI generated code smells",
+      "url": "https://github.com/scanaislop/aislop",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.83,
+      "date": "2026-05-29T13:37:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}
