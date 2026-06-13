@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-11T17:46:30.657Z",
+  "generatedBy": "Studio news backfill",
+  "site": "Repo Foundry",
+  "date": "2026-06-06",
+  "article_count": 1,
+  "archived_story_count": 84,
+  "articles": [
+    {
+      "title": "Ntsc-rs – open-source video emulation of analog TV and VHS artifacts",
+      "url": "https://ntsc.rs/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.97,
+      "date": "2026-06-06T19:17:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

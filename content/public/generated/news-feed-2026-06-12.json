@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-13T12:49:29.524Z",
+  "generated": "2026-06-12T17:45:10.610Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
@@ -79,19 +79,19 @@
       "category": "ai_models"
     },
     {
-      "title": "Open source AI must win",
-      "url": "https://opensourceaimustwin.com/?share=v2",
-      "source": "Hacker News",
+      "title": "Mortal Shell II",
+      "url": "https://www.eurogamer.net/games/mortal-shell-2",
+      "source": "Eurogamer",
       "tags": [
-        "open_source"
+        "cli_tool"
       ],
       "matching_tags": [
-        "open_source"
+        "cli_tool"
       ],
-      "importance": 0.48,
-      "date": "2026-06-13T02:14:24.000Z",
+      "importance": 0.5599999999999999,
+      "date": "2026-06-12T15:04:33.001Z",
       "summary": null,
-      "category": "tech_general"
+      "category": "gaming"
     },
     {
       "title": "A dumpster arrived behind my university's library",
@@ -105,6 +105,21 @@
       ],
       "importance": 0.48,
       "date": "2026-06-12T14:21:22.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Boo – screen-style terminal multiplexer built on libghostty",
+      "url": "https://github.com/coder/boo",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-11T20:52:26.000Z",
       "summary": null,
       "category": "tech_general"
     },
@@ -210,21 +225,6 @@
       ],
       "importance": 0.38,
       "date": "2026-06-12T15:07:20.336Z",
-      "summary": null,
-      "category": "ai_tools"
-    },
-    {
-      "title": "github.com/gvergnaud/ts-p…",
-      "url": "https://github.com/gvergnaud/ts-pattern/releases/tag/v4.1.2",
-      "source": "X / @gabrielvergnaud",
-      "tags": [
-        "repo_update"
-      ],
-      "matching_tags": [
-        "repo_update"
-      ],
-      "importance": 0.38,
-      "date": "2026-06-12T15:06:58.047Z",
       "summary": null,
       "category": "ai_tools"
     }
