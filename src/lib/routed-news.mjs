@@ -206,6 +206,7 @@ export function applyRoutedNewsFeed(siteData, feed, options = {}) {
   return {
     ...siteData,
     news,
+    contentModifiedAt: provenance.generatedAt,
     sourceProvenance: {
       ...(siteData.sourceProvenance || {}),
       news: provenance,

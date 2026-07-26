@@ -87,11 +87,15 @@ const publicRoutes = [
 ];
 
 const siteUrl = "https://koltregaskes.github.io/repo-foundry";
-const lastmod = new Date(siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
+const defaultLastmod = new Date(siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
+const newsLastmod = new Date(siteData.contentModifiedAt || siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${publicRoutes
-  .map((route) => `  <url><loc>${siteUrl}/${route}</loc><lastmod>${lastmod}</lastmod></url>`)
+  .map((route) => {
+    const lastmod = route === "" || route === "news/" ? newsLastmod : defaultLastmod;
+    return `  <url><loc>${siteUrl}/${route}</loc><lastmod>${lastmod}</lastmod></url>`;
+  })
   .join("\n")}
 </urlset>
 `;

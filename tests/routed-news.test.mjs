@@ -6,6 +6,7 @@ import {
   assertRoutedNewsFeed,
   ROUTED_NEWS_PUBLIC_PATH,
 } from "../src/lib/routed-news.mjs";
+import { findPublicBoundaryFindings } from "../src/lib/public-boundary.mjs";
 
 const now = new Date("2026-07-26T12:00:00.000Z");
 const baseSiteData = {
@@ -45,6 +46,7 @@ test("public data consumes the routed feed and records its exact consumer path",
   assert.equal(compiled.sourceProvenance.news.consumerPath, ROUTED_NEWS_PUBLIC_PATH);
   assert.equal(compiled.sourceProvenance.news.generatedAt, "2026-07-25T17:47:27.635Z");
   assert.equal(compiled.sourceProvenance.news.newestItemAt, "2026-07-25T01:56:18.000Z");
+  assert.equal(compiled.contentModifiedAt, "2026-07-25T17:47:27.635Z");
   assert.equal(compiled.news[0].title, "Newest update");
   assert.equal(compiled.news[0].url, routedFeed.articles[1].url);
   assert.equal(compiled.news[0].summary, "Fresh public detail.");
@@ -77,4 +79,17 @@ test("feed contract rejects mismatched article counts", () => {
     () => assertRoutedNewsFeed({ ...routedFeed, article_count: 3 }, { now }),
     /article_count is 3; expected 2/,
   );
+});
+
+test("public boundary catches raw and JSON-escaped workspace paths", () => {
+  const findings = findPublicBoundaryFindings([
+    { relativePath: "raw.json", content: String.raw`{"path":"W:\Repos\_local\secret"}` },
+    { relativePath: "escaped.json", content: JSON.stringify({ path: String.raw`W:\Repos\_local\secret` }) },
+    { relativePath: "safe.json", content: '{"path":"https://example.com/public"}' },
+  ]);
+
+  assert.deepEqual(findings, [
+    "raw.json: Windows workspace path",
+    "escaped.json: Windows workspace path",
+  ]);
 });
