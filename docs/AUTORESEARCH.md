@@ -48,3 +48,12 @@ Not allowed:
 - manager notes
 - internal ops status
 - database details
+
+## Routed public news contract
+
+The public build consumes `content/public/generated/news-feed-latest.json` directly for the news shelf.
+It rejects the build when that feed, or its newest article, is more than three days old. The compiled
+site records the exact consumer path and source timestamps in `sourceProvenance.news`.
+
+Run `npm run validate:public` before review. It proves the routed consumer, checks source age, builds
+the site, and scans the output for local workspace, session, checkout, and database leakage.

@@ -33,6 +33,7 @@ export const ACTIVE_KNOWLEDGE_ROOT = fs.existsSync(INTERNAL_RUNTIME_KNOWLEDGE_RO
 export const PUBLIC_CONTENT_ROOT = path.join(REPO_ROOT, "content", "public");
 export const PUBLIC_GENERATED_ROOT = path.join(PUBLIC_CONTENT_ROOT, "generated");
 export const PUBLIC_MANUAL_ROOT = path.join(PUBLIC_CONTENT_ROOT, "manual");
+export const ROUTED_NEWS_PATH = path.join(PUBLIC_GENERATED_ROOT, "news-feed-latest.json");
 export const DIST_ROOT = path.join(REPO_ROOT, "dist");
 export const PUBLIC_DIST_ROOT = path.join(DIST_ROOT, "public");
 export const INTERNAL_CANONICAL_REPO = path.join(WORKSPACE_ROOT, "_My Open Source", "repo-foundry");

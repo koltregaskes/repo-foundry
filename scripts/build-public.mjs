@@ -14,8 +14,9 @@ import {
   buildVisualisationsPage,
 } from "../src/templates/public.mjs";
 import { compilePublicSiteData } from "../src/lib/compile.mjs";
-import { PUBLIC_DIST_ROOT, PUBLIC_GENERATED_ROOT } from "../src/lib/constants.mjs";
-import { copyFile, ensureDir, readJson, removeDir, writeText } from "../src/lib/io.mjs";
+import { PUBLIC_DIST_ROOT, PUBLIC_GENERATED_ROOT, ROUTED_NEWS_PATH } from "../src/lib/constants.mjs";
+import { copyFile, ensureDir, readJson, removeDir, writeJson, writeText } from "../src/lib/io.mjs";
+import { applyRoutedNewsFeed } from "../src/lib/routed-news.mjs";
 
 async function writePage(relativePath, html) {
   const targetPath = path.join(PUBLIC_DIST_ROOT, relativePath);
@@ -23,11 +24,21 @@ async function writePage(relativePath, html) {
 }
 
 const generatedPath = path.join(PUBLIC_GENERATED_ROOT, "site-data.json");
-const siteData = (await readJson(generatedPath, null)) ?? (await compilePublicSiteData());
+const generatedSiteData = await readJson(generatedPath, { repos: [] });
+const routedNews = await readJson(ROUTED_NEWS_PATH, {
+  generated: null,
+  site: null,
+  article_count: 0,
+  articles: [],
+});
+const siteData = generatedSiteData.repos?.length
+  ? applyRoutedNewsFeed(generatedSiteData, routedNews)
+  : await compilePublicSiteData();
 
 await removeDir(PUBLIC_DIST_ROOT);
 await ensureDir(PUBLIC_DIST_ROOT);
 await ensureDir(path.join(PUBLIC_DIST_ROOT, "assets"));
+await ensureDir(path.join(PUBLIC_DIST_ROOT, "data"));
 
 await copyFile(path.join(process.cwd(), "src", "assets", "shared.css"), path.join(PUBLIC_DIST_ROOT, "assets", "shared.css"));
 await copyFile(path.join(process.cwd(), "src", "assets", "tokens.css"), path.join(PUBLIC_DIST_ROOT, "assets", "tokens.css"));
@@ -35,6 +46,7 @@ await copyFile(path.join(process.cwd(), "src", "assets", "shell.js"), path.join(
 await copyFile(path.join(process.cwd(), "src", "assets", "favicon.svg"), path.join(PUBLIC_DIST_ROOT, "assets", "favicon.svg"));
 await copyFile(path.join(process.cwd(), "src", "assets", "public-app.js"), path.join(PUBLIC_DIST_ROOT, "assets", "public-app.js"));
 await writeText(path.join(PUBLIC_DIST_ROOT, ".nojekyll"), "");
+await writeJson(path.join(PUBLIC_DIST_ROOT, "data", "source-provenance.json"), siteData.sourceProvenance);
 
 await writePage("index.html", buildPublicHome(siteData, "./"));
 await writePage(path.join("trending", "index.html"), buildTrendingPage(siteData, false, "../"));
@@ -75,11 +87,15 @@ const publicRoutes = [
 ];
 
 const siteUrl = "https://koltregaskes.github.io/repo-foundry";
-const lastmod = new Date(siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
+const defaultLastmod = new Date(siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
+const newsLastmod = new Date(siteData.contentModifiedAt || siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${publicRoutes
-  .map((route) => `  <url><loc>${siteUrl}/${route}</loc><lastmod>${lastmod}</lastmod></url>`)
+  .map((route) => {
+    const lastmod = route === "" || route === "news/" ? newsLastmod : defaultLastmod;
+    return `  <url><loc>${siteUrl}/${route}</loc><lastmod>${lastmod}</lastmod></url>`;
+  })
   .join("\n")}
 </urlset>
 `;

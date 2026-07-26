@@ -1,4 +1,11 @@
 import { expect, test } from "@playwright/test";
+import fs from "node:fs";
+
+const routedNews = JSON.parse(
+  fs.readFileSync(new URL("../../content/public/generated/news-feed-latest.json", import.meta.url), "utf8"),
+);
+const newestRoutedItem = routedNews.articles
+  .toSorted((left, right) => new Date(right.date).getTime() - new Date(left.date).getTime())[0];
 
 const baseUrl = process.env.REPO_FOUNDRY_BASE_URL || "http://127.0.0.1:54189";
 
@@ -61,7 +68,8 @@ test("repo library filters and pagination work", async ({ page }) => {
 test("updates and visualisations render real generated data", async ({ page }) => {
   await openClean(page, "/news/", "Foundry Feed.");
   expect(await page.locator(".news-card").count()).toBeGreaterThanOrEqual(8);
-  await expect(page.locator(".news-card").first()).toContainText("released");
+  await expect(page.locator(".news-card").first()).toContainText(newestRoutedItem.title);
+  await expect(page.locator(".news-card").first().locator("h3 a")).toHaveAttribute("href", newestRoutedItem.url);
 
   await openClean(page, "/visualisations/", "Visualisations.");
   await expect(page.locator(".visual-summary-grid .status-card")).toHaveCount(4);

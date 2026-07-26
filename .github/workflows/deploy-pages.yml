@@ -29,8 +29,8 @@ jobs:
         with:
           node-version: 24
 
-      - name: Build public site
-        run: node ./scripts/build-public.mjs
+      - name: Validate routed source and build public site
+        run: npm run verify:public-input && npm run build:public && npm run verify:public-boundary
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v5

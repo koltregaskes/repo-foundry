@@ -8,6 +8,10 @@
     "sync:news": "node ./scripts/sync-release-news.mjs",
     "compile:public": "node ./scripts/compile-public-data.mjs",
     "build:public": "node ./scripts/build-public.mjs",
+    "verify:public-input": "node ./scripts/verify-public-input.mjs",
+    "verify:public-boundary": "node ./scripts/verify-public-boundary.mjs",
+    "test": "node --test ./tests/*.test.mjs",
+    "validate:public": "npm test && npm run verify:public-input && npm run build:public && npm run verify:public-boundary",
     "build:internal": "node ./scripts/build-internal.mjs",
     "build:all": "node ./scripts/rebuild-all.mjs",
     "test:visual": "npm run build:public && playwright test ./tests/visual/repo-foundry.spec.js --workers=1 --browser=chromium --output=output/playwright/test-results"
