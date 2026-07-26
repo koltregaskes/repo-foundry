@@ -3,6 +3,7 @@ import { readJson, writeJson } from "../src/lib/io.mjs";
 
 const args = new Set(process.argv.slice(2));
 const write = args.has("--write");
+const force = args.has("--force");
 const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
 const today = new Date().toISOString().slice(0, 10);
 
@@ -60,6 +61,17 @@ const targets = research.items
 
 if (!targets.length) {
   throw new Error(`No GitHub repository records found in ${RESEARCH_PATH}`);
+}
+
+if (write && !force && targets.every(({ item }) => item.verifiedDate === today)) {
+  console.log(JSON.stringify({
+    mode: "write",
+    source: RESEARCH_PATH,
+    checked: 0,
+    changed: 0,
+    skipped: "all tracked GitHub repositories were already verified today",
+  }, null, 2));
+  process.exit(0);
 }
 
 const refreshed = await mapConcurrent(targets, 4, async ({ item, index, repo }) => {
