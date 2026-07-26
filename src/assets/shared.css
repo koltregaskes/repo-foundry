@@ -360,6 +360,7 @@ p {
 .site-header__body-wrap {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .site-header__eyebrow,
@@ -401,6 +402,7 @@ p {
   margin-top: var(--space-3);
   font-size: clamp(3.25rem, 8vw, 8.8rem);
   line-height: var(--lh-tight);
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 
@@ -416,11 +418,13 @@ p {
   border-radius: var(--r-md);
   color: var(--ink-3);
   font-size: var(--fs-sm);
+  overflow-wrap: anywhere;
 }
 
 .site-main {
   display: grid;
   gap: var(--space-8);
+  min-width: 0;
   padding-top: var(--space-7);
 }
 
@@ -766,6 +770,7 @@ p {
 .content-section {
   display: grid;
   gap: var(--space-5);
+  min-width: 0;
 }
 
 .section-heading {
@@ -843,6 +848,7 @@ p {
 .story-stack {
   display: grid;
   gap: var(--space-5);
+  min-width: 0;
 }
 
 .card-grid {
@@ -1140,6 +1146,7 @@ p {
 .detail-hero {
   display: grid;
   gap: var(--space-5);
+  min-width: 0;
   padding: clamp(var(--space-6), 4vw, var(--space-9));
   background:
     linear-gradient(135deg, var(--accent-soft), transparent 48%),
@@ -1149,6 +1156,7 @@ p {
 .detail-hero h2 {
   font-size: clamp(2.8rem, 6vw, 6.8rem);
   line-height: var(--lh-tight);
+  overflow-wrap: anywhere;
   text-transform: uppercase;
 }
 

@@ -1,0 +1,67 @@
+{
+  "generated": "2026-06-26T17:45:08.018Z",
+  "site": "Repo Foundry",
+  "article_count": 4,
+  "articles": [
+    {
+      "title": "We all depend on open source. We will defend it together",
+      "url": "https://akrites.org/letter/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-26T05:40:36.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Framework's 10G Ethernet module exposes USB-C's complexity",
+      "url": "https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-26T01:10:52.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion",
+      "url": "https://github.com/inkeep/open-knowledge",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-25T16:04:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "FGF21 Gene Therapy Improves Health in Aged Mice",
+      "url": "https://www.fightaging.org/archives/2026/06/fgf21-gene-therapy-improves-health-in-aged-mice/",
+      "source": "Fight Aging Newsletter",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-06-23T10:11:57.000Z",
+      "summary": "Increased FGF21 expression is essential to the life extension produced by the practice of calorie restriction. It is a part of the regulatory system governing the beneficial reaction to low levels of protein intake, an evolved response that helps to increase the odds of individuals surviving long winters and other periods of famine. Here, researchers report on the use of an FGF21 AAV gene therapy in mice to produce the sweeping improvements in health that are characteristic of most calorie restriction mimetic strategies. The decline of organ function during aging limits healthspan. Despite the potential of lifestyle interventions to improve health, sustained maintenance of healthspan is challenging, and no gerotherapeutic drugs have been approved. Here, we demonstrated that aged and geriatric male and female mice [&#8230;]",
+      "category": "health_research"
+    }
+  ]
+}

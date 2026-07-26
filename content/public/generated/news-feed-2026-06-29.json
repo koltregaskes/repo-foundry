@@ -1,0 +1,82 @@
+{
+  "generated": "2026-06-29T17:45:05.826Z",
+  "site": "Repo Foundry",
+  "article_count": 5,
+  "articles": [
+    {
+      "title": "A native graphical shell for SSH",
+      "url": "https://probablymarcus.com/blocks/2026/06/28/native-graphical-shell-for-SSH.html",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-29T15:42:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "DocumentDB – a MongoDB compatible open-source database",
+      "url": "https://documentdb.io/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-29T14:09:15.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Herdr: Agent multiplexer that lives in your terminal",
+      "url": "https://github.com/ogulcancelik/herdr",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-29T04:27:46.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "POSIX Is Not a Shell",
+      "url": "https://alganet.github.io/blog/2026-06-28-12-POSIX-Is-Not-A-Shell.html",
+      "source": "Hacker News",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-28T20:39:50.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "5k menus from the New York Public Library’s Buttolph Collection (1880-1920)",
+      "url": "https://pudding.cool/2026/06/menu-story/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-28T14:44:56.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "generated": "2026-06-16T17:45:08.863Z",
+  "site": "Repo Foundry",
+  "article_count": 3,
+  "articles": [
+    {
+      "title": "Show HN: SharkClean MCP",
+      "url": "https://github.com/a-funk/sharkclean-mcp",
+      "source": "Hacker News",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-12T16:09:14.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Microsoft turns to AWS as GitHub faces AI capacity crunch",
+      "url": "https://runtimewire.com/article/microsoft-github-aws-ai-capacity-crunch",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-16T02:47:57.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Banned book library in a wi-fi smart light bulb",
+      "url": "https://www.richardosgood.com/posts/banned-book-library/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-15T22:37:55.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

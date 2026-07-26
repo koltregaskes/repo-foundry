@@ -1,0 +1,67 @@
+{
+  "generated": "2026-06-30T17:45:07.492Z",
+  "site": "Repo Foundry",
+  "article_count": 4,
+  "articles": [
+    {
+      "title": "Ornith-1.0: self-improving open-source models for agentic coding",
+      "url": "https://github.com/deepreinforce-ai/Ornith-1",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-06-29T17:16:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "I spent 6 days building my VDOM library as I hated how React handles memo",
+      "url": "https://vflash.github.io/Tyaff/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-30T10:35:29.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "JumpServer: Open-Source Privileged Access Management",
+      "url": "https://github.com/jumpserver/jumpserver",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-29T19:06:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Open Source Low Tech",
+      "url": "https://opensourcelowtech.org/",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-26T06:35:17.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

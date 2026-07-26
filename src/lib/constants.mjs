@@ -6,7 +6,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export const REPO_ROOT = path.resolve(__dirname, "..", "..");
-export const WORKSPACE_ROOT = path.resolve(REPO_ROOT, "..", "..");
+const fallbackWorkspaceRoot = path.resolve(REPO_ROOT, "..", "..");
+const estateReposRoot = path.join(path.parse(REPO_ROOT).root, "Repos");
+export const WORKSPACE_ROOT = process.env.REPO_FOUNDRY_WORKSPACE_ROOT
+  ? path.resolve(process.env.REPO_FOUNDRY_WORKSPACE_ROOT)
+  : fs.existsSync(path.join(estateReposRoot, "_local", "surfaces"))
+    ? estateReposRoot
+    : fallbackWorkspaceRoot;
 export const LEGACY_INTERNAL_ROOT = path.join(WORKSPACE_ROOT, "_local", "surfaces", "repos-hub", "local-hub");
 export const INTERNAL_RUNTIME_ROOT = path.join(WORKSPACE_ROOT, "_local", "surfaces", "repo-foundry-internal");
 export const INTERNAL_RUNTIME_DATA_ROOT = path.join(INTERNAL_RUNTIME_ROOT, "data");

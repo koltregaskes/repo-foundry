@@ -5,6 +5,7 @@
   "description": "Shared internal and public hub for repository intelligence, discovery, and editorial curation under the Repo Foundry brand.",
   "type": "module",
   "scripts": {
+    "refresh:repos": "node ./scripts/refresh-repo-metadata.mjs",
     "sync:news": "node ./scripts/sync-release-news.mjs",
     "compile:public": "node ./scripts/compile-public-data.mjs",
     "build:public": "node ./scripts/build-public.mjs",

@@ -1,0 +1,187 @@
+{
+  "generated": "2026-07-05T12:00:32.623Z",
+  "site": "Repo Foundry",
+  "article_count": 12,
+  "articles": [
+    {
+      "title": "NHS to use AI on its app to direct patients to appropriate services",
+      "url": "https://www.theguardian.com/society/2026/jul/04/nhs-ai-app-patients-appropriate-services-health",
+      "source": "The Guardian (Society/Health)",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-07-05T11:32:31.220Z",
+      "summary": "&lt;p&gt;Update in England expected to reach about 200,000 patients over the next year as part of £10bn package to overhaul NHS systems&lt;/p&gt;&lt;p&gt;The NHS will begin using AI on its app to direct patients to the appropriate services, it has been announced.&lt;/p&gt;&lt;p&gt;The tool will be used to triage patients and to ascertain if they should be allocated a GP appointment. Some may be advised to attend a pharmacy or their local A&amp;amp;E department instead, depending on the severity ",
+      "category": "health_research"
+    },
+    {
+      "title": "NASA&#039;s Hubble captures a star-spangled sea of 500,000 stars",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260704232634.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.54,
+      "date": "2026-07-05T11:32:30.482Z",
+      "summary": "Celebrating the United States&#039; 250th anniversary, NASA released a stunning Hubble portrait of Messier 3, an ancient globular cluster with more than 500,000 stars. The remarkable cluster is helping scientists unravel the Milky Way&#039;s past thanks to its rare stars and possible origins in a long ago cosmic merger.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Audacious mission to rescue NASA&#039;s falling telescope has launched",
+      "url": "https://www.newscientist.com/article/2532627-audacious-mission-to-rescue-nasas-falling-telescope-has-launched/?utm_campaign=RSS%7CNSNS&#038;utm_source=NSNS&#038;utm_medium=RSS&#038;utm_content=home",
+      "source": "New Scientist",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.54,
+      "date": "2026-07-05T11:32:28.133Z",
+      "summary": "NASA’s Swift space telescope is reaching the end of its two-decade run in orbit – unless a satellite launched on 3 July can give it a lifesaving boost",
+      "category": "tech_general"
+    },
+    {
+      "title": "Reggae walk of fame launched in Harlesden",
+      "url": "https://www.bbc.co.uk/news/articles/c0ryxr0l4elo?at_medium=RSS&amp;at_campaign=rss",
+      "source": "BBC Entertainment & Arts",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.54,
+      "date": "2026-07-05T11:32:23.320Z",
+      "summary": "A trail celebrating Harlesden's reggae heritage and Windrush pioneers launches in north-west London.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Beeg float library, a Rust port of Fabrice Bellard's libbf",
+      "url": "https://github.com/lifthrasiir/libbeef",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-07-05T05:23:24.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Zig: All Package Management Functionality Moved from Compiler to Build System",
+      "url": "https://ziglang.org/devlog/2026/#2026-06-30",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-07-04T16:30:10.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "NASA celebrates America&#039;s 250th birthday with incredible views of space",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260702230859.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-07-05T11:32:30.487Z",
+      "summary": "NASA is marking the United States&#039; 250th birthday with four striking red, white, and blue images of deep space from the Chandra X-ray Observatory. The collection features an exploded star, a stellar nursery, a galaxy where stars are rapidly forming, and a galaxy cluster that provides evidence for dark matter.",
+      "category": "tech_general"
+    },
+    {
+      "title": "NASA&#039;s Hubble captures a crimson stellar nursery sparkling with blue and white stars",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260704232639.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-07-05T11:32:30.478Z",
+      "summary": "Hubble has captured a spectacular view of LH 95, where about 2,500 young stars are still on their journey to becoming full-fledged stars. Scientists discovered these growing stars can keep pulling in gas and dust for millions of years, extending an important stage of stellar development. The region also contains multiple generations of stars living side by side, offering fresh clues about how star formation unfolds over time.",
+      "category": "tech_general"
+    },
+    {
+      "title": "NASA&#039;s Hubble spots a stellar sparkler for the Fourth of July",
+      "url": "https://www.sciencedaily.com/releases/2026/07/260704232642.htm",
+      "source": "ScienceDaily Top Science",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-07-05T11:32:30.470Z",
+      "summary": "NASA&#039;s Hubble Space Telescope has captured a spectacular red, white, and blue view of one of the Milky Way&#039;s oldest star clusters to celebrate the nation&#039;s 250th anniversary. Hidden within the ancient cluster are clues to how exploding stars helped transform the young universe into one capable of forming planets and, eventually, life.",
+      "category": "tech_general"
+    },
+    {
+      "title": "You know the Mayflower. What about the White Lion? Here&apos;s the story of &apos;Two Ships&apos;",
+      "url": "https://www.npr.org/2026/07/03/nx-s1-5876220/two-ships-review-america-250-mayflower-white-lion",
+      "source": "NPR Culture",
+      "tags": [
+        "tool_update"
+      ],
+      "matching_tags": [
+        "tool_update"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-07-05T11:32:28.648Z",
+      "summary": "David S. Reynolds&apos; book examines the twin legacies of the Mayflower, which carried the Pilgrims to Plymouth in 1620, and the White Lion, which brought the first enslaved Africans to Virginia in 1619.",
+      "category": "tech_general"
+    },
+    {
+      "title": "Ukraine hits major oil terminal in Russia's St Petersburg",
+      "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&amp;at_campaign=rss",
+      "source": "BBC News (World)",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.38,
+      "date": "2026-07-05T11:32:26.084Z",
+      "summary": "Ukrainian President Volodymyr Zelensky says the target is key infrastructure \"that generates revenue for Russia's war\".",
+      "category": "tech_general"
+    },
+    {
+      "title": "In pictures: Stars and fans celebrate Taylor and Travis's wedding",
+      "url": "https://www.bbc.co.uk/news/articles/c7vyqgy4r5lo?at_medium=RSS&amp;at_campaign=rss",
+      "source": "BBC Entertainment & Arts",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.38,
+      "date": "2026-07-05T11:32:23.384Z",
+      "summary": "Celebrities and sports stars were spotted as the A-list couple tied the knot in New York on Friday.",
+      "category": "tech_general"
+    }
+  ]
+}

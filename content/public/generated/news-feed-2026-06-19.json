@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-19T17:45:09.256Z",
+  "site": "Repo Foundry",
+  "article_count": 2,
+  "articles": [
+    {
+      "title": "Zero-Touch OAuth for MCP",
+      "url": "https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/",
+      "source": "Hacker News",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-06-18T21:54:10.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Akse3D – open-source 3D modelling anyone can master",
+      "url": "https://akse3d-en.skaperiet.no",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-15T13:13:38.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

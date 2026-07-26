@@ -1,0 +1,37 @@
+{
+  "generated": "2026-06-27T17:45:07.142Z",
+  "site": "Repo Foundry",
+  "article_count": 2,
+  "articles": [
+    {
+      "title": "Anonymous GitHub account mass-dropping undisclosed 0-days",
+      "url": "https://github.com/bikini/exploitarium",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-27T14:31:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "The gap between open weights LLMs and closed source LLMs",
+      "url": "https://blog.doubleword.ai/frontier-os-llm",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-26T21:14:47.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}

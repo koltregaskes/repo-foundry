@@ -1,0 +1,67 @@
+{
+  "generated": "2026-06-17T17:45:03.391Z",
+  "site": "Repo Foundry",
+  "article_count": 4,
+  "articles": [
+    {
+      "title": "NLnet announces funding for 67 more open-source projects",
+      "url": "https://nlnet.nl/news/2026/20260616-67-new-projects.html",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.72,
+      "date": "2026-06-16T23:12:09.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "Launch HN: Adam (YC W25) – Open-Source AI CAD",
+      "url": "https://github.com/Adam-CAD/CADAM",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-17T16:14:04.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "MicroUI – A tiny, portable, immediate-mode UI library written in ANSI C",
+      "url": "https://github.com/rxi/microui",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-17T12:04:28.000Z",
+      "summary": null,
+      "category": "tech_general"
+    },
+    {
+      "title": "GLM-5.2 is the new leading open weights model on Artificial Analysis",
+      "url": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index",
+      "source": "Hacker News",
+      "tags": [
+        "open_source"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.48,
+      "date": "2026-06-17T09:12:00.000Z",
+      "summary": null,
+      "category": "tech_general"
+    }
+  ]
+}
