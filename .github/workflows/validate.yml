@@ -25,5 +25,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build public site
-        run: npm run build:public
+      - name: Validate public source contract and build
+        run: npm run validate:public

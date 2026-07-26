@@ -7,10 +7,12 @@ import {
   NEWS_PATH,
   REPO_INVENTORY_PATH,
   RESEARCH_PATH,
+  ROUTED_NEWS_PATH,
   SESSION_INDEX_PATH,
   UPDATE_SCHEDULE_PATH,
 } from "./constants.mjs";
 import { categoryCopy, codexResources, editorialNotes, namingTrack, siteMeta } from "./manual-content.mjs";
+import { applyRoutedNewsFeed } from "./routed-news.mjs";
 
 function isoNow() {
   return new Date().toISOString();
@@ -207,9 +209,10 @@ function compileWatchlist(schedule) {
 }
 
 export async function loadInternalInputs() {
-  const [research, repoNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory] = await Promise.all([
+  const [research, repoNews, routedNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory] = await Promise.all([
     readJson(RESEARCH_PATH, { generatedAt: null, items: [], summary: {}, sources: [] }),
     readJson(NEWS_PATH, { generatedAt: null, items: [] }),
+    readJson(ROUTED_NEWS_PATH, { generated: null, site: null, article_count: 0, articles: [] }),
     readJson(BACKLOG_PATH, { generatedAt: null, items: [] }),
     readJson(UPDATE_SCHEDULE_PATH, { generatedAt: null, items: [] }),
     readJson(KNOWLEDGE_INDEX_PATH, []),
@@ -217,11 +220,11 @@ export async function loadInternalInputs() {
     readJson(REPO_INVENTORY_PATH, { generatedAt: null, counts: {}, zones: {} }),
   ]);
 
-  return { research, repoNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory };
+  return { research, repoNews, routedNews, backlog, schedule, knowledgeIndex, sessionIndex, repoInventory };
 }
 
-export async function compilePublicSiteData() {
-  const { research, repoNews, schedule } = await loadInternalInputs();
+export async function compilePublicSiteData(options = {}) {
+  const { research, repoNews, routedNews, schedule } = await loadInternalInputs();
   const generatedAt = safeDate(research.generatedAt, isoNow());
   const records = (research.items || [])
     .map((item) => repoRecord(item, generatedAt))
@@ -233,7 +236,7 @@ export async function compilePublicSiteData() {
   const news = compileNewsFeed(repoNews.items, records, generatedAt);
   const metrics = compileMetrics(records, visualisations, generatedAt);
 
-  return {
+  const siteData = {
     generatedAt,
     workingTitle: siteMeta.workingTitle,
     strapline: siteMeta.strapline,
@@ -249,6 +252,8 @@ export async function compilePublicSiteData() {
     codexResources,
     editorialNotes,
   };
+
+  return applyRoutedNewsFeed(siteData, routedNews, options);
 }
 
 export async function compileInternalSeed() {
