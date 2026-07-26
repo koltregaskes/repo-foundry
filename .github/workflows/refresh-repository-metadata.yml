@@ -1,0 +1,63 @@
+name: Refresh repository metadata
+
+on:
+  schedule:
+    - cron: "7 18 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Refresh even when today's metadata is already present
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+concurrency:
+  group: repo-foundry-metadata-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Refresh public repository metadata
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "${{ inputs.force }}" = "true" ]; then
+            npm run refresh:public-repos -- --write --force
+          else
+            npm run refresh:public-repos -- --write
+          fi
+
+      - name: Validate public boundary and build
+        run: npm run validate:public
+
+      - name: Commit refreshed public data
+        run: |
+          if git diff --quiet -- content/public/generated/site-data.json; then
+            echo "Repository metadata is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/public/generated/site-data.json
+          git commit -m "chore: refresh repository metadata"
+          git pull --rebase origin main
+          git push origin HEAD:main

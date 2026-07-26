@@ -24,10 +24,15 @@ repo-foundry/
 
 ```powershell
 npm run compile:public
+npm run refresh:public-repos -- --write
 npm run build:public
 npm run build:internal
 npm run build:all
 ```
+
+The public metadata refresh is also scheduled in GitHub Actions at 18:07 UTC
+each day. It refreshes the committed public-safe repository snapshot, runs the
+full public validation gate, and only commits when the snapshot changed.
 
 ## Outputs
 

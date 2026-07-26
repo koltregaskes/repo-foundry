@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "refresh:repos": "node ./scripts/refresh-repo-metadata.mjs",
+    "refresh:public-repos": "node ./scripts/refresh-public-repos.mjs",
     "sync:news": "node ./scripts/sync-release-news.mjs",
     "compile:public": "node ./scripts/compile-public-data.mjs",
     "build:public": "node ./scripts/build-public.mjs",

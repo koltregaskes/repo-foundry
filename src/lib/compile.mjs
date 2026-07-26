@@ -65,7 +65,7 @@ function truncateLabel(value, maxLength) {
   return text.length > maxLength ? `${text.slice(0, maxLength - 1)}...` : text;
 }
 
-function repoPreviewImage(item) {
+export function repoPreviewImage(item) {
   const palettes = [
     { paper: "#08111f", ink: "#eff7ff", accent: "#00e5ff", soft: "#10243d" },
     { paper: "#07140f", ink: "#effff5", accent: "#a6ff4d", soft: "#14301f" },
@@ -164,7 +164,7 @@ function compileNewsFeed(newsInput, records, generatedAt) {
     .slice(0, 12);
 }
 
-function buildVisualisations(records) {
+export function buildVisualisations(records) {
   const now = new Date();
   const buildSeries = (keyFn) =>
     Object.entries(
@@ -185,7 +185,7 @@ function buildVisualisations(records) {
   };
 }
 
-function compileMetrics(records, visualisations, generatedAt) {
+export function compileMetrics(records, visualisations, generatedAt) {
   const todayCount = visualisations.freshness.find((entry) => entry.label === "today")?.value || 0;
   const thisWeekCount = visualisations.freshness.find((entry) => entry.label === "this-week")?.value || 0;
   return {
