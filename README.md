@@ -64,3 +64,10 @@ full public validation gate, and only commits when the snapshot changed.
 
 The public site is generated only from allowlisted public-safe fields.
 It must never publish local paths, session data, backlog ownership, manager notes, or workspace-only repo telemetry.
+
+GitHub Pages does not expose repository-owned response-header configuration, so
+the generated HTML includes a tested CSP meta policy and a
+`strict-origin-when-cross-origin` referrer policy. The CSP covers the site's
+current local scripts, inline style attributes, Google Fonts and data-URI repo
+artwork. It does not claim header-only controls such as `frame-ancestors` or
+reporting.
