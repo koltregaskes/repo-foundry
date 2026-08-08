@@ -51,8 +51,8 @@ jobs:
             npm run refresh:public-repos -- --write
           fi
 
-      - name: Validate public boundary and build
-        run: npm run validate:public
+      - name: Validate repository metadata refresh
+        run: npm test
 
       - name: Commit refreshed public data
         run: |
@@ -67,11 +67,23 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
+      - name: Validate routed source and build public site
+        id: public_validation
+        continue-on-error: true
+        run: npm run verify:public-input && npm run build:public && npm run verify:public-boundary
+
+      - name: Report deferred Pages deployment
+        if: steps.public_validation.outcome == 'failure'
+        run: |
+          echo "::warning::Repository metadata was refreshed, but Pages deployment was skipped because the routed news source did not pass validation."
+
       - name: Upload Pages artifact
+        if: steps.public_validation.outcome == 'success'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist/public
 
       - name: Deploy Pages artifact
+        if: steps.public_validation.outcome == 'success'
         id: deployment
         uses: actions/deploy-pages@v5
