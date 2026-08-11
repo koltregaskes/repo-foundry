@@ -52,14 +52,17 @@ jobs:
           fi
 
       - name: Prepare refreshed public data commit
+        id: metadata_commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet -- content/public/generated/site-data.json; then
             echo "Repository metadata is already current."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git add content/public/generated/site-data.json
             git commit -m "chore: refresh repository metadata"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
           git pull --rebase origin main
 
@@ -67,6 +70,7 @@ jobs:
         run: npm test && npm run build:public-boundary && npm run verify:public-boundary
 
       - name: Push refreshed repository metadata
+        if: steps.metadata_commit.outputs.changed == 'true'
         run: |
           git push origin HEAD:main
 
