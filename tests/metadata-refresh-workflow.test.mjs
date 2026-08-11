@@ -7,6 +7,10 @@ const workflowPath = new URL(
   import.meta.url,
 );
 const workflow = await fs.readFile(workflowPath, "utf8");
+const validateWorkflow = await fs.readFile(
+  new URL("../.github/workflows/validate.yml", import.meta.url),
+  "utf8",
+);
 const packageJson = JSON.parse(
   await fs.readFile(new URL("../package.json", import.meta.url), "utf8"),
 );
@@ -77,4 +81,14 @@ test("unchanged metadata never pushes the checked-out dispatch branch", () => {
     workflow,
     /- name: Push refreshed repository metadata\s+if: steps\.metadata_commit\.outputs\.changed == 'true'/,
   );
+});
+
+
+test("generic validation checks code without consuming the deployment freshness gate", () => {
+  assert.match(
+    validateWorkflow,
+    /npm test && npm run build:public-boundary && npm run verify:public-boundary/,
+  );
+  assert.doesNotMatch(validateWorkflow, /npm run validate:public/);
+  assert.match(workflow, /run: npm run verify:public-input/);
 });
