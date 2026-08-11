@@ -25,5 +25,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Validate public source contract and build
-        run: npm run validate:public
+      - name: Validate code and public boundary
+        run: npm test && npm run build:public-boundary && npm run verify:public-boundary
