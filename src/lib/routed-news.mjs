@@ -90,6 +90,7 @@ export function assertRoutedNewsFeed(
     now = new Date(),
     maxAgeDays = DEFAULT_MAX_ROUTED_NEWS_AGE_DAYS,
     expectedSite = "Repo Foundry",
+    allowStale = false,
   } = {},
 ) {
   if (!feed || typeof feed !== "object" || Array.isArray(feed)) {
@@ -119,7 +120,7 @@ export function assertRoutedNewsFeed(
   if (generatedAgeMs < -futureToleranceMs) {
     throw new Error("Routed news generated timestamp is in the future.");
   }
-  if (generatedAgeMs > maxAgeMs) {
+  if (!allowStale && generatedAgeMs > maxAgeMs) {
     throw new Error(
       `Routed news feed is ${(generatedAgeMs / 86_400_000).toFixed(1)} days old; maximum is ${maxAgeDays}.`,
     );
@@ -146,7 +147,7 @@ export function assertRoutedNewsFeed(
   if (newestItemAgeMs < -futureToleranceMs) {
     throw new Error("Routed news newest article timestamp is in the future.");
   }
-  if (newestItemAgeMs > maxAgeMs) {
+  if (!allowStale && newestItemAgeMs > maxAgeMs) {
     throw new Error(
       `Routed news newest article is ${(newestItemAgeMs / 86_400_000).toFixed(1)} days old; maximum is ${maxAgeDays}.`,
     );

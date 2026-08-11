@@ -18,6 +18,10 @@ import { PUBLIC_DIST_ROOT, PUBLIC_GENERATED_ROOT, ROUTED_NEWS_PATH } from "../sr
 import { copyFile, ensureDir, readJson, removeDir, writeJson, writeText } from "../src/lib/io.mjs";
 import { applyRoutedNewsFeed } from "../src/lib/routed-news.mjs";
 
+const allowStaleRoutedNews = process.argv.includes(
+  "--allow-stale-routed-news-for-boundary-scan",
+);
+
 async function writePage(relativePath, html) {
   const targetPath = path.join(PUBLIC_DIST_ROOT, relativePath);
   await writeText(targetPath, html);
@@ -32,7 +36,9 @@ const routedNews = await readJson(ROUTED_NEWS_PATH, {
   articles: [],
 });
 const siteData = generatedSiteData.repos?.length
-  ? applyRoutedNewsFeed(generatedSiteData, routedNews)
+  ? applyRoutedNewsFeed(generatedSiteData, routedNews, {
+    allowStale: allowStaleRoutedNews,
+  })
   : await compilePublicSiteData();
 
 await removeDir(PUBLIC_DIST_ROOT);

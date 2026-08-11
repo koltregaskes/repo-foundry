@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import { PUBLIC_DIST_ROOT } from "../src/lib/constants.mjs";
+import { PUBLIC_DIST_ROOT, PUBLIC_GENERATED_ROOT } from "../src/lib/constants.mjs";
 import { findPublicBoundaryFindings } from "../src/lib/public-boundary.mjs";
 
 async function filesUnder(root) {
@@ -19,10 +19,18 @@ async function filesUnder(root) {
 }
 
 const publicFiles = await filesUnder(PUBLIC_DIST_ROOT);
-const entries = await Promise.all(publicFiles.map(async (filePath) => ({
+const distEntries = await Promise.all(publicFiles.map(async (filePath) => ({
   relativePath: path.relative(PUBLIC_DIST_ROOT, filePath),
   content: await fs.readFile(filePath, "utf8"),
 })));
+const sourceDataPath = path.join(PUBLIC_GENERATED_ROOT, "site-data.json");
+const entries = [
+  {
+    relativePath: "content/public/generated/site-data.json",
+    content: await fs.readFile(sourceDataPath, "utf8"),
+  },
+  ...distEntries,
+];
 const findings = findPublicBoundaryFindings(entries);
 
 if (findings.length) {

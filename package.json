@@ -10,6 +10,7 @@
     "sync:news": "node ./scripts/sync-release-news.mjs",
     "compile:public": "node ./scripts/compile-public-data.mjs",
     "build:public": "node ./scripts/build-public.mjs",
+    "build:public-boundary": "node ./scripts/build-public.mjs --allow-stale-routed-news-for-boundary-scan",
     "verify:public-input": "node ./scripts/verify-public-input.mjs",
     "verify:public-boundary": "node ./scripts/verify-public-boundary.mjs",
     "test": "node --test ./tests/*.test.mjs",

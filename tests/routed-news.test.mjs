@@ -74,9 +74,44 @@ test("source-age gate rejects a feed with stale articles", () => {
   );
 });
 
+test("boundary-only compilation accepts stale but well-formed routed news", () => {
+  const staleFeed = {
+    ...routedFeed,
+    generated: "2026-07-20T00:00:00.000Z",
+    articles: routedFeed.articles.map((article) => ({
+      ...article,
+      date: "2026-07-20T00:00:00.000Z",
+    })),
+  };
+
+  const compiled = applyRoutedNewsFeed(baseSiteData, staleFeed, {
+    now,
+    maxAgeDays: 3,
+    allowStale: true,
+  });
+
+  assert.equal(compiled.news.length, 2);
+  assert.equal(compiled.sourceProvenance.news.generatedAt, "2026-07-20T00:00:00.000Z");
+});
+
+test("boundary-only compilation still rejects future timestamps", () => {
+  const futureFeed = {
+    ...routedFeed,
+    generated: "2026-07-27T12:00:00.000Z",
+  };
+
+  assert.throws(
+    () => assertRoutedNewsFeed(futureFeed, { now, allowStale: true }),
+    /generated timestamp is in the future/,
+  );
+});
+
 test("feed contract rejects mismatched article counts", () => {
   assert.throws(
-    () => assertRoutedNewsFeed({ ...routedFeed, article_count: 3 }, { now }),
+    () => assertRoutedNewsFeed(
+      { ...routedFeed, article_count: 3 },
+      { now, allowStale: true },
+    ),
     /article_count is 3; expected 2/,
   );
 });
