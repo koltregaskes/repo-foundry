@@ -14,6 +14,10 @@ const boundaryVerifier = await fs.readFile(
   new URL("../scripts/verify-public-boundary.mjs", import.meta.url),
   "utf8",
 );
+const publicBuilder = await fs.readFile(
+  new URL("../scripts/build-public.mjs", import.meta.url),
+  "utf8",
+);
 
 test("metadata refresh validates the public boundary before pushing", () => {
   const prepareStep = workflow.indexOf("- name: Prepare refreshed public data commit");
@@ -37,6 +41,10 @@ test("metadata refresh validates the public boundary before pushing", () => {
   );
   assert.match(boundaryVerifier, /PUBLIC_GENERATED_ROOT/);
   assert.match(boundaryVerifier, /content\/public\/generated\/site-data\.json/);
+  assert.match(
+    publicBuilder,
+    /compilePublicSiteData\(\{\s+allowStale: allowStaleRoutedNews,\s+\}\)/,
+  );
 });
 
 test("stale routed news defers Pages without weakening pre-push safety", () => {
@@ -57,5 +65,16 @@ test("stale routed news defers Pages without weakening pre-push safety", () => {
   assert.match(
     workflow,
     /- name: Deploy Pages artifact\s+if: steps\.public_validation\.outcome == 'success'/,
+  );
+});
+
+
+test("unchanged metadata never pushes the checked-out dispatch branch", () => {
+  assert.match(workflow, /id: metadata_commit/);
+  assert.match(workflow, /echo "changed=false" >> "\$GITHUB_OUTPUT"/);
+  assert.match(workflow, /echo "changed=true" >> "\$GITHUB_OUTPUT"/);
+  assert.match(
+    workflow,
+    /- name: Push refreshed repository metadata\s+if: steps\.metadata_commit\.outputs\.changed == 'true'/,
   );
 });
