@@ -39,7 +39,9 @@ const siteData = generatedSiteData.repos?.length
   ? applyRoutedNewsFeed(generatedSiteData, routedNews, {
     allowStale: allowStaleRoutedNews,
   })
-  : await compilePublicSiteData();
+  : await compilePublicSiteData({
+    allowStale: allowStaleRoutedNews,
+  });
 
 await removeDir(PUBLIC_DIST_ROOT);
 await ensureDir(PUBLIC_DIST_ROOT);
