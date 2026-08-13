@@ -1,0 +1,352 @@
+{
+  "generated": "2026-08-13T07:40:24.267Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "pnpm 12 RC 4",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.0.0-rc.4",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.8,
+      "date": "2026-08-12T14:42:28.000Z",
+      "summary": "pnpm 12 RC 4 adds pruning for stale minimum-release-age exclusions, injected-dependency resynchronisation, atomic global installs and further lockfile and peer-dependency reliability improvements.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "pnpr 0.1.0 alpha 6",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/pnpr%400.1.0-alpha.6",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.6,
+      "date": "2026-08-12T14:38:30.000Z",
+      "summary": "The pnpr alpha validates forwarded catalogue targets and keeps catalogue-specific resolutions isolated in the server cache.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "pnpm 12 RC 3",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.0.0-rc.3",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-09T20:32:01.000Z",
+      "summary": "pnpm 12 RC 3 includes command-shim and process-exit reliability fixes ahead of the pnpm 12 stable release.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Gemini CLI 0.56 nightly — 13 August",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260813.g1ac337739",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-13T01:19:22.000Z",
+      "summary": "The 13 August Gemini CLI nightly expands evaluation validation, tool-call formatting and failure summaries.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI 0.56 nightly — 12 August",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-nightly.20260812.g5024443c7",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-12T01:18:41.000Z",
+      "summary": "The 12 August Gemini CLI nightly fixes false model-capacity exhaustion and core quota-to-model mapping, and adds local evaluation reporting.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Gemini CLI 0.56 preview 1",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.56.0-preview.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.75,
+      "date": "2026-08-11T19:46:47.000Z",
+      "summary": "Gemini CLI 0.56 preview 1 packages the latest 0.56 development line for broader pre-release testing.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Astro 7.2.1",
+      "url": "https://github.com/withastro/astro/releases/tag/astro%407.2.1",
+      "source": "GitHub Releases · Astro",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.75,
+      "date": "2026-08-11T16:44:01.000Z",
+      "summary": "Astro 7.2.1 fixes CSS hot-module replacement behaviour in the Astro web framework.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Astro underscore redirects 1.0.4",
+      "url": "https://github.com/withastro/astro/releases/tag/%40astrojs/underscore-redirects%401.0.4",
+      "source": "GitHub Releases · Astro",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.6,
+      "date": "2026-08-11T16:44:03.000Z",
+      "summary": "The Astro underscore-redirects integration fixes handling for dynamic redirects.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Astro Node adapter 11.1.1",
+      "url": "https://github.com/withastro/astro/releases/tag/%40astrojs/node%4011.1.1",
+      "source": "GitHub Releases · Astro",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.65,
+      "date": "2026-08-11T16:44:09.000Z",
+      "summary": "Astro's Node adapter 11.1.1 ships a patch addressing EventEmitter behaviour in the server adapter.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Next.js 16.3.1 canary 15",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.15",
+      "source": "GitHub Releases · Next.js",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-12T23:50:16.000Z",
+      "summary": "Next.js canary 15 restores an mtime fallback, documents Turbopack chunking clusters and includes contribution-workflow maintenance.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Next.js 16.3.1 canary 14",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.14",
+      "source": "GitHub Releases · Next.js",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-12T13:25:30.000Z",
+      "summary": "Next.js canary 14 fixes debug build paths for Pages Router support entries and restores the live headers view of incoming requests.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "Next.js 16.3.1 canary 13",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1-canary.13",
+      "source": "GitHub Releases · Next.js",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "web_framework",
+        "tool_update"
+      ],
+      "importance": 0.65,
+      "date": "2026-08-11T23:51:56.000Z",
+      "summary": "Next.js canary 13 reduces stale Turbopack cache retention, decouples loader-tree construction from child ordering and updates Lightning CSS.",
+      "category": "developer_tools"
+    },
+    {
+      "title": "OpenAI Codex 0.148 alpha 12",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.12",
+      "source": "GitHub Releases · OpenAI Codex",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.75,
+      "date": "2026-08-13T06:43:33.000Z",
+      "summary": "OpenAI published Codex CLI 0.148.0 alpha 12 for early testing of the current Rust-based release line.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Codex 0.148 alpha 11",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.11",
+      "source": "GitHub Releases · OpenAI Codex",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-08-13T04:11:00.000Z",
+      "summary": "OpenAI published Codex CLI 0.148.0 alpha 11 as part of the active pre-release sequence.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "OpenAI Codex 0.148 alpha 9",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0-alpha.9",
+      "source": "GitHub Releases · OpenAI Codex",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "ai_tool",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.65,
+      "date": "2026-08-12T01:35:53.000Z",
+      "summary": "OpenAI published Codex CLI 0.148.0 alpha 9 for pre-release testing across supported platforms.",
+      "category": "ai_tools"
+    }
+  ]
+}
