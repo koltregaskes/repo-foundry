@@ -1,4 +1,17 @@
 export const SITE_URL = "https://koltregaskes.github.io/repo-foundry";
+export const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'self'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data:",
+  "connect-src 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+export const REFERRER_POLICY = "strict-origin-when-cross-origin";
 
 export function escapeHtml(value) {
   return String(value ?? "")
@@ -113,6 +126,8 @@ export function buildDocument({
 <html lang="en-GB" data-skin="hud" data-accent="magenta">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="${CONTENT_SECURITY_POLICY}" />
+    <meta name="referrer" content="${REFERRER_POLICY}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeAttribute(description)}" />
