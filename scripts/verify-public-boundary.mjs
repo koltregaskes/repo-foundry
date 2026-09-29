@@ -3,6 +3,7 @@ import path from "node:path";
 
 import { PUBLIC_DIST_ROOT, PUBLIC_GENERATED_ROOT } from "../src/lib/constants.mjs";
 import { findPublicBoundaryFindings } from "../src/lib/public-boundary.mjs";
+import { CONTENT_SECURITY_POLICY, REFERRER_POLICY } from "../src/templates/layout.mjs";
 
 async function filesUnder(root) {
   const entries = await fs.readdir(root, { withFileTypes: true });
@@ -37,6 +38,22 @@ if (findings.length) {
   throw new Error(`Public/private boundary scan failed:\n${findings.join("\n")}`);
 }
 
+const htmlEntries = entries.filter(({ relativePath }) => relativePath.endsWith(".html"));
+const expectedCsp = `<meta http-equiv="Content-Security-Policy" content="${CONTENT_SECURITY_POLICY}" />`;
+const expectedReferrer = `<meta name="referrer" content="${REFERRER_POLICY}" />`;
+
+for (const { relativePath, content } of htmlEntries) {
+  if (content.split(expectedCsp).length !== 2) {
+    throw new Error(`${relativePath} must contain exactly one canonical Content-Security-Policy meta tag.`);
+  }
+  if (content.split(expectedReferrer).length !== 2) {
+    throw new Error(`${relativePath} must contain exactly one canonical referrer policy meta tag.`);
+  }
+  if (content.indexOf(expectedCsp) > content.indexOf("<title>")) {
+    throw new Error(`${relativePath} declares its Content-Security-Policy after controlled resources.`);
+  }
+}
+
 const provenance = JSON.parse(await fs.readFile(path.join(PUBLIC_DIST_ROOT, "data", "source-provenance.json"), "utf8"));
 const expectedNewsLastmod = provenance.news?.generatedAt?.slice(0, 10);
 const sitemap = await fs.readFile(path.join(PUBLIC_DIST_ROOT, "sitemap.xml"), "utf8");
@@ -45,4 +62,4 @@ if (!expectedNewsLastmod || !sitemap.includes(newsSitemapEntry)) {
   throw new Error("Public sitemap does not use the routed-news source date for /news/.");
 }
 
-console.log(`Public/private boundary scan passed for ${PUBLIC_DIST_ROOT}`);
+console.log(`Public/private boundary and security metadata scan passed for ${htmlEntries.length} HTML files in ${PUBLIC_DIST_ROOT}`);
