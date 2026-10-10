@@ -1,34 +1,11 @@
 {
-  "generated": "2026-10-09T17:45:17.650Z",
+  "generated": "2026-10-10T17:45:20.476Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
     {
-      "title": "ttok 0.4",
-      "url": "https://simonwillison.net/2026/Oct/8/ttok/",
-      "source": "Simon Willison's Blog",
-      "tags": [
-        "open_source",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "open_source",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7999999999999999,
-      "date": "2026-10-08T23:34:28.000Z",
-      "summary": "Release: ttok 0.4 ttok is my CLI tool for counting tokens, using OpenAI's open source tiktoken library. It hasn't been in updated in a couple of years, but I finally fixed a Click warning, updated CI, and added a --list-models command to list available models. It works with uvx , so you can count tokens in anything like this: cat file.txt | uvx ttok Tags: projects , ai , openai , generative-ai , llms , tokenization",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Release v0.25.1-preview.1",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.1-preview.1",
+      "title": "Release v0.25.0-nightly.20261009.085a44f336",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.0-nightly.20261009.085a44f336",
       "source": "GitHub Releases · Qwen Code",
       "tags": [
         "mcp",
@@ -45,8 +22,50 @@
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-09T05:35:14.000Z",
+      "date": "2026-10-09T22:09:39.000Z",
       "summary": "What's Changed fix(agents): replace selected remote Hosts without losing bindings by @yiliang114 in #13430 test(core): close #12693 post-merge review test and hygiene gaps by @wenshao in #13341 test(integration): make the /hooks dialog E2E witness the rendered dialog ( #13425 ) by @qwen-code-dev-bot in #13427 fix(ci): wait 60s before the E2E build artifact download retry ( #13284 ) by @qwen-code-dev-bot in #13292 fix(ci): fail yamllint and shellcheck lanes loudly on an empty git file list by @qwen-code-dev-bot in #12650 fix(managed-agent): serve SSE subscribers from a Condition instead of...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.65.0-nightly.20261010.g9b6e0265d",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0-nightly.20261010.g9b6e0265d",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-10T01:38:44.000Z",
+      "summary": "What's Changed fix(cli): handle JSON parse and response stream errors in fetchJson by @jesussamuel-byte in #29658 fix(core): preserve line terminators in truncateString by @diegogodinezr in #29673 fix(vscode-ide-companion): make IdeServer.stop() resolve while MCP sessions are open by @elberthc-byte in #29674 fix(core): retain ask_user question text in the tool result display by @elberthc-byte in #29677 fix(core): eliminate false positives on untrusted command flags and compound loops by @DavidAPierce in #29672 fix(cli): clear cached credentials when re-selecting Google login by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 12.11.2",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.11.2",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-09T17:38:44.000Z",
+      "summary": "This release fixes --workspace-concurrency=Infinity , filters set by an updateConfig hook, and store fetches with enable-modules-dir=false . Patch Changes --workspace-concurrency=Infinity now runs workspace projects with no concurrency limit. It used to fail with invalid digit found in string #16793 . pnpm install and other recursive commands now apply the filter and filterProd that an updateConfig hook sets. They used to run on every workspace project #16792 . enable-modules-dir=false now also fetches the packages an install reuses from an existing lockfile, so the store holds every...",
       "category": "ai_tools"
     },
     {
@@ -71,242 +90,195 @@
       "category": "ai_tools"
     },
     {
-      "title": "pnpm 12.11.1",
-      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.11.1",
-      "source": "GitHub Releases · pnpm",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-09T12:28:20.000Z",
-      "summary": "This release fixes two ways pnpm install could fail, runs tools of any Rust release through pnx , and treats registry.npmjs.com as an alias of the npm registry. Patch Changes pnpm install no longer fails when packageManager pins the pnpm version that is already running and the registry does not publish that version. pnpm warns and continues. A registry mirror that has not synced a release no longer blocks the commands of a project pinned to it. pnpm install no longer fails with ERR_PNPM_CMD_SHIM_CHMOD when node_modules/.bin holds a shim that another user created, if everyone can already...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "pnpm 12.11.0",
-      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.11.0",
-      "source": "GitHub Releases · pnpm",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-09T06:43:40.000Z",
-      "summary": "This release adds Rust toolchain management, links the agent skills that dependencies ship, adds the permissions setting, and keeps the colors of streamed script output. Minor Changes pnpm install now links the agent skills that direct dependencies ship under skills/ /SKILL.md into the project's agent skill directories, such as .claude/skills . A package's skills are linked only after you approve them with pnpm approve . The skills.dirs setting chooses the directories pnpm/rfcs#35 . Added the permissions setting, which records what each dependency may do. Its build capability works like...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v0.98.0",
-      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.0",
-      "source": "GitHub Releases · Crush",
-      "tags": [
-        "mcp",
-        "repo_update",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T19:46:44.000Z",
-      "summary": "Rex, OSC 7501, xAI/Grok OAuth and more Hey! There’s some good quality of life stuff in this release. Let’s take a look! It’s Rex Time Following an update on Bubbletea Crush now supports the Program Status Protocol , aka OSC 7501 , created by Superlogical for Rex ! As a bonus, TUIOS also supports the protocol. x.AI OAuth Now Crush supports Grok OAuth login. Enjoy! Many more fixes A lot of fixes were introduced this version: Server side improvements by @meowgorithm External editor swallowing empty buffer Models behind OAuth couldn't be used if they weren't in Catwalk Fixed MCP toggled...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "openclaw 2026.9.9",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.9",
-      "source": "GitHub Releases · OpenClaw",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T17:38:34.000Z",
-      "summary": "OpenClaw v2026.9.9 185 commits · 112 pull requests · 92 contributors Changes included in this release The release notes and changelog contain the same content, presented in two formats: Release notes — formatted for people, with expandable sections. Changelog — plain Markdown for AI agents and tools. Thanks @A1fred-AI @adele-with-a-b @alexph-dev @Alix-007 @alkor2000 @altaywtf @aniruddhaadak80 @aounakram @armstrongsam25 @AXEG0 @azuretek @big-hill @carlosjarenom @cestercian @changeroa @ChuLaiTheGreat @cmrstudio56 @danieljimz @dapangkai11 @DasX @davidcittadini @dh-js @drakeo338 @ekinnee...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Turborepo v2.11.8-canary.1",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.8-canary.1",
-      "source": "GitHub Releases · Turbo",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T14:41:40.000Z",
-      "summary": "What's Changed Changelog fix: Pass repository to release asset commands by @anthonyshew in #14327 chore: Release Turborepo 2.11.5-canary.5 by @anthonyshew in #14328 chore: Release Turborepo 2.11.5 by @github-actions[bot] in #14329 fix: Upgrade standalone turbo on installer reruns by @anthonyshew in #14330 test: Deflake OpenTelemetry and PTY shutdown tests by @anthonyshew in #14331 docs: Document standalone turbo installation by @anthonyshew in #14332 ci: Install standalone turbo on Windows with PowerShell by @anthonyshew in #14334 fix: Keep Yarn patch resolutions with npm protocol...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "ttok 1.0",
-      "url": "https://simonwillison.net/2026/Oct/9/ttok/",
+      "title": "Deno is joining Cloudflare",
+      "url": "https://simonwillison.net/2026/Oct/9/deno-is-joining-cloudflare/",
       "source": "Simon Willison's Blog",
       "tags": [
+        "open_source",
         "repo_update",
-        "github_release",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-09T22:48:37.000Z",
+      "summary": "Deno is joining Cloudflare The Deno team released the first version of celld back in August - their open source implementation of the Durable Objects pattern from Cloudflare Workers. Today, Cloudflare are acquiring Deno outright, with the goal of building on celld to \"make workerd self-hosting a first-class supported way to build and run apps using the Workers programming model\" (see the Cloudflare blog .) The bad news is that Deno itself will not be maintained by Cloudflare beyond the next year: We will support the Deno runtime for another year with monthly releases containing bug fixes...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "ONLYOFFICE adds AI across its editors, with separate installation for open-source editions",
+      "url": "https://superpowerdaily.com/posts/onlyoffice-adds-ai-across-its-editors-with-separate-installation-for-open-source-editions",
+      "source": "Superpower Daily",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-10T15:27:24.000Z",
+      "summary": "The release supports cloud and local models, but the official release notes qualify the built-in AI pitch: open-source versions require separate installation.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.64.0-preview.1",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-preview.1",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
         "repo_update",
-        "github_release",
+        "cli_tool",
         "tool_update"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-10-09T00:34:43.000Z",
-      "summary": "Release: ttok 1.0 I released ttok 0.4 , ran uv tool upgrade ttok , piped a file into the new version... and realized that it was defaulting to the GPT-4 tokenizer when it should very clearly default to GPT-5/GPT-6 instead! I figured switching the default was a reasonable excuse to finally ship a 1.0. OpenAI haven't actually confirmed that GPT-6 uses the same tokenizer as the GPT-5 family yet - there's an angry issue about it - but I found this commit by William Liu which reports on an experiment he ran confirming that the tokenizers are likely the same: All seven GPT models (5.5, 5.6...",
+      "importance": 0.7,
+      "date": "2026-10-09T20:27:57.000Z",
+      "summary": "What's Changed fix(patch): cherry-pick 2ce1a69 to release/v0.64.0-preview.0-pr-29672 to patch version v0.64.0-preview.0 and create version 0.64.0-preview.1 by @gemini-cli-robot in #29696 Full Changelog : v0.64.0-preview.0...v0.64.0-preview.1",
       "category": "ai_tools"
     },
     {
-      "title": "v0.98.1",
-      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.1",
+      "title": "pnpr 0.1.0-alpha.15",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/pnpr%400.1.0-alpha.15",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-10-10T12:35:55.000Z",
+      "summary": "pnpr 0.1.0-alpha.15 adds a web UI, admin APIs for package rules, teams, and accounts, and SCIM deprovisioning. It also carries a security fix for tokens that outlived their account. Minor Changes pnpr serves a web UI at /-/ui/ when the new @pnpm/pnpr-ui package is installed next to it, for example with pnpm add -g @pnpm/pnpr,@pnpm/pnpr-ui . The new ui setting turns the UI off or serves it from another directory. The web UI signs in with a password or with an OIDC provider that offers browser sign-in. pnpr lists those providers at GET /-/pnpr/v0/sign-in . A browser sign-in started with...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
       "source": "GitHub Releases · Crush",
       "tags": [
         "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-10T01:08:40.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.7",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.7",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-09T23:48:05.000Z",
+      "summary": "Core Changes Reland experimental custom webpack support: #99234 Misc Changes Add CI for upgrade evals with shared preparation: #99908 Rebuild upgrade evals around delivered apps: #99880 Upgrade Corepack to 0.34.7: #99959 Upgrade Turborepo to 2.11.7: #99958 Normalize pnpm store cache keys: #99957 test: cover Pages Router _app availability in Turbopack dev ( #99789 ): #99910 Turbopack: chain the Pages Router development client module graph: #98823 turbopack: report an actionable error when Node.js child processes cannot connect: #99887 Turbopack: Ignore realpath errors during module...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Stark warning – does new footage in Avengers: Endgame reveal the truth about Doctor Doom?",
+      "url": "https://www.theguardian.com/film/2026/oct/09/stark-warning-does-new-footage-in-avengers-endgame-reveal-the-truth-about-doctor-doom",
+      "source": "The Guardian (Culture)",
+      "tags": [
+        "github_release",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "github_release",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-09T16:25:44.000Z",
+      "summary": "Warning: contains spoilers The four short scenes added to the new version has made the film the highest-grossing of all time – but the only people really enjoying this are the Disney accountants Does it really matter which film is the highest-grossing of all time at the global box office? Will James Cameron be lying awake at night staring into the darkness and pondering whether to withdraw humanity’s access to giant, blue-skinned space elves out of sheer spite, just because Avatar has been dethroned once again by Avengers: Endgame? It seems unlikely. Are the Russo brothers at this very...",
+      "category": "tech_general"
+    },
+    {
+      "title": "v16.5.0-canary.6",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.6",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-09T16:11:53.000Z",
+      "summary": "Core Changes Add more metadata to agent upgrade telemetry: #99925 perf: reduce build tree view allocations: #99930 fix: classify collapsed generated paths from child routes: #99864 Upgrade React from d75b0697-20261006 to b618bbb4-20261007 : #99879 Misc Changes docs(skills): use agent-agnostic branch prefix in create-pr: #99934 [test] Regression test for XSS-safe GoogleTagManager#dataLayer : #99464 [image-optimization] Expose next/image-optimizer-transform as a public subpath: #99312 fix(next): register the chunk groups that are chunked: #99749 refactor(turbopack): chunk several chunk...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Dozens reported injured in Yemeni Houthi attack at Riyadh airport",
+      "url": "https://www.theguardian.com/world/2026/oct/10/yemen-government-allied-forces-recapture-bab-al-mandab-strait-houthis-taiz",
+      "source": "The Guardian (World)",
+      "tags": [
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
-        "repo_update",
         "cli_tool",
         "tool_update"
       ],
-      "importance": 0.7,
-      "date": "2026-10-09T12:26:53.000Z",
-      "summary": "Tiny patch This fixes new GPT-6 models via Copilot! Enjoy, Charm XX 💫 Changelog Fixed 8584922 : fix: route newer Copilot models through the Responses API ( #4048 ) ( @DaVinci42 ) Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/v0.98.1/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/v0.98.1/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp '...",
+      "importance": 0.54,
+      "date": "2026-10-10T15:54:12.000Z",
+      "summary": "Saudi authorities yet to confirm strike as government-allied forces in Yemen claim successful offensive to retake Bab al-Mandab strait Yemen’s Houthis have launched a missile attack on Riyadh’s international airport in Saudi Arabia, with dozens reported wounded and a witness describing panic in the terminal. Saudi authorities did not confirm any new attack or evacuation, but one witness reported hearing an explosion while waiting to board a flight, and another said they saw a strike that left people wounded. Continue reading...",
+      "category": "tech_general"
+    },
+    {
+      "title": "You’ve Been Overlooking Your Best Idea People. AI Is About to Fix That.",
+      "url": "https://www.entrepreneur.com/building-a-business/youve-been-overlooking-your-best-idea-people-ai-is-about-to-fix-that?utm_source=flipboard&utm_content=topic/business",
+      "source": "Flipboard AI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-09T23:00:00.000Z",
+      "summary": "For a century, work rewarded people who could package ideas neatly. AI makes packaging free, and that changes who gets ahead. Key Takeaways The modern workplace has long rewarded the ability to package thinking into tidy output over the quality of the thinking itself. • AI now handles structuring, …",
       "category": "ai_tools"
     },
     {
-      "title": "v8.0.0-rc.17-dev.11: The binder resolves entity names in type-constructor arguments (#30659)",
-      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.17-dev.11",
-      "source": "GitHub Releases · Prisma",
+      "title": "Flydubai co-pilot planned suicide attack on Israeli airport, UAE prosecutors say",
+      "url": "https://www.theguardian.com/world/2026/oct/09/flydubai-co-pilot-planned-suicide-attack-on-israeli-airport-uae-prosecutors-say",
+      "source": "The Guardian (World)",
       "tags": [
-        "repo_update",
-        "developer_tool",
         "cli_tool"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
         "cli_tool"
       ],
-      "importance": 0.7,
-      "date": "2026-10-09T09:51:30.000Z",
-      "summary": "The PSL binder records a resolution for the entity name inside a type-constructor argument, such as OrderStatus in status pg.enum(OrderStatus) . Go-to-definition, hover, find references and rename now work on such a name. Renaming a native_enum block renames its pg.enum(...) usages, which #30633 left unchanged. Changes Binder ( packages/1-framework/2-authoring/psl-parser/src/binder.ts ): for a type whose name resolves to a constructor that declares entityRefArg , the positional argument at entityRefArg.index is bound through the path an entityRef attribute argument takes (...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v1.54.0",
-      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.54.0",
-      "source": "GitHub Releases · Goose",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T18:56:22.000Z",
-      "summary": "✨ Features Prompt for goose mode during first-time configure #12629 HTML session export with an interactive viewer #11977 🐛 Bug Fixes Adaptive thinking for Claude Sonnet and Haiku 5.5 #12761 Treat a client extension selection as the exact session set #12548 Support hyphenated GPT 6.1 Sol effort aliases #12689 Use a system Node.js in the Windows npx wrapper #12176 Show thinking when GOOSE_CLI_SHOW_THINKING is set to any value #12454 Price Databricks GLM aliases from the zhipuai catalog #12673 Read messages from config for tom #12634 Preserve the service total when folding cache input...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Turborepo v2.11.8-canary.2",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.8-canary.2",
-      "source": "GitHub Releases · Turbo",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T18:54:45.000Z",
-      "summary": "What's Changed Changelog fix: Stop add-package-names codemod from generating duplicate names by @irontaek in #14433 feat: Reconcile captured JavaScript tool selections by @anthonyshew in #14436 chore: Release Turborepo 2.11.8-canary.1 by @github-actions[bot] in #14453 fix: Share setup TLS and guard official source policy by @anthonyshew in #14438 chore: Upgrade Next.js to 16.3.8 repo-wide for CVE-2026-94483 by @anthonyshew in #14451 chore: Release Turbo repository packages 0.0.1-canary.31 by @github-actions[bot] in #14455 ci: Use GitHub OIDC for versioned docs aliases by @anthonyshew in...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v8.0.0-rc.17-dev.5: Rename symbol in the PSL language server (#30633)",
-      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.17-dev.5",
-      "source": "GitHub Releases · Prisma",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T15:59:12.000Z",
-      "summary": "The PSL language server answers textDocument/rename and textDocument/prepareRename for models, composite types, named types, blocks (including enum blocks), fields and namespaces. A rename edits the declaration and every reference across the schema files of the project, from a cursor on the declaration name or on any reference. The renamed positions are exactly the ones find references ( #30621 ) returns. When the rename would change a database name, the edit also adds @map(\" \") or @@map(\" \") to the declaration, so the database keeps its names. Changes Rename provider (...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v8.0.0-rc.17-dev.2: TML-3340: close out the one-config-file project (#30654)",
-      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.17-dev.2",
-      "source": "GitHub Releases · Prisma",
-      "tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-08T14:42:09.000Z",
-      "summary": "$ git diff --stat main...HEAD | tail -1 25 files changed, 1 insertion(+), 2833 deletions(-) This closes the one-config-file project. It deletes the project's working folder, projects/one-config-file/ , and fixes one duplicate number in the failure-mode catalogue. Linear: TML-3340. The project moved Prisma Composer's configuration out of its own prisma-composer.config.ts into the composer section of prisma.config.ts , and deleted Composer's standalone prisma-composer binary. Prisma 8 now has one CLI and one config file. The rest of this description is the close-out record the Drive process...",
-      "category": "ai_tools"
+      "importance": 0.54,
+      "date": "2026-10-09T20:38:11.000Z",
+      "summary": "Hammam al-Hammami is believed to have been targeting the passenger terminal at Ben Gurion airport near Tel Aviv The co-pilot who tried to seize control of a passenger jet flying from Dubai to Tel Aviv last week was planning to launch a suicide attack targeting the passenger terminal at Israel’s international airport, prosecutors in the United Arab Emirates said on Friday. Hammam al-Hammami attacked the plane’s Indian pilot with an emergency axe, but failed to prevent his badly injured colleague from opening the cockpit’s security door to allow passengers to overpower his assailant....",
+      "category": "tech_general"
     }
   ]
 }
