@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-17T17:45:03.877Z",
+  "generated": "2026-10-18T17:45:03.833Z",
   "site": "Repo Foundry",
-  "article_count": 14,
+  "article_count": 8,
   "articles": [
     {
-      "title": "Release v0.25.2-nightly.20261016.b4614845f0",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-nightly.20261016.b4614845f0",
+      "title": "Release v0.25.2-nightly.20261017.39c237af3b",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.2-nightly.20261017.39c237af3b",
       "source": "GitHub Releases · Qwen Code",
       "tags": [
         "mcp",
@@ -22,160 +22,13 @@
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-16T22:01:44.000Z",
+      "date": "2026-10-17T22:05:50.000Z",
       "summary": "What's Changed fix(managed-agent): admit team_plan_approval into the journal-only interrupted-turn settle ( #13847 ) by @wenshao in #14160 test(managed-agent): add the FG8e/FG8f monitor_run and background-shell fault gates by @wenshao in #14120 feat(extensions): add bounded generated failure explorer views (PR4) by @qqqys in #14269 fix(sdk-java): Order the FG8 gate's imports for the checkstyle rules by @wenshao in #14305 test(cli): skip the remaining chmod-based tests on the permission probe by @wenshao in #14271 refactor(managed-agent): Reuse text and byte-range utilities by @doudouOUC...",
       "category": "ai_tools"
     },
     {
-      "title": "Release v0.25.3-preview.0",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.25.3-preview.0",
-      "source": "GitHub Releases · Qwen Code",
-      "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T18:28:53.000Z",
-      "summary": "What's Changed fix(managed-agent): admit team_plan_approval into the journal-only interrupted-turn settle ( #13847 ) by @wenshao in #14160 test(managed-agent): add the FG8e/FG8f monitor_run and background-shell fault gates by @wenshao in #14120 feat(extensions): add bounded generated failure explorer views (PR4) by @qqqys in #14269 fix(sdk-java): Order the FG8 gate's imports for the checkstyle rules by @wenshao in #14305 test(cli): skip the remaining chmod-based tests on the permission probe by @wenshao in #14271 refactor(managed-agent): Reuse text and byte-range utilities by @doudouOUC...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Turborepo v2.11.9",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.9",
-      "source": "GitHub Releases · Turbo",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T19:07:18.000Z",
-      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.8 by @github-actions[bot] in #14789 perf: Prefetch Cargo metadata during lazy graph construction by @anthonyshew in #14497 perf: Compute Berry lockfile closures once across workspaces by @anthonyshew in #14499 perf: Check cache hit outputs in place instead of on the blocking pool by @anthonyshew in #14524 perf: Speed up Berry lockfile loading by @anthonyshew in #14500 perf: Parse bun.lock without building a JSON syntax tree by @anthonyshew in #14502 perf: Skip the dry run cache batch window when there is no remote cache by...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v1.55.0",
-      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.55.0",
-      "source": "GitHub Releases · Goose",
-      "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T17:07:23.000Z",
-      "summary": "✨ Features AIgateway declarative provider #12528 Propagate W3C trace context from ACP prompts to MCP tool calls #12697 Surface provider x-request-id on responses and errors #12587 Honor supports_vision declared on custom provider models #12769 Use live model metadata for OpenAI reasoning and prefer the Responses API #12568 Cap auto-compaction at 225k tokens by default #12790 Improve askai bot relevance #12728 🐛 Bug Fixes Adaptive thinking for Claude Sonnet and Haiku 5.5 #12761 Reject malformed GOOSE_MODE across ACP providers #12846 Bedrock: don't retry non-context ValidationException on...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v8.0.0-rc.18-dev.16: Test that PSL merges several types blocks (#30753)",
-      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.18-dev.16",
-      "source": "GitHub Releases · Prisma",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T16:06:26.000Z",
-      "summary": "Linked issue n/a — small change At a glance types { Email = String } model User { id Int @id email Email slug Slug } types { Slug = VarChar (191) } prisma contract emit accepts this schema: the named types from both blocks are in the contract. If a name is bound in two types blocks, the second one is reported as PSL_DUPLICATE_DECLARATION and the first binding is kept. Summary A schema has been able to contain several types blocks since the legacy PSL parser was replaced by the symbol table in #851 . The legacy parser reported \"Only one top-level types block is allowed per document\"....",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v8.0.0-rc.18-dev.15: Remove 945 redundant and declaration-restating unit tests (#30731)",
-      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.18-dev.15",
-      "source": "GitHub Releases · Prisma",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T15:36:08.000Z",
-      "summary": "Linked issue n/a. This continues the test-suite audit from #30729 . At a glance This is a typical removal, from packages/1-framework/3-tooling/migration/test/find-path-with-invariants.test.ts : { - const graph = reconstructGraph([pkg('A', 'B', 'm1')]); - expect(findPathWithInvariants(graph, 'A', 'Z', new Set(['X']))).toBeNull(); - });\"> - it ( 'unreachable target → null' , ( ) => { - const graph = reconstructGraph ( [ pkg ( 'A' , 'B' , 'm1' ) ] ) ; - expect ( findPathWithInvariants ( graph , 'A' , 'Z' , new Set ( [ 'X' ] ) ) ) . toBeNull ( ) ; - } ) ; The same file keeps a test with an...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Turborepo v2.11.9-canary.1",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.9-canary.1",
-      "source": "GitHub Releases · Turbo",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-16T14:06:28.000Z",
-      "summary": "What's Changed Changelog test: Add owned setup policy fixtures for CLI tests by @anthonyshew in #14456 feat: Represent matching Node-bundled npm ownership by @anthonyshew in #14457 feat: Preserve setup lock declarations during prune by @anthonyshew in #14459 refactor: Add guarded setup publication primitives by @anthonyshew in #14460 chore: Release Turborepo 2.11.8-canary.2 by @github-actions[bot] in #14458 chore: Update non-monorepo example by @vercel-gh-bot-4[bot] in #14452 feat: Provision frozen Node and pnpm through setup by @anthonyshew in #14462 fix: Exclude optional npm peers from...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents",
-      "url": "https://www.marktechpost.com/2026/10/16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/",
-      "source": "MarkTechPost",
-      "tags": [
-        "open_source",
-        "repo_update",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "open_source",
-        "repo_update",
-        "tool_update"
-      ],
-      "importance": 0.7999999999999999,
-      "date": "2026-10-17T00:09:12.000Z",
-      "summary": "Perplexity has open-sourced SPACE, the sandbox platform behind every task in Perplexity Computer. The Perplexity SPACE sandbox gives each agent task its own Firecracker microVM. Credentials and outbound traffic are controlled from outside that VM. The code ships under Apache 2.0 on GitHub. For teams building coding or browsing agents, this is a production-tested isolation […] The post Perplexity Open-Sources SPACE, a Firecracker MicroVM Sandbox for AI Agents appeared first on MarkTechPost .",
-      "category": "ai_research"
-    },
-    {
-      "title": "Release v0.66.0-nightly.20261017.ged96faedf",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261017.ged96faedf",
+      "title": "Release v0.66.0-nightly.20261018.ged96faedf",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0-nightly.20261018.ged96faedf",
       "source": "GitHub Releases · Gemini CLI",
       "tags": [
         "repo_update",
@@ -188,9 +41,26 @@
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-17T01:31:42.000Z",
-      "summary": "What's Changed Add Banner about Gemini CLI not being optimized for Gemini 4 by @srithreepo in #29774 Update README to remove obsolete content by @srithreepo in #29775 fix(ci): remove unsupported members permission in unassign-inactive-assignees workflow by @ugorla-dev in #29770 fix(cli): reset slash-command conflict dedupe when conflicts reappear by @jvargassanchez-dot in #29768 fix(cli): verify active binary update to prevent PATH shadowing false success by @urielefrenvirtusa in #29757 fix(cli): support 'keys' array in keybindings.json by @urielefrenvirtusa in #29773 fix(cli): forward...",
+      "date": "2026-10-18T01:34:41.000Z",
+      "summary": "Full Changelog : v0.66.0-nightly.20261017.ged96faedf...v0.66.0-nightly.20261018.ged96faedf",
       "category": "ai_tools"
+    },
+    {
+      "title": "Google Open-Sources Harness2, a Recursive Agent Harnessing Framework",
+      "url": "https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "developer_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-18T08:15:04.000Z",
+      "summary": "Google Research released Harness2, an Apache-2.0 framework that rewrites an agent's harness at test time. One refinement step lifted GLM-5 by 11.5 points on WorkBuddy-Bench with no weight updates. The post Google Open-Sources Harness2, a Recursive Agent Harnessing Framework appeared first on MarkTechPost .",
+      "category": "ai_research"
     },
     {
       "title": "nightly",
@@ -205,48 +75,14 @@
         "cli_tool"
       ],
       "importance": 0.7,
-      "date": "2026-10-17T00:51:04.000Z",
+      "date": "2026-10-18T00:56:25.000Z",
       "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
       "category": "ai_tools"
     },
     {
-      "title": "v16.5.0-canary.16",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.16",
-      "source": "GitHub Releases · Next.js 15",
-      "tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "importance": 0.62,
-      "date": "2026-10-16T23:47:57.000Z",
-      "summary": "Core Changes Refactor fetchStrategy -> stage and completeness: #99706 Remove dead NextNodeServer.renderHTML: #100284 Pass Server Action request metadata into App rendering: #100274 Revert \"Keep requests through middleware in a single OpenTelemetry trace\": #100302 Respect release age when pinning the upgrade CLI: #100256 Misc Changes test: remove stale deploy gate on cold RSC navigation param caching test: #100285 Fix upgrade eval worktree dependency links: #100257 Credits Huge thanks to @lukesandberg , @acdlite , @kassens , @devjiwonchoi , and @sokra for helping!",
-      "category": "ai_tools"
-    },
-    {
-      "title": "release-publish/c544916c9070-1792176107: test: expose skill library worker failure context",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Fc544916c9070-1792176107",
-      "source": "GitHub Releases · OpenClaw",
-      "tags": [
-        "repo_update",
-        "developer_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool"
-      ],
-      "importance": 0.62,
-      "date": "2026-10-16T18:41:09.000Z",
-      "summary": "Retain mock Responses exceptions with the request scenario, advertised tools, and input identities so a silent reporter does not hide an incomplete stream's cause. On missing revisions, include selected pins, Gateway revision inventory, publication and placement receipts, node logs, and observed bundle hashes. Expand catalog paths against the actual Gateway or worker fixture home. This is diagnostic-only: all 75 assertions, deadlines, and runtime behavior are unchanged. No worker resource path is inferred when the turn never reaches the provider. Proof: controlled incomplete-stream and...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "A new framework teaches AI models to audit and repair each other’s reasoning, improving accuracy",
-      "url": "https://venturebeat.com/orchestration/a-new-framework-teaches-ai-models-to-audit-and-repair-each-others-reasoning-improving-accuracy",
-      "source": "VentureBeat AI",
+      "title": "How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models",
+      "url": "https://www.marktechpost.com/2026/10/17/how-to-make-zero-training-tabular-predictions-with-nvidia-structured-data-models/",
+      "source": "MarkTechPost",
       "tags": [
         "developer_tool"
       ],
@@ -254,24 +90,54 @@
         "developer_tool"
       ],
       "importance": 0.7999999999999999,
-      "date": "2026-10-17T04:50:40.567Z",
-      "summary": "",
-      "category": "ai_tools"
+      "date": "2026-10-18T05:56:05.000Z",
+      "summary": "In this tutorial, we implement Structured Data Models, NVIDIA’s new library that puts several pretrained foundation models for tables behind one PyTorch interface, and use it to make predictions without training. The library wraps TabICLv2 and KumoTabular for single tables and KumoRelational for whole relational databases, and each of them answers by in-context learning: we […] The post How to Make Zero-Training Tabular Predictions with NVIDIA Structured Data Models appeared first on MarkTechPost .",
+      "category": "ai_research"
     },
     {
-      "title": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
-      "url": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme",
-      "source": "The Guardian (World)",
+      "title": "Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI",
+      "url": "https://www.marktechpost.com/2026/10/17/voxel51-3-0-physical-ai-data-platform/",
+      "source": "MarkTechPost",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-18T04:06:33.000Z",
+      "summary": "Voxel51 3.0 merges search, curation, annotation and evaluation of multimodal sensor data into one platform for physical AI teams. It adds Voxel51 Agent with 45+ MCP tools, dataset versioning, and a free self-service tier. The post Meet Voxel51 3.0: A Unified Multimodal Data Platform for Physical AI appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Hermes gets a WhatsApp voice-call plugin",
+      "url": "https://www.digg.com/ai/8kngy9zn",
+      "source": "Digg AI",
       "tags": [
         "developer_tool"
       ],
       "matching_tags": [
         "developer_tool"
       ],
-      "importance": 0.7,
-      "date": "2026-10-16T18:09:34.000Z",
-      "summary": "Beijing warns against ‘discriminatory’ step after France drops opposition to British role in Made in Europe package No 10 has left the door open to imposing tariffs on Chinese-made electric vehicles as part of the Made in Europe package, prompting a warning from Beijing that such a move would be “discriminatory”. Downing Street said on Friday that it would “welcome the objective to have the UK included in the Industrial Accelerator Act” after France dropped its opposition to Britain joining the scheme . Continue reading...",
-      "category": "tech_general"
+      "importance": 0.5800000000000001,
+      "date": "2026-10-18T17:30:42.939Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.17",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.17",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-10-17T23:46:40.000Z",
+      "summary": "Misc Changes turbo-persistence: prefetch multi-page SST blocks with MADV_WILLNEED: #100283 Credits Huge thanks to @lukesandberg for helping!",
+      "category": "ai_tools"
     }
   ]
 }
