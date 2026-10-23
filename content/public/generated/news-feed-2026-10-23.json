@@ -1,0 +1,296 @@
+{
+  "generated": "2026-10-23T17:45:04.701Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "Release v0.26.0-nightly.20261022.bf66a26c97",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.0-nightly.20261022.bf66a26c97",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T22:30:02.000Z",
+      "summary": "What's Changed feat(serve): add daemon token persistence by @wenshao in #15023 fix(release): cover every spawned vendored binary in the tarball exec-bit gate by @yiliang114 in #15008 test(managed-agent): reuse a same-key cancel (FG11d) by @wenshao in #14997 test(managed-agent): share the quote and camel gate helpers (FG13) by @wenshao in #15047 test(managed-agent): align Hosted fault gates with shared ownership by @doudouOUC in #15066 test(ci): guard no-AK membership and filter resolution by @zonemeen in #14989 feat(managed-agent): Add durable manual context compression by @doudouOUC in...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v8.0.0-rc.20-dev.1: chore(release): bump to 8.0.0-rc.20 (#30838)",
+      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.20-dev.1",
+      "source": "GitHub Releases · Prisma",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T17:41:26.000Z",
+      "summary": "Version 8.0.0-rc.19 → 8.0.0-rc.20 . Merging this PR publishes the release. The main change: the ORM's commands run on @prisma/cli-engine 0.9.0, the engine the prisma CLI 8.0.0-rc.25 ships ( #30835 ). A piped ORM command now prints tab-separated data lines on stdout; scripts that read JSON must pass --json . This release lets prisma/composer and prisma/prisma-cli drop their engine 0.7.0 pins. What to review Release notes: docs/releases/v8.0.0-rc.20.md , which becomes the GitHub Release body. It covers 11 merged PRs: 7 breaking changes, 7 features, 3 fixes. CHANGELOG.md has the same entry....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v8.0.0-rc.20",
+      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.20",
+      "source": "GitHub Releases · Prisma",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T18:09:39.000Z",
+      "summary": "v8.0.0-rc.20 ORM commands run on @prisma/cli-engine 0.9.0, so a piped command prints tab-separated data lines and JSON needs --json . A type alias in PSL can set @default , @onCreate and @onUpdate , and the contract stores each column's real type instead of the alias name. Postgres migrations can rename, move and remove namespaces, and can change a relation's actions or a primary key. A failed migration check now names the object it expected. The upgrade recipes for this hop: the app recipe and the extension recipe . Each breaking change below names the change ids to look for in them....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v4.0.538",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.538",
+      "source": "GitHub Releases · Remotion",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T15:32:38.000Z",
+      "summary": "What's Changed Many performance improvements in the Studio! @remotion/studio : Preserve pitch when changing playback speed by @JonnyBurger in #12423 Upgrade Mediabunny to 1.62.0 by @JonnyBurger in #12450 @remotion/media : Add preservePitch to change speed without changing pitch by @alec-watts in #12350 remotion : Show notice in when not supported instead of crash by @JonnyBurger in #12421 remotion : Fix memory leak when replacing children by @alec-watts in #12291 remotion : Fix retention of replaced components and callbacks by @JonnyBurger in #12462 remotion : Fix Studio sequence prop...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v8.0.0-rc.19-dev.10: TML-3693: Each database's packages move into one folder (#30829)",
+      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.19-dev.10",
+      "source": "GitHub Releases · Prisma",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T13:59:05.000Z",
+      "summary": "This PR moves each database's packages into one folder per database. After it, everything Postgres needs is here: packages/3-targets/postgres/ 1-target/ @internal/target-postgres 2-adapter/ @internal/adapter-postgres 3-driver/ @internal/driver-postgres 4-codec-testkit/ @internal/postgres-codec-testkit 9-facade/ @internal/postgres Before, the same five packages were spread over four folders: Package Was in Now in target pack packages/3-targets/3-targets/postgres/ packages/3-targets/postgres/1-target/ adapter packages/3-targets/6-adapters/postgres/ packages/3-targets/postgres/2-adapter/...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-22T18:09:56.000Z",
+      "summary": "Donating Agent Skills to the Agentic AI Foundation News today from Anthropic: We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, which we co-founded with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP). I'm pleased to note I called this one last December , when Anthropic first declared skills to be an \"open standard\": I wouldn't be surprised to see this end up in the AAIF , recently the new home of the MCP specification....",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.98.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T17:21:28.000Z",
+      "summary": "Keanu, OAuth re-sign-in and a crash fix This patch was brought to you by our team and our favorite contributors! Keanu Caution This will make you feel like a hacker A theme made by @andreynering 🎉 💻 Fixed! • Fixed a crash when parallel tool calls finish together, by @andreynering • Fixed OAuth sign-in and credential refresh, by @taciturnaxolotl • Ctrl+C now interrupts startup, and custom provider model discovery no longer stalls it, by @taciturnaxolotl • Fixed server prompts and permission requests being scoped to the wrong session, by @meowgorithm • Fixed the TUI status, spinner and...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v1.56.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T15:57:25.000Z",
+      "summary": "✨ Features Automatic thinking level operation for improved model reasoning #12237 Resume failed or cancelled delegate subagents #13015 Subagent session link in UI with view-only subagent sessions #12998 Limit concurrent subagents with GOOSE_MAX_CONCURRENT_SUBAGENTS #12946 Report session status via OSC 7501 in CLI #12928 Windows NSIS installer for desktop #12869 IO Intelligence provider #12795 Provider-defined cache prices support #12944 Dangerous include history option #13051 Replace PCTX code mode with Boa JavaScript runtime #12952 🐛 Bug Fixes Windows build error #13081 Omit...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-nightly.20261023.ga713410ab",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261023.ga713410ab",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T01:35:10.000Z",
+      "summary": "What's Changed fix(a2a-server,core): preserve extended token usage metadata and align per-turn reporting by @jvargassanchez-dot in #29834 fix(core): ensure all model turns with function calls receive thought signatures by @amelidev in #29828 fix(cli): handle termination signals and prevent tool execution after cancellation in non-interactive mode by @urielefrenvirtusa in #29849 fix(cli): preserve ${VAR} placeholders during deprecated settings migration by @villahernandez-coder in #29867 Full Changelog : v0.67.0-nightly.20261022.g09d81bf11...v0.67.0-nightly.20261023.ga713410ab",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 11.28.8",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.28.8",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T22:08:54.000Z",
+      "summary": "Patch Changes The standalone @pnpm/exe builds now embed Node.js 26.12.1. The previously embedded Node.js 26.0.0 still trusted the certificate authority intermediates that Node.js distrusted in October 2026, so a standalone pnpm accepted TLS certificates issued under them. Platinum Sponsors Gold Sponsors",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.10.6",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.6",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T21:11:27.000Z",
+      "summary": "2026.10.6 Highlights Patched Node runtime required: OpenClaw now requires Node 24.22.1+ on the 24 line or 26.12.1+ on the 26 line, which reject TLS chains signed with the compromised certificate keys addressed in the October 2026 Node.js security releases. Docker images ship Node 24.22.1, installers select the patched runtimes, and openclaw update refuses with recovery guidance before installing on an older Node instead of breaking the running install. Source builds now pin pnpm 12.15.0. ( #179992 ) Thanks @joshavant . Safer updates and recovery: package swaps now refuse unsafe service...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v7.6.8 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.8",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-22T17:06:53.000Z",
+      "summary": "7.6.8 General Cmdlet Updates and Fixes Remove the Update Notification feature from PowerShell ( #28242 ) Build and Packaging Improvements Update to .NET SDK 10.0.402 Merged PR 42142: [release/v7.6.8] Update branch for release SHA256 Hashes of the release artifacts hashes.sha256 8B1E273A18AB7B3AB0D3FB1DC9FDC8F9631FEC092EF48CA4CCFCAF32D6012B24 powershell-7.6.8-1.azl4.aarch64.rpm 20658D1269AFBABE57CBD806AF8D96EFF23106C0FDA5665F8AB608512388731C powershell-7.6.8-1.azl4.x86_64.rpm 7AF32201D27E64C0D52EA68E9D6CF5647C50B7E43E08F83CA849ECEA99164737 powershell-7.6.8-1.cm.aarch64.rpm...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T00:53:52.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari?utm_source=flipboard&utm_content=other",
+      "source": "Flipboard AI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-22T19:45:00.000Z",
+      "summary": "Yes, of course there are pay package incentives in play for Musk. But that’s not all. Oh sure, SpaceX’s credit risk is pretty high because it’s about to borrow another $40 billion to spend on Nvidia chips, but who cares about that? SpaceX and Tesla have formed special committees to discuss a …",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Microsoft and library association partner on free AI training for workers and patrons",
+      "url": "https://superpowerdaily.com/posts/microsoft-and-library-association-partner-on-free-ai-training-for-workers-and-patrons",
+      "source": "Superpower Daily",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-22T14:23:24.000Z",
+      "summary": "The initiative combines practical lessons with privacy protection, source checking and judgment about whether AI belongs in a task.",
+      "category": "ai_tools"
+    }
+  ]
+}
