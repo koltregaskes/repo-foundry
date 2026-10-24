@@ -1,0 +1,298 @@
+{
+  "generated": "2026-10-24T17:46:06.005Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "Release v0.26.1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T17:09:15.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes fix(qqbot)!: restore per-group session isolation under thread scope ( #13882 ) by @Eric-GoodBoy-Tech Complete Change List Features Adds opt-in daemon token persistence: qwen daemon start --save-token stores the bearer token in an owner-only file, qwen daemon token manages it, and daemon stop removes it. ( #15023 ) by @wenshao Adds idle-only manual context compression for Workspace-bound Managed Sessions via public API and the WebShell context-usage popover, preserving audit history. ( #15104 ) by @doudouOUC Aligns OpenTUI...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.26.1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T17:06:46.000Z",
+      "summary": "What's Changed feat(serve): add daemon token persistence by @wenshao in #15023 fix(release): cover every spawned vendored binary in the tarball exec-bit gate by @yiliang114 in #15008 test(managed-agent): reuse a same-key cancel (FG11d) by @wenshao in #14997 test(managed-agent): share the quote and camel gate helpers (FG13) by @wenshao in #15047 test(managed-agent): align Hosted fault gates with shared ownership by @doudouOUC in #15066 test(ci): guard no-AK membership and filter resolution by @zonemeen in #14989 feat(managed-agent): Add durable manual context compression by @doudouOUC in...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.0-nightly.20261023.5a0be33432",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.0-nightly.20261023.5a0be33432",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T22:33:02.000Z",
+      "summary": "What's Changed feat(serve): add daemon token persistence by @wenshao in #15023 fix(release): cover every spawned vendored binary in the tarball exec-bit gate by @yiliang114 in #15008 test(managed-agent): reuse a same-key cancel (FG11d) by @wenshao in #14997 test(managed-agent): share the quote and camel gate helpers (FG13) by @wenshao in #15047 test(managed-agent): align Hosted fault gates with shared ownership by @doudouOUC in #15066 test(ci): guard no-AK membership and filter resolution by @zonemeen in #14989 feat(managed-agent): Add durable manual context compression by @doudouOUC in...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.9.34",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.34",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T11:38:56.000Z",
+      "summary": "This is a gateway-only extended-stable release, which is our current equivalent to LTS. This release is OpenClaw from the end of September 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.10.6 2026.9.34 Highlights Safer agent file edits: apply_patch now validates an ordered envelope before mutating the workspace, so a later invalid hunk cannot delete files changed by an earlier operation. ( #160409 ) Thanks @masatohoshino , @obviyus , and @RomneyDa . More...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.10.7",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T10:32:23.000Z",
+      "summary": "2026.10.7 Highlights Replay-safe session recovery: interrupted sessions now retain recovery provenance and unfinished tool outcomes, stopped conversations retire terminal recovery residue before accepting the next message, rejected Claude CLI drafts stay out of final replies, large child-completion batches stay within requester context, and Codex previews no longer block replies after a context refresh. ( #153728 , #168764 , #172068 , #177716 , #176682 , #176783 , #176675 , #159715 , #181801 ) Thanks @zhangguiping-xydt , @ruel225 , @Oliver4Spot , @jjjhenriksen , @enki , @PennyVibe ,...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Meet Anthropic’s sandbox-runtime: OS-Level Sandboxing for AI Agents, No Containers",
+      "url": "https://www.marktechpost.com/2026/10/24/anthropic-sandbox-runtime-ai-agent-sandbox/",
+      "source": "MarkTechPost",
+      "tags": [
+        "mcp",
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-24T11:12:27.000Z",
+      "summary": "Anthropic sandbox-runtime (srt) is the open-source, OS-level sandbox behind Claude Code. It restricts file and network access for agents, MCP servers and CLI tools with Seatbelt on macOS and bubblewrap on Linux, no containers needed. The post Meet Anthropic’s sandbox-runtime: OS-Level Sandboxing for AI Agents, No Containers appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-23T19:40:54.000Z",
+      "summary": "Introducing Kimi K3.1 Pro Kimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot promise \"Full model weights will be released by Nov 4, 2026\". They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same). The US dollar pricing is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5. Moonshot's own benchmarks show Kimi as approximately level with Opus 5.5 and GPT-6 Astra - beating them on a few benchmarks,...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-nightly.20261024.gcd1b45c2d",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261024.gcd1b45c2d",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T01:15:53.000Z",
+      "summary": "What's Changed fix(cli): stop continuation stream processing and auto-nudge after request cancellation by @jesussamuel-byte in #29868 fix(cli): correct Thai and Lao SARA AM display width by @elberthc-byte in #29883 fix(core): resolve relative file paths against active IDE workspace root by @villahernandez-coder in #29838 feat(cli): add models command and --list-models flag for model discovery by @urielefrenvirtusa in #29880 fix(cli): convert Claude hook timeout from seconds to milliseconds during migration by @villahernandez-coder in #29899 Full Changelog :...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.98.2",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.98.2",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T17:36:17.000Z",
+      "summary": "Keanu, OAuth re-sign-in and a crash fix This patch was brought to you by our team and our favorite contributors! The Keanu Theme Caution This will make you feel like a hacker A theme made by @andreynering 🎉 💻 Fixed! • Fixed a crash when parallel tool calls finish together, by @andreynering • Fixed OAuth sign-in and credential refresh, by @taciturnaxolotl • Ctrl+C now interrupts startup, and custom provider model discovery no longer stalls it, by @taciturnaxolotl • Fixed server prompts and permission requests being scoped to the wrong session, by @meowgorithm • Fixed the TUI status,...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v1.56.0",
+      "url": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0",
+      "source": "GitHub Releases · Goose",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T15:57:25.000Z",
+      "summary": "✨ Features Automatic thinking level operation for improved model reasoning #12237 Resume failed or cancelled delegate subagents #13015 Subagent session link in UI with view-only subagent sessions #12998 Limit concurrent subagents with GOOSE_MAX_CONCURRENT_SUBAGENTS #12946 Report session status via OSC 7501 in CLI #12928 Windows NSIS installer for desktop #12869 IO Intelligence provider #12795 Provider-defined cache prices support #12944 Dangerous include history option #13051 Replace PCTX code mode with Boa JavaScript runtime #12952 🐛 Bug Fixes Windows build error #13081 Omit...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "battledrones v14: Compass Rose, a four player map",
+      "url": "https://simonwillison.net/2026/Oct/24/battledrones/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-24T03:59:57.000Z",
+      "summary": "Release: battledrones v14: Compass Rose, a four player map I added four player online mode to Battledrones - previous maps were limited to two. Here's the initial prompt I used: Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works with the WebSocket non-audio based multiplayer mode so up to four human players can join (any spare slots use AI) Claude Opus 4.5 added a new map called \"Compass Rose\" and modified the WebSockets multiplayer network code to support up to four players for that map, joining via share links or QR codes. The new teams...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Moonshot AI Releases Kimi K3.1 Pro: A 2.8T Total/104B Active Params (MoE) Model with 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/23/moonshot-ai-kimi-k3-1-pro-open-weight-model/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-23T22:52:40.000Z",
+      "summary": "Moonshot AI released Kimi K3.1 Pro, a 2.8T-parameter, 104B-active MoE model with 1M-token context. It scores 65.7% on Terminal-Bench 4.0, costs $2/$10 per million tokens, and open weights arrive by Nov 4, 2026. The post Moonshot AI Releases Kimi K3.1 Pro: A 2.8T Total/104B Active Params (MoE) Model with 1M Context appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-24T00:51:26.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.26",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.26",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-23T23:46:33.000Z",
+      "summary": "Core Changes Turbopack: bump trace format header to TRACEv1: #99781 Pass staged fallback params directly to adapter renders: #100456 Fix navigation from global-not-found to app routes: #100592 End the cache-signal read when encryptActionBoundArgs hits the RDC: #100622 Ignore flaky turbo-tasks-fs watcher tests in CI: #100627 Misc Changes test: enable build-error suites in deploy mode: #100482 test: enable deploy-excluded suites verified against deployments: #100484 Turbopack: fix trace crates after concurrent trace format changes: #100656 [cd] Document that Turbopack team can also approve...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "release-publish/3f5d04f8ebc9-1792785124",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F3f5d04f8ebc9-1792785124",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-10-23T19:47:49.000Z",
+      "summary": "fix(ui): keep plugin navigation message type private ( #181862 )",
+      "category": "ai_tools"
+    }
+  ]
+}
