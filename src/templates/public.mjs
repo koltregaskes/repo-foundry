@@ -292,7 +292,7 @@ function buildHomeContent(siteData) {
     )}
     ${sectionFrame(
       "CLI and agents",
-      "Codex-style CLIs, command surfaces, and agent workflow references closest to hands-on development.",
+      "Coding-agent CLIs, command surfaces, and agent workflow references closest to hands-on development.",
       `<div class="card-grid">${siteData.codexResources.slice(0, 3).map(resourceCard).join("")}</div>`,
       `<a class="button-link button-link--ghost" href="resources/codex/">Open shelf</a>`,
     )}
@@ -763,7 +763,7 @@ export function buildCodexPage(siteData, baseHref = "../../") {
   const content = `
     ${sectionFrame(
       "CLI and agents",
-      "A public-safe shortlist of Codex-style CLIs, coding-agent workflows, orchestration patterns, and operator-grade command surfaces.",
+      "A public-safe shortlist of coding-agent CLIs, workflow references, orchestration patterns, and operator-grade command surfaces.",
       `<div class="card-grid">${siteData.codexResources.map(resourceCard).join("")}</div>`,
     )}
     ${sectionFrame(
@@ -794,7 +794,7 @@ export function buildCodexPage(siteData, baseHref = "../../") {
     eyebrow: "Resource shelf",
     heroKicker: "Agent shelf",
     heroTitle: "CLI and agents.",
-    heroBody: "Codex-style tools, coding-agent repos, workflow references, and comparators worth watching closely.",
+    heroBody: "Coding-agent CLIs, workflow references, and comparators worth watching closely.",
     content,
     scriptPath: "assets/public-app.js",
     jsonLd: [

@@ -42,6 +42,12 @@ export const codexResources = [
     tags: ["Codex", "CLI", "coding agents"],
   },
   {
+    title: "Claude Code",
+    url: "https://github.com/anthropics/claude-code",
+    summary: "Anthropic's coding-agent CLI, the other major command surface beside Codex and Gemini CLI.",
+    tags: ["Claude", "CLI", "coding agents"],
+  },
+  {
     title: "Gemini CLI",
     url: "https://github.com/google-gemini/gemini-cli",
     summary: "A useful comparator for model-facing command-line workflows and operational UX decisions.",
