@@ -55,12 +55,16 @@ The public build consumes `content/public/generated/news-feed-latest.json` direc
 It rejects the build when that feed, or its newest article, is more than three days old. The compiled
 site records the exact consumer path and source timestamps in `sourceProvenance.news`.
 
-`.github/workflows/routed-feed-freshness.yml` runs every day at 06:30 UTC and fails once that feed is
-one day old, so a missed refresh is visible before the three-day gate. No public feed URL exists, so
-the job does not download or invent articles. `npm run sync:news` only refreshes private local
-`repo-news.json`. The shared news routing file lists Repo Foundry as a destination at
-`sites/repo-foundry/content/public/generated` and assigns it no sources. The gatherer that writes
-`news-feed-latest.json` remains outside this repo, on the Windows publisher.
+`.github/workflows/refresh-routed-feed.yml` runs every day at 05:15 UTC. It checks out
+`shared/website-tools/pipelines/news` from `koltregaskes/ai-resource-hub`, fetches every entry in
+`config/sources.json`, and applies the Repo Foundry filter in `site-filters.json`. When that fetch
+returns items, it commits `content/public/generated/news-feed-latest.json`. A source that cannot be
+fetched fails the run by name. The job does not invent articles.
+
+`.github/workflows/routed-feed-freshness.yml` remains the early signal. It runs at 06:30 UTC and fails
+once the committed feed is one day old, before the three-day gate. `npm run sync:news` only refreshes
+private local `repo-news.json`. The shared routing file lists Repo Foundry as a destination at
+`sites/repo-foundry/content/public/generated`.
 
 Run `npm run validate:public` before review. It proves the routed consumer, checks source age, builds
 the site, and scans the output for local workspace, session, checkout, and database leakage.

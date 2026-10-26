@@ -2,9 +2,8 @@
  * Fails once the committed routed feed is a day old.
  *
  * The public build still refuses the feed at three days. This check runs on
- * a schedule so a missed Windows refresh is visible before that gate.
- * It does not invent articles and it does not download a feed: no public
- * URL is published for this file.
+ * a schedule so a missed refresh is visible before that gate. The refresh
+ * workflow is what fetches sources and commits the feed.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -21,7 +20,7 @@ export const FEED_PATH = path.resolve(
 export const WARN_AFTER_DAYS = 1;
 export const HARD_MAX_DAYS = 3;
 export const MISSING_SOURCE =
-  "No public feed URL exists. content/public/generated/news-feed-latest.json is written by the Windows gatherer, which is not in this repo. npm run sync:news only refreshes private local repo-news.json. Shared routing lists Repo Foundry as a destination (sites/repo-foundry/content/public/generated) with no sources assigned.";
+  "The 05:15 UTC refresh fetches every source in the shared news sources.json and commits this file only when that fetch returns items. A source that cannot be fetched fails that run by name. This check means the committed feed was not replaced. Shared routing lists Repo Foundry as a destination (sites/repo-foundry/content/public/generated).";
 
 export function assessRoutedFeedFreshness(feed, now = new Date()) {
   if (!feed || typeof feed !== "object" || !Array.isArray(feed.articles) || feed.articles.length === 0) {

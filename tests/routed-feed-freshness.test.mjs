@@ -37,8 +37,8 @@ test("a one-day-old feed warns before the three-day build gate", () => {
   assert.equal(assessment.warn, true);
   assert.equal(assessment.hardFail, false);
   assert.ok(assessment.ageDays < HARD_MAX_DAYS);
-  assert.match(formatReport(assessment), /Missing source: No public feed URL exists/);
-  assert.match(MISSING_SOURCE, /Windows gatherer/);
+  assert.match(formatReport(assessment), /Missing source: The 05:15 UTC refresh/);
+  assert.match(MISSING_SOURCE, /sources\.json/);
   assert.match(MISSING_SOURCE, /sites\/repo-foundry\/content\/public\/generated/);
 });
 

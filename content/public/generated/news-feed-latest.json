@@ -1,276 +1,298 @@
 {
-  "generated": "2026-10-25T17:45:50.840Z",
+  "generated": "2026-10-26T00:13:26.137Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
     {
-      "title": "Release v0.26.1",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.1",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "Research agenda proposes seven open problems for multi-agent AI swarms",
+      "url": "https://www.digg.com/ai/r76rcah4",
+      "source": "Digg AI",
       "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-10-24T17:09:15.000Z",
-      "summary": "Highlights See the complete change list below. Breaking Changes fix(qqbot)!: restore per-group session isolation under thread scope ( #13882 ) by @Eric-GoodBoy-Tech Complete Change List Features Adds opt-in daemon token persistence: qwen daemon start --save-token stores the bearer token in an owner-only file, qwen daemon token manages it, and daemon stop removes it. ( #15023 ) by @wenshao Adds idle-only manual context compression for Workspace-bound Managed Sessions via public API and the WebShell context-usage popover, preserving audit history. ( #15104 ) by @doudouOUC Aligns OpenTUI...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T23:40:03.518Z",
+      "summary": "A JinesisLab researcher says each problem is scored for its importance to AI alignment.",
+      "category": "industry-media"
     },
     {
-      "title": "Qwen Code Desktop v0.26.1",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.1",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "Eight-video course on building reasoning models is online",
+      "url": "https://www.digg.com/ai/qjwaj81v",
+      "source": "Digg AI",
       "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-10-24T17:06:46.000Z",
-      "summary": "What's Changed feat(serve): add daemon token persistence by @wenshao in #15023 fix(release): cover every spawned vendored binary in the tarball exec-bit gate by @yiliang114 in #15008 test(managed-agent): reuse a same-key cancel (FG11d) by @wenshao in #14997 test(managed-agent): share the quote and camel gate helpers (FG13) by @wenshao in #15047 test(managed-agent): align Hosted fault gates with shared ownership by @doudouOUC in #15066 test(ci): guard no-AK membership and filter resolution by @zonemeen in #14989 feat(managed-agent): Add durable manual context compression by @doudouOUC in...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T22:42:49.472Z",
+      "summary": "Sebastian Raschka says the course offers over 11 hours of Python and PyTorch coding on evaluation, reinforcement learning and distillation.",
+      "category": "industry-media"
     },
     {
-      "title": "openclaw 2026.10.7",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7",
-      "source": "GitHub Releases · OpenClaw",
+      "title": "Shigeru Miyamoto selected for Japan's Order of Culture, reflects on AI and creativity",
+      "url": "https://www.digg.com/ai/9j7dv2z0",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-10-24T20:19:15.000Z",
-      "summary": "2026.10.7 Highlights Replay-safe session recovery: interrupted sessions now retain recovery provenance and unfinished tool outcomes, stopped conversations retire terminal recovery residue before accepting the next message, rejected Claude CLI drafts stay out of final replies, large child-completion batches stay within requester context, and Codex previews no longer block replies after a context refresh. ( #153728 , #168764 , #172068 , #177716 , #176682 , #176783 , #176675 , #159715 , #181801 ) Thanks @zhangguiping-xydt , @ruel225 , @Oliver4Spot , @jjjhenriksen , @enki , @PennyVibe ,...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T22:30:01.750Z",
+      "summary": "Famitsu reports Miyamoto distinguished creating from the satisfying work of execution, saying AI could make that difference clearer.",
+      "category": "industry-media"
     },
     {
-      "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
-      "url": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
-      "source": "MarkTechPost",
+      "title": "One-time reset restores 25% of monthly quota for Kimi subscribers",
+      "url": "https://www.digg.com/ai/p8tafiis",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-10-25T02:59:08.000Z",
-      "summary": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP, Node.js and self-managed GitLab deployments hit by this week’s critical RCE flaws, then open 1 PR per repo. The post Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats appeared first on MarkTechPost .",
-      "category": "ai_research"
+      "importance": 0.35,
+      "date": "2026-10-25T21:24:50.895Z",
+      "summary": "Kimi apologized for K3.1 Pro rate limits and unnecessary quota use, saying it is reducing unnecessary subagent calls.",
+      "category": "industry-media"
     },
     {
-      "title": "Release v0.67.0-nightly.20261025.gcd1b45c2d",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261025.gcd1b45c2d",
-      "source": "GitHub Releases · Gemini CLI",
+      "title": "Softmax and cross-entropy implementations reportedly contain two subtle bugs",
+      "url": "https://www.digg.com/ai/we3n4mdl",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-10-25T01:31:55.000Z",
-      "summary": "Full Changelog : v0.67.0-nightly.20261024.gcd1b45c2d...v0.67.0-nightly.20261025.gcd1b45c2d",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T21:01:18.506Z",
+      "summary": "On X, @jon_barron claims a simple rewrite fixes both bugs and eliminates slingshots during grokking.",
+      "category": "industry-media"
     },
     {
-      "title": "v7.6.9 Release of PowerShell",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.9",
-      "source": "GitHub Releases · PowerShell",
+      "title": "@theo's T3 Code work list includes two-click clones and live guest thread sharing",
+      "url": "https://www.digg.com/ai/bpr7gowe",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.62,
-      "date": "2026-10-25T17:26:05.000Z",
-      "summary": "7.6.9 Build and Packaging Improvements Update to .NET SDK 10.0.403 Merged PR 42305: [release/v7.6.9] Update branch for release SHA256 Hashes of the release artifacts hashes.sha256 638E954664D07A29190570FAF862B8A50B35F7E1C10DBD0F0E8A7E0F70138B45 powershell-7.6.9-1.azl4.aarch64.rpm FA959724AE0FB6D68731981DDDF5D35C3CD1F7308E9EAE8EC1F3D5159B4350A6 powershell-7.6.9-1.azl4.x86_64.rpm 04607223FDA408A26CDF641BFE38F651965C2769EB30CEB17AEC4D4F570EE4FE powershell-7.6.9-1.cm.aarch64.rpm 80C6ED0A0BEA7D3EF827383C7DDB2F369DEA8F8A7FBBA7E32A510D114C980E1B powershell-7.6.9-1.cm.x86_64.rpm...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T20:01:22.038Z",
+      "summary": "In an October 25 post, @theo also described compiler projects and put other merged PRs at roughly 370.",
+      "category": "industry-media"
     },
     {
-      "title": "v7.5.13 Release of PowerShell",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.13",
-      "source": "GitHub Releases · PowerShell",
+      "title": "A musical joke about rain on a wedding day",
+      "url": "https://www.digg.com/ai/83foctzd",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.62,
-      "date": "2026-10-25T17:22:11.000Z",
-      "summary": "7.5.13 Build and Packaging Improvements Update to .NET SDK 9.0.320 Merged PR 42303: [release/v7.5.13] Update branch for release SHA256 Hashes of the release artifacts hashes.sha256 3AD34E14948C3DE4E9D51185FEE8ECCA4406A9A9D96F5B6944514E2BC6AE0549 powershell-7.5.13-1.cm.aarch64.rpm 9CE23CF885D680352BD056A952B686BE39D42DA1D6166FF06C57A984C5BC02F8 powershell-7.5.13-1.cm.x86_64.rpm 1E864FDD64F3F4ED558FFAB6163A2BD70E4115096BA671F1AECCCF14C6834710 powershell-7.5.13-1.rh.x86_64.rpm A7ED6DF953F8F35FF9A9B517BB15569E41F873F4277FD94DC8AEB1C94EF56D53 powershell-7.5.13-linux-arm32.tar.gz...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T19:42:26.971Z",
+      "summary": "A poster riffs on “It's like raaaaain on your wedding day” and links to a photo.",
+      "category": "industry-media"
     },
     {
-      "title": "v7.4.22 Release of PowerShell",
-      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.4.22",
-      "source": "GitHub Releases · PowerShell",
+      "title": "The 'Scale mafia' and its alumni in AI, venture capital and government",
+      "url": "https://www.digg.com/ai/txkinlkq",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.62,
-      "date": "2026-10-25T17:19:31.000Z",
-      "summary": "7.4.22 Build and Packaging Improvements Update to .NET SDK 8.0.427 SHA256 Hashes of the release artifacts hashes.sha256 AA81683B111314FF48083CD6CD757EF795683047FEFC9D06412B36D93046B481 powershell-7.4.22-1.cm.aarch64.rpm 1D9628127B2CA4963EDDB3876ED67C91AC96A8593DB0269B68F49A1D3E9548F2 powershell-7.4.22-1.cm.x86_64.rpm FF74FE178EFD5BEBE2C78424134C656F4A39B5D0CFF5DBCBBBB66A31E55D676E powershell-7.4.22-1.rh.x86_64.rpm BCA2C7F5B583F5E0701BEA162CCFAD963027C87F96C79019440C037CD0C9AFF7 powershell-7.4.22-linux-arm32.tar.gz 532750DF5D0A3587EBE2D714D0F96899C2F7B248AFE051FDD98E97FA2C20B1B4...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-25T19:03:40.452Z",
+      "summary": "Alexandr Wang calls Scale alumni the 'first true mafia of the modern tech era,' listing their current roles.",
+      "category": "industry-media"
     },
     {
-      "title": "nightly",
-      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
-      "source": "GitHub Releases · Crush",
+      "title": "Updated Google privacy policy says your Gmail might be used for advertising",
+      "url": "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/",
+      "source": "Ars Technica AI",
       "tags": [
-        "repo_update",
-        "cli_tool"
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
       ],
       "matching_tags": [
-        "repo_update",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-10-25T00:55:57.000Z",
-      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-10-23T20:19:55.000Z",
+      "summary": "Turning on Personal Intelligence gives the company more data for ad targeting.",
+      "category": "industry-media"
     },
     {
-      "title": "Neighbours is being recut into a microdrama focused on Margot Robbie – and her co-stars aren’t happy",
-      "url": "https://www.theguardian.com/tv-and-radio/2026/oct/26/neighbours-soap-recut-ai-microdrama-mobile-series-feat-margot-robbie",
-      "source": "The Guardian Tech",
+      "title": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "url": "https://huggingface.co/blog/allenai/litpivot",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.74,
-      "date": "2026-10-25T14:00:06.000Z",
-      "summary": "Robbie’s storylines in the famous soap will be recut into vertical micro-episodes to be watched on phones – but her fellow cast members say they haven’t been consulted The long-running Australian soap opera Neighbours is being recut with AI into a microdrama designed to be watched on phones, sparking a debate among the show’s actors and the industry over the wider implications of television archives being mined for new content. RoseBerry Media, which specialises in making “vertical television” for phones, has repurposed original episodes of Neighbours for distribution on its Epis...",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-23T16:15:50.000Z",
+      "summary": "LitPivot: Developing research ideas through dynamic contextualization within the literature landscape",
+      "category": "platform-blog"
     },
     {
-      "title": "Show HN: Farol – a risk map of a pull request for the person who approves it",
-      "url": "https://github.com/winnin/farol",
-      "source": "Hacker News",
+      "title": "Does Your Model Run on AWS Trainium? Look It Up",
+      "url": "https://huggingface.co/blog/torch-neuronx-model-support",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.64,
-      "date": "2026-10-25T13:28:06.000Z",
-      "summary": "",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-23T00:00:00.000Z",
+      "summary": "Does Your Model Run on AWS Trainium? Look It Up",
+      "category": "platform-blog"
     },
     {
-      "title": "Bye Bye Brotli? Google's Compression Library Is a Security Mess",
-      "url": "https://www.bugsink.com/blog/bye-bye-brotli/",
-      "source": "Hacker News",
+      "title": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+      "source": "Hugging Face Blog",
       "tags": [
-        "developer_tool"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "developer_tool"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.64,
-      "date": "2026-10-25T11:06:25.000Z",
-      "summary": "",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-22T22:24:34.000Z",
+      "summary": "Turning Database Grading into RL Rewards: Post-Training Agents with ThinkingBox",
+      "category": "platform-blog"
     },
     {
-      "title": "Roku developer repositories moved from GitHub to GitLab",
-      "url": "https://blog.roku.com/developer/gitlab-move",
-      "source": "Hacker News",
+      "title": "Ensemble forecasting with IBM Granite time-series models",
+      "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.5599999999999999,
-      "date": "2026-10-24T16:06:26.000Z",
-      "summary": "",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-22T07:51:31.000Z",
+      "summary": "Ensemble forecasting with IBM Granite time-series models",
+      "category": "platform-blog"
     },
     {
-      "title": "TV stars to marry in chapel home after proposal 'on Welsh soil'",
-      "url": "https://www.bbc.co.uk/news/articles/cw30ej25lvypo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC Entertainment & Arts",
+      "title": "OpenAI’s latest AI models are coming to Google Cloud and Antigravity",
+      "url": "https://arstechnica.com/ai/2026/10/openais-latest-ai-models-are-coming-to-google-cloud-and-antigravity/",
+      "source": "Ars Technica AI",
       "tags": [
-        "repo_update"
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
       ],
       "matching_tags": [
-        "repo_update"
+        "open_source"
       ],
-      "importance": 0.54,
-      "date": "2026-10-24T15:59:18.000Z",
-      "summary": "Keith Brymer Jones and Marj Hogarth are to marry in their chapel home in Pwllheli in May 2027.",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-21T18:51:42.000Z",
+      "summary": "Google Cloud will have GPT 6.1 Astra, Sol, and Luna in the coming weeks.",
+      "category": "industry-media"
     },
     {
-      "title": "Derren Brown turns into Nostradamus – and I predict you’ll submit to one gasp-inducing stunt after another",
-      "url": "https://www.theguardian.com/stage/2026/oct/25/derren-brown-only-human-review-gasp-inducing-stunts-apollo-london",
-      "source": "The Guardian (Culture)",
+      "title": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+      "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.45999999999999996,
-      "date": "2026-10-25T06:00:53.000Z",
-      "summary": "Apollo theatre, London Prophecies are impossibly fulfilled by the superstar who takes his cue from the legendary French seer in his show Only Human Do we have free will – or are the words I am about to write, the four stars twinkling atop this review, pre-ordained? That’s the stuff Derren Brown conjures with in his new show Only Human, which takes its inspiration from Nostradamus’s ability to foresee the future. Nostradamus used divination techniques – and so Brown engineers a stunt in which his audience, en masse, dowse a waterway in the building next door. Nostradamus had a near-death...",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-10-21T18:26:30.000Z",
+      "summary": "NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required",
+      "category": "platform-blog"
     }
   ]
 }
