@@ -1,8 +1,33 @@
 {
-  "generated": "2026-10-27T17:45:08.587Z",
+  "generated": "2026-10-28T17:45:29.595Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
+    {
+      "title": "SDK TypeScript Release v0.1.25",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.25",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:16:39.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
     {
       "title": "SDK TypeScript Release v0.1.24",
       "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.24",
@@ -29,26 +54,114 @@
       "category": "ai_tools"
     },
     {
-      "title": "n8n@3.0.0",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%403.0.0",
-      "source": "GitHub Releases · n8n",
+      "title": "Release v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
       "tags": [
         "mcp",
-        "agentic_framework",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:56:50.000Z",
+      "summary": "Highlights Generated UI cards keep inputs and state across navigation and split views, show live views after initial calculation, and appear only for clients that can render MCP Apps. ( #15611 , #15787 , #15720 , #15790 ) Persistent session Workflow mode can be enabled with --workflow-mode on, /workflows mode on, SDK, or ACP, and workflow switches now reach the CLI sandbox. ( #15422 , #15743 ) Tool results shrink to remaining headroom before auto-compaction, and qwen-latest-series- or qwen4 aliases are detected with 1M-token context windows. ( #13599 , #15758 , #15762 ) Valid XML tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:51:11.000Z",
+      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-preview.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T20:07:49.000Z",
+      "summary": "What's Changed Changelog for v0.65.0 by @gemini-cli-robot in #29853 chore(release): bump version to 0.67.0-nightly.20261020.gb041de017 by @gemini-cli-robot in #29854 Changelog for v0.66.0-preview.0 by @gemini-cli-robot in #29852 feat(cli): bridge the IDE companion into container sandboxes over exec stdio by @elberthc-byte in #29858 fix(core): prevent duplicate agent loading when workspace is home directory ( #27692 ) by @urielefrenvirtusa in #29847 fix(ide): exclude IDE settings and GEMINI.md files from open file con text by @villahernandez-coder in #29848 fix(core): scope untrusted flag...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.10.8",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.8",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool"
       ],
       "matching_tags": [
         "mcp",
-        "agentic_framework",
         "repo_update",
         "developer_tool",
         "cli_tool"
       ],
       "importance": 0.7,
-      "date": "2026-10-27T08:50:42.000Z",
-      "summary": "3.0.0 (2026-10-27) Bug Fixes Add file-type tooltip to artifact download button ( #41490 ) ( 4a74f02 ) ai-builder: Check execution:read in Assistant execution reads ( #41863 ) ( a967486 ) ai-builder: Send Assistant model calls through the configured AI transport ( #41948 ) ( 9b63561 ) Allow custom OAuth2 scopes ( #41249 ) ( 2b450cf ) API: Accept expressions in number, boolean, and options credential fields ( #41832 ) ( 281ce2c ) API: Advertise the OAuth resource challenge on every public API 401 ( #41829 ) ( 182a428 ) API: Remove node timestamps from the workflow OpenAPI schema ( #41792 )...",
+      "date": "2026-10-28T00:10:29.000Z",
+      "summary": "2026.10.8 Highlights Updates that finish and recover: an ordinary post-update Doctor failure restarts the Gateway instead of leaving it stopped, an orphaned maintenance worker no longer blocks every CLI command and Gateway start, and updates no longer abort on ACL filesystems, Windows pnpm optional-dependency links, pnpm 10 global installs, debug console logging, or a missing legacy OAuth directory. ( #180668 , #181695 , #181141 , #181596 , #181456 , #182850 , #180174 ) Thanks @hannesrudolph , @SMF12138 , @rayluo88 , @PonySlayer28 , and @VN77-77VN . Gateway service installs on every...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.66.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T20:26:28.000Z",
+      "summary": "What's Changed Update ROADMAP.md to no longer reference outdated 2025 roadmap by @DavidAPierce in #29723 Changelog for v0.65.0-preview.0 by @gemini-cli-robot in #29739 chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae by @gemini-cli-robot in #29740 Changelog for v0.64.0 by @gemini-cli-robot in #29741 fix(ui): implement synchronized output and isolate spinner rendering by @diegogodinezr in #29725 fix(ui): fix debug console height calculation and terminalBuffer flickering by @ugorla-dev in #29695 fix(cli): prevent right-hand border bleed in scrollable tool containers by...",
       "category": "ai_tools"
     },
     {
@@ -115,209 +228,92 @@
       "category": "ai_tools"
     },
     {
-      "title": "openclaw 2026.10.8",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.8",
-      "source": "GitHub Releases · OpenClaw",
-      "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-27T12:43:32.000Z",
-      "summary": "2026.10.8 Highlights Updates that finish and recover: an ordinary post-update Doctor failure restarts the Gateway instead of leaving it stopped, an orphaned maintenance worker no longer blocks every CLI command and Gateway start, and updates no longer abort on ACL filesystems, Windows pnpm optional-dependency links, pnpm 10 global installs, debug console logging, or a missing legacy OAuth directory. ( #180668 , #181695 , #181141 , #181596 , #181456 , #182850 , #180174 ) Thanks @hannesrudolph , @SMF12138 , @rayluo88 , @PonySlayer28 , and @VN77-77VN . Gateway service installs on every...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "n8n@2.46.0",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.46.0",
-      "source": "GitHub Releases · n8n",
-      "tags": [
-        "mcp",
-        "agentic_framework",
-        "repo_update",
-        "developer_tool"
-      ],
-      "matching_tags": [
-        "mcp",
-        "agentic_framework",
-        "repo_update",
-        "developer_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-27T08:45:39.000Z",
-      "summary": "2.46.0 (2026-10-27) Bug Fixes Add file-type tooltip to artifact download button ( #41490 ) ( 4a74f02 ) ai-builder: Check execution:read in Assistant execution reads ( #41863 ) ( a967486 ) ai-builder: Send Assistant model calls through the configured AI transport ( #41948 ) ( 9b63561 ) Allow custom OAuth2 scopes ( #41249 ) ( 2b450cf ) API: Accept expressions in number, boolean, and options credential fields ( #41832 ) ( 281ce2c ) API: Advertise the OAuth resource challenge on every public API 401 ( #41829 ) ( 182a428 ) API: Remove node timestamps from the workflow OpenAPI schema ( #41792 )...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "beta",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/beta",
-      "source": "GitHub Releases · n8n",
-      "tags": [
-        "mcp",
-        "agentic_framework",
-        "repo_update",
-        "developer_tool"
-      ],
-      "matching_tags": [
-        "mcp",
-        "agentic_framework",
-        "repo_update",
-        "developer_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-27T08:40:55.000Z",
-      "summary": "2.46.0 (2026-10-27) Bug Fixes Add file-type tooltip to artifact download button ( #41490 ) ( 4a74f02 ) ai-builder: Check execution:read in Assistant execution reads ( #41863 ) ( a967486 ) ai-builder: Send Assistant model calls through the configured AI transport ( #41948 ) ( 9b63561 ) Allow custom OAuth2 scopes ( #41249 ) ( 2b450cf ) API: Accept expressions in number, boolean, and options credential fields ( #41832 ) ( 281ce2c ) API: Advertise the OAuth resource challenge on every public API 401 ( #41829 ) ( 182a428 ) API: Remove node timestamps from the workflow OpenAPI schema ( #41792 )...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "openclaw 2026.9.35",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.35",
-      "source": "GitHub Releases · OpenClaw",
-      "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-27T02:20:41.000Z",
-      "summary": "This is a gateway-only extended-stable release, which is our current equivalent to LTS. This release is OpenClaw from the end of September 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.10.7 2026.9.35 Highlights Steadier memory under service managers: worker heap caps now apply even when the Gateway service passes a process-wide --max-old-space-size , idle Codex app-server clients retire after 30 seconds, and archive workers are reused between session deletes,...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Release v0.67.0-nightly.20261027.g363a13119",
-      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261027.g363a13119",
+      "title": "Release v0.67.0-nightly.20261028.gfa5c17365",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261028.gfa5c17365",
       "source": "GitHub Releases · Gemini CLI",
       "tags": [
-        "mcp",
         "repo_update",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
-        "mcp",
         "repo_update",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-27T01:15:46.000Z",
-      "summary": "What's Changed fix(core): classify project spending cap errors as terminal quota errors by @jesussamuel-byte in #29961 fix(acp): include MCP server and tool metadata in permission requests by @duvanka-prasad in #29910 fix(cli): prevent parent command name insertion on /chat list autocomplete by @urielefrenvirtusa in #29967 fix(cli): validate finite numbers in numeric settings editor by @diegogodinezr in #29968 New Contributors @duvanka-prasad made their first contribution in #29910 Full Changelog : v0.67.0-nightly.20261025.gcd1b45c2d...v0.67.0-nightly.20261027.g363a13119",
+      "date": "2026-10-28T01:22:20.000Z",
+      "summary": "What's Changed fix(core): allow trusted system paths on Android (Termux) for ripgrep resolution ( #21836 ) by @amelidev in #29884 fix(core): normalize CRLF line endings before diffing in getDiffContextSnippet by @jesussamuel-byte in #29966 fix(cli): handle terminals that render ambiguous-width characters as wide by @elberthc-byte in #29905 fix(cli): prevent duplicate history and double telemetry in confirm_action flow by @duvanka-prasad in #29974 Changelog for v0.67.0-preview.0 by @gemini-cli-robot in #29990 Changelog for v0.66.0 by @gemini-cli-robot in #29992 Full Changelog :...",
       "category": "ai_tools"
     },
     {
-      "title": "pnpm 11.28.9",
-      "url": "https://github.com/pnpm/pnpm/releases/tag/v11.28.9",
-      "source": "GitHub Releases · pnpm",
-      "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-27T00:32:50.000Z",
-      "summary": "This release fixes a crash on registry responses with too many content encodings ( GHSA-xjj6-f33q-929c ) and sizes the install worker pool by the container's CPU quota. A repeat pnpm install now acts on more setting changes. Patch Changes Crashes and security A registry response with too many content encodings can no longer crash pnpm. pnpm now uses undici 7.30.1, which fixes GHSA-xjj6-f33q-929c . pnpm install now sizes its worker pool by the CPU quota of the container it runs in, such as a Kubernetes CPU limit, when that quota is smaller than the number of CPUs the container may run on....",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Release v0.26.1-nightly.20261026.34769f9d41",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.1-nightly.20261026.34769f9d41",
+      "title": "Release v0.26.3-preview.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3-preview.0",
       "source": "GitHub Releases · Qwen Code",
       "tags": [
         "repo_update",
-        "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
         "repo_update",
-        "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-26T22:32:18.000Z",
-      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "date": "2026-10-27T19:08:34.000Z",
+      "summary": "What's Changed feat(memory): opt-in extraction cadence after a no-op run by @yiliang114 in #13571 fix(core): recover outer XML calls with quoted call content by @yiliang114 in #13579 feat(core): shrink tool results to the headroom left before auto-compaction by @yiliang114 in #13599 fix(acp): carry rewind identity through daemon clients by @yiliang114 in #15441 feat(web-shell): retain Generated UI instances across same-page navigation by @qqqys in #15611 Full Changelog : v0.26.2...v0.26.3-preview.0",
       "category": "ai_tools"
     },
     {
-      "title": "Release v0.26.2-preview.0",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.2-preview.0",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "n8n@1.123.89",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.89",
+      "source": "GitHub Releases · n8n",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "mcp",
+        "repo_update"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "mcp",
+        "repo_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-26T18:25:27.000Z",
-      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "date": "2026-10-28T07:30:08.000Z",
+      "summary": "1.123.89 (2026-10-28) Bug Fixes Google Drive Node: Fix infinite pagination loop in v1 API request ( #42124 ) ( 3faa762 ) MCP Server Trigger Node: Evict idle sessions to prevent memory leak ( #42120 ) ( 54eaf65 )",
       "category": "ai_tools"
     },
     {
-      "title": "openclaw 2026.10.10-beta.4",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.4",
-      "source": "GitHub Releases · OpenClaw",
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
       "tags": [
         "repo_update",
-        "developer_tool",
         "cli_tool"
       ],
       "matching_tags": [
         "repo_update",
-        "developer_tool",
         "cli_tool"
       ],
       "importance": 0.7,
-      "date": "2026-10-27T05:39:34.000Z",
-      "summary": "2026.10.10-beta.4 Highlights Changes Fixes Automations: preserve authenticated operator authority for explicit same-conversation scheduled follow-ups, including one-shot next_check rearming, while retaining role, session, cancellation, target, and tool-policy revocation boundaries. ( #176422 ) Thanks @RomneyDa . Gateway security: keep an environment-referenced hooks.token out of agent host-exec and CLI child environments at startup and across config reloads, while preserving explicit per-command overrides. ( #179199 ) Thanks @VACInc and @RomneyDa . Memory Wiki: preserve human-authored...",
+      "date": "2026-10-28T00:54:08.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
       "category": "ai_tools"
     },
     {
-      "title": "v0.43.0",
-      "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
-      "source": "GitHub Releases · ComfyUI",
+      "title": "v16.5.0-canary.29",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.29",
+      "source": "GitHub Releases · Next.js 15",
       "tags": [
         "repo_update",
-        "developer_tool",
-        "tool_update"
+        "cli_tool"
       ],
       "matching_tags": [
         "repo_update",
-        "developer_tool",
-        "tool_update"
+        "cli_tool"
       ],
       "importance": 0.7,
-      "date": "2026-10-27T02:40:46.000Z",
-      "summary": "What's Changed model_prefetch: syncrhonize all graph cleanups by @rattus128 in #17178 Add rope scaling support to MOSS-image by @kijai in #17172 [Partner Nodes] Renew partner-node sign-in tokens in API nodes by @dante01yoon in #16943 [Partner Nodes] feat(HeyGen): add HeyGen Voice instant clone and text-to-speech by @bigcat88 in #17043 [Partner Nodes] feat(ClarityAI): add Crystal Video Upscaler node by @bigcat88 in #17192 [Partner Nodes] feat(BFL): add 2K/4K resolutions to FLUX 3 Video nodes by @bigcat88 in #17200 Support MOSS-image color-depth control by @kijai in #17206 Add to Readme...",
+      "date": "2026-10-27T23:46:43.000Z",
+      "summary": "Core Changes Create cache directory before persisting Chrome DevTools workspace UUID: #100802 Upgrade React from ab0d927f-20261020 to dc9aed36-20261027 : #100791 [testmode] Fix compressed HTTP responses with test proxy: #100805 chore(deps): bump sharp@0.35.5: #99714 Turbopack: Auto-detect pnpm GVS and configure an additional root for it: #99758 Persist storage cache in Docker environments: #100790 Persist fully static PPR payloads in filesystem cache: #100759 Stamp FileSystemCache revalidations and entries with the monotonic clock: #100357 Example Changes examples: add eve example:...",
       "category": "ai_tools"
     }
   ]
