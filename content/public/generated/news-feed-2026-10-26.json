@@ -1,0 +1,276 @@
+{
+  "generated": "2026-10-26T05:35:19.657Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "SDK TypeScript Release v0.1.23",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.23",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-26T04:43:39.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.1 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.1-nightly.20261025.8e28d5380c",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.1-nightly.20261025.8e28d5380c",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-25T23:20:17.000Z",
+      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats",
+      "url": "https://www.marktechpost.com/2026/10/24/cognition-devin-vulnerability-fixes-plugin-php2shell-nodejs-gitlab/",
+      "source": "MarkTechPost",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-25T02:59:08.000Z",
+      "summary": "Cognition released the Devin Vulnerability Fixes plugin, 3 MIT-licensed agent skills that inventory, patch and test PHP, Node.js and self-managed GitLab deployments hit by this week’s critical RCE flaws, then open 1 PR per repo. The post Cognition Open-Sources an Agent Plugin that Helps Secure Systems against Recent Cybersecurity Threats appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "pnpm 10.34.8",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.34.8",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-25T17:54:42.000Z",
+      "summary": "Patch Changes 7ced81e : Recompute hoisted dependencies when a frozen install removes packages, so public hoist links are handed over to retained versions #16861 . debbb4c : When pnpm removes or replaces a direct dependency, it now finishes removing the dependency's bins before it deletes the dependency's directory. Packages that declare bins through directories.bin no longer leave broken shims in node_modules/.bin #16876 . 07becba : The standalone pnpm executables now embed Node.js 24.22.1. They embedded Node.js 20, which has reached end of life and still trusts the certificate authority...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v7.6.9 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.6.9",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-25T17:26:05.000Z",
+      "summary": "7.6.9 Build and Packaging Improvements Update to .NET SDK 10.0.403 Merged PR 42305: [release/v7.6.9] Update branch for release SHA256 Hashes of the release artifacts hashes.sha256 638E954664D07A29190570FAF862B8A50B35F7E1C10DBD0F0E8A7E0F70138B45 powershell-7.6.9-1.azl4.aarch64.rpm FA959724AE0FB6D68731981DDDF5D35C3CD1F7308E9EAE8EC1F3D5159B4350A6 powershell-7.6.9-1.azl4.x86_64.rpm 04607223FDA408A26CDF641BFE38F651965C2769EB30CEB17AEC4D4F570EE4FE powershell-7.6.9-1.cm.aarch64.rpm 80C6ED0A0BEA7D3EF827383C7DDB2F369DEA8F8A7FBBA7E32A510D114C980E1B powershell-7.6.9-1.cm.x86_64.rpm...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v7.5.13 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.5.13",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-25T17:22:11.000Z",
+      "summary": "7.5.13 Build and Packaging Improvements Update to .NET SDK 9.0.320 Merged PR 42303: [release/v7.5.13] Update branch for release SHA256 Hashes of the release artifacts hashes.sha256 3AD34E14948C3DE4E9D51185FEE8ECCA4406A9A9D96F5B6944514E2BC6AE0549 powershell-7.5.13-1.cm.aarch64.rpm 9CE23CF885D680352BD056A952B686BE39D42DA1D6166FF06C57A984C5BC02F8 powershell-7.5.13-1.cm.x86_64.rpm 1E864FDD64F3F4ED558FFAB6163A2BD70E4115096BA671F1AECCCF14C6834710 powershell-7.5.13-1.rh.x86_64.rpm A7ED6DF953F8F35FF9A9B517BB15569E41F873F4277FD94DC8AEB1C94EF56D53 powershell-7.5.13-linux-arm32.tar.gz...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v7.4.22 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.4.22",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-25T17:19:31.000Z",
+      "summary": "7.4.22 Build and Packaging Improvements Update to .NET SDK 8.0.427 SHA256 Hashes of the release artifacts hashes.sha256 AA81683B111314FF48083CD6CD757EF795683047FEFC9D06412B36D93046B481 powershell-7.4.22-1.cm.aarch64.rpm 1D9628127B2CA4963EDDB3876ED67C91AC96A8593DB0269B68F49A1D3E9548F2 powershell-7.4.22-1.cm.x86_64.rpm FF74FE178EFD5BEBE2C78424134C656F4A39B5D0CFF5DBCBBBB66A31E55D676E powershell-7.4.22-1.rh.x86_64.rpm BCA2C7F5B583F5E0701BEA162CCFAD963027C87F96C79019440C037CD0C9AFF7 powershell-7.4.22-linux-arm32.tar.gz 532750DF5D0A3587EBE2D714D0F96899C2F7B248AFE051FDD98E97FA2C20B1B4...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 10.34.9",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v10.34.9",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.62,
+      "date": "2026-10-25T17:54:24.000Z",
+      "summary": "Patch Changes 0bff20d : The pnpm version that packageManager pins now records that pin in a fresh pnpm-lock.yaml when pnpm 10 switched to it. A later pnpm install --frozen-lockfile then succeeds #17303 . Platinum Sponsors Gold Sponsors",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model",
+      "url": "https://www.marktechpost.com/2026/10/25/nanbeige-releases-nanbeige4-3-33b-open-agentic-coding-model/",
+      "source": "MarkTechPost",
+      "tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "cli_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-25T21:15:21.000Z",
+      "summary": "Nanbeige LLM Lab released Nanbeige4.3-33B, a 33B dense Apache 2.0 model with 512K context. It reports 80.9 on Terminal-Bench 2.1 and will teach the upcoming Nanbeige4.3-3B. The post Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-26T00:54:41.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Neighbours is being recut into a microdrama focused on Margot Robbie – and her co-stars aren’t happy",
+      "url": "https://www.theguardian.com/tv-and-radio/2026/oct/26/neighbours-soap-recut-ai-microdrama-mobile-series-feat-margot-robbie",
+      "source": "The Guardian Tech",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-10-25T14:00:06.000Z",
+      "summary": "Actor’s storylines in the famous soap will be recut into vertical micro-episodes to be watched on phones – but her fellow cast members say they haven’t been consulted The long-running Australian soap opera Neighbours is being recut with AI into a microdrama designed to be watched on phones, sparking a debate among the show’s actors and the industry over the wider implications of television archives being mined for new content. RoseBerry Media, which specialises in making “vertical television” for phones, has repurposed original episodes of Neighbours for distribution on its Epis platform,...",
+      "category": "tech_general"
+    },
+    {
+      "title": "Bye Bye Brotli? Google's Compression Library Is a Security Mess",
+      "url": "https://www.bugsink.com/blog/bye-bye-brotli/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-25T11:06:25.000Z",
+      "summary": "",
+      "category": "tech_general"
+    },
+    {
+      "title": "Show HN: Farol – a risk map of a pull request for the person who approves it",
+      "url": "https://github.com/winnin/farol",
+      "source": "Hacker News",
+      "tags": [
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update"
+      ],
+      "importance": 0.72,
+      "date": "2026-10-25T13:28:06.000Z",
+      "summary": "",
+      "category": "tech_general"
+    },
+    {
+      "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
+      "url": "https://github.com/KrushnaVardhanReddy/PaperPilot",
+      "source": "Hacker News",
+      "tags": [
+        "mcp"
+      ],
+      "matching_tags": [
+        "mcp"
+      ],
+      "importance": 0.5599999999999999,
+      "date": "2026-10-26T03:29:05.000Z",
+      "summary": "",
+      "category": "tech_general"
+    },
+    {
+      "title": "Dolly Parton's Imagination Library",
+      "url": "https://imaginationlibrary.com/",
+      "source": "Hacker News",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.48,
+      "date": "2026-10-25T18:23:54.000Z",
+      "summary": "",
+      "category": "tech_general"
+    }
+  ]
+}

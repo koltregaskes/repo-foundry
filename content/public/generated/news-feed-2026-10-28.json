@@ -1,0 +1,320 @@
+{
+  "generated": "2026-10-28T17:45:29.595Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "SDK TypeScript Release v0.1.25",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.25",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:16:39.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.24",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.24",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T16:08:25.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.2 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:56:50.000Z",
+      "summary": "Highlights Generated UI cards keep inputs and state across navigation and split views, show live views after initial calculation, and appear only for clients that can render MCP Apps. ( #15611 , #15787 , #15720 , #15790 ) Persistent session Workflow mode can be enabled with --workflow-mode on, /workflows mode on, SDK, or ACP, and workflow switches now reach the CLI sandbox. ( #15422 , #15743 ) Tool results shrink to remaining headroom before auto-compaction, and qwen-latest-series- or qwen4 aliases are detected with 1M-token context windows. ( #13599 , #15758 , #15762 ) Valid XML tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:51:11.000Z",
+      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-preview.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-preview.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T20:07:49.000Z",
+      "summary": "What's Changed Changelog for v0.65.0 by @gemini-cli-robot in #29853 chore(release): bump version to 0.67.0-nightly.20261020.gb041de017 by @gemini-cli-robot in #29854 Changelog for v0.66.0-preview.0 by @gemini-cli-robot in #29852 feat(cli): bridge the IDE companion into container sandboxes over exec stdio by @elberthc-byte in #29858 fix(core): prevent duplicate agent loading when workspace is home directory ( #27692 ) by @urielefrenvirtusa in #29847 fix(ide): exclude IDE settings and GEMINI.md files from open file con text by @villahernandez-coder in #29848 fix(core): scope untrusted flag...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.10.8",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.8",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T00:10:29.000Z",
+      "summary": "2026.10.8 Highlights Updates that finish and recover: an ordinary post-update Doctor failure restarts the Gateway instead of leaving it stopped, an orphaned maintenance worker no longer blocks every CLI command and Gateway start, and updates no longer abort on ACL filesystems, Windows pnpm optional-dependency links, pnpm 10 global installs, debug console logging, or a missing legacy OAuth directory. ( #180668 , #181695 , #181141 , #181596 , #181456 , #182850 , #180174 ) Thanks @hannesrudolph , @SMF12138 , @rayluo88 , @PonySlayer28 , and @VN77-77VN . Gateway service installs on every...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.66.0",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.66.0",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T20:26:28.000Z",
+      "summary": "What's Changed Update ROADMAP.md to no longer reference outdated 2025 roadmap by @DavidAPierce in #29723 Changelog for v0.65.0-preview.0 by @gemini-cli-robot in #29739 chore(release): bump version to 0.66.0-nightly.20261013.g204db94ae by @gemini-cli-robot in #29740 Changelog for v0.64.0 by @gemini-cli-robot in #29741 fix(ui): implement synchronized output and isolate spinner rendering by @diegogodinezr in #29725 fix(ui): fix debug console height calculation and terminalBuffer flickering by @ugorla-dev in #29695 fix(cli): prevent right-hand border bleed in scrollable tool containers by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.2",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.2",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T16:05:08.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes fix(managed-agent)!: simplify Web Shell controls and retire cwd submissions ( #15616 ) by @doudouOUC Complete Change List Features feat(managed): add session permission rules and Auto approval ( #15448 ) by @doudouOUC feat(core): add an experimental shared agent loop and run headless on it ( #15369 ) by @qqqys Adds X-DashScope-Source-Config to matching QwenCloud and Qianwen AI Platform requests to identify site and client, without changing authentication or retries. ( #15041 ) by @yiliang114 Resumed OpenTUI sessions now...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 12.16.1",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.16.1",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T15:28:26.000Z",
+      "summary": "This release fixes pnpm install hanging on a cold store in workspaces that install Cargo crates, and pnpm pack shipping a file that files excludes by name. Patch Changes pnpm install no longer hangs on a cold store in a workspace that also installs Cargo crates or a Rust toolchain. pnpm pack and pnpm publish now apply a files entry that names a file after the glob and directory entries, as npm does. A file excluded by name, such as !dist/index.js , stays out even when a later dist/** matches it. A file named by its path, such as lib/secret.js , ships even when a later !lib/*.js matches...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.2-preview.1",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.2-preview.1",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T15:24:38.000Z",
+      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-nightly.20261028.gfa5c17365",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261028.gfa5c17365",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T01:22:20.000Z",
+      "summary": "What's Changed fix(core): allow trusted system paths on Android (Termux) for ripgrep resolution ( #21836 ) by @amelidev in #29884 fix(core): normalize CRLF line endings before diffing in getDiffContextSnippet by @jesussamuel-byte in #29966 fix(cli): handle terminals that render ambiguous-width characters as wide by @elberthc-byte in #29905 fix(cli): prevent duplicate history and double telemetry in confirm_action flow by @duvanka-prasad in #29974 Changelog for v0.67.0-preview.0 by @gemini-cli-robot in #29990 Changelog for v0.66.0 by @gemini-cli-robot in #29992 Full Changelog :...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.3-preview.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3-preview.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T19:08:34.000Z",
+      "summary": "What's Changed feat(memory): opt-in extraction cadence after a no-op run by @yiliang114 in #13571 fix(core): recover outer XML calls with quoted call content by @yiliang114 in #13579 feat(core): shrink tool results to the headroom left before auto-compaction by @yiliang114 in #13599 fix(acp): carry rewind identity through daemon clients by @yiliang114 in #15441 feat(web-shell): retain Generated UI instances across same-page navigation by @qqqys in #15611 Full Changelog : v0.26.2...v0.26.3-preview.0",
+      "category": "ai_tools"
+    },
+    {
+      "title": "n8n@1.123.89",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.89",
+      "source": "GitHub Releases · n8n",
+      "tags": [
+        "mcp",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T07:30:08.000Z",
+      "summary": "1.123.89 (2026-10-28) Bug Fixes Google Drive Node: Fix infinite pagination loop in v1 API request ( #42124 ) ( 3faa762 ) MCP Server Trigger Node: Evict idle sessions to prevent memory leak ( #42120 ) ( 54eaf65 )",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T00:54:08.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.29",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.29",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-27T23:46:43.000Z",
+      "summary": "Core Changes Create cache directory before persisting Chrome DevTools workspace UUID: #100802 Upgrade React from ab0d927f-20261020 to dc9aed36-20261027 : #100791 [testmode] Fix compressed HTTP responses with test proxy: #100805 chore(deps): bump sharp@0.35.5: #99714 Turbopack: Auto-detect pnpm GVS and configure an additional root for it: #99758 Persist storage cache in Docker environments: #100790 Persist fully static PPR payloads in filesystem cache: #100759 Stamp FileSystemCache revalidations and entries with the monotonic clock: #100357 Example Changes examples: add eve example:...",
+      "category": "ai_tools"
+    }
+  ]
+}
