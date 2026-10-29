@@ -1,0 +1,108 @@
+{
+  "generated": "2026-10-29T17:45:20.368Z",
+  "site": "Repo Foundry",
+  "article_count": 5,
+  "articles": [
+    {
+      "title": "SDK TypeScript Release v0.1.25",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.25",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:16:39.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:56:50.000Z",
+      "summary": "Highlights Generated UI cards keep inputs and state across navigation and split views, show live views after initial calculation, and appear only for clients that can render MCP Apps. ( #15611 , #15787 , #15720 , #15790 ) Persistent session Workflow mode can be enabled with --workflow-mode on, /workflows mode on, SDK, or ACP, and workflow switches now reach the CLI sandbox. ( #15422 , #15743 ) Tool results shrink to remaining headroom before auto-compaction, and qwen-latest-series- or qwen4 aliases are detected with 1M-token context windows. ( #13599 , #15758 , #15762 ) Valid XML tool...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.26.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.3",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-28T16:51:11.000Z",
+      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "UK budget adds AI security funding and ties data-centre power support to local benefits",
+      "url": "https://superpowerdaily.com/posts/uk-budget-adds-ai-security-funding-and-ties-data-centre-power-support-to-local-benefits",
+      "source": "Superpower Daily",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-10-28T16:01:52.000Z",
+      "summary": "The package includes £120 million more for the AI Security Institute and £165 million for biosecurity, alongside a conditional route to electricity connections.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "2026-10-28, Version 26.13.0 'Lithium' (LTS), @richardlau",
+      "url": "https://github.com/nodejs/node/releases/tag/v26.13.0",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "cli_tool"
+      ],
+      "importance": 0.54,
+      "date": "2026-10-28T16:57:41.000Z",
+      "summary": "Notable Changes This release marks the transition of Node.js 26.x into Long Term Support (LTS) with the codename 'Lithium'. It will continue to receive updates through to the end of April 2029. Other than updating metadata, such as the process.release object, to reflect that the release is LTS, no further changes from Node.js 26.12.1 are included. If you are updating from an earlier Long Term Support release (e.g. Node.js 24 or 22 or earlier) please note that since Node.js 25 the official binaries for Linux are linked against libatomic, which may need to be installed separately depending...",
+      "category": "ai_tools"
+    }
+  ]
+}
