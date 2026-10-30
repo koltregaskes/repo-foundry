@@ -1,0 +1,314 @@
+{
+  "generated": "2026-10-30T17:45:12.956Z",
+  "site": "Repo Foundry",
+  "article_count": 15,
+  "articles": [
+    {
+      "title": "SDK TypeScript Release v0.1.26",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.26",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T15:29:54.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.4 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v8.0.0-rc.22-dev.1: chore(release): bump to 8.0.0-rc.22 (#30919)",
+      "url": "https://github.com/prisma/orm/releases/tag/v8.0.0-rc.22-dev.1",
+      "source": "GitHub Releases · Prisma",
+      "tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-30T13:27:17.000Z",
+      "summary": "8.0.0-rc.21 → 8.0.0-rc.22 . See versioning . Publishing was broken and is fixed. From 23 October every Publish to npm run on main failed with ENEEDAUTH on three packages that had never been on npm: @prisma/orm-mysql , @prisma/orm-target-mysql ( #30856 ) and @prisma/orm-postgres-contrib ( #30904 ). Trusted publishing cannot authenticate a package that does not exist yet. They were published once by hand and given a trusted publisher; the re-run of run 41053844815 then published all three from CI. The failed runs had also skipped the rc.21 git tag and GitHub Release, which the...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "cua-driver-rs v0.27.0",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/cua-driver-rs-v0.27.0",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-30T06:32:30.000Z",
+      "summary": "Qwen CUA Driver prebuilt binaries (vendored under packages/cua-driver ). macOS : codesigned + notarized universal binary + QwenCuaDriver.app Linux : unsigned (x86_64 + arm64, glibc 2.31 floor) Windows : unsigned UIAccess worker + native SDK payload (x86_64 + arm64); deployments must sign and trust the worker on the target machine before UIAccess activation Node.js : the same workflow publishes @qwen-code/cua-sdk after a clean install against these release assets and publishes the same-version browser SDK and @qwen-code/node-repl-mcp package after its MCP protocol smoke tests Enable...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.10.9",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.9",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T17:32:17.000Z",
+      "summary": "2026.10.9 Highlights Patch vulnerable runtime dependencies: fast-uri 4.2.3 rejects malformed URI schemes and hosts in MCP schema validation, oversized Zod collections are rejected early in A2UI and the Discord embedded app SDK, IMAP sender parsing uses nodemailer 10.1.4 so spoofed senders cannot pass the sender token gate, and Microsoft Teams uses patched MSAL Node 7.1.1. ( #187294 ) Thanks @RomneyDa . Apply tools.fs.workspaceOnly to Gateway-built tools, so delegate changes still require approval and media tools stay inside the workspace. ( #185094 ) Thanks @eleqtrizit , @RomneyDa , and...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "pnpm 12.17",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.17.0",
+      "source": "GitHub Releases · pnpm",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-30T14:24:43.000Z",
+      "summary": "pnpm 12.17.0 adds pnpm peers check --global , dependency-group selectors and wildcards in overrides , and runtime, package manager, Cargo, and Python updates in pnpm outdated and pnpm update . It also fixes files that other users could not read in Docker images, and repeat installs that missed changes to local dependencies. Minor Changes pnpm peers check now accepts --global ( -g ) to check globally installed packages. After a global install or update, the peer dependency warning now suggests pnpm peers check -g #17504 . pnpm outdated and pnpm update now inspect and update package manager...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.67.0-nightly.20261030.gb633c0703",
+      "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261030.gb633c0703",
+      "source": "GitHub Releases · Gemini CLI",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-30T01:22:17.000Z",
+      "summary": "What's Changed docs(readme): clarify Gemini CLI scope, limitations, and tool landscape by @LyalinDotCom in #29995 fix(cli): bound inline history re-render after terminal width changes by @jvargassanchez-dot in #29904 fix(ui): handle surrogate pairs when truncating in sanitizeForDisplay by @diegogodinezr in #29993 fix(core): make isWithinRoot case-insensitive on Windows by @duvanka-prasad in #29999 fix(core): recognize dotted Gemini 3 models in supportsMultimodalFunctionResponse by @jesussamuel-byte in #29982 feat(cli): add extension validation command and evaluation tests by @tadipavan in...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.11-canary.1",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.11-canary.1",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T22:51:13.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.9-canary.1 by @github-actions[bot] in #14817 fix: Allow native package manager configuration during setup by @anthonyshew in #14816 refactor: Remove setup lifecycle script controls by @anthonyshew in #14818 docs: Use .NET in the multi-language guide by @sahyl in #14793 fix(cache): Parallelize dry-run HEAD fallback by @FOWEPJF255 in #14801 fix: Allow non-recursive Turbo commands in root tasks by @sahyl in #14814 chore: Release Turborepo 2.11.9 by @github-actions[bot] in #14824 chore(deps): Update dependency @vercel/geistdocs to v2 by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.99.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.99.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-30T10:00:05.000Z",
+      "summary": "Catwalk v3, hooks! A big one! Crush now runs on Catwalk v3, hooks can see every part of a run, and editors that host Crush get a whole new set of tools to feel right at home. Small overview of Catwalk v3 : Crush now speaks Catwalk v3 . Provider type describes the API format a provider uses, not who made it: completions : OpenAI-compatible APIs responses : OpenAI, or anything routed through it messages : Anthropic-compatible APIs Your config is migrated automatically when it loads, so openai , openai-compat and anthropic keep working. No edits needed. The provider add and model add flags...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.32",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.32",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T23:44:27.000Z",
+      "summary": "Core Changes Fix hangs and crashes for 204 responses from route handlers and deduped fetches: #100159 fix(adapter): preserve revalidation for metadata prerenders: #100861 next-custom-transforms: Optimize server-reference transform output: #100637 Show dev overlay errors before the indicator state is known: #100629 Update font data: #100863 Misc Changes Improve common errors in turbo-trace-server: #100862 docs: clarify use cache is unsupported in Proxy: #100842 Revert \"perf(turbopack): canonicalize async loader availability\": #100898 [test] Cover cache reuse after revalidation and failed...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.4-nightly.20261029.70be140e14",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.4-nightly.20261029.70be140e14",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T23:19:07.000Z",
+      "summary": "What's Changed feat(managed): Add bounded SQL history queries by @doudouOUC in #15839 feat(generated-ui): keep chatting with a card's values and turn Generated UI on by default by @qqqys in #15856 test(web-shell): follow the renamed workspace copy in two e2e specs by @wenshao in #15860 feat(web-shell): keyboard shortcuts for Session Overview and Split View by @4ekuct25 in #14179 feat(web-shell): add Russian locale for the Goal card and Goals dialog by @4ekuct25 in #13685 fix(managed-agent): harden the upgrade command's phases after a full review by @wenshao in #15853 feat(web-shell):...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v7.7.0-rc.1 Release of PowerShell",
+      "url": "https://github.com/PowerShell/PowerShell/releases/tag/v7.7.0-rc.1",
+      "source": "GitHub Releases · PowerShell",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T22:37:35.000Z",
+      "summary": "7.7.0-rc.1 General Cmdlet Updates and Fixes Fix Clear-Host for remote Windows session from a non-Windows platform ( #28116 ) (Thanks Jordan Borean (@jborean93) !) Remove the Update Notification feature from PowerShell ( #28242 ) Protect property assignment on non-core objects to NoteProperty members in Constrained Language Mode ( #28206 ) Bind Hyper-V socket server V2 to the selected partition VM ID ( #28204 ) Protect ForEach() property assignment on non-core types in Constrained Language Mode ( #28207 ) Require -FetchExternalReference to resolve external Test-Json schema references (...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "openclaw 2026.9.36",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.36",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T21:48:10.000Z",
+      "summary": "This is a gateway-only extended-stable release, which is our current equivalent to LTS. This release is OpenClaw from the end of September 2026, plus critical security updates, reliability and performance fixes, and features like new model support. The latest version of OpenClaw at the time of this release is 2026.10.9 2026.9.36 Highlights Failed updates stay recoverable: a failed npm rollback no longer leaves the installed package missing, and update checks keep Doctor recovery guidance, stop recopying private rehearsal databases, and no longer reopen candidate-migrated state. Fixes...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Release v0.26.4",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T16:02:46.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features feat(generated-ui): follow the host theme in generated views ( #15798 ) by @qqqys feat(ci): bound autofix takeover with a round budget ( #15388 ) by @wenshao feat(verify-pr): make \"re-verify after update\" a follow-up trigger ( #15816 ) by @wenshao feat(extensions): support unscoped npm installation and updates ( #15781 ) by @callmeYe feat(web-shell): move no-workspace sessions beside workspaces ( #15319 ) by @deggs7 feat(managed): add independent worktrees for main...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Qwen Code Desktop v0.26.4",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.4",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-10-29T15:18:19.000Z",
+      "summary": "What's Changed fix(config): report controls that were silently dropped by @yiliang114 in #15794 docs(managed): cite the shared-Session queue decision in the gate design by @wenshao in #15797 test(managed-agent): pin HostedProcessLiveness.running on every host by @wenshao in #15791 feat(generated-ui): follow the host theme in generated views by @qqqys in #15798 perf(web-templates): reclaim 92 KB of the HTML export renderer bundle by @yiliang114 in #15778 test: settle the two loaded-host waits from #15593 by @2SinceJuly in #15639 feat(ci): bound autofix takeover with a round budget by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Arc: a ~70 MB streaming speech model that transcribes links names and metadata to your own list as they're spoken, with no second model [p]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1xiyuoj/arc_a_70_mb_streaming_speech_model_that/",
+      "source": "Reddit r/MachineLearning",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.8999999999999999,
+      "date": "2026-10-29T22:51:57.000Z",
+      "summary": "I built Arc-Transcriber, which does ASR-NL in 1-step. Every 100 ms, one model returns the transcript plus: - Names linked to a list you give it (a roster, contacts, product names); new names are flagged \"not on the list\" - Numbers with their values (scores, clocks, money, dates) - Speakers and roles; - Sound and channel events (telephone audio, clipping, poor audio) - Whether the speech was addressed to an assistant. - Inbuilt tags for dialog act, speaker segmentation and more. Total 200+ trained decision heads. The usual ASR, then NER, then entity-linking and then LLM chain is collapsed...",
+      "category": "ai_research"
+    }
+  ]
+}
