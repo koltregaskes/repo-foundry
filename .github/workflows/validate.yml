@@ -27,3 +27,9 @@ jobs:
 
       - name: Validate code and public boundary
         run: npm test && npm run build:public-boundary && npm run verify:public-boundary
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+      - name: Validate generated SEO and feed
+        run: python scripts/check-seo.py
