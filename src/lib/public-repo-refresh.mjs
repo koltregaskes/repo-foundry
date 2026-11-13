@@ -60,10 +60,15 @@ export async function refreshPublicRepoMetadata(siteData, fetchMetadata, options
     };
   }
 
-  const refreshed = await mapConcurrent(targets, concurrency, async ({ repo, index, github }) => {
+  const failures = [];
+  const results = await mapConcurrent(targets, concurrency, async ({ repo, index, github }) => {
+    try {
     const metadata = await fetchMetadata(github.owner, github.repo);
     const requested = `${github.owner}/${github.repo}`.toLowerCase();
-    if (!metadata?.full_name || metadata.full_name.toLowerCase() !== requested) {
+    const canonical = githubRepo(metadata?.html_url);
+    const renamed = metadata?.full_name?.toLowerCase() !== requested;
+    const verifiedRedirect = metadata?.redirectedFrom?.toLowerCase() === requested && Number.isSafeInteger(metadata?.id);
+    if (!canonical || metadata.full_name?.toLowerCase() !== (canonical.owner+'/'+canonical.repo).toLowerCase() || (renamed && !verifiedRedirect)) {
       throw new Error(`GitHub returned ${metadata?.full_name || "an invalid record"} for ${github.owner}/${github.repo}`);
     }
 
@@ -86,8 +91,15 @@ export async function refreshPublicRepoMetadata(siteData, fetchMetadata, options
       before: Number(repo.stars || 0),
       after: updated.stars,
       updated,
+      renamed,
     };
+    } catch (error) {
+      failures.push({repo:github.owner+"/"+github.repo,reason:error.message});
+      return null;
+    }
   });
+  const refreshed = results.filter(Boolean);
+  if (!refreshed.length) return {siteData,result:{checked:targets.length,updated:0,failed:failures.length,failures,changed:0,skipped:"no repository could be refreshed; previous metadata retained"}};
 
   const repos = siteData.repos.map((repo) => ({ ...repo }));
   for (const entry of refreshed) {
@@ -113,12 +125,16 @@ export async function refreshPublicRepoMetadata(siteData, fetchMetadata, options
     },
   };
 
-  const changed = refreshed.filter((entry) => entry.before !== entry.after);
+  const changed = refreshed.filter((entry) => entry.before !== entry.after || entry.renamed);
   return {
     siteData: next,
     result: {
       mode: "write",
-      checked: refreshed.length,
+      checked: targets.length,
+      updated: refreshed.length,
+      failed: failures.length,
+      failures,
+      renamed: refreshed.filter(entry=>entry.renamed).map(entry=>entry.updated.name),
       changed: changed.length,
       totalStarsBefore: refreshed.reduce((sum, entry) => sum + entry.before, 0),
       totalStarsAfter: refreshed.reduce((sum, entry) => sum + entry.after, 0),
