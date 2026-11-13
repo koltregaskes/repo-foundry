@@ -1,53 +1,80 @@
 {
-  "generated": "2026-11-12T17:45:23.478Z",
+  "generated": "2026-11-13T17:45:04.272Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
     {
-      "title": "pnpm 12.20",
-      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.20.0",
-      "source": "GitHub Releases · pnpm",
+      "title": "Qwen Code Desktop v0.27.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.3",
+      "source": "GitHub Releases · Qwen Code",
       "tags": [
+        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
+        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-11-12T00:23:41.000Z",
-      "summary": "pnpm 12.20.0 records the specifiers of local directory dependencies in the experimental v13 lockfile and fixes several nodeLinker: hoisted , peer dependency, and overrides bugs. The bundled node-gyp no longer ships the undici version that security scanners flag. Remote resolution and shared build caches no longer work with pnpr 0.1.0-alpha.19 or older. Minor Changes With lockfile.format: v13 , pnpm install records the dependency specifiers of local directory packages. Frozen installs reject changed specifiers even when the locked versions still satisfy them. Patch Changes Upgrading and...",
+      "date": "2026-11-13T01:18:29.000Z",
+      "summary": "What's Changed fix(ci): read prettier's whole ignore set at the base tip by @wenshao in #16729 fix(cli,core): let an Agent Host retry an enrollment whose answer was lost by @wenshao in #16722 fix(channels): shape-check authorExclude on the inbound task record by @wenshao in #16740 feat(managed-agent): import Skills from the original Runtime by @doudouOUC in #16638 docs: clarify tool bridge requirements when migrating from tools.core by @521Peter in #16750 fix(ci): annotate a truncated tree and pin the encoded tree ref by @wenshao in #16747 refactor(managed-agent): give JDBC stores names...",
       "category": "ai_tools"
     },
     {
-      "title": "v4.0.543",
-      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.543",
-      "source": "GitHub Releases · Remotion",
+      "title": "Release v0.27.3",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3",
+      "source": "GitHub Releases · Qwen Code",
       "tags": [
+        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
+        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-11-11T19:24:21.000Z",
-      "summary": "What's Changed @remotion/studio : Add audio level meters by @JonnyBurger in #13146 remotion.pro is retired, buy a license now at https://www.remotion.dev/pricing instead @remotion/cli : Add open-timeline import and canvas-capture import by @JonnyBurger in #13148 @remotion/renderer : Add chromiumOptions.flags to override Chrome flags by @JonnyBurger in #13147 @remotion/renderer : Add proResBitsPerMacroblock for ProRes file size control by @JonnyBurger in #13220 @remotion/studio : Add movable playback diagnostics by @JonnyBurger in #13224 @remotion/studio : Create s by right-clicking by...",
+      "date": "2026-11-13T00:56:37.000Z",
+      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features Added chips above the Web Shell composer for unfinished background workflows, shells, monitors, and local agents, replacing the status-bar task pill. ( #16813 ) by @qqqys Added Chinese localization for GitHub channel event prompts in PR-bound sessions when the channel UI language is Chinese, while other languages remain English. ( #16773 ) by @wenshao Managed MCP now counts only up to 32 live selections, retains removed entries for recovery, keeps the 16-enabled limit,...",
       "category": "ai_tools"
     },
     {
-      "title": "Turborepo v2.11.11",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.11",
+      "title": "Release v0.27.2-nightly.20261112.70a487be84",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261112.70a487be84",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "mcp",
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-12T22:27:16.000Z",
+      "summary": "What's Changed fix(managed-agent): release the MCP owner when a Session closes by @wenshao in #16728 fix(managed-agent): harden Harness error-code parsing, host reader and exception causes by @doudouOUC in #16826 docs(providers): document Wiro AI under OpenAI-compatible providers by @EminBudak in #16850 docs(serve): describe workspace Skill settings writes by name by @521Peter in #16833 refactor(managed-agent): keep asynchronous admission as the only publication mode by @doudouOUC in #16840 feat(web-shell): show unfinished background tasks as chips above the composer by @qqqys in #16813...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Turborepo v2.11.12-canary.1",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.12-canary.1",
       "source": "GitHub Releases · Turbo",
       "tags": [
         "repo_update",
@@ -62,8 +89,27 @@
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-11-11T18:30:22.000Z",
-      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.10 by @github-actions[bot] in #14877 fix: Remove redundant task disclaimers from setup output by @anthonyshew in #14870 fix: Report declared package manager versions in turbo info by @anthonyshew in #14830 feat: Stop requiring .turbo/ to be Git-ignored in turbo setup by @anthonyshew in #14822 fix: Isolate JS test fixture cleanup between suites by @anthonyshew in #14864 fix: Remove Linux host version fingerprints from Python caching by @anthonyshew in #14861 fix: Write the restore manifest before a local cache restore returns by...",
+      "date": "2026-11-12T17:45:19.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.11-canary.2 by @github-actions[bot] in #14962 fix: Stop input hashing from following symlinks out of the repository by @chadhietala in #14964 fix(cli): Record correct telemetry command name for turbo ls by @Pcmhacker-piro in #14968 fix: Preserve TMPDIR in strict environment mode by @ChrisX101010 in #14970 fix: Keep npm-wrapper group SIGTERM and SIGHUP from force-killing tasks by @mvanhorn in #14972 fix(cli): Report whether stdin is a terminal in turbo info by @Pcmhacker-piro in #14981 chore(deps): Update dependency @vercel/geistdocs...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "SDK TypeScript Release v0.1.33",
+      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.33",
+      "source": "GitHub Releases · Qwen Code",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-13T01:14:28.000Z",
+      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.27.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.0 Source: CLI built from source (same branch/ref as SDK) See commit history for changes.",
       "category": "ai_tools"
     },
     {
@@ -86,40 +132,89 @@
       "category": "ai_tools"
     },
     {
-      "title": "8.12 RC3",
-      "url": "https://github.com/redis/redis/releases/tag/8.12-rc3",
-      "source": "GitHub Releases · Redis",
+      "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
+      "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/",
+      "source": "MarkTechPost",
       "tags": [
         "open_source",
-        "repo_update",
-        "cli_tool"
+        "developer_tool"
       ],
       "matching_tags": [
         "open_source",
-        "repo_update",
-        "cli_tool"
+        "developer_tool"
       ],
-      "importance": 0.7,
-      "date": "2026-11-12T09:32:11.000Z",
-      "summary": "This is the third Release Candidate of Redis 8.12 in Redis Open Source. Release Candidates are feature-complete pre-releases. Pre-releases are not suitable for production use. Security fixes #16127 A TLS session could be resumed on another listener (client port vs. cluster bus), or after tls-auth-clients or tls-expected-peer-name changed, without the checks of the new settings New Features #16135 New commands: ZMOVE , BZMOVE , ZMOVEMEMBER to atomically move members between sorted sets - from either end, by score range, or by name - with COUNT batching and NX / XX destination conditions...",
+      "importance": 0.7999999999999999,
+      "date": "2026-11-13T10:32:26.000Z",
+      "summary": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storage and network. Google reports over 90% lower KV transfer latency on 235B to 480B MoE models. The post Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs appeared first on MarkTechPost .",
+      "category": "ai_research"
+    },
+    {
+      "title": "llm-gemini 0.37",
+      "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+      "source": "Simon Willison's Blog",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-11-12T22:55:19.000Z",
+      "summary": "Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: Model Dates Input ($/M) Cached input Output Gemini 4 Carbon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Argon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Hydrogen   $1.50 $0.075 $7.50 Carbon and Argon are the same price , and both are...",
       "category": "ai_tools"
     },
     {
-      "title": "release-publish/fc9e1cd26eeb-1794479957: fix(release): keep direct npm recovery within request budget (#197689)",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Ffc9e1cd26eeb-1794479957",
-      "source": "GitHub Releases · OpenClaw",
+      "title": "LangChain adds Gemini-powered decisions for routing AI agents and screening tool calls",
+      "url": "https://superpowerdaily.com/posts/langchain-adds-gemini-powered-decisions-for-routing-ai-agents-and-screening-tool-calls",
+      "source": "Superpower Daily",
+      "tags": [
+        "agentic_framework",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "agentic_framework",
+        "tool_update"
+      ],
+      "importance": 0.7999999999999999,
+      "date": "2026-11-12T21:30:27.000Z",
+      "summary": "The beta integration returns probabilities rather than written answers. Its tool-call checks can reject destructive actions even when a user explicitly requests them.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "n8n@1.123.96",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.96",
+      "source": "GitHub Releases · n8n",
       "tags": [
         "repo_update",
-        "cli_tool"
+        "developer_tool"
       ],
       "matching_tags": [
         "repo_update",
-        "cli_tool"
+        "developer_tool"
       ],
       "importance": 0.7,
-      "date": "2026-11-12T10:36:40.000Z",
-      "summary": "Reuse command-local evidence reads for carrierless consume, as authorize already does. Preserve final live authority checks and the request cap. Co-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com Co-authored-by: vincentkoc 25068+vincentkoc@users.noreply.github.com",
+      "date": "2026-11-13T08:30:15.000Z",
+      "summary": "1.123.96 (2026-11-13) Bug Fixes editor: Make JSON highlight color visible on light theme ( #43690 ) ( bffbcd8 ) Update @modelcontextprotocol/sdk ( #43527 ) ( f719280 )",
       "category": "ai_tools"
+    },
+    {
+      "title": "Heartland review – Jessica Chastain’s Netflix country music thriller is more miss than hit",
+      "url": "https://www.theguardian.com/film/2026/nov/13/heartland-review-jessica-chastain-netflix",
+      "source": "The Guardian (Culture)",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-13T08:01:12.000Z",
+      "summary": "The Oscar winner plays a singer turned detective searching for her niece in an overly generic Nashville-based mystery that fails to find its footing Given the popularity of its music and the streaming services’ interest in faith-based programming, I’m always a little surprised that there aren’t more movies and TV shows about Nashville. Well, at least the idea of Nashville, the country music mecca that is perpetually struggling to define itself within and against the country at large, a place that has always been more diverse than its reputation yet still stands for a certain image of...",
+      "category": "tech_general"
     },
     {
       "title": "nightly",
@@ -134,93 +229,8 @@
         "cli_tool"
       ],
       "importance": 0.7,
-      "date": "2026-11-12T00:46:10.000Z",
+      "date": "2026-11-13T00:47:12.000Z",
       "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v16.5.0-canary.48",
-      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.48",
-      "source": "GitHub Releases · Next.js 15",
-      "tags": [
-        "repo_update",
-        "developer_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "developer_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-11-11T23:45:08.000Z",
-      "summary": "Core Changes Prerender route handlers that await immediates: #101593 Fix orphaned detached telemetry flush processes: #101588 Upgrade React from e84e1492-20261031 to 1620f7b9-20261111 : #101587 docs: clarify tag invalidation client effects: #101504 Keep dev overlay errors across no-op webpack hot updates: #101532 Misc Changes Turbopack: don't grow effect vectors inside the analyzer arena: #101480 Fix metadata route selection with --debug-build-paths : #101585 eval: generate the docs pointer from the tested Next.js package: #101558 Turbopack: scale default disk write concurrency: #101519...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "release-publish/17140700d7b5-1794431923: fix: keep parent npm authorization within request budget (#197336)",
-      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F17140700d7b5-1794431923",
-      "source": "GitHub Releases · OpenClaw",
-      "tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-11-11T21:17:45.000Z",
-      "summary": "Reuse command-local raw evidence acquisition for carrier-less parent authorization while retaining final freshness and live authority checks. Co-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com",
-      "category": "ai_tools"
-    },
-    {
-      "title": "2026-11-11, Version 22.23.5 'Jod' (LTS), @aduh95",
-      "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
-      "source": "GitHub Releases · Node.js",
-      "tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "importance": 0.7,
-      "date": "2026-11-11T16:44:03.000Z",
-      "summary": "This is a security release. Notable Changes ( CVE-2026-123863 ) http2: release headers when a stream is removed (Matteo Collina) – High ( CVE-2026-123864 ) tls,http: prevent nested parser execution from empty writes (Matteo Collina) – High ( CVE-2026-123865 ) http2: detect streams abandoned by nghttp2 (Matteo Collina) – High ( CVE-2026-123866 ) http2: retain buffers until socket writes finish (Matteo Collina) – High ( CVE-2026-123872 ) tls: disable resumption for mTLS with no session id context (Tim Perry) – High ( CVE-2026-123872 ) tls: don't allow renegotiation or HRR to change SNI (Tim...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "@apollo/server@5.5.2",
-      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo%2Fserver%405.5.2",
-      "source": "GitHub Releases · Apollo Server v4",
-      "tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "cli_tool"
-      ],
-      "importance": 0.62,
-      "date": "2026-11-11T19:42:33.000Z",
-      "summary": "Patch Changes #8232 1766981 Thanks @glasser ! - Constrain the @graphql-tools/schema , @graphql-tools/merge , and @graphql-tools/utils dependency ranges so that a fresh install of @apollo/server on Node.js v20 (via npm) no longer pulls in @whatwg-node/promise-helpers@2 , which declares engines.node >=22.15 and therefore fails installs that enforce engine constraints (such as npm --engine-strict ). While Node.js v20 is EOL, Apollo Server 5 is still documented as supporting this version.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "@apollo/server-integration-testsuite@5.5.2",
-      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo%2Fserver-integration-testsuite%405.5.2",
-      "source": "GitHub Releases · Apollo Server v4",
-      "tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "importance": 0.54,
-      "date": "2026-11-11T19:42:30.000Z",
-      "summary": "Patch Changes Updated dependencies [ 1766981 ]: @apollo/server@5.5.2",
       "category": "ai_tools"
     },
     {
@@ -235,39 +245,43 @@
         "repo_update",
         "github_release"
       ],
-      "importance": 0.45999999999999996,
+      "importance": 0.62,
       "date": "2026-11-12T14:00:00.000Z",
       "summary": "In the latest release of images collected by the Euclid space telescope, there are close-ups of distant galaxies where stars are in the process of forming",
       "category": "tech_general"
     },
     {
-      "title": "New Indian mega library rocked by scandal over 'AI-generated books' The Tamil Nadu government has ordered an internal audit of library collections across the state. See more",
-      "url": "https://www.bbc.com/news/articles/c54gne3plvrxo",
-      "source": "BBC AI",
+      "title": "Turborepo v2.11.12-canary.2",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.12-canary.2",
+      "source": "GitHub Releases · Turbo",
       "tags": [
-        "developer_tool"
+        "repo_update",
+        "tool_update"
       ],
       "matching_tags": [
-        "developer_tool"
+        "repo_update",
+        "tool_update"
       ],
-      "importance": 0.8200000000000001,
-      "date": "2026-11-11T17:02:05.610Z",
-      "summary": "",
+      "importance": 0.54,
+      "date": "2026-11-13T16:07:13.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.12-canary.1 by @github-actions[bot] in #15012 chore(deps): Update dependency @vercel/geistdocs to v2.15.2 by @vercel-gh-bot-4[bot] in #15013 fix: Install adapter-vercel in with-svelte example by @anthonyshew in #15019 feat: Add turborepo@add skill by @codywong in #15014 feat: Add --verbose to turbo setup by @anthonyshew in #15015 refactor: Make turbo setup's installer output safe for concurrent installers by @anthonyshew in #15016 feat: Run turbo setup dependency installs in parallel by @anthonyshew in #15017 New Contributors...",
       "category": "ai_tools"
     },
     {
-      "title": "USC develops AI framework to coordinate Los Angeles wildfire evacuations",
-      "url": "https://superpowerdaily.com/posts/usc-develops-ai-framework-to-coordinate-los-angeles-wildfire-evacuations",
-      "source": "Superpower Daily",
+      "title": "v1.104.7",
+      "url": "https://github.com/tailscale/tailscale/releases/tag/v1.104.7",
+      "source": "GitHub Releases · Tailscale",
       "tags": [
-        "developer_tool"
+        "repo_update",
+        "tool_update"
       ],
       "matching_tags": [
-        "developer_tool"
+        "repo_update",
+        "tool_update"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-11-11T23:27:18.000Z",
-      "summary": "The NSF-funded EVAC-AI project would connect fire forecasts, road access and residents’ needs. Staggered alerts and autonomous rescue rides remain research goals.",
+      "importance": 0.54,
+      "date": "2026-11-12T22:56:51.000Z",
+      "summary": "Please refer to the changelog available at https://tailscale.com/changelog",
       "category": "ai_tools"
     }
   ]
