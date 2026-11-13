@@ -107,6 +107,7 @@ export function buildDocument({
     : "";
   const dataScript = pageData ? `<script id="page-data" type="application/json">${serializeData(pageData)}</script>` : "";
   const canonicalUrl = absoluteUrl(canonicalPath);
+  const skipHref = `${String(canonicalPath || "").replace(/^\.?\//, "")}#main`;
   const schemaBlocks = buildJsonLd([...jsonLd, breadcrumbsJsonLd(breadcrumbs)]);
 
   return `<!DOCTYPE html>
@@ -143,7 +144,7 @@ export function buildDocument({
     ${schemaBlocks}
   </head>
   <body class="${escapeAttribute(bodyClass)}" data-surface="${escapeAttribute(audience)}">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="${escapeAttribute(skipHref)}">Skip to content</a>
     <div class="site-backdrop" aria-hidden="true"></div>
     <div class="site-shell">
       <header class="site-header" data-reveal>

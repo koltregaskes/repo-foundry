@@ -309,7 +309,7 @@ function buildFeedContent(siteData) {
     ${telemetry(siteData, "Broadcast on-air")}
     <section class="feed-grid" data-reveal>
       <div class="story-stack">
-        <p class="eyebrow">// story drops</p>
+        <h2 class="eyebrow">// story drops</h2>
         ${stories}
       </div>
       <aside class="source-panel">
