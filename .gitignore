@@ -55,3 +55,7 @@ SESSION-NOTES.md
 design/
 design/handoff-*/
 CLAUDE-*-HANDOFF.md
+
+node_modules/
+test-results/
+playwright-report/

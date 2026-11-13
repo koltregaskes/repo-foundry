@@ -1,0 +1,23 @@
+name: Launch contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.22.1'
+          cache: npm
+      - run: npm ci
+      - run: npm test && npm run build:public-boundary && npm run verify:public-boundary
+      - run: python scripts/check-seo.py
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:launch
