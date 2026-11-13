@@ -59,7 +59,7 @@ site records the exact consumer path and source timestamps in `sourceProvenance.
 `shared/website-tools/pipelines/news` from `koltregaskes/ai-resource-hub`, fetches every entry in
 `config/sources.json`, and applies the Repo Foundry filter in `site-filters.json`. A successful fetch
 commits `content/public/generated/news-feed-latest.json`, including a fresh empty article list when
-nothing matches. A source that cannot be fetched fails the run by name and leaves the file unchanged.
+nothing matches. Unavailable sources are reported; the feed changes only when a majority succeeds.
 After a commit, the same run publishes GitHub Pages. The job does not invent articles.
 
 `.github/workflows/routed-feed-freshness.yml` remains the early signal. It runs at 06:30 UTC and fails

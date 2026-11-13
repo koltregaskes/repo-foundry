@@ -264,10 +264,10 @@ function buildHomeContent(siteData) {
         <h2>${selected ? escapeHtml(selected.name) : "Repo Foundry"}</h2>
         <p>${selected ? escapeHtml(selected.summary) : escapeHtml(siteData.description)}</p>
         <div class="stat-lines">
-          <span><b>HP</b><i style="--bar:92%"></i></span>
-          <span><b>DMG</b><i style="--bar:88%"></i></span>
-          <span><b>SPD</b><i style="--bar:70%"></i></span>
-          <span><b>DEF</b><i style="--bar:54%"></i></span>
+          <span><b>HP</b><i class="stat-bar--92"></i></span>
+          <span><b>DMG</b><i class="stat-bar--88"></i></span>
+          <span><b>SPD</b><i class="stat-bar--70"></i></span>
+          <span><b>DEF</b><i class="stat-bar--54"></i></span>
         </div>
         <p class="eyebrow">Match history</p>
         <div class="mini-feed">
