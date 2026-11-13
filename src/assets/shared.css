@@ -143,6 +143,10 @@ p {
   transform: translateY(0);
 }
 
+.site-main:focus {
+  outline: none;
+}
+
 .site-backdrop {
   position: fixed;
   inset: 0;
@@ -586,6 +590,13 @@ p {
   background: var(--accent);
   color: var(--accent-ink);
   box-shadow: var(--shadow-ring);
+}
+
+/* Dimmed small text fails 4.5:1 on the solid accent fill, so keep it at full ink. */
+.agent-card.is-selected .agent-card__id,
+.agent-card.is-selected .agent-card__role,
+.agent-card.is-selected .agent-card__stars {
+  opacity: 1;
 }
 
 .agent-card__link {

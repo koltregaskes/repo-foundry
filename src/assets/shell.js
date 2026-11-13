@@ -46,6 +46,16 @@
   applyAccent(storedValue(accentKey, accents, "magenta"));
 
   document.addEventListener("click", function (event) {
+    var skipLink = event.target.closest(".skip-link");
+    var main = document.getElementById("main");
+    if (skipLink && main) {
+      event.preventDefault();
+      main.setAttribute("tabindex", "-1");
+      main.focus();
+      main.scrollIntoView();
+      return;
+    }
+
     var skinButton = event.target.closest("[data-skin-set]");
     if (skinButton) {
       applySkin(skinButton.dataset.skinSet);
