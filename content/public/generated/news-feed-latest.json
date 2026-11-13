@@ -1,82 +1,263 @@
 {
-  "generated": "2026-10-29T17:45:20.368Z",
+  "generated": "2026-11-12T17:45:23.478Z",
   "site": "Repo Foundry",
-  "article_count": 5,
+  "article_count": 15,
   "articles": [
     {
-      "title": "SDK TypeScript Release v0.1.25",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.25",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "pnpm 12.20",
+      "url": "https://github.com/pnpm/pnpm/releases/tag/v12.20.0",
+      "source": "GitHub Releases · pnpm",
       "tags": [
-        "mcp",
-        "repo_update",
-        "github_release",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "mcp",
-        "repo_update",
-        "github_release",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
-      ],
-      "importance": 0.7,
-      "date": "2026-10-28T16:16:39.000Z",
-      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.26.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.26.0 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.25.3 Source: CLI built from source (same branch/ref as...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "Release v0.26.3",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.26.3",
-      "source": "GitHub Releases · Qwen Code",
-      "tags": [
-        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
-        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-28T16:56:50.000Z",
-      "summary": "Highlights Generated UI cards keep inputs and state across navigation and split views, show live views after initial calculation, and appear only for clients that can render MCP Apps. ( #15611 , #15787 , #15720 , #15790 ) Persistent session Workflow mode can be enabled with --workflow-mode on, /workflows mode on, SDK, or ACP, and workflow switches now reach the CLI sandbox. ( #15422 , #15743 ) Tool results shrink to remaining headroom before auto-compaction, and qwen-latest-series- or qwen4 aliases are detected with 1M-token context windows. ( #13599 , #15758 , #15762 ) Valid XML tool...",
+      "date": "2026-11-12T00:23:41.000Z",
+      "summary": "pnpm 12.20.0 records the specifiers of local directory dependencies in the experimental v13 lockfile and fixes several nodeLinker: hoisted , peer dependency, and overrides bugs. The bundled node-gyp no longer ships the undici version that security scanners flag. Remote resolution and shared build caches no longer work with pnpr 0.1.0-alpha.19 or older. Minor Changes With lockfile.format: v13 , pnpm install records the dependency specifiers of local directory packages. Frozen installs reject changed specifiers even when the locked versions still satisfy them. Patch Changes Upgrading and...",
       "category": "ai_tools"
     },
     {
-      "title": "Qwen Code Desktop v0.26.3",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.26.3",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "v4.0.543",
+      "url": "https://github.com/remotion-dev/remotion/releases/tag/v4.0.543",
+      "source": "GitHub Releases · Remotion",
       "tags": [
-        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "matching_tags": [
-        "mcp",
         "repo_update",
         "developer_tool",
         "cli_tool",
         "tool_update"
       ],
       "importance": 0.7,
-      "date": "2026-10-28T16:51:11.000Z",
-      "summary": "What's Changed feat(managed): add session permission rules and Auto approval by @doudouOUC in #15448 fix(cli): harden serve token resolution against project env injection by @yiliang114 in #15228 feat(core): add an experimental shared agent loop and run headless on it by @qqqys in #15369 fix(cli): align OpenTUI cancellation and retry with Ink by @chiga0 in #15283 test(managed-agent): assert web_fetch in the Hosted workspace gate fixture by @yiliang114 in #15451 fix(vscode): leave edit mode after a refused edit by @yiliang114 in #15439 fix(rewind): resolve legacy turns by source identity...",
+      "date": "2026-11-11T19:24:21.000Z",
+      "summary": "What's Changed @remotion/studio : Add audio level meters by @JonnyBurger in #13146 remotion.pro is retired, buy a license now at https://www.remotion.dev/pricing instead @remotion/cli : Add open-timeline import and canvas-capture import by @JonnyBurger in #13148 @remotion/renderer : Add chromiumOptions.flags to override Chrome flags by @JonnyBurger in #13147 @remotion/renderer : Add proResBitsPerMacroblock for ProRes file size control by @JonnyBurger in #13220 @remotion/studio : Add movable playback diagnostics by @JonnyBurger in #13224 @remotion/studio : Create s by right-clicking by...",
       "category": "ai_tools"
     },
     {
-      "title": "UK budget adds AI security funding and ties data-centre power support to local benefits",
-      "url": "https://superpowerdaily.com/posts/uk-budget-adds-ai-security-funding-and-ties-data-centre-power-support-to-local-benefits",
+      "title": "Turborepo v2.11.11",
+      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.11",
+      "source": "GitHub Releases · Turbo",
+      "tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-11T18:30:22.000Z",
+      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.10 by @github-actions[bot] in #14877 fix: Remove redundant task disclaimers from setup output by @anthonyshew in #14870 fix: Report declared package manager versions in turbo info by @anthonyshew in #14830 feat: Stop requiring .turbo/ to be Git-ignored in turbo setup by @anthonyshew in #14822 fix: Isolate JS test fixture cleanup between suites by @anthonyshew in #14864 fix: Remove Linux host version fingerprints from Python caching by @anthonyshew in #14861 fix: Write the restore manifest before a local cache restore returns by...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v0.101.0",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.101.0",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool",
+        "tool_update"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-12T16:56:42.000Z",
+      "summary": "Skill toggles, tool timers and a faster Hyper ⚡ This release was brought to you by our team and our favorite contributors! Long awaited features ahead, read along! Toggle skills Skills can now be switched on and off right from the command palette. Broken skills are easy to spot, too! (they're marked with a red × and the reason they failed) 🕐 How long is this taking? Every tool call now shows how long it's been running. Now, you'll know whether that test suite is just slow or actually stuck. Lighter, faster Hyper ⚡ Requests to Hyper are now compressed with Brotli 🥦. That means much...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "8.12 RC3",
+      "url": "https://github.com/redis/redis/releases/tag/8.12-rc3",
+      "source": "GitHub Releases · Redis",
+      "tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "open_source",
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-12T09:32:11.000Z",
+      "summary": "This is the third Release Candidate of Redis 8.12 in Redis Open Source. Release Candidates are feature-complete pre-releases. Pre-releases are not suitable for production use. Security fixes #16127 A TLS session could be resumed on another listener (client port vs. cluster bus), or after tls-auth-clients or tls-expected-peer-name changed, without the checks of the new settings New Features #16135 New commands: ZMOVE , BZMOVE , ZMOVEMEMBER to atomically move members between sorted sets - from either end, by score range, or by name - with COUNT batching and NX / XX destination conditions...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "release-publish/fc9e1cd26eeb-1794479957: fix(release): keep direct npm recovery within request budget (#197689)",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2Ffc9e1cd26eeb-1794479957",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-12T10:36:40.000Z",
+      "summary": "Reuse command-local evidence reads for carrierless consume, as authorize already does. Preserve final live authority checks and the request cap. Co-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com Co-authored-by: vincentkoc 25068+vincentkoc@users.noreply.github.com",
+      "category": "ai_tools"
+    },
+    {
+      "title": "nightly",
+      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
+      "source": "GitHub Releases · Crush",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-12T00:46:10.000Z",
+      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "v16.5.0-canary.48",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.48",
+      "source": "GitHub Releases · Next.js 15",
+      "tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "developer_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-11T23:45:08.000Z",
+      "summary": "Core Changes Prerender route handlers that await immediates: #101593 Fix orphaned detached telemetry flush processes: #101588 Upgrade React from e84e1492-20261031 to 1620f7b9-20261111 : #101587 docs: clarify tag invalidation client effects: #101504 Keep dev overlay errors across no-op webpack hot updates: #101532 Misc Changes Turbopack: don't grow effect vectors inside the analyzer arena: #101480 Fix metadata route selection with --debug-build-paths : #101585 eval: generate the docs pointer from the tested Next.js package: #101558 Turbopack: scale default disk write concurrency: #101519...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "release-publish/17140700d7b5-1794431923: fix: keep parent npm authorization within request budget (#197336)",
+      "url": "https://github.com/openclaw/openclaw/releases/tag/release-publish%2F17140700d7b5-1794431923",
+      "source": "GitHub Releases · OpenClaw",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-11T21:17:45.000Z",
+      "summary": "Reuse command-local raw evidence acquisition for carrier-less parent authorization while retaining final freshness and live authority checks. Co-authored-by: RomneyDa 6581799+RomneyDa@users.noreply.github.com",
+      "category": "ai_tools"
+    },
+    {
+      "title": "2026-11-11, Version 22.23.5 'Jod' (LTS), @aduh95",
+      "url": "https://github.com/nodejs/node/releases/tag/v22.23.5",
+      "source": "GitHub Releases · Node.js",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-11T16:44:03.000Z",
+      "summary": "This is a security release. Notable Changes ( CVE-2026-123863 ) http2: release headers when a stream is removed (Matteo Collina) – High ( CVE-2026-123864 ) tls,http: prevent nested parser execution from empty writes (Matteo Collina) – High ( CVE-2026-123865 ) http2: detect streams abandoned by nghttp2 (Matteo Collina) – High ( CVE-2026-123866 ) http2: retain buffers until socket writes finish (Matteo Collina) – High ( CVE-2026-123872 ) tls: disable resumption for mTLS with no session id context (Tim Perry) – High ( CVE-2026-123872 ) tls: don't allow renegotiation or HRR to change SNI (Tim...",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@apollo/server@5.5.2",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo%2Fserver%405.5.2",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "cli_tool"
+      ],
+      "importance": 0.62,
+      "date": "2026-11-11T19:42:33.000Z",
+      "summary": "Patch Changes #8232 1766981 Thanks @glasser ! - Constrain the @graphql-tools/schema , @graphql-tools/merge , and @graphql-tools/utils dependency ranges so that a fresh install of @apollo/server on Node.js v20 (via npm) no longer pulls in @whatwg-node/promise-helpers@2 , which declares engines.node >=22.15 and therefore fails installs that enforce engine constraints (such as npm --engine-strict ). While Node.js v20 is EOL, Apollo Server 5 is still documented as supporting this version.",
+      "category": "ai_tools"
+    },
+    {
+      "title": "@apollo/server-integration-testsuite@5.5.2",
+      "url": "https://github.com/apollographql/apollo-server/releases/tag/%40apollo%2Fserver-integration-testsuite%405.5.2",
+      "source": "GitHub Releases · Apollo Server v4",
+      "tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "tool_update"
+      ],
+      "importance": 0.54,
+      "date": "2026-11-11T19:42:30.000Z",
+      "summary": "Patch Changes Updated dependencies [ 1766981 ]: @apollo/server@5.5.2",
+      "category": "ai_tools"
+    },
+    {
+      "title": "Vast data dump from Euclid space telescope reveals stunning galaxies",
+      "url": "https://www.newscientist.com/article/2598614-vast-data-dump-from-euclid-space-telescope-reveals-stunning-galaxies/?utm_campaign=RSS|NSNS&utm_content=home&utm_medium=RSS&utm_source=NSNS",
+      "source": "New Scientist",
+      "tags": [
+        "repo_update",
+        "github_release"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "github_release"
+      ],
+      "importance": 0.45999999999999996,
+      "date": "2026-11-12T14:00:00.000Z",
+      "summary": "In the latest release of images collected by the Euclid space telescope, there are close-ups of distant galaxies where stars are in the process of forming",
+      "category": "tech_general"
+    },
+    {
+      "title": "New Indian mega library rocked by scandal over 'AI-generated books' The Tamil Nadu government has ordered an internal audit of library collections across the state. See more",
+      "url": "https://www.bbc.com/news/articles/c54gne3plvrxo",
+      "source": "BBC AI",
+      "tags": [
+        "developer_tool"
+      ],
+      "matching_tags": [
+        "developer_tool"
+      ],
+      "importance": 0.8200000000000001,
+      "date": "2026-11-11T17:02:05.610Z",
+      "summary": "",
+      "category": "ai_tools"
+    },
+    {
+      "title": "USC develops AI framework to coordinate Los Angeles wildfire evacuations",
+      "url": "https://superpowerdaily.com/posts/usc-develops-ai-framework-to-coordinate-los-angeles-wildfire-evacuations",
       "source": "Superpower Daily",
       "tags": [
         "developer_tool"
@@ -85,23 +266,8 @@
         "developer_tool"
       ],
       "importance": 0.7999999999999999,
-      "date": "2026-10-28T16:01:52.000Z",
-      "summary": "The package includes £120 million more for the AI Security Institute and £165 million for biosecurity, alongside a conditional route to electricity connections.",
-      "category": "ai_tools"
-    },
-    {
-      "title": "2026-10-28, Version 26.13.0 'Lithium' (LTS), @richardlau",
-      "url": "https://github.com/nodejs/node/releases/tag/v26.13.0",
-      "source": "GitHub Releases · Node.js",
-      "tags": [
-        "cli_tool"
-      ],
-      "matching_tags": [
-        "cli_tool"
-      ],
-      "importance": 0.54,
-      "date": "2026-10-28T16:57:41.000Z",
-      "summary": "Notable Changes This release marks the transition of Node.js 26.x into Long Term Support (LTS) with the codename 'Lithium'. It will continue to receive updates through to the end of April 2029. Other than updating metadata, such as the process.release object, to reflect that the release is LTS, no further changes from Node.js 26.12.1 are included. If you are updating from an earlier Long Term Support release (e.g. Node.js 24 or 22 or earlier) please note that since Node.js 25 the official binaries for Linux are linked against libatomic, which may need to be installed separately depending...",
+      "date": "2026-11-11T23:27:18.000Z",
+      "summary": "The NSF-funded EVAC-AI project would connect fire forecasts, road access and residents’ needs. Staggered alerts and autonomous rescue rides remain research goals.",
       "category": "ai_tools"
     }
   ]

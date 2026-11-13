@@ -123,7 +123,13 @@ export function buildDocument({
     <meta property="og:title" content="${escapeAttribute(title)}" />
     <meta property="og:description" content="${escapeAttribute(description)}" />
     <meta property="og:url" content="${escapeAttribute(canonicalUrl)}" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="${SITE_URL}/assets/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Repo Foundry: open-source discovery" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="${SITE_URL}/assets/og-card.png" />
+    <link rel="alternate" type="application/rss+xml" title="Repo Foundry releases" href="${SITE_URL}/feed.xml" />
     <base href="${escapeAttribute(baseHref)}" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
