@@ -32,6 +32,10 @@ urls = [n.text for n in ET.parse(ROOT / 'sitemap.xml').findall('.//{*}loc')]
 assert len(urls) == len(set(urls))
 for url in urls:
     assert local(url).is_file(), url
+for page in ROOT.rglob("*.html"):
+    h = Head(); h.feed(page.read_text(encoding="utf-8"))
+    if "noindex" not in h.meta.get("robots", ""):
+        assert page in [local(url) for url in urls], (page, "missing indexable route in sitemap")
 for rel in [str(local(url).relative_to(ROOT)).replace('\\', '/') for url in urls]:
     url = BASE + ('' if rel == 'index.html' else rel.removesuffix('index.html'))
     h = Head(); h.feed((ROOT / rel).read_text(encoding='utf-8'))
