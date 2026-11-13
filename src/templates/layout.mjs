@@ -1,3 +1,5 @@
+import siteConfig from "../../site-config.json" with { type: "json" };
+export const CONTACT_EMAIL = siteConfig.contactEmail;
 export const SITE_URL = "https://koltregaskes.github.io/repo-foundry";
 
 export function escapeHtml(value) {
@@ -212,7 +214,7 @@ export function buildDocument({
             <a href="https://github.com/koltregaskes/repo-foundry">GitHub</a>
             <a href="https://github.com/koltregaskes">Kol on GitHub</a>
             <a href="https://x.com/koltregaskes">X / Twitter</a>
-            <a href="https://koltregaskes.com/contact/">Contact Kol</a>
+            <a href="mailto:${escapeAttribute(CONTACT_EMAIL)}">${escapeHtml(CONTACT_EMAIL)}</a>
           </nav>
         </div>
         <p class="footer-copyright">Repo Foundry &copy; 2026 Kol Tregaskes. Public build only; private operational material stays out of this site.</p>
