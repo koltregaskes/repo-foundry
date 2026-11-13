@@ -21,12 +21,12 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Checkout news routing config
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: koltregaskes/ai-resource-hub
           ref: main

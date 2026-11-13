@@ -1656,3 +1656,8 @@ body.has-motion [data-reveal].is-visible {
     justify-self: start;
   }
 }
+
+.stat-bar--92 { --bar: 92%; }
+.stat-bar--88 { --bar: 88%; }
+.stat-bar--70 { --bar: 70%; }
+.stat-bar--54 { --bar: 54%; }
