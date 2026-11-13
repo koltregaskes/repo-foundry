@@ -248,7 +248,7 @@ function initVisualisations(data) {
           .map(
             (item) => `<div class="visual-bar__row">
               <span>${escapeHtml(item.label)}</span>
-              <div class="visual-bar__meter"><div class="visual-bar__fill" style="width:${(item.value / max) * 100}%"></div></div>
+              <div class="visual-bar__meter"><div class="visual-bar__fill" data-width="${(item.value / max) * 100}"></div></div>
               <strong>${item.value}</strong>
             </div>`,
           )
@@ -263,6 +263,7 @@ function initVisualisations(data) {
     seriesCard("Star bands", data.visualisations.starBands || []),
     seriesCard("Freshness", data.visualisations.freshness || []),
   ].join("");
+  root.querySelectorAll("[data-width]").forEach(bar => { bar.style.width = Math.max(0, Math.min(100, Number(bar.dataset.width))) + "%"; });
 }
 
 const data = readPageData();
