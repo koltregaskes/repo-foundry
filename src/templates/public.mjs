@@ -1,4 +1,4 @@
-import { absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
+import { CONTACT_EMAIL, absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
 
 function formatDate(value) {
   const parsed = new Date(value || "");
@@ -393,7 +393,8 @@ function buildContactContent() {
         </article>
         <article class="channel-card">
           <p class="eyebrow">Ops status</p>
-          <h3>Static-first.</h3>
+          <h3>Email</h3>
+          <a class="text-link" href="mailto:${escapeAttribute(CONTACT_EMAIL)}">${escapeHtml(CONTACT_EMAIL)}</a>
           <p>No backend endpoint, no paid services, and no credentialed contact pipeline in v1.</p>
         </article>
         <article class="channel-card">
