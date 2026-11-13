@@ -1,4 +1,5 @@
 import path from "node:path";
+import { SITE_URL, escapeHtml } from "../src/templates/layout.mjs";
 
 import {
   buildAboutPage,
@@ -53,7 +54,15 @@ await copyFile(path.join(process.cwd(), "src", "assets", "tokens.css"), path.joi
 await copyFile(path.join(process.cwd(), "src", "assets", "shell.js"), path.join(PUBLIC_DIST_ROOT, "assets", "shell.js"));
 await copyFile(path.join(process.cwd(), "src", "assets", "favicon.svg"), path.join(PUBLIC_DIST_ROOT, "assets", "favicon.svg"));
 await copyFile(path.join(process.cwd(), "src", "assets", "public-app.js"), path.join(PUBLIC_DIST_ROOT, "assets", "public-app.js"));
+await copyFile(path.join(process.cwd(), "src/assets/og-card.png"), path.join(PUBLIC_DIST_ROOT, "assets/og-card.png"));
 await writeText(path.join(PUBLIC_DIST_ROOT, ".nojekyll"), "");
+const feedItems = siteData.news.map((item) => {
+  const date = new Date(item.publishedAt);
+  if (!Number.isFinite(date.getTime())) throw new Error("RSS item has an invalid publication date");
+  return `<item><title>${escapeHtml(item.title)}</title><link>${escapeHtml(item.url)}</link><guid isPermaLink="false">${escapeHtml(item.url)}</guid><description>${escapeHtml(item.summary || item.title)}</description><pubDate>${date.toUTCString()}</pubDate></item>`;
+}).join("\n");
+await writeText(path.join(PUBLIC_DIST_ROOT, "feed.xml"), `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Repo Foundry releases</title><link>${SITE_URL}/</link><description>Curated open-source release updates. Dates come from the source articles.</description><language>en-gb</language><atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>${feedItems}</channel></rss>`);
 await writeJson(path.join(PUBLIC_DIST_ROOT, "data", "source-provenance.json"), siteData.sourceProvenance);
 
 await writePage("index.html", buildPublicHome(siteData, "./"));
@@ -94,7 +103,7 @@ const publicRoutes = [
   ...siteData.categories.map((category) => `lanes/${category.id}/`),
 ];
 
-const siteUrl = "https://koltregaskes.github.io/repo-foundry";
+const siteUrl = SITE_URL;
 const defaultLastmod = new Date(siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
 const newsLastmod = new Date(siteData.contentModifiedAt || siteData.generatedAt || Date.now()).toISOString().slice(0, 10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -155,6 +164,8 @@ Repo Foundry is a public-safe discovery surface for high-signal open-source repo
 - [Visualisations](${siteUrl}/visualisations/): public-safe charts and snapshots.
 - [Codex resources](${siteUrl}/resources/codex/): Codex-adjacent references and public resources.
 - [About](${siteUrl}/about/): scope, public/private boundary, and editorial posture.
+
+- [RSS releases](${siteUrl}/feed.xml): source-dated release updates.
 
 ## Agent Notes
 - Private operational records and coordination material are excluded from this public build.
