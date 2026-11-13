@@ -51,25 +51,9 @@ test("metadata refresh validates the public boundary before pushing", () => {
   );
 });
 
-test("stale routed news defers Pages without weakening pre-push safety", () => {
-  const pushStep = workflow.indexOf("- name: Push refreshed repository metadata");
-  const routedValidation = workflow.indexOf(
-    "- name: Validate routed source for Pages deployment",
-  );
-
-  assert.ok(pushStep < routedValidation);
-  assert.match(
-    workflow.slice(routedValidation),
-    /continue-on-error: true\s+run: npm run verify:public-input/,
-  );
-  assert.match(
-    workflow,
-    /- name: Upload Pages artifact\s+if: steps\.public_validation\.outcome == 'success'/,
-  );
-  assert.match(
-    workflow,
-    /- name: Deploy Pages artifact\s+if: steps\.public_validation\.outcome == 'success'/,
-  );
+test("metadata refresh dispatches the single deployment freshness gate", () => {
+  assert.match(workflow, /gh workflow run deploy-pages.yml --ref main/);
+  assert.doesNotMatch(workflow, /upload-pages-artifact|deploy-pages@/);
 });
 
 
@@ -90,5 +74,5 @@ test("generic validation checks code without consuming the deployment freshness 
     /npm test && npm run build:public-boundary && npm run verify:public-boundary/,
   );
   assert.doesNotMatch(validateWorkflow, /npm run validate:public/);
-  assert.match(workflow, /run: npm run verify:public-input/);
+  assert.match(workflow, /gh workflow run deploy-pages.yml/);
 });

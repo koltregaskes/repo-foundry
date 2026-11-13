@@ -13,23 +13,20 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
+  actions: write
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
-  group: pages
+  group: refresh-repository-metadata
   cancel-in-progress: false
 
 jobs:
   refresh:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -74,23 +71,8 @@ jobs:
         run: |
           git push origin HEAD:main
 
-      - name: Validate routed source for Pages deployment
-        id: public_validation
-        continue-on-error: true
-        run: npm run verify:public-input
-
-      - name: Report deferred Pages deployment
-        if: steps.public_validation.outcome == 'failure'
-        run: |
-          echo "::warning::Repository metadata was refreshed, but Pages deployment was skipped because the routed news source did not pass validation."
-
-      - name: Upload Pages artifact
-        if: steps.public_validation.outcome == 'success'
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: dist/public
-
-      - name: Deploy Pages artifact
-        if: steps.public_validation.outcome == 'success'
-        id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Dispatch the single Pages workflow
+        if: steps.metadata_commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main
