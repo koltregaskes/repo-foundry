@@ -40,9 +40,16 @@ for (const file of await pages(root)) {
   const result = await new AxeBuilder({page}).analyze();
   expect(result.violations.filter(v => ['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
   if(relative==='visualisations/index.html') {
-   const bars=await page.locator('.visual-bar__fill').evaluateAll(nodes=>nodes.map(n=>({expected:Number(n.dataset.width),actual:parseFloat(n.style.width)})));
+   const bars=await page.locator('.visual-bar__fill').evaluateAll(nodes=>nodes.map(n=>({expected:Number(n.dataset.width),fill:n.getBoundingClientRect().width,track:n.closest(".visual-bar__meter").getBoundingClientRect().width})));
    expect(bars.length).toBeGreaterThan(0);
-   for(const bar of bars) expect(bar.actual).toBeCloseTo(bar.expected,2);
+   for(const bar of bars) {
+    expect(Number.isFinite(bar.expected)).toBe(true);
+    expect(bar.expected).toBeGreaterThanOrEqual(0);
+    expect(bar.expected).toBeLessThanOrEqual(100);
+    expect(bar.track).toBeGreaterThan(0);
+    // Half a percentage point accommodates subpixel layout rounding at narrow widths.
+    expect(Math.abs(bar.fill / bar.track * 100 - bar.expected)).toBeLessThanOrEqual(0.5);
+   }
   }
   const links = await page.locator('[href], [src]').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')||n.getAttribute('src')).filter(Boolean).map(value=>new URL(value,document.baseURI).href));
   for(const link of links) {
