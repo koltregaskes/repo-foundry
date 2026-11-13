@@ -32,6 +32,9 @@ __pycache__/
 .env.*
 !.env.example
 
+# News config checked out by the refresh workflow
+.news-pipeline/
+
 # Local-only planning and scratch docs
 docs/local/
 planning-local/

@@ -99,7 +99,7 @@ export function assertRoutedNewsFeed(
   if (feed.site !== expectedSite) {
     throw new Error(`Routed news feed site must be "${expectedSite}", received "${feed.site || "missing"}".`);
   }
-  if (!Array.isArray(feed.articles) || feed.articles.length === 0) {
+  if (!Array.isArray(feed.articles)) {
     throw new Error("Routed news feed has no articles.");
   }
   if (Number(feed.article_count) !== feed.articles.length) {
@@ -141,16 +141,20 @@ export function assertRoutedNewsFeed(
     }
     return parseDate(article.date, `article ${index + 1} date`);
   });
-  const newestItemAt = new Date(Math.max(...itemDates.map((date) => date.getTime())));
-  const newestItemAgeMs = nowDate.getTime() - newestItemAt.getTime();
+  const newestItemAt = itemDates.length
+    ? new Date(Math.max(...itemDates.map((date) => date.getTime())))
+    : generatedAt;
+  if (itemDates.length > 0) {
+    const newestItemAgeMs = nowDate.getTime() - newestItemAt.getTime();
 
-  if (newestItemAgeMs < -futureToleranceMs) {
-    throw new Error("Routed news newest article timestamp is in the future.");
-  }
-  if (!allowStale && newestItemAgeMs > maxAgeMs) {
-    throw new Error(
-      `Routed news newest article is ${(newestItemAgeMs / 86_400_000).toFixed(1)} days old; maximum is ${maxAgeDays}.`,
-    );
+    if (newestItemAgeMs < -futureToleranceMs) {
+      throw new Error("Routed news newest article timestamp is in the future.");
+    }
+    if (!allowStale && newestItemAgeMs > maxAgeMs) {
+      throw new Error(
+        `Routed news newest article is ${(newestItemAgeMs / 86_400_000).toFixed(1)} days old; maximum is ${maxAgeDays}.`,
+      );
+    }
   }
 
   return {
@@ -192,7 +196,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
     .sort((left, right) => new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime())
     .slice(0, 12);
 
-  if (news.length === 0) {
+  if (news.length === 0 && feed.articles.length > 0) {
     throw new Error("Routed news feed produced no public-safe articles.");
   }
 
