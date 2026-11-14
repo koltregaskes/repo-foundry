@@ -33,7 +33,7 @@ function navMarkup(items, currentKey) {
   return items
     .map((item) => {
       const active = item.id === currentKey ? "is-active" : "";
-      return `<a class="hub-nav__link ${active}" href="${escapeAttribute(item.href)}">${escapeHtml(item.label)}</a>`;
+      return `<a class="hub-nav__link ${active}"${item.id === currentKey ? ' aria-current="page"' : ""} href="${escapeAttribute(item.href)}">${escapeHtml(item.label)}</a>`;
     })
     .join("");
 }
