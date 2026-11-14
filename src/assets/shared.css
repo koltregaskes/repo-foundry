@@ -1681,3 +1681,5 @@ body.has-motion [data-reveal].is-visible {
 .news-card h3, .news-card p { overflow-wrap: anywhere; }
 .stack-item { flex-wrap: wrap; }
 .stack-item > div { min-width: 0; overflow-wrap: anywhere; }
+
+.footer-wordmark { min-width: 0; overflow-wrap: anywhere; }

@@ -5,6 +5,8 @@ export function findOverflow({scrollers=[],decorativeClippers=[]}={}) {
  for(const element of document.querySelectorAll('body *')){
   const rect=element.getBoundingClientRect(),style=getComputedStyle(element);
   if(!rect.width||!rect.height||!element.getClientRects().length)continue;
+  // Standard one-pixel clipped accessible labels have no visible text.
+  if(rect.width<=1&&rect.height<=1&&style.position==='absolute'&&style.clip!=='auto')continue;
   let hidden=false,reviewed=false,clipper=null;
   for(let ancestor=element;ancestor;ancestor=ancestor.parentElement){
    const computed=getComputedStyle(ancestor),bounds=ancestor.getBoundingClientRect();
@@ -17,7 +19,11 @@ export function findOverflow({scrollers=[],decorativeClippers=[]}={}) {
   }
   if(hidden||reviewed)continue;
   const viewportOverflow=rect.left < -tolerance||rect.right > viewport+tolerance;
-  const textOverflow=style.overflowX==='visible'&&element.clientWidth>0&&element.scrollWidth>element.clientWidth+tolerance;
+  const containsText=[...element.childNodes].some(node=>node.nodeType===Node.TEXT_NODE&&node.textContent.trim());
+  const textContainer=containsText||/^(H[1-6]|P|A|SPAN|STRONG|SMALL|LABEL|CODE|PRE|BUTTON|TD|TH)$/.test(element.tagName);
+  let textOverflow=false;
+  if(textContainer){const range=document.createRange();range.selectNodeContents(element);textOverflow=[...range.getClientRects()].some(bounds=>bounds.width>0&&(bounds.left<rect.left-tolerance||bounds.right>rect.right+tolerance));}
+
   if(viewportOverflow||clipper||textOverflow)issues.push({tag:element.tagName,id:element.id,classes:element.getAttribute('class'),left:rect.left,right:rect.right,width:rect.width,clipper,textOverflow});
  }
  return issues;
