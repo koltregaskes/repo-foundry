@@ -1,18 +1,35 @@
+import {isIP} from 'node:net';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
+function safeDestination(value) {
+ try { const url=new URL(value),host=url.hostname.replace(/^\[|\]$/g,'');
+  return url.protocol==='https:'&&!url.username&&!url.password&&!isIP(host)&&host!=='localhost'&&!/\.(?:localhost|local|internal)$/.test(host);
+ } catch { return false; }
+}
 export async function checkExternalUrl(url,{fetchImpl=fetch,retry=false,deadline=Date.now()+20000}={}) {
  for(let attempt=0;attempt<(retry?2:1);attempt++) {
-  try {
-   const response=await fetchImpl(url,{signal:AbortSignal.timeout(Math.max(1,Math.min(6000,deadline-Date.now()))),redirect:'follow',headers:{'user-agent':'LaunchLinkCheck/1.0'}});
+  let current=url;const visited=new Set();
+  try {for(let hop=0;hop<8;hop++) {
+   if(!safeDestination(current)||visited.has(current))return {status:'unsafe',code:'unsafe-redirect'};
+   visited.add(current);if(Date.now()>=deadline)return {status:'unverified',code:'deadline'};
+   const response=await fetchImpl(current,{signal:AbortSignal.timeout(Math.max(1,Math.min(6000,deadline-Date.now()))),redirect:'manual',headers:{'user-agent':'LaunchLinkCheck/1.0'}});
    await response.body?.cancel();
+   if([301,302,303,307,308].includes(response.status)) {
+    const location=response.headers?.get('location');if(!location)return {status:'unverified',code:response.status};
+    current=new URL(location,current).href;continue;
+   }
    if([404,410].includes(response.status))return {status:'broken',code:response.status};
-   if(response.ok && !(new URL(url).protocol==='https:' && new URL(response.url||url).protocol!=='https:'))return {status:'ok',code:response.status};
-   if(attempt===0&&retry&&[429,500,502,503,504].includes(response.status)&&Date.now()<deadline)continue;
+   if(response.ok)return {status:'ok',code:response.status};
+   if(attempt===0&&retry&&[429,500,502,503,504].includes(response.status)&&Date.now()<deadline)break;
    return {status:'unverified',code:response.status};
+  }
+  if(visited.size>=8)return {status:'unsafe',code:'redirect-limit'};
   } catch {if(attempt===0&&retry&&Date.now()<deadline)continue;return {status:'unverified',code:'network/redirect'}}
  }
+ return {status:'unverified',code:'retry-exhausted'};
 }
+
 async function walk(dir){return (await Promise.all((await fs.readdir(dir,{withFileTypes:true})).map(e=>e.isDirectory()?(e.name.startsWith('.')||['node_modules','test-results','tests','playwright-report'].includes(e.name)?[]:walk(path.join(dir,e.name))):e.name.endsWith('.html')?[path.join(dir,e.name)]:[]))).flat()}
 async function main(){
  const urls=new Set();
@@ -24,7 +41,7 @@ async function main(){
  const deadline=Date.now()+250000;let checked=0,failed=0,unknown=0;const hosts=new Map();
  function unverified(url,code){unknown++;const host=new URL(url).hostname;hosts.set(host,(hosts.get(host)||0)+1);console.log(`UNVERIFIED ${code} ${host}`)}
  async function workers(queue,count,retry){await Promise.all(Array.from({length:count},async()=>{while(queue.length){const url=queue.shift();if(Date.now()>=deadline){unverified(url,'deadline');continue}const result=await checkExternalUrl(url,{retry,deadline});checked++;
-  if(result.status==='broken'){failed++;console.log(`BROKEN ${result.code} ${new URL(url).origin}${new URL(url).pathname}`)}else if(result.status==='unverified')unverified(url,result.code);
+  if(result.status==='broken'){failed++;console.log(`BROKEN ${result.code} ${new URL(url).origin}${new URL(url).pathname}`)}else if(['unverified','unsafe'].includes(result.status))unverified(url,result.code);
  }}))}
  await Promise.all([workers(archive,2,true),workers(other,6,false)]);
  const report={checked,broken:failed,unverified:unknown,total:urls.size};console.log(JSON.stringify(report));
