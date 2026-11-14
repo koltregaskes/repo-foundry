@@ -1,0 +1,12 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {verifyPublishedSite} from '../scripts/check-published-freshness.mjs';
+const now=new Date('2026-11-14T06:30:00Z'),date='2026-11-14T05:00:00.000Z',base='https://example.com/foundry/';
+const feed={site:'Repo Foundry',generated:date,article_count:1,articles:[{title:'Source headline',url:'https://example.com/source',source:'Example',date,summary:'Actual source.'}]};const metadata={repos:[{slug:'example-tool',name:'example/tool'}],sourceProvenance:{repositoryMetadata:{generatedAt:date,itemCount:1}}};
+const provenance={news:{generatedAt:date,newestItemAt:date,itemCount:1,consumedItems:1},repositoryMetadata:metadata.sourceProvenance.repositoryMetadata};
+const fixtures={'data/source-provenance.json':JSON.stringify(provenance),'news/':'<link rel="canonical" href="'+base+'news/">Source headline https://example.com/source','feed.xml':'https://example.com/source '+new Date(date).toUTCString(),'repos/example-tool/':'example/tool'};
+function run(changes={},extra={}){return verifyPublishedSite({base,feed,metadata,now,fetchImpl:async url=>({status:200,text:async()=>({...fixtures,...changes})[url.slice(base.length)]}),...extra});}
+test('independent public readback records original dates and body hashes',async()=>{const report=await run();assert.equal(report.checks.length,4);assert.equal(report.sourceGeneratedAt,date);assert.ok(report.checks.every(c=>c.sha256.length===64));});
+test('stale source cannot be rescued by a new metadata build',async()=>{await assert.rejects(run({}, {feed:{...feed,generated:'2026-11-10T00:00:00Z'}}),/days old/);});
+test('stale deployed provenance fails even when checkout is fresh',async()=>{await assert.rejects(run({'data/source-provenance.json':JSON.stringify({...provenance,news:{...provenance.news,generatedAt:'2026-11-10T00:00:00Z'}})}),/deployed news/);});
+test('missing public article and RSS dates fail',async()=>{await assert.rejects(run({'news/':'<link href="'+base+'news/">'}),/news item missing/);await assert.rejects(run({'feed.xml':'https://example.com/source'}),/RSS item\/date missing/);});
+test('old metadata fails despite new feed',async()=>{await assert.rejects(run({}, {metadata:{...metadata,sourceProvenance:{repositoryMetadata:{generatedAt:'2026-11-10T00:00:00Z'}}}}),/metadata snapshot/);});
+test('missing public destination fails',async()=>{await assert.rejects(run({}, {fetchImpl:async()=>({status:404})}),/did not return 200/);});

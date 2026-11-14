@@ -20,3 +20,7 @@ jobs:
 
       - name: Warn before the three-day routed feed gate
         run: node scripts/check-routed-feed-freshness.mjs
+
+      - name: Read back deployed news, RSS and metadata without the Mini PC
+        if: always()
+        run: node scripts/check-published-freshness.mjs

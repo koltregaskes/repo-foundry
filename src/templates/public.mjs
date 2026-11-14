@@ -299,14 +299,21 @@ function buildHomeContent(siteData) {
   `;
 }
 
+function sourceSnapshot(siteData) {
+  const news=siteData.sourceProvenance?.news;
+  const stamp=value=>{const date=new Date(value||'');return Number.isFinite(date.getTime())?'<time datetime="'+date.toISOString()+'">'+escapeHtml(date.toLocaleString('en-GB',{timeZone:'UTC'}))+' UTC</time>':'unknown';};
+  return '<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+stamp(news?.newestItemAt)+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
+}
+
 function buildFeedContent(siteData) {
   const highlights = siteData.repos.slice(0, 3).map((repo) => repoCard(repo, { compact: true, action: "Read dossier" })).join("");
   const stories = siteData.news.length
     ? siteData.news.map(newsCard).join("")
-    : `<p class="empty-state">No public release items are available yet. Run the release sync and rebuild the site to repopulate this page.</p>`;
+    : `<p class="empty-state">No public release items were returned by the latest source refresh. The repository library remains available.</p>`;
 
   return `
     ${telemetry(siteData, "Broadcast on-air")}
+    ${sourceSnapshot(siteData)}
     <section class="feed-grid" data-reveal>
       <div class="story-stack">
         <h2 class="eyebrow">// story drops</h2>
