@@ -166,7 +166,7 @@ function scoreboard(siteData) {
   const items = siteData.repos
     .slice(0, 10)
     .map((repo) => `${repo.name} star signal ${number(repo.stars)}`);
-  const text = [...items, ...items]
+  const text = items
     .map((item) => `<span>${escapeHtml(item)}</span>`)
     .join("");
 
@@ -299,14 +299,21 @@ function buildHomeContent(siteData) {
   `;
 }
 
+function sourceSnapshot(siteData) {
+  const news=siteData.sourceProvenance?.news;
+  const stamp=value=>{const date=new Date(value||'');return Number.isFinite(date.getTime())?'<time datetime="'+date.toISOString()+'">'+escapeHtml(date.toLocaleString('en-GB',{timeZone:'UTC'}))+' UTC</time>':'unknown';};
+  return '<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+(news?.itemCount===0?'none returned':stamp(news?.newestItemAt))+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
+}
+
 function buildFeedContent(siteData) {
   const highlights = siteData.repos.slice(0, 3).map((repo) => repoCard(repo, { compact: true, action: "Read dossier" })).join("");
   const stories = siteData.news.length
     ? siteData.news.map(newsCard).join("")
-    : `<p class="empty-state">No public release items are available yet. Run the release sync and rebuild the site to repopulate this page.</p>`;
+    : `<p class="empty-state">No public release items were returned by the latest source refresh. The repository library remains available.</p>`;
 
   return `
     ${telemetry(siteData, "Broadcast on-air")}
+    ${sourceSnapshot(siteData)}
     <section class="feed-grid" data-reveal>
       <div class="story-stack">
         <h2 class="eyebrow">// story drops</h2>
@@ -362,15 +369,16 @@ function buildAboutContent(siteData) {
 function buildContactContent() {
   return `
     <section class="contact-grid" data-reveal>
-      <form class="contact-form" data-contact-form>
+      <form class="contact-form" data-contact-form data-contact-email="${escapeAttribute(CONTACT_EMAIL)}">
         <p class="eyebrow">// comms.transmit</p>
         <h2>Incoming.</h2>
         <p>Send a repo signal, correction, source note, or cross-link suggestion. This static form prepares a local draft in v1; it does not send to a backend.</p>
+        <fieldset class="contact-fields" data-contact-fields disabled><legend>Message details</legend>
         <div class="form-grid">
           <label for="contact-name">Name</label>
-          <input id="contact-name" name="name" autocomplete="name" required />
+          <input id="contact-name" name="name" maxlength="160" autocomplete="name" required />
           <label for="contact-email">Email</label>
-          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          <input id="contact-email" name="email" maxlength="254" type="email" autocomplete="email" required />
           <label for="contact-topic">Signal type</label>
           <select id="contact-topic" name="topic">
             <option>Repo suggestion</option>
@@ -379,9 +387,12 @@ function buildContactContent() {
             <option>Estate cross-link</option>
           </select>
           <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" rows="6" required></textarea>
+          <textarea id="contact-message" name="message" rows="6" maxlength="2000" required></textarea>
         </div>
-        <button type="submit" class="button-link">Transmit draft</button>
+        </fieldset>
+        <button type="submit" class="button-link" disabled>Prepare email draft</button>
+        <a class="text-link" data-prepared-email hidden>Review draft in your email app</a>
+        <noscript><p>The draft form needs JavaScript. Use the email link on this page instead; this form sends nothing.</p></noscript>
         <p class="form-status" data-contact-status aria-live="polite"></p>
       </form>
       <aside class="channel-stack">

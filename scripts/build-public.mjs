@@ -85,7 +85,7 @@ for (const category of siteData.categories) {
   await writePage(path.join("lanes", category.id, "index.html"), buildLaneDetailPage(siteData, category, "../../"));
 }
 
-await writePage("404.html", buildPublicHome(siteData, "./").replace('name="robots" content="index,follow"', 'name="robots" content="noindex,follow"'));
+await writePage("404.html", buildPublicHome(siteData, `${SITE_URL}/`).replace('name="robots" content="index,follow"', 'name="robots" content="noindex,follow"'));
 
 const publicRoutes = [
   "",

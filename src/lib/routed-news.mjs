@@ -147,7 +147,7 @@ export function assertRoutedNewsFeed(
   });
   const newestItemAt = itemDates.length
     ? new Date(Math.max(...itemDates.map((date) => date.getTime())))
-    : generatedAt;
+    : null;
   if (itemDates.length > 0) {
     const newestItemAgeMs = nowDate.getTime() - newestItemAt.getTime();
 
@@ -164,7 +164,7 @@ export function assertRoutedNewsFeed(
   return {
     consumerPath: ROUTED_NEWS_PUBLIC_PATH,
     generatedAt: generatedAt.toISOString(),
-    newestItemAt: newestItemAt.toISOString(),
+    newestItemAt: newestItemAt?.toISOString() ?? null,
     itemCount: feed.articles.length,
   };
 }

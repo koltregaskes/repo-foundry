@@ -1,0 +1,15 @@
+name: Built links and redirect safety
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.22.1'
+      - run: node --test tests/safe-redirects.test.mjs
+      - run: npm run build:public-boundary
+      - run: python scripts/check-internal-links.py

@@ -41,7 +41,7 @@ test('a fresh empty feed does not warn', () => {
 
   assert.equal(assessment.warn, false)
   assert.equal(assessment.hardFail, false)
-  assert.equal(assessment.newestItemAt, generated)
+  assert.equal(assessment.newestItemAt, null)
 })
 
 test("a one-day-old feed warns before the three-day build gate", () => {
@@ -67,3 +67,6 @@ test("the scheduled workflow runs this check every day", () => {
   assert.match(workflow, /workflow_dispatch:/);
   assert.doesNotMatch(workflow, /contents: write/);
 });
+
+test('future source timestamps cannot pass the daily canary',()=>{assert.throws(()=>assessRoutedFeedFreshness(feedAt('2026-10-27T00:00:00Z'),now),/future/);});
+test('mismatched source counts cannot pass the daily canary',()=>{assert.throws(()=>assessRoutedFeedFreshness({...feedAt(now.toISOString()),article_count:2},now),/article_count/);});
