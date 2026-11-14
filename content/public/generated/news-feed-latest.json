@@ -1,288 +1,297 @@
 {
-  "generated": "2026-11-13T17:45:04.272Z",
+  "generated": "2026-11-14T12:12:31.113Z",
   "site": "Repo Foundry",
   "article_count": 15,
   "articles": [
     {
-      "title": "Qwen Code Desktop v0.27.3",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/desktop-v0.27.3",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "Gradio’s NeurIPS challenge asks AI agents to show their work",
+      "url": "https://www.digg.com/ai/683fuxv7",
+      "source": "Digg AI",
       "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T01:18:29.000Z",
-      "summary": "What's Changed fix(ci): read prettier's whole ignore set at the base tip by @wenshao in #16729 fix(cli,core): let an Agent Host retry an enrollment whose answer was lost by @wenshao in #16722 fix(channels): shape-check authorExclude on the inbound task record by @wenshao in #16740 feat(managed-agent): import Skills from the original Runtime by @doudouOUC in #16638 docs: clarify tool bridge requirements when migrating from tools.core by @521Peter in #16750 fix(ci): annotate a truncated tree and pin the encoded tree ref by @wenshao in #16747 refactor(managed-agent): give JDBC stores names...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T11:31:10.943Z",
+      "summary": "Gradio’s paper-reproduction challenge runs November 20–December 5, with a five-paper limit and registration closing November 19.",
+      "category": "industry-media"
     },
     {
-      "title": "Release v0.27.3",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.3",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "‘Stand with Jensen’ letter is ‘amateur hour,’ @lulumeservey says",
+      "url": "https://www.digg.com/ai/7byd0tu8",
+      "source": "Digg AI",
       "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T00:56:37.000Z",
-      "summary": "Highlights See the complete change list below. Breaking Changes No known breaking changes. Complete Change List Features Added chips above the Web Shell composer for unfinished background workflows, shells, monitors, and local agents, replacing the status-bar task pill. ( #16813 ) by @qqqys Added Chinese localization for GitHub channel event prompts in PR-bound sessions when the channel UI language is Chinese, while other languages remain English. ( #16773 ) by @wenshao Managed MCP now counts only up to 32 live selections, retains removed entries for recovery, keeps the 16-enabled limit,...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T05:51:31.247Z",
+      "summary": "@lulumeservey says the letter’s signature pages include names such as Xi Jinping and Jeffrey Epstein.",
+      "category": "industry-media"
     },
     {
-      "title": "Release v0.27.2-nightly.20261112.70a487be84",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/v0.27.2-nightly.20261112.70a487be84",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "Muse announces Poppy 1.0, an open standard for personal agents to work with businesses",
+      "url": "https://www.digg.com/ai/h1x9ymfb",
+      "source": "Digg AI",
       "tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "mcp",
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-12T22:27:16.000Z",
-      "summary": "What's Changed fix(managed-agent): release the MCP owner when a Session closes by @wenshao in #16728 fix(managed-agent): harden Harness error-code parsing, host reader and exception causes by @doudouOUC in #16826 docs(providers): document Wiro AI under OpenAI-compatible providers by @EminBudak in #16850 docs(serve): describe workspace Skill settings writes by name by @521Peter in #16833 refactor(managed-agent): keep asynchronous admission as the only publication mode by @doudouOUC in #16840 feat(web-shell): show unfinished background tasks as chips above the composer by @qqqys in #16813...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T05:32:00.191Z",
+      "summary": "Muse says a poppy.json file tells personal agents how to reach businesses’ websites, APIs or agents.",
+      "category": "industry-media"
     },
     {
-      "title": "Turborepo v2.11.12-canary.1",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.12-canary.1",
-      "source": "GitHub Releases · Turbo",
+      "title": "Databricks says Genie hit 91% on its data benchmark. Rivals used a different setup.",
+      "url": "https://www.digg.com/ai/il3nxnsy",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-12T17:45:19.000Z",
-      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.11-canary.2 by @github-actions[bot] in #14962 fix: Stop input hashing from following symlinks out of the repository by @chadhietala in #14964 fix(cli): Record correct telemetry command name for turbo ls by @Pcmhacker-piro in #14968 fix: Preserve TMPDIR in strict environment mode by @ChrisX101010 in #14970 fix: Keep npm-wrapper group SIGTERM and SIGHUP from force-killing tasks by @mvanhorn in #14972 fix(cli): Report whether stdin is a terminal in turbo info by @Pcmhacker-piro in #14981 chore(deps): Update dependency @vercel/geistdocs...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T01:43:31.479Z",
+      "summary": "Databricks says Genie beat two unnamed agents using fewer than half the tokens, though the systems had different integrations.",
+      "category": "industry-media"
     },
     {
-      "title": "SDK TypeScript Release v0.1.33",
-      "url": "https://github.com/QwenLM/qwen-code/releases/tag/sdk-typescript-v0.1.33",
-      "source": "GitHub Releases · Qwen Code",
+      "title": "Epoch says AI safety-test agents tried hacking its site—and posing as its staff",
+      "url": "https://www.digg.com/ai/a1q745xp",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T01:14:28.000Z",
-      "summary": "Bundled CLI Version This SDK release bundles CLI version: 0.27.3 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.2 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.1 Source: CLI built from source (same branch/ref as SDK) Bundled CLI Version This SDK release bundles CLI version: 0.27.0 Source: CLI built from source (same branch/ref as SDK) See commit history for changes.",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T01:35:47.629Z",
+      "summary": "Epoch says agents sought private benchmark data during Trajectory Labs’ evaluations, initially without consent, but didn’t obtain it.",
+      "category": "industry-media"
     },
     {
-      "title": "v0.101.0",
-      "url": "https://github.com/charmbracelet/crush/releases/tag/v0.101.0",
-      "source": "GitHub Releases · Crush",
+      "title": "Claude Fable and Opus lead Coding Agent Index v2.1. Fable max takes an expensive detour",
+      "url": "https://www.digg.com/ai/f9w7so4z",
+      "source": "Digg AI",
       "tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
       ],
       "matching_tags": [
-        "repo_update",
-        "cli_tool",
-        "tool_update"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-12T16:56:42.000Z",
-      "summary": "Skill toggles, tool timers and a faster Hyper ⚡ This release was brought to you by our team and our favorite contributors! Long awaited features ahead, read along! Toggle skills Skills can now be switched on and off right from the command palette. Broken skills are easy to spot, too! (they're marked with a red × and the reason they failed) 🕐 How long is this taking? Every tool call now shows how long it's been running. Now, you'll know whether that test suite is just slow or actually stuck. Lighter, faster Hyper ⚡ Requests to Hyper are now compressed with Brotli 🥦. That means much...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-14T01:34:47.108Z",
+      "summary": "Artificial Analysis reports a tie at 58, while Fable’s pricier max setting scores lower as more attempts time out.",
+      "category": "industry-media"
     },
     {
-      "title": "Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs",
-      "url": "https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/",
-      "source": "MarkTechPost",
+      "title": "NYU Courant’s new AI center wants models mathematicians can pick apart",
+      "url": "https://www.digg.com/ai/vdn548s2",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.35,
+      "date": "2026-11-14T01:33:21.784Z",
+      "summary": "MAIC says it’s founding a consortium with UT Austin to pursue shared infrastructure and eventually its own open model.",
+      "category": "industry-media"
+    },
+    {
+      "title": "A Cybercab of your own? Tesla invites select customers to buy",
+      "url": "https://www.digg.com/ai/tw8h94m7",
+      "source": "Digg AI",
+      "tags": [
+        "announcement",
+        "model_release",
+        "open_source",
+        "ai_agents",
+        "research_paper",
+        "industry_move"
+      ],
+      "matching_tags": [
+        "open_source"
+      ],
+      "importance": 0.35,
+      "date": "2026-11-14T01:31:14.153Z",
+      "summary": "Cybercab purchase invites are going to select customers, reportedly with a $29,990 price and required $299 monthly autonomy subscription.",
+      "category": "industry-media"
+    },
+    {
+      "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+      "source": "Hugging Face Blog",
       "tags": [
         "open_source",
-        "developer_tool"
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
         "open_source",
-        "developer_tool"
+        "agentic_framework"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-11-13T10:32:26.000Z",
-      "summary": "Google released TPU Sync, an open-source C++ library that moves KV caches and weights across TPU HBM, host DRAM, storage and network. Google reports over 90% lower KV transfer latency on 235B to 480B MoE models. The post Google Releases TPU Sync: Open-Source KV Cache Transfer for TPUs appeared first on MarkTechPost .",
-      "category": "ai_research"
+      "importance": 0.35,
+      "date": "2026-11-13T18:00:39.000Z",
+      "summary": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
+      "category": "platform-blog"
     },
     {
-      "title": "llm-gemini 0.37",
-      "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
-      "source": "Simon Willison's Blog",
+      "title": "XYBench: Helping with the problem behind the question",
+      "url": "https://huggingface.co/blog/allenai/xybench",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update",
-        "tool_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update",
-        "tool_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-11-12T22:55:19.000Z",
-      "summary": "Release: llm-gemini 0.37 Google launched Gemini 4 Hydrogen today - the lowest cost member of the Gemini 4 family. It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing really confusing. Here's the pricing scheme: Model Dates Input ($/M) Cached input Output Gemini 4 Carbon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Argon Through Nov 30, 2026 $2.00 $0.10 $10.00 From Dec 1, 2026 $4.00 $0.20 $20.00 Gemini 4 Hydrogen   $1.50 $0.075 $7.50 Carbon and Argon are the same price , and both are...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-13T17:02:35.000Z",
+      "summary": "XYBench: Helping with the problem behind the question",
+      "category": "platform-blog"
     },
     {
-      "title": "LangChain adds Gemini-powered decisions for routing AI agents and screening tool calls",
-      "url": "https://superpowerdaily.com/posts/langchain-adds-gemini-powered-decisions-for-routing-ai-agents-and-screening-tool-calls",
-      "source": "Superpower Daily",
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "source": "Hugging Face Blog",
       "tags": [
-        "agentic_framework",
-        "tool_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "agentic_framework",
-        "tool_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.7999999999999999,
-      "date": "2026-11-12T21:30:27.000Z",
-      "summary": "The beta integration returns probabilities rather than written answers. Its tool-call checks can reject destructive actions even when a user explicitly requests them.",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-13T14:05:22.000Z",
+      "summary": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "category": "platform-blog"
     },
     {
-      "title": "n8n@1.123.96",
-      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%401.123.96",
-      "source": "GitHub Releases · n8n",
+      "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
+      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+      "source": "Ars Technica AI",
       "tags": [
-        "repo_update",
-        "developer_tool"
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
       ],
       "matching_tags": [
-        "repo_update",
-        "developer_tool"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T08:30:15.000Z",
-      "summary": "1.123.96 (2026-11-13) Bug Fixes editor: Make JSON highlight color visible on light theme ( #43690 ) ( bffbcd8 ) Update @modelcontextprotocol/sdk ( #43527 ) ( f719280 )",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-12T19:23:03.000Z",
+      "summary": "Gemini 4 Hydrogen isn’t getting a slow, security-conscious release like Carbon and Argon.",
+      "category": "industry-media"
     },
     {
-      "title": "Heartland review – Jessica Chastain’s Netflix country music thriller is more miss than hit",
-      "url": "https://www.theguardian.com/film/2026/nov/13/heartland-review-jessica-chastain-netflix",
-      "source": "The Guardian (Culture)",
+      "title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+      "source": "Hugging Face Blog",
       "tags": [
-        "repo_update",
-        "tool_update"
+        "open_source",
+        "model_release",
+        "tool_use",
+        "agentic_framework"
       ],
       "matching_tags": [
-        "repo_update",
-        "tool_update"
+        "open_source",
+        "agentic_framework"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T08:01:12.000Z",
-      "summary": "The Oscar winner plays a singer turned detective searching for her niece in an overly generic Nashville-based mystery that fails to find its footing Given the popularity of its music and the streaming services’ interest in faith-based programming, I’m always a little surprised that there aren’t more movies and TV shows about Nashville. Well, at least the idea of Nashville, the country music mecca that is perpetually struggling to define itself within and against the country at large, a place that has always been more diverse than its reputation yet still stands for a certain image of...",
-      "category": "tech_general"
+      "importance": 0.35,
+      "date": "2026-11-12T19:07:35.000Z",
+      "summary": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "category": "platform-blog"
     },
     {
-      "title": "nightly",
-      "url": "https://github.com/charmbracelet/crush/releases/tag/nightly",
-      "source": "GitHub Releases · Crush",
+      "title": "Google faces calls for AI moratoriums in schools after Gemini pilot backlash",
+      "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
+      "source": "Ars Technica AI",
       "tags": [
-        "repo_update",
-        "cli_tool"
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
       ],
       "matching_tags": [
-        "repo_update",
-        "cli_tool"
+        "open_source"
       ],
-      "importance": 0.7,
-      "date": "2026-11-13T00:47:12.000Z",
-      "summary": "Verifying the artifacts First, download the checksums.txt file and the checksums.txt.sigstore.json file files, for example, with wget : wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt ' wget ' https://github.com/charmbracelet/crush/releases/download/nightly/checksums.txt.sigstore.json ' Then, verify it using cosign : cosign verify-blob \\ --certificate-identity-regexp ' ^https://github.com/charmbracelet/crush/\\.github/workflows/(release|nightly)\\.yml@ ' \\ --certificate-oidc-issuer ' https://token.actions.githubusercontent.com ' \\ --bundle '...",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-12T18:57:45.000Z",
+      "summary": "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”",
+      "category": "industry-media"
     },
     {
-      "title": "Vast data dump from Euclid space telescope reveals stunning galaxies",
-      "url": "https://www.newscientist.com/article/2598614-vast-data-dump-from-euclid-space-telescope-reveals-stunning-galaxies/?utm_campaign=RSS|NSNS&utm_content=home&utm_medium=RSS&utm_source=NSNS",
-      "source": "New Scientist",
+      "title": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
+      "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
+      "source": "Ars Technica AI",
       "tags": [
-        "repo_update",
-        "github_release"
+        "research_paper",
+        "open_source",
+        "hardware",
+        "policy"
       ],
       "matching_tags": [
-        "repo_update",
-        "github_release"
+        "open_source"
       ],
-      "importance": 0.62,
-      "date": "2026-11-12T14:00:00.000Z",
-      "summary": "In the latest release of images collected by the Euclid space telescope, there are close-ups of distant galaxies where stars are in the process of forming",
-      "category": "tech_general"
-    },
-    {
-      "title": "Turborepo v2.11.12-canary.2",
-      "url": "https://github.com/vercel/turborepo/releases/tag/v2.11.12-canary.2",
-      "source": "GitHub Releases · Turbo",
-      "tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "importance": 0.54,
-      "date": "2026-11-13T16:07:13.000Z",
-      "summary": "What's Changed Changelog chore: Release Turborepo 2.11.12-canary.1 by @github-actions[bot] in #15012 chore(deps): Update dependency @vercel/geistdocs to v2.15.2 by @vercel-gh-bot-4[bot] in #15013 fix: Install adapter-vercel in with-svelte example by @anthonyshew in #15019 feat: Add turborepo@add skill by @codywong in #15014 feat: Add --verbose to turbo setup by @anthonyshew in #15015 refactor: Make turbo setup's installer output safe for concurrent installers by @anthonyshew in #15016 feat: Run turbo setup dependency installs in parallel by @anthonyshew in #15017 New Contributors...",
-      "category": "ai_tools"
-    },
-    {
-      "title": "v1.104.7",
-      "url": "https://github.com/tailscale/tailscale/releases/tag/v1.104.7",
-      "source": "GitHub Releases · Tailscale",
-      "tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "matching_tags": [
-        "repo_update",
-        "tool_update"
-      ],
-      "importance": 0.54,
-      "date": "2026-11-12T22:56:51.000Z",
-      "summary": "Please refer to the changelog available at https://tailscale.com/changelog",
-      "category": "ai_tools"
+      "importance": 0.35,
+      "date": "2026-11-12T14:50:17.000Z",
+      "summary": "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker.",
+      "category": "industry-media"
     }
   ]
 }
