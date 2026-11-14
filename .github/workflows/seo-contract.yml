@@ -1,0 +1,15 @@
+name: Built SEO regression contract
+on: [pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.22.1'
+      - run: node scripts/build-public.mjs --allow-stale-routed-news-for-boundary-scan
+      - run: python scripts/check-seo.py
+      - run: python tests/contracts/seo.test.py

@@ -32,6 +32,9 @@ jobs:
       - name: Validate routed source and build public site
         run: npm run verify:public-input && npm run build:public && npm run verify:public-boundary
 
+      - name: Check built SEO before uploading the live artifact
+        run: python scripts/check-seo.py
+
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
