@@ -15,6 +15,8 @@ const NAMED_HTML_ENTITIES = {
 function safeScalar(codePoint) {
   return Number.isInteger(codePoint) && codePoint > 0 && codePoint <= 0x10FFFF &&
     !(codePoint >= 0xD800 && codePoint <= 0xDFFF) &&
+    !(codePoint >= 0xFDD0 && codePoint <= 0xFDEF) &&
+    (codePoint & 0xFFFF) < 0xFFFE &&
     !(codePoint < 0x20 && ![9,10,13].includes(codePoint)) &&
     !(codePoint >= 0x7F && codePoint <= 0x9F);
 }

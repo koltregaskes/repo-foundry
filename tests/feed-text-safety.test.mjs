@@ -6,3 +6,5 @@ test('hostile feed text cannot break script context, including Unicode separator
 
 test('valid supplementary numeric entities remain readable',()=>{assert.equal(compile('Sky &#x1F30C; &#128512;').title,'Sky '+String.fromCodePoint(0x1F30C)+' '+String.fromCodePoint(0x1F600));});
 test('decoded control characters are replaced safely',()=>{assert.equal(compile('A&#x80;B&#x1F;C').title,'A'+String.fromCodePoint(0xFFFD)+'B'+String.fromCodePoint(0xFFFD)+'C');});
+
+for(const point of [0xFFFE,0xFFFF,0xFDD0,0xFDEF,0x1FFFE,0x1FFFF,0x10FFFE,0x10FFFF])test('noncharacter rejected in raw and entity form '+point.toString(16),()=>{for(const title of ['Raw '+String.fromCodePoint(point),'Entity &#x'+point.toString(16)+';']){const item=compile(title);assert.ok(!item.title.includes(String.fromCodePoint(point)));}});
