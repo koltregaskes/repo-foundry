@@ -176,6 +176,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
   const news = feed.articles
     .map((article) => {
       const publishedAt = parseDate(article.date, "article date").toISOString();
+      const parsedUrl = new URL(article.url);
       const tags = [...new Set([...(article.tags || []), ...(article.matching_tags || [])])]
         .map((tag) => cleanPublicText(tag))
         .filter(Boolean);
@@ -185,7 +186,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
       return {
         id: `routed-${slugify(`${source}-${article.title}-${publishedAt}`)}`,
         title: cleanPublicText(article.title),
-        url: article.url,
+        url: parsedUrl.href,
         source,
         sourcePlatform: sourcePlatformFromUrl(article.url),
         projectName: projectName(article),
