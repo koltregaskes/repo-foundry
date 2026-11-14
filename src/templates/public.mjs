@@ -362,15 +362,16 @@ function buildAboutContent(siteData) {
 function buildContactContent() {
   return `
     <section class="contact-grid" data-reveal>
-      <form class="contact-form" data-contact-form>
+      <form class="contact-form" data-contact-form data-contact-email="${escapeAttribute(CONTACT_EMAIL)}">
         <p class="eyebrow">// comms.transmit</p>
         <h2>Incoming.</h2>
         <p>Send a repo signal, correction, source note, or cross-link suggestion. This static form prepares a local draft in v1; it does not send to a backend.</p>
+        <fieldset class="contact-fields" data-contact-fields disabled><legend>Message details</legend>
         <div class="form-grid">
           <label for="contact-name">Name</label>
-          <input id="contact-name" name="name" autocomplete="name" required />
+          <input id="contact-name" name="name" maxlength="160" autocomplete="name" required />
           <label for="contact-email">Email</label>
-          <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          <input id="contact-email" name="email" maxlength="254" type="email" autocomplete="email" required />
           <label for="contact-topic">Signal type</label>
           <select id="contact-topic" name="topic">
             <option>Repo suggestion</option>
@@ -379,9 +380,12 @@ function buildContactContent() {
             <option>Estate cross-link</option>
           </select>
           <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" rows="6" required></textarea>
+          <textarea id="contact-message" name="message" rows="6" maxlength="2000" required></textarea>
         </div>
-        <button type="submit" class="button-link">Transmit draft</button>
+        </fieldset>
+        <button type="submit" class="button-link" disabled>Prepare email draft</button>
+        <a class="text-link" data-prepared-email hidden>Review draft in your email app</a>
+        <noscript><p>The draft form needs JavaScript. Use the email link on this page instead; this form sends nothing.</p></noscript>
         <p class="form-status" data-contact-status aria-live="polite"></p>
       </form>
       <aside class="channel-stack">

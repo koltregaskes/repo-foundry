@@ -145,11 +145,22 @@
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (!form.reportValidity()) return;
+      var values = new FormData(form);
+      var body = ['Name: ' + values.get('name'), 'Reply to: ' + values.get('email'), '', values.get('message')].join('\n');
+      var prepared = form.querySelector('[data-prepared-email]');
+      prepared.setAttribute('href', 'mailto:' + form.dataset.contactEmail + '?subject=' + encodeURIComponent('Repo Foundry: ' + values.get('topic')) + '&body=' + encodeURIComponent(body));
+      prepared.hidden = false;
       var status = form.querySelector("[data-contact-status]");
       if (status) {
-        status.textContent = "Draft prepared locally. Open GitHub or email with the same public-safe note.";
+        status.textContent = "Draft prepared locally. Review it in your email app; nothing has been sent.";
       }
     });
+  }
+
+  if (form) {
+    form.querySelector('[data-contact-fields]').disabled = false;
+    form.querySelector('button[type="submit"]').disabled = false;
   }
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;

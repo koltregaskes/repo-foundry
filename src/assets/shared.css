@@ -1076,6 +1076,8 @@ p {
   gap: var(--space-5);
 }
 
+.contact-fields { border: 0; margin: 0; padding: 0; min-width: 0; }
+
 .form-grid {
   display: grid;
   grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr);
