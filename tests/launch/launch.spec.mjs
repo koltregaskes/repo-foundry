@@ -1,3 +1,4 @@
+import {findOverflow} from '../../scripts/overflow-check.mjs';
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -16,9 +17,10 @@ const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.j
 for (const file of await pages(root)) {
  const relative = path.relative(root,file).replaceAll('\\','/');
  const html = await fs.readFile(file,'utf8');
- for (const width of [320,1280]) test(`${relative} at ${width}px`, async ({page}) => {
+ for (const width of [320,390,1280]) test(`${relative} at ${width}px`, async ({page}) => {
   await page.addInitScript(() => { window.cspViolations=[]; document.addEventListener("securitypolicyviolation", e => window.cspViolations.push({directive:e.effectiveDirective,blocked:e.blockedURI})); });
   await page.setViewportSize({width,height:900});
+  await page.emulateMedia({reducedMotion:'reduce'});
   await page.route('**/*', async route => {
    const url = new URL(route.request().url());
    if(url.origin !== origin) return route.abort();
@@ -34,11 +36,24 @@ for (const file of await pages(root)) {
   if (redirect) await page.waitForURL(new URL(redirect[1], new URL(relative,base)).href);
   await page.waitForLoadState('networkidle');
   await expect(page.locator('body')).toBeVisible();
-  const overflow = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(e => e.getBoundingClientRect().right > innerWidth + 1).map(e => ({tag:e.tagName,classes:e.className,width:e.getBoundingClientRect().width,right:e.getBoundingClientRect().right})).slice(0,10));
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), JSON.stringify(overflow)).toBe(true);
+  await page.evaluate(()=>document.fonts.ready);
+  expect(await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches)).toBe(true);
+  expect(await page.locator('body').getAttribute('class')).not.toContain('has-motion');
+  const overflow = await page.evaluate(findOverflow);
+  expect(overflow).toEqual([]);
+  await expect(page.locator('main')).toHaveCount(1);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await page.keyboard.press('Tab');
+  await expect(page.locator('.skip-link')).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('#main')).toBeFocused();
   expect(await page.evaluate(()=>window.cspViolations)).toEqual([]);
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   const result = await new AxeBuilder({page}).analyze();
-  expect(result.violations.filter(v => ['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))).toEqual([]);
+  if(result.violations.some(v=>v.id==='color-contrast'))console.log('CONTRAST STATE '+JSON.stringify(state));
+  const incompleteContrast=result.incomplete.filter(v=>v.id==='color-contrast').reduce((n,v)=>n+v.nodes.length,0);
+  if(incompleteContrast)console.log(relative+' '+width+': '+incompleteContrast+' contrast nodes need human review');
+  expect(result.violations.filter(v => ['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))).toEqual([]);
   if(relative==='visualisations/index.html') {
    const bars=await page.locator('.visual-bar__fill').evaluateAll(nodes=>nodes.map(n=>({expected:Number(n.dataset.width),fill:n.getBoundingClientRect().width,track:n.closest(".visual-bar__meter").getBoundingClientRect().width})));
    expect(bars.length).toBeGreaterThan(0);

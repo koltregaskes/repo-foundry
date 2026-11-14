@@ -4,12 +4,14 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+env:
+  PLAYWRIGHT_CHANNEL: msedge
 permissions:
   contents: read
 jobs:
   launch:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
@@ -19,5 +21,8 @@ jobs:
       - run: npm ci
       - run: npm test && npm run build:public-boundary && npm run verify:public-boundary
       - run: python scripts/check-seo.py
-      - run: npx playwright install --with-deps chromium
+      - name: Verify installed Edge (no browser download)
+        run: microsoft-edge --version
+      - name: Prove overflow and clipping negatives at 320 and 390
+        run: node scripts/check-overflow-browser.mjs
       - run: npm run test:launch

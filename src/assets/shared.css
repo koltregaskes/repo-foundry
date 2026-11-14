@@ -307,7 +307,7 @@ p {
   border: 1px solid transparent;
   border-radius: var(--r-pill);
   background: var(--accent);
-  transition: transform var(--t-quick) var(--ease-out), box-shadow var(--t-quick) var(--ease-out), border-color var(--t-quick) var(--ease-out);
+  transition: transform var(--t-quick) var(--ease-out), box-shadow var(--t-quick) var(--ease-out), border-color var(--t-quick) var(--ease-out), background var(--t-quick) var(--ease-out), color var(--t-quick) var(--ease-out);
 }
 
 .accent-picker__dot--magenta {
@@ -824,7 +824,7 @@ p {
   color: var(--accent-ink);
   font-weight: 900;
   letter-spacing: var(--tr-mono);
-  transition: transform var(--t-quick) var(--ease-out), box-shadow var(--t-quick) var(--ease-out), border-color var(--t-quick) var(--ease-out), background var(--t-quick) var(--ease-out), color var(--t-quick) var(--ease-out);
+  transition: transform var(--t-quick) var(--ease-out), box-shadow var(--t-quick) var(--ease-out), border-color var(--t-quick) var(--ease-out);
 }
 
 .button-link:hover,
@@ -1661,3 +1661,23 @@ body.has-motion [data-reveal].is-visible {
 .stat-bar--88 { --bar: 88%; }
 .stat-bar--70 { --bar: 70%; }
 .stat-bar--54 { --bar: 54%; }
+
+/* Keep every scoreboard entry readable, including with reduced motion. */
+.scoreboard { align-items: flex-start; }
+.scoreboard__window { overflow: visible; }
+.ticker-track { display: flex; flex-wrap: wrap; white-space: normal; animation: none; gap: var(--space-3) var(--space-5); }
+.ticker-track span { overflow-wrap: anywhere; }
+@media (max-width: 600px) { .scoreboard { flex-direction: column; } }
+
+/* Grid children must wrap rather than spill behind rounded card clipping. */
+.loadout-copy, .agent-card__link, .agent-card__link > * { min-width: 0; overflow-wrap: anywhere; }
+.agent-card__link { grid-template-columns: minmax(0, 1fr); }
+.loadout-copy h2 { overflow-wrap: anywhere; }
+
+
+.repo-card { grid-template-columns: minmax(0, 1fr); }
+.repo-card__body, .repo-poster, .repo-poster > *, .repo-card__title { min-width: 0; overflow-wrap: anywhere; }
+
+.news-card h3, .news-card p { overflow-wrap: anywhere; }
+.stack-item { flex-wrap: wrap; }
+.stack-item > div { min-width: 0; overflow-wrap: anywhere; }
