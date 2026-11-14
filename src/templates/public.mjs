@@ -166,7 +166,7 @@ function scoreboard(siteData) {
   const items = siteData.repos
     .slice(0, 10)
     .map((repo) => `${repo.name} star signal ${number(repo.stars)}`);
-  const text = [...items, ...items]
+  const text = items
     .map((item) => `<span>${escapeHtml(item)}</span>`)
     .join("");
 
