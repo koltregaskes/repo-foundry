@@ -302,7 +302,7 @@ function buildHomeContent(siteData) {
 function sourceSnapshot(siteData) {
   const news=siteData.sourceProvenance?.news;
   const stamp=value=>{const date=new Date(value||'');return Number.isFinite(date.getTime())?'<time datetime="'+date.toISOString()+'">'+escapeHtml(date.toLocaleString('en-GB',{timeZone:'UTC'}))+' UTC</time>':'unknown';};
-  return '<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+stamp(news?.newestItemAt)+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
+  return '<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+(news?.itemCount===0?'none returned':stamp(news?.newestItemAt))+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
 }
 
 function buildFeedContent(siteData) {

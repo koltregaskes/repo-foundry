@@ -6,7 +6,7 @@ export async function verifyPublishedSite({base,feed,metadata,now=new Date(),fet
  const published=JSON.parse(await get('data/source-provenance.json'));
  for(const key of ['generatedAt','newestItemAt','itemCount','consumedItems'])assert.equal(published.news?.[key],provenance[key],'deployed news provenance differs: '+key);
  for(const key of ['generatedAt','itemCount'])assert.equal(published.repositoryMetadata?.[key],expectedMetadata[key],'deployed metadata differs: '+key);
- const html=await get('news/'),rss=await get('feed.xml');
+ const html=await get('news/'),rss=await get('feed.xml');assert.match(rss,/<rss\b/,'published RSS document missing');
  assert.ok(html.includes('href="'+new URL('news/',base).href+'"'),'news canonical differs');
  for(const item of news){assert.ok(html.includes(escapeHtml(item.title))&&html.includes(escapeHtml(item.url)),'deployed news item missing');assert.ok(rss.includes(escapeHtml(item.url))&&rss.includes(new Date(item.publishedAt).toUTCString()),'deployed RSS item/date missing');}
  if(!news.length)assert.match(html,/No public release items were returned/i,'empty source is not honestly presented');
