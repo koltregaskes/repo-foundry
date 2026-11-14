@@ -87,15 +87,19 @@
     focusables[nextIndex].focus();
   }
 
+  var helpOpener = null;
   function toggleHelp(force) {
     var help = document.querySelector("[data-shortcut-help]");
     if (!help) return;
+    var wasOpen = !help.hasAttribute("hidden");
     var show = typeof force === "boolean" ? force : help.hasAttribute("hidden");
     if (show) {
+      helpOpener = document.activeElement;
       help.removeAttribute("hidden");
       help.querySelector("button")?.focus();
     } else {
       help.setAttribute("hidden", "");
+      if (wasOpen && helpOpener?.isConnected) helpOpener.focus();
     }
   }
 
