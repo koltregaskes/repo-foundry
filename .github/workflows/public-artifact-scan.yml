@@ -1,0 +1,30 @@
+name: Public artifact secret scan
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24.22.1'
+      - name: Build the allowlisted public artifact
+        run: npm run build:public-boundary
+      - name: Prove scanner detection and scan the public build (redacted summary only)
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/scan-canary"
+          node -e 'require("node:fs").writeFileSync(process.env.RUNNER_TEMP+"/scan-canary/synthetic.txt", "ghp_"+require("node:crypto").randomBytes(18).toString("hex"))'
+          docker run --rm -v "$RUNNER_TEMP/scan-canary:/canary:ro" zricethezav/gitleaks:v8.30.0 dir /canary --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/scan-canary.log" 2>&1 && result=0 || result=$?
+          if [ "$result" -ne 2 ]; then echo 'Scanner negative control failed; details withheld'; exit 1; fi
+          echo 'Scanner negative control: synthetic fixture rejected; values withheld'
+          docker run --rm -v "$PWD/dist/public:/public:ro" zricethezav/gitleaks:v8.30.0 dir /public --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/public-secret-scan.log" 2>&1 && result=0 || result=$?
+          if [ "$result" -eq 0 ]; then echo 'Public build secret scan: passed (redacted summary only)'; elif [ "$result" -eq 2 ]; then echo 'Public build secret scan: findings detected; values withheld'; exit 2; else echo "Public build secret scan failed, exit $result; details withheld"; exit "$result"; fi
+
