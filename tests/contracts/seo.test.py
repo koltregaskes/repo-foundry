@@ -22,6 +22,11 @@ class SeoContract(unittest.TestCase):
   def duplicate(s):
    block=re.search(r'<script type="application/ld\+json">.*?</script>',s,re.S).group();return s.replace('</head>',block+'</head>')
   with self.assertRaises(AssertionError): self.mutate(lambda r:self.page(r,duplicate))
+ def test_index_alias_cannot_replace_canonical_route(self):
+  def alias(r):
+   p=r/'sitemap.xml';p.write_text(p.read_text().replace('https://koltregaskes.github.io/repo-foundry/</loc>','https://koltregaskes.github.io/repo-foundry/index.html</loc>'))
+   self.page(r,lambda s:s.replace('href="https://koltregaskes.github.io/repo-foundry/"','href="https://koltregaskes.github.io/repo-foundry/index.html"').replace('content="https://koltregaskes.github.io/repo-foundry/"','content="https://koltregaskes.github.io/repo-foundry/index.html"'))
+  with self.assertRaises(AssertionError):self.mutate(alias)
  def test_corrupt_png(self):
   def corrupt(r):
    p=r/'assets/og-card.png';p.write_bytes(p.read_bytes()[:24])

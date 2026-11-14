@@ -27,7 +27,9 @@ def local(url):
  parsed=urlparse(url);assert not parsed.query and not parsed.fragment,('noncanonical query/hash',url)
  target=(ROOT/unquote(url[len(BASE):])).resolve();assert target.is_relative_to(ROOT),url
  return target/'index.html' if target.is_dir() else target
+checked_pngs=set()
 def png(file):
+ if file in checked_pngs:return
  data=file.read_bytes();assert data[:8]==b'\x89PNG\r\n\x1a\n','OG is not PNG'
  offset=8;chunks=[];image=b'';header=None
  while offset<len(data):
@@ -48,6 +50,7 @@ def png(file):
  row=(width*channels[colour]*depth+7)//8;decoder=zlib.decompressobj();raw=decoder.decompress(image,(row+1)*height+1)
  assert decoder.eof and len(raw)==(row+1)*height,'PNG decode size'
  assert all(raw[n] in range(5) for n in range(0,len(raw),row+1)),'PNG filter'
+ checked_pngs.add(file)
 def schemas(blocks):
  assert blocks,'missing JSON-LD';seen=set()
  for block in blocks:
@@ -64,6 +67,9 @@ for page in ROOT.rglob('*.html'):
  if 'noindex' not in ','.join(h.meta.get('robots',[])):assert page in files,(page,'missing indexable route')
 for url,page in zip(urls,files):
  h=Head();h.feed(page.read_text(encoding='utf8'));rel=page.relative_to(ROOT)
+ expected=BASE+('' if str(rel)=='index.html' else rel.as_posix().removesuffix('index.html'))
+ assert url==expected,(rel,'canonical route alias')
+ assert 'noindex' not in h.one(h.meta,'robots').lower(),(rel,'noindex in sitemap')
  assert h.one(h.links,'canonical')==url,(rel,'canonical')
  for key in ['description','og:title','og:description','og:image:alt','twitter:card']:h.one(h.meta,key)
  assert h.one(h.meta,'og:url')==url,(rel,'og:url')
