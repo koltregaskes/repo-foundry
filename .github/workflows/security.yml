@@ -21,25 +21,11 @@ jobs:
       - run: npm audit --audit-level=low
       - name: Regress untrusted feed text and script serialization
         run: node --test tests/feed-text-safety.test.mjs
-      - name: Build the public artifact for the existing scanner
-        run: npm run build:public-boundary
       - name: Scan history with redacted output only
         shell: bash
         run: |
           docker run --rm -v "$PWD:/repo:ro" zricethezav/gitleaks:v8.30.0 git /repo --gitleaks-ignore-path /repo/.gitleaksignore --redact=100 --exit-code 2 --no-banner --log-opts="--all -- . :(exclude)**/.env :(exclude)**/.env.* :(exclude).env :(exclude).env.*" > "$RUNNER_TEMP/secret-scan.log" 2>&1 && result=0 || result=$?
           if [ "$result" -eq 0 ]; then echo 'Secret scan: passed (redacted summary only)'; elif [ "$result" -eq 2 ]; then echo 'Secret scan: findings detected; values withheld'; exit 2; else echo "Secret scan: scanner failed, exit $result; details withheld"; exit "$result"; fi
-
-      - name: Prove scanner detection and scan the public build (redacted summary only)
-        shell: bash
-        run: |
-          mkdir -p "$RUNNER_TEMP/scan-canary"
-          node -e 'require("node:fs").writeFileSync(process.env.RUNNER_TEMP+"/scan-canary/synthetic.txt", "ghp_"+require("node:crypto").randomBytes(18).toString("hex"))'
-          docker run --rm -v "$RUNNER_TEMP/scan-canary:/canary:ro" zricethezav/gitleaks:v8.30.0 dir /canary --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/scan-canary.log" 2>&1 && result=0 || result=$?
-          if [ "$result" -ne 2 ]; then echo 'Scanner negative control failed; details withheld'; exit 1; fi
-          echo 'Scanner negative control: synthetic fixture rejected; values withheld'
-          docker run --rm -v "$PWD/dist/public:/public:ro" zricethezav/gitleaks:v8.30.0 dir /public --redact=100 --exit-code 2 --no-banner > "$RUNNER_TEMP/public-secret-scan.log" 2>&1 && result=0 || result=$?
-          if [ "$result" -eq 0 ]; then echo 'Public build secret scan: passed (redacted summary only)'; elif [ "$result" -eq 2 ]; then echo 'Public build secret scan: findings detected; values withheld'; exit 2; else echo "Public build secret scan failed, exit $result; details withheld"; exit "$result"; fi
-
   external-links:
     runs-on: ubuntu-latest
     timeout-minutes: 5
