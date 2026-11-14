@@ -19,6 +19,8 @@ jobs:
           node-version: '24.22.1'
       - run: npm ci
       - run: npm audit --audit-level=low
+      - name: Regress untrusted feed text and script serialization
+        run: node --test tests/feed-text-safety.test.mjs
       - name: Scan history with redacted output only
         shell: bash
         run: |

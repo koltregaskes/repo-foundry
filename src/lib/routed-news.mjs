@@ -12,19 +12,25 @@ const NAMED_HTML_ENTITIES = {
   quot: '"',
 };
 
+function safeScalar(codePoint) {
+  return Number.isInteger(codePoint) && codePoint > 0 && codePoint <= 0x10FFFF &&
+    !(codePoint >= 0xD800 && codePoint <= 0xDFFF) &&
+    !(codePoint >= 0xFDD0 && codePoint <= 0xFDEF) &&
+    (codePoint & 0xFFFF) < 0xFFFE &&
+    !(codePoint < 0x20 && ![9,10,13].includes(codePoint)) &&
+    !(codePoint >= 0x7F && codePoint <= 0x9F);
+}
 function decodeHtmlEntities(value) {
-  return String(value || "").replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (match, entity) => {
-    const lowerEntity = entity.toLowerCase();
-    if (lowerEntity.startsWith("#x")) {
-      const codePoint = Number.parseInt(lowerEntity.slice(2), 16);
-      return Number.isNaN(codePoint) ? match : String.fromCodePoint(codePoint);
+  const decoded=String(value || '').replace(/&(#x[0-9a-f]+|#[0-9]+|[a-z]+);/gi,(match,entity)=>{
+    const lower=entity.toLowerCase();
+    if(lower.startsWith('#')) {
+      const point=lower.startsWith('#x')?Number.parseInt(lower.slice(2),16):Number(lower.slice(1));
+      return safeScalar(point)?String.fromCodePoint(point):'�';
     }
-    if (lowerEntity.startsWith("#")) {
-      const codePoint = Number.parseInt(lowerEntity.slice(1), 10);
-      return Number.isNaN(codePoint) ? match : String.fromCodePoint(codePoint);
-    }
-    return NAMED_HTML_ENTITIES[lowerEntity] ?? match;
+    return NAMED_HTML_ENTITIES[lower]??match;
   });
+  // Entity decoding and raw feed strings share the same scalar boundary.
+  return Array.from(decoded,char=>safeScalar(char.codePointAt(0))?char:'�').join('');
 }
 
 function cleanPublicText(value) {
@@ -170,6 +176,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
   const news = feed.articles
     .map((article) => {
       const publishedAt = parseDate(article.date, "article date").toISOString();
+      const parsedUrl = new URL(article.url);
       const tags = [...new Set([...(article.tags || []), ...(article.matching_tags || [])])]
         .map((tag) => cleanPublicText(tag))
         .filter(Boolean);
@@ -179,7 +186,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
       return {
         id: `routed-${slugify(`${source}-${article.title}-${publishedAt}`)}`,
         title: cleanPublicText(article.title),
-        url: article.url,
+        url: parsedUrl.href,
         source,
         sourcePlatform: sourcePlatformFromUrl(article.url),
         projectName: projectName(article),
