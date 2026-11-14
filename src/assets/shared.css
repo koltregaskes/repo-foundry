@@ -1683,3 +1683,5 @@ body.has-motion [data-reveal].is-visible {
 .stack-item > div { min-width: 0; overflow-wrap: anywhere; }
 
 .footer-wordmark { min-width: 0; overflow-wrap: anywhere; }
+
+.operator-card h2 { overflow-wrap: anywhere; }

@@ -41,6 +41,14 @@ for (const file of await pages(root)) {
   expect(await page.locator('body').getAttribute('class')).not.toContain('has-motion');
   const overflow = await page.evaluate(findOverflow);
   expect(overflow).toEqual([]);
+  if(relative==='about/index.html'&&width===1280){
+   const heading=page.locator('.operator-card h2');
+   await heading.evaluate(e=>{e.style.fontFamily='monospace';e.style.fontSize='80px';e.style.maxWidth='370px';e.style.letterSpacing='4px';});
+   await expect(heading).toHaveCSS('font-size','80px');
+   await expect(heading).toHaveCSS('letter-spacing','4px');
+   expect(await page.evaluate(findOverflow),'About heading must wrap with wider fallback metrics').toEqual([]);
+   await heading.evaluate(e=>{e.style.removeProperty('font-family');e.style.removeProperty('font-size');e.style.removeProperty('max-width');e.style.removeProperty('letter-spacing');});
+  }
   await expect(page.locator('main')).toHaveCount(1);
   await expect(page.locator('h1')).toHaveCount(1);
   await page.keyboard.press('Tab');
@@ -50,7 +58,6 @@ for (const file of await pages(root)) {
   expect(await page.evaluate(()=>window.cspViolations)).toEqual([]);
   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   const result = await new AxeBuilder({page}).analyze();
-  if(result.violations.some(v=>v.id==='color-contrast'))console.log('CONTRAST STATE '+JSON.stringify(state));
   const incompleteContrast=result.incomplete.filter(v=>v.id==='color-contrast').reduce((n,v)=>n+v.nodes.length,0);
   if(incompleteContrast)console.log(relative+' '+width+': '+incompleteContrast+' contrast nodes need human review');
   expect(result.violations.filter(v => ['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))).toEqual([]);
