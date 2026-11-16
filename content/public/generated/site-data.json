@@ -27,7 +27,14 @@
       "potentialUse": "repo-native AI workflow automation, markdown-to-GitHub-Actions patterns, approval-gated maintenance flows, MCP gateway and firewall ideas, recurring repo-ops design, Build-room automation infrastructure",
       "addedAt": "2026-07-01T14:03:09.565Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "waooai-waoowaoo",
@@ -51,7 +58,14 @@
       "potentialUse": "story-to-video pipeline design, storyboard and scene-consistency patterns, character-and-scene generation UX, dubbing workflow ideas, Docker-packaged creator tooling, Studio video workflow comparisons",
       "addedAt": "2026-07-01T14:03:09.565Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "solacelabs-solace-agent-mesh",
@@ -75,7 +89,14 @@
       "potentialUse": "event-driven multi-agent orchestration, A2A communication patterns, async workflow design, artifact-routing architecture, Slack/REST/UI gateway ideas, long-running automation infrastructure, Build-room agent operations",
       "addedAt": "2026-06-28T14:05:20.252Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "firecrawl-open-agent-builder",
@@ -99,7 +120,14 @@
       "potentialUse": "visual workflow-builder patterns, web research automation, MCP-node UX, user-approval checkpoint design, LangGraph execution surfaces, Firecrawl-style content extraction flows, Build-room research tooling",
       "addedAt": "2026-06-28T14:05:20.252Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "activepieces-activepieces",
@@ -123,7 +151,14 @@
       "potentialUse": "workflow-builder patterns, pieces-as-MCP architecture, human approval and form-input surfaces, self-hosted automation UX, integration-packaging design, Build-room automation infrastructure",
       "addedAt": "2026-06-27T14:06:04.016Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "bytechefhq-bytechef",
@@ -147,7 +182,14 @@
       "potentialUse": "agent-step workflow patterns, drag-and-drop orchestration UX, Copilot-generated flow design, streaming and structured-output surfaces, Build-room workflow comparisons",
       "addedAt": "2026-06-27T14:06:04.016Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "simstudioai-sim",
@@ -171,7 +213,14 @@
       "potentialUse": "AI workspace patterns, chat-plus-canvas agent building, knowledge-base and table UX, self-hosted control-plane ideas, workflow-builder ergonomics, Build-room automation surfaces",
       "addedAt": "2026-06-26T15:02:02.826Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "voltagent-voltagent",
@@ -195,7 +244,14 @@
       "potentialUse": "TypeScript agent-runtime patterns, workflow-engine design, MCP integration, eval and guardrail packaging, observability surface ideas, Build-room agent infrastructure",
       "addedAt": "2026-06-26T15:02:02.826Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "panniantong-agent-reach",
@@ -219,7 +275,14 @@
       "potentialUse": "source-access capability layer, multi-backend routing patterns, doctor and health-check design, public-versus-login source boundary handling, agent bootstrap prompts, links-research infrastructure, Rooms OS source-intake tooling",
       "addedAt": "2026-06-24T14:06:24.758Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "etiennelescot-n8n-as-code",
@@ -243,7 +306,14 @@
       "potentialUse": "repo-backed workflow authoring, agent-safe n8n context generation, environment and promotion patterns, TypeScript workflow packaging, local-managed-instance operations, Build-room automation infrastructure",
       "addedAt": "2026-06-24T14:06:24.758Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "daytonaio-daytona",
@@ -262,12 +332,19 @@
         "developer tools",
         "agent infrastructure"
       ],
-      "summary": "Secure runtime platform for AI-generated code and agent workflows that packages isolated sandboxes, snapshots, SDKs, preview tooling, computer-use hooks, and a full control plane.",
-      "whyRelevant": "Strong infrastructure addition because it turns sandboxed code execution, persistent agent state, previews, SDK access, and operator controls into one reusable runtime substrate rather than another single-agent wrapper.",
-      "potentialUse": "sandbox runtime patterns, persistent snapshot workflows, preview proxy design, isolated compute-plane architecture, agent SDK packaging, operator control-plane ideas, browser and computer-use execution boundaries",
+      "summary": "Historical reference. The supplied launch audit observed this repository archived on 3 October 2026, with no further updates expected; its README said core development had been private since June.",
+      "whyRelevant": "Historical architecture and workflow reference only. Recheck upstream for any successor.",
+      "potentialUse": "Study the archived implementation; do not rely on this dossier as a current maintained-service recommendation.",
       "addedAt": "2026-06-19T14:06:41.655Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": true,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "hbai-ltd-toonflow-app",
@@ -291,7 +368,14 @@
       "potentialUse": "desktop creator-workstation patterns, script-to-storyboard flow, short-drama production UX, staged video pipeline design, local deploy packaging, Studio video workflow ideas",
       "addedAt": "2026-06-19T14:06:41.655Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "agent0ai-agent-zero",
@@ -315,7 +399,14 @@
       "potentialUse": "agent workbench patterns, browser-annotation review loops, host-machine connector design, project-isolated memory and skills, plugin-hub packaging, desktop-plus-browser operator workflows",
       "addedAt": "2026-06-14T14:07:51.778Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "openbmb-pilotdeck",
@@ -339,7 +430,14 @@
       "potentialUse": "workspace operating-system patterns, traceable memory editing, per-task cost controls, model-routing decisions, background task execution, skills and MCP packaging, productivity UI ideas",
       "addedAt": "2026-06-14T14:07:51.778Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "coleam00-archon",
@@ -363,7 +461,14 @@
       "potentialUse": "repeatable coding workflows, isolated worktree orchestration, approval-gated PR pipelines, web dashboard monitoring, build-room automation patterns, repo-level skill installation",
       "addedAt": "2026-06-13T14:01:30.240Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "nousresearch-hermes-agent",
@@ -387,7 +492,14 @@
       "potentialUse": "message-gateway architecture, self-improving skill loop, scheduled automations, subagent delegation, cross-session memory, multi-backend runtime design, Windows-native agent operations",
       "addedAt": "2026-06-13T14:01:30.240Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "hitsz-tmg-videoclaw",
@@ -411,7 +523,14 @@
       "potentialUse": "idea-to-video workflow design, staged storyboard and asset pipeline, WebUI creator surfaces, model-routing for video generation, intermediate review UX, publish-ready video assembly",
       "addedAt": "2026-06-13T14:01:30.240Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "zeyuet-audiox",
@@ -435,7 +554,14 @@
       "potentialUse": "multimodal audio generation patterns, video-to-audio and text-to-music experiments, checkpoint and demo packaging, dataset-caption pipeline design, benchmark follow-up for Studio and Analytics, creator-audio R and D",
       "addedAt": "2026-06-12T14:02:48.046Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "nexu-io-html-video",
@@ -459,7 +585,14 @@
       "potentialUse": "repo-to-video and article-to-video workflows, local MP4 render pipeline, template-gallery patterns, engine-adapter architecture, storyboard and content-graph design, creator-facing studio and CLI packaging",
       "addedAt": "2026-06-12T14:02:48.046Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "skyvern-ai-skyvern",
@@ -483,7 +616,14 @@
       "potentialUse": "browser workflow platform patterns, agent-plus-SDK packaging, MCP browser bridge, no-code and code hybrid automation, operator review surfaces, web-task infrastructure",
       "addedAt": "2026-06-11T14:08:33.503Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "dream-num-univer",
@@ -507,7 +647,14 @@
       "potentialUse": "embedded spreadsheet and document surface, AI spreadsheet workflows, plugin-based productivity architecture, headless document processing, office-style UI patterns, internal tool surfaces",
       "addedAt": "2026-06-11T14:08:33.503Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "stability-ai-stable-audio-tools",
@@ -531,7 +678,14 @@
       "potentialUse": "audio model packaging, dataset and training pipeline patterns, conditional audio generation tooling, creator-audio R and D, benchmark setup, reusable audio infrastructure",
       "addedAt": "2026-06-11T14:08:33.503Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "calesthio-openmontage",
@@ -555,7 +709,14 @@
       "potentialUse": "video-production pipeline patterns, research-to-script orchestration, agent skill packaging, Remotion composition architecture, stock-and-generated clip blending, creator workflow surfaces",
       "addedAt": "2026-06-06T14:05:15.976Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "ace-step-ace-step-1-5",
@@ -579,7 +740,14 @@
       "potentialUse": "local music generation stack, Gradio and API product patterns, Windows portable packaging, lyric and metadata control, music editing workflows, audio-tool benchmark tracking",
       "addedAt": "2026-06-06T14:05:15.976Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "heartmula-heartlib",
@@ -603,7 +771,14 @@
       "potentialUse": "music foundation model benchmarking, audio-text retrieval patterns, lyric-transcription integration, open model packaging, creator tooling research, evaluation and dataset follow-up",
       "addedAt": "2026-06-06T14:05:15.976Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "builderz-labs-mission-control",
@@ -627,7 +802,14 @@
       "potentialUse": "agent operations dashboard patterns, recurring-task scheduling, skills registry and sync, approval-gate workflows, multi-gateway orchestration, security and audit surfaces",
       "addedAt": "2026-06-04T14:11:29.816Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "minishlab-semble",
@@ -651,7 +833,14 @@
       "potentialUse": "agent code-search substrate, MCP search integration, repo-exploration acceleration, token-efficiency patterns, local index and cache strategy, AGENTS.md installation patterns",
       "addedAt": "2026-06-04T14:11:29.816Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "browserbase-stagehand",
@@ -675,7 +864,14 @@
       "potentialUse": "browser-agent architecture, inspectable act-or-code split, cached web workflows, self-healing automation rails, reusable browser task surfaces",
       "addedAt": "2026-06-04T14:06:38.923Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "accomplish-ai-coworker",
@@ -699,7 +895,14 @@
       "potentialUse": "desktop AI coworker patterns, local trust-boundary design, browser and document workflow packaging, approval-driven automation, repeatable skills, operator-facing productivity surface design",
       "addedAt": "2026-06-04T14:06:38.923Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     }
   ],
   "featured": [
@@ -725,7 +928,14 @@
       "potentialUse": "repo-native AI workflow automation, markdown-to-GitHub-Actions patterns, approval-gated maintenance flows, MCP gateway and firewall ideas, recurring repo-ops design, Build-room automation infrastructure",
       "addedAt": "2026-07-01T14:03:09.565Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "waooai-waoowaoo",
@@ -749,7 +959,14 @@
       "potentialUse": "story-to-video pipeline design, storyboard and scene-consistency patterns, character-and-scene generation UX, dubbing workflow ideas, Docker-packaged creator tooling, Studio video workflow comparisons",
       "addedAt": "2026-07-01T14:03:09.565Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "solacelabs-solace-agent-mesh",
@@ -773,7 +990,14 @@
       "potentialUse": "event-driven multi-agent orchestration, A2A communication patterns, async workflow design, artifact-routing architecture, Slack/REST/UI gateway ideas, long-running automation infrastructure, Build-room agent operations",
       "addedAt": "2026-06-28T14:05:20.252Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "firecrawl-open-agent-builder",
@@ -797,7 +1021,14 @@
       "potentialUse": "visual workflow-builder patterns, web research automation, MCP-node UX, user-approval checkpoint design, LangGraph execution surfaces, Firecrawl-style content extraction flows, Build-room research tooling",
       "addedAt": "2026-06-28T14:05:20.252Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "activepieces-activepieces",
@@ -821,7 +1052,14 @@
       "potentialUse": "workflow-builder patterns, pieces-as-MCP architecture, human approval and form-input surfaces, self-hosted automation UX, integration-packaging design, Build-room automation infrastructure",
       "addedAt": "2026-06-27T14:06:04.016Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     },
     {
       "slug": "bytechefhq-bytechef",
@@ -845,7 +1083,14 @@
       "potentialUse": "agent-step workflow patterns, drag-and-drop orchestration UX, Copilot-generated flow design, streaming and structured-output surfaces, Build-room workflow comparisons",
       "addedAt": "2026-06-27T14:06:04.016Z",
       "refreshedAt": "2026-11-15T22:44:00.272Z",
-      "featured": true
+      "featured": true,
+      "metadataCheckedAt": null,
+      "editorialReviewedAt": null,
+      "archived": null,
+      "pushedAt": null,
+      "licenseSpdx": null,
+      "licenseUrl": null,
+      "upstreamDescription": null
     }
   ],
   "categories": [
@@ -872,24 +1117,24 @@
     },
     {
       "id": "video-and-media-tooling",
-      "name": "Video and media tooling",
+      "name": "Video tooling",
       "shortLabel": "Media tooling",
       "description": "Graph-based creator workflows, video tooling, and modular pipeline systems for visual output.",
-      "count": 0
+      "count": 5
     },
     {
       "id": "video-and-music-tooling",
-      "name": "Video and music tooling",
+      "name": "Music/audio tooling",
       "shortLabel": "Music tooling",
       "description": "Audio generation, music workflows, and adjacent media systems that might become practical tooling.",
-      "count": 0
+      "count": 4
     },
     {
       "id": "productivity",
-      "name": "Productivity",
+      "name": "Productivity surface",
       "shortLabel": "Productivity",
       "description": "Useful interfaces and tools that make day-to-day work faster, calmer, or more automatable.",
-      "count": 0
+      "count": 4
     }
   ],
   "news": [
