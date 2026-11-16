@@ -2,10 +2,12 @@ import assert from 'node:assert/strict';import fs from 'node:fs/promises';import
 export async function verifyPublishedSite({base,feed,metadata,now=new Date(),fetchImpl=fetch}) {
  const {news,provenance}=compileRoutedNewsFeed(feed,{now,maxAgeDays:1});const expectedMetadata=metadata.sourceProvenance?.repositoryMetadata;
  assert.ok(expectedMetadata?.generatedAt,'metadata source timestamp missing');const age=now-new Date(expectedMetadata.generatedAt);assert.ok(Number.isFinite(age)&&age>=-300000&&age<=2*86400000,'metadata snapshot older than two days or future');
+ if(feed.acquisition && feed.acquisition.status!=='healthy')throw Error('Published source coverage is reduced');
  const checks=[];async function get(relative){const url=new URL(relative,base);assert.equal(url.protocol,'https:');const response=await fetchImpl(url.href,{redirect:'manual',signal:AbortSignal.timeout(15000)});assert.equal(response.status,200,'published destination did not return 200: '+url.pathname);const text=await response.text();checks.push({url:url.href,status:response.status,sha256:createHash('sha256').update(text).digest('hex')});return text;}
  const published=JSON.parse(await get('data/source-provenance.json'));
  for(const key of ['generatedAt','newestItemAt','itemCount','consumedItems'])assert.equal(published.news?.[key],provenance[key],'deployed news provenance differs: '+key);
  for(const key of ['generatedAt','itemCount'])assert.equal(published.repositoryMetadata?.[key],expectedMetadata[key],'deployed metadata differs: '+key);
+ if(feed.acquisition)assert.deepEqual(published.news?.acquisition,feed.acquisition,'deployed source coverage differs');
  const html=await get('news/'),rss=await get('feed.xml');assert.match(rss,/<rss\b/,'published RSS document missing');
  assert.ok(html.includes('href="'+new URL('news/',base).href+'"'),'news canonical differs');
  for(const item of news){assert.ok(html.includes(escapeHtml(item.title))&&html.includes(escapeHtml(item.url)),'deployed news item missing');assert.ok(rss.includes(escapeHtml(item.url))&&rss.includes(new Date(item.publishedAt).toUTCString()),'deployed RSS item/date missing');}

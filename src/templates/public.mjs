@@ -1,4 +1,5 @@
 import { PRIVACY_UPDATED, RESOURCE_HOSTS, NAVIGATION_HOSTS } from "../lib/privacy.mjs";
+import { coverageMessage } from "../lib/source-coverage.mjs";
 import { repositoryClaims } from "../assets/repo-claims.mjs";
 import { CONTACT_EMAIL, absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
 
@@ -249,6 +250,7 @@ function buildHomeContent(siteData) {
 
   return `
     ${telemetry(siteData, "Loadout online")}
+    <p role="status">${escapeHtml(coverageMessage(siteData.sourceProvenance?.news?.acquisition))}</p>
     <section class="home-loadout" data-reveal>
       <div class="loadout-copy">
         <p class="eyebrow">// loadout</p>
@@ -307,14 +309,14 @@ function buildHomeContent(siteData) {
 function sourceSnapshot(siteData) {
   const news=siteData.sourceProvenance?.news;
   const stamp=value=>{const date=new Date(value||'');return Number.isFinite(date.getTime())?'<time datetime="'+date.toISOString()+'">'+escapeHtml(date.toLocaleString('en-GB',{timeZone:'UTC'}))+' UTC</time>':'unknown';};
-  return '<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+(news?.itemCount===0?'none returned':stamp(news?.newestItemAt))+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
+  return '<p role="status">'+escapeHtml(coverageMessage(news?.acquisition))+'</p>'+(news?.acquisition?'<ul>'+news.acquisition.sources.map(source=>'<li>'+escapeHtml(source.name)+': '+escapeHtml(source.outcome)+'; last success: '+escapeHtml(source.lastSuccessAt||'unverified')+'</li>').join('')+'</ul>':'')+'<section class="source-panel" aria-label="News source snapshot"><h2 class="eyebrow">Source snapshot</h2><p>Source captured: '+stamp(news?.generatedAt)+'. Latest source item: '+(news?.itemCount===0?'none returned':stamp(news?.newestItemAt))+'.</p><p>These are source dates, not the time this page was rebuilt. This is a snapshot, not a live feed.</p></section>';
 }
 
 function buildFeedContent(siteData) {
   const highlights = siteData.repos.slice(0, 3).map((repo) => repoCard(repo, { compact: true, action: "Read dossier" })).join("");
   const stories = siteData.news.length
     ? siteData.news.map(newsCard).join("")
-    : `<p class="empty-state">No public release items were returned by the latest source refresh. The repository library remains available.</p>`;
+    : `<p class="empty-state">No public release items were returned after article relevance checks. See source coverage above. The repository library remains available.</p>`;
 
   return `
     ${telemetry(siteData, "Broadcast on-air")}
@@ -329,7 +331,7 @@ function buildFeedContent(siteData) {
         ${highlights}
         <div class="source-panel__note">
           <p class="eyebrow">Sources</p>
-          <p>Feed items use public-safe release and project update records. Unknowns stay out of the public build.</p>
+          <p>Feed items pass conservative article-level rules for repository releases and material open-source software updates. Publisher-wide tags do not establish relevance. Check the linked source before reuse.</p>
         </div>
       </aside>
     </section>

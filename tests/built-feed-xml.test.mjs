@@ -7,6 +7,7 @@ function buildFixture(url='https://example.com/xml-safe'){
   // The hostile URL fixture uses a synthetic navigation host. Authorise it only
   // in this copied fixture's notice, preserving the production host boundary.
   fs.appendFileSync(path.join(fixture,'src/lib/privacy.mjs'),"\nNAVIGATION_HOSTS.push('example.com');\n");
+  for(const article of feed.articles)article.summary='Open-source library release. '+article.summary;fs.writeFileSync(p,JSON.stringify(feed));
   const build=spawnSync(process.execPath,['scripts/build-public.mjs','--allow-stale-routed-news-for-boundary-scan'],{cwd:fixture,encoding:'utf8',timeout:60000});assert.equal(build.status,0,build.stderr);const output=path.join(fixture,'dist/public/feed.xml'),xml=fs.readFileSync(output,'utf8');assert.ok(xml.includes('XML scalar fixture'));assert.ok(xml.includes(new URL(url).href));
   const parser=spawnSync(process.env.PYTHON||(process.platform==='win32'?'python':'python3'),['-c','import sys, xml.etree.ElementTree as E; E.parse(sys.argv[1])',output],{encoding:'utf8',timeout:10000});assert.equal(parser.status,0,parser.stderr);
   assert.doesNotMatch(fs.readFileSync(path.join(fixture,'dist/public/news/index.html'),'utf8'),/[\u0001\uFFFF]/u);

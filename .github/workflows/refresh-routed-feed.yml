@@ -38,6 +38,10 @@ jobs:
       - name: Fetch sources and apply the Repo Foundry filter
         run: node scripts/refresh-routed-feed.mjs --pipeline .news-pipeline/shared/website-tools/pipelines/news
 
+      - name: Report source coverage
+        if: always()
+        run: node scripts/report-source-status.mjs
+
       - name: Check the fetched feed against the public gate
         run: npm run verify:public-input
 
