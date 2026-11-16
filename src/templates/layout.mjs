@@ -202,6 +202,7 @@ export function buildDocument({
             <a href="resources/codex/">CLI and agents</a>
             <a href="about/">About</a>
             <a href="contact/">Contact</a>
+            <a href="privacy/">Privacy notice</a>
           </nav>
           <nav class="footer-links" aria-label="Other Kol projects">
             <p>Projects</p>
