@@ -124,7 +124,14 @@ function repoRecord(item, generatedAt) {
     whyRelevant: item.whyRelevant || "",
     potentialUse: item.potentialUse || "",
     addedAt: safeDate(item.addedAt, generatedAt),
-    refreshedAt: generatedAt,
+    refreshedAt: item.refreshedAt || null,
+    metadataCheckedAt: item.metadataCheckedAt || null,
+    editorialReviewedAt: item.editorialReviewedAt || null,
+    archived: typeof item.archived === "boolean" ? item.archived : null,
+    pushedAt: item.pushedAt || null,
+    licenseSpdx: item.licenseSpdx || null,
+    licenseUrl: item.licenseUrl || null,
+    upstreamDescription: typeof item.upstreamDescription === "string" ? item.upstreamDescription : null,
     featured: item.extractionStatus === "shortlisted" || Number(item.stars || 0) >= 100000,
   };
 }
