@@ -1,3 +1,4 @@
+import { repositoryClaims } from "../assets/repo-claims.mjs";
 import { CONTACT_EMAIL, absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
 
 function formatDate(value) {
@@ -73,8 +74,8 @@ function repoSchema(repo) {
     url: absoluteUrl(`repos/${repo.slug}/`),
     codeRepository: repo.repoUrl || undefined,
     programmingLanguage: repo.tags?.find((tag) => /python|typescript|javascript|rust|go|ruby/i.test(tag)) || undefined,
-    description: repo.summary,
-    dateModified: repo.refreshedAt,
+    description: `${repositoryClaims(repo).status} ${repositoryClaims(repo).editorial} ${repo.summary}`,
+    dateModified: repo.editorialReviewedAt || undefined,
     keywords: repo.tags || [],
   };
 }
@@ -127,11 +128,12 @@ function repoCard(record, options = {}) {
         <span class="pill pill--soft">${number(record.stars)} stars</span>
       </div>
       <h3 class="repo-card__title"><a href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(record.name)}</a></h3>
+      <p class="repo-card__detail">${escapeHtml(repositoryClaims(record).status)} ${escapeHtml(repositoryClaims(record).editorial)}</p>
       <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
       <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
       <div class="tag-row">${tagsMarkup(record.tags)}</div>
       <div class="repo-card__footer">
-        <span>Checked ${escapeHtml(formatShortDate(record.refreshedAt))}</span>
+        <span>${escapeHtml(repositoryClaims(record).checked)}</span>
         <a class="text-link" href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(action)}</a>
       </div>
     </div>
@@ -146,6 +148,7 @@ function agentCard(record, index, selected = false) {
       ${selected ? `<span class="brk brk--tl"></span><span class="brk brk--tr"></span><span class="brk brk--bl"></span><span class="brk brk--br"></span>` : ""}
       <span class="agent-card__name">${escapeHtml(record.name.split("/").pop() || record.name)}</span>
       <span class="agent-card__role">${escapeHtml(role)}</span>
+      <span class="agent-card__role">${escapeHtml(repositoryClaims(record).status)} ${escapeHtml(repositoryClaims(record).checked)}</span>
       <span class="agent-card__stars">${number(record.stars)} stars</span>
     </a>
   </article>`;
@@ -262,6 +265,7 @@ function buildHomeContent(siteData) {
         <span class="brk brk--tl"></span><span class="brk brk--br"></span>
         <p class="eyebrow">Selected A01</p>
         <h2>${selected ? escapeHtml(selected.name) : "Repo Foundry"}</h2>
+        <p>${selected ? escapeHtml(repositoryClaims(selected).status + " " + repositoryClaims(selected).editorial) : ""}</p>
         <p>${selected ? escapeHtml(selected.summary) : escapeHtml(siteData.description)}</p>
         <div class="stat-lines">
           <span><b>HP</b><i class="stat-bar--92"></i></span>
@@ -623,7 +627,11 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
         <span class="pill pill--soft">${number(repo.stars)} stars</span>
       </div>
       <h2>${escapeHtml(repo.name)}</h2>
+      <p>${escapeHtml(repositoryClaims(repo).status)}</p>
+      <p>${escapeHtml(repositoryClaims(repo).editorial)}</p>
       <p>${escapeHtml(repo.summary)}</p>
+      <p>${escapeHtml(repositoryClaims(repo).licence)} ${repo.licenseUrl ? `<a href="${escapeAttribute(repo.licenseUrl)}">Reported licence reference</a>` : ""}</p>
+      <p>Upstream description snapshot: ${escapeHtml(repo.upstreamDescription ?? "unverified")}</p>
       <div class="tag-row">${tagsMarkup(repo.tags)}</div>
       <div class="action-row">
         ${repo.repoUrl ? `<a class="button-link" href="${escapeAttribute(repo.repoUrl)}">Open repository</a>` : ""}
@@ -642,7 +650,7 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
       </article>
       <article class="detail-card">
         <p class="eyebrow">Freshness</p>
-        <p>Added ${escapeHtml(formatDate(repo.addedAt))} and refreshed ${escapeHtml(formatDate(repo.refreshedAt))}.</p>
+        <p>Added ${escapeHtml(formatDate(repo.addedAt))}. ${escapeHtml(repositoryClaims(repo).checked)} ${escapeHtml(repositoryClaims(repo).activity)}</p>
       </article>
     </section>
     ${sectionFrame("Related", "More repos from the same shelf.", `<div class="card-grid">${related.map((item) => repoCard(item)).join("")}</div>`)}
