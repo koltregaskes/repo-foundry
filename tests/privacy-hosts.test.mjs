@@ -21,6 +21,11 @@ async function fixture(source,file='page.html',mentions){
  return root;
 }
 test('real built output has declared hosts and privacy links',async()=>{
+ // CI runs npm test before any build, and dist/ is ignored: build the public output here when it is missing.
+ try{await fs.access('dist/public/privacy/index.html');}catch{
+  const built=spawnSync(process.execPath,['scripts/build-public.mjs','--allow-stale-routed-news-for-boundary-scan'],{encoding:'utf8'});
+  assert.equal(built.status,0,built.stderr||built.stdout);
+ }
  const result=await inspectPrivacyHosts('dist/public');assert.deepEqual(result.errors,[]);assert.equal(result.resourceHosts,2);
  const notice=await fs.readFile('dist/public/privacy/index.html','utf8');
  for(const word of ['GitHub Pages','Cloudflare','proposal only','fonts.googleapis.com','fonts.gstatic.com','GitHub avatars','foundry.skin','foundry.accent','no service worker','not active','UK GDPR','ICO','2026-11-16','hello@koltregaskes.com'])assert.ok(notice.includes(word),word);
