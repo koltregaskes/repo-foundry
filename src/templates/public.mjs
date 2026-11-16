@@ -419,13 +419,13 @@ function buildContactContent() {
 }
 
 function buildListingContent(siteData, items, page, archiveOnly = false) {
-  const cards = items.map((repo) => repoCard(repo)).join("");
+  const cards = items.length ? items.map((repo) => repoCard(repo)).join("") : `<p class="empty-state">No repositories in this view. Browse the full library or change the filter.</p>`;
   return `
     <section class="content-section" data-reveal>
       <div class="section-heading">
         <div>
           <p class="eyebrow">${archiveOnly ? "Archive" : "Library"}</p>
-          <h2>${page === "trending" ? "A freshness-first view of the public-safe research feed." : "The main browse surface for curated repositories."}</h2>
+          <h2>${page === "trending" ? "Repository additions ordered by their original added date, with older records retained." : "The main browse surface for curated repositories."}</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/" : "repos/"}">Back to latest</a>` : `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/archive/" : "repos/archive/"}">Open archive</a>`}
@@ -463,11 +463,12 @@ export function buildPublicHome(siteData, baseHref = "./") {
 }
 
 export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../") {
-  const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
+  const ordered = [...siteData.repos].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt));
+  const items = archiveOnly ? ordered.filter(repo => Date.now() - new Date(repo.addedAt) > 7 * 86400000) : ordered;
   const path = archiveOnly ? "trending/archive/" : "trending/";
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | ${archiveOnly ? "Signals archive" : "Live signals"}`,
+    title: `${siteData.workingTitle} | ${archiveOnly ? "Additions archive" : "Recent additions"}`,
     description: "Recent additions across the public-safe research feed.",
     currentKey: "repos",
     baseHref,
@@ -475,28 +476,29 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
     navItems: publicNav(),
     eyebrow: "Signal feed",
     heroKicker: "Repository radar",
-    heroTitle: archiveOnly ? "Signals archive." : "Live signals.",
-    heroBody: "A freshness-first view of the library for people who care about new arrivals more than the full archive.",
+    heroTitle: archiveOnly ? "Additions archive." : "Recent additions.",
+    heroBody: `Browse the curated snapshot by added date. Newest addition: ${formatDate(ordered[0]?.addedAt)}. Stars are a snapshot, not measured growth.`,
     content: buildListingContent(siteData, items, "trending", archiveOnly),
     pageData: {
       page: archiveOnly ? "trending-archive" : "trending",
-      items: siteData.repos,
-      defaults: { freshness: archiveOnly ? "archive" : "fresh", featuredOnly: false },
+      items: ordered,
+      defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
     jsonLd: [
-      pageSchema("CollectionPage", archiveOnly ? "Repo Foundry signals archive" : "Repo Foundry live signals", "Recent additions across the public-safe research feed.", path),
+      pageSchema("CollectionPage", archiveOnly ? "Repo Foundry signals archive" : "Repo Foundry recent additions", "Recent additions across the public-safe research feed.", path),
       itemListSchema("Repo Foundry signals", items, path, (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
     ],
     breadcrumbs: [
       { name: "Home", path: "" },
-      { name: archiveOnly ? "Signals archive" : "Live signals", path },
+      { name: archiveOnly ? "Additions archive" : "Recent additions", path },
     ],
   });
 }
 
 export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref = "../") {
-  const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
+  const ordered = [...siteData.repos].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt));
+  const items = archiveOnly ? ordered.filter(repo => Date.now() - new Date(repo.addedAt) > 7 * 86400000) : ordered;
   const path = archiveOnly ? "repos/archive/" : "repos/";
   return buildDocument({
     audience: "public",
@@ -513,7 +515,7 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
     content: buildListingContent(siteData, items, "repos", archiveOnly),
     pageData: {
       page: archiveOnly ? "repos-archive" : "repos",
-      items: siteData.repos,
+      items: ordered,
       defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
@@ -579,7 +581,7 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
     </section>
     ${sectionFrame(
       "Lane shortlist",
-      "Every current public-safe repo in this lane, with featured picks floated first.",
+      "Every public-safe repository snapshot in this lane, with featured picks floated first.",
       `<div class="card-grid">${items.length ? items.map((repo) => repoCard(repo)).join("") : `<p class="empty-state">No public-safe repos are currently pinned to this lane.</p>`}</div>`,
     )}
   `;

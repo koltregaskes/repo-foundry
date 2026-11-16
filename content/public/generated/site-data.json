@@ -872,24 +872,24 @@
     },
     {
       "id": "video-and-media-tooling",
-      "name": "Video and media tooling",
+      "name": "Video tooling",
       "shortLabel": "Media tooling",
       "description": "Graph-based creator workflows, video tooling, and modular pipeline systems for visual output.",
-      "count": 0
+      "count": 5
     },
     {
       "id": "video-and-music-tooling",
-      "name": "Video and music tooling",
+      "name": "Music/audio tooling",
       "shortLabel": "Music tooling",
       "description": "Audio generation, music workflows, and adjacent media systems that might become practical tooling.",
-      "count": 0
+      "count": 4
     },
     {
       "id": "productivity",
-      "name": "Productivity",
+      "name": "Productivity surface",
       "shortLabel": "Productivity",
       "description": "Useful interfaces and tools that make day-to-day work faster, calmer, or more automatable.",
-      "count": 0
+      "count": 4
     }
   ],
   "news": [

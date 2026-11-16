@@ -1,3 +1,4 @@
+import { canonicalCategory, discoveryData } from "./discovery.mjs";
 import { readJson, slugify } from "./io.mjs";
 import {
   ACTIVE_INTERNAL_DATA_ROOT,
@@ -97,17 +98,6 @@ export function repoPreviewImage(item) {
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
-function categoryMeta(items) {
-  return Object.entries(categoryCopy)
-    .map(([name, copy]) => ({
-      id: slugify(name),
-      name,
-      shortLabel: copy.shortLabel,
-      description: copy.description,
-      count: items.filter((item) => item.category === name).length,
-    }));
-}
-
 function repoRecord(item, generatedAt) {
   const repoName = item.name || item.id || "Unknown repo";
   return {
@@ -118,7 +108,7 @@ function repoRecord(item, generatedAt) {
     stars: Number(item.stars || 0),
     source: item.source || "Unknown",
     sourcePlatform: item.sourcePlatform || sourcePlatformFromUrl(item.url || ""),
-    category: item.category || "Productivity",
+    category: canonicalCategory(item.category || "Productivity surface"),
     tags: Array.isArray(item.tags) ? item.tags.map((entry) => String(entry)) : [],
     summary: item.summary || "",
     whyRelevant: item.whyRelevant || "",
@@ -231,7 +221,7 @@ export async function compilePublicSiteData(options = {}) {
     .sort((left, right) => new Date(right.addedAt).getTime() - new Date(left.addedAt).getTime());
 
   const visualisations = buildVisualisations(records);
-  const categories = categoryMeta(records);
+  const categories = discoveryData({repos: records}).categories;
   const featured = records.filter((item) => item.featured).slice(0, 6);
   const news = compileNewsFeed(repoNews.items, records, generatedAt);
   const metrics = compileMetrics(records, visualisations, generatedAt);

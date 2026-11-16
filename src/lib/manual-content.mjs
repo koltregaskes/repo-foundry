@@ -20,15 +20,21 @@ export const categoryCopy = {
     shortLabel: "Agent builder",
     description: "Graph builders, orchestration canvases, and agent authoring tools that turn flows into reusable products.",
   },
-  "Video and media tooling": {
+  "Video tooling": {
+    id: "video-and-media-tooling",
+    aliases: ["Video and media tooling"],
     shortLabel: "Media tooling",
     description: "Graph-based creator workflows, video tooling, and modular pipeline systems for visual output.",
   },
-  "Video and music tooling": {
+  "Music/audio tooling": {
+    id: "video-and-music-tooling",
+    aliases: ["Video and music tooling"],
     shortLabel: "Music tooling",
     description: "Audio generation, music workflows, and adjacent media systems that might become practical tooling.",
   },
-  Productivity: {
+  "Productivity surface": {
+    id: "productivity",
+    aliases: ["Productivity"],
     shortLabel: "Productivity",
     description: "Useful interfaces and tools that make day-to-day work faster, calmer, or more automatable.",
   },
