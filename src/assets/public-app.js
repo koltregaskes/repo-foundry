@@ -129,7 +129,7 @@ function initRepoListing(data) {
   }
 
   function filteredItems() {
-    return data.items.filter((item) => {
+    return [...data.items].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt)).filter((item) => {
       const haystack = [item.name, item.summary, item.whyRelevant, item.potentialUse, ...(item.tags || [])]
         .join(" ")
         .toLowerCase();
