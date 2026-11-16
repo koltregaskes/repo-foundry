@@ -10,6 +10,8 @@
  * generated timestamp and an empty article list.
  */
 import fs from 'node:fs'
+import { tagEntries } from '../src/lib/article-relevance.mjs'
+import { makeCoverage, validateCoverage, coverageMessage } from '../src/lib/source-coverage.mjs'
 import path from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 
@@ -121,7 +123,7 @@ function parseRss(xml, source) {
     const summary = cleanText(
       readTag(block, 'description') || readTag(block, 'summary') || readTag(block, 'content'),
     )
-    if (title && /^https?:\/\//i.test(url)) entries.push({ title, url, date, summary })
+    if (title && /^https?:\/\//i.test(url)) entries.push({ title, url, date, summary, metadata: [...block.matchAll(/<category(?:\s[^>]*)?>([\s\S]*?)<\/category>/gi)].map(m=>cleanText(m[1])).concat([...block.matchAll(/<category\b[^>]*term=["']([^"']*)["']/gi)].map(m=>cleanText(m[1]))) })
   }
   return capEntries(entries, source.maxItems)
 }
@@ -413,19 +415,6 @@ function applySiteFilter(items, siteFilter, now) {
   return matched.slice(0, Number.isFinite(maxArticles) && maxArticles > 0 ? maxArticles : matched.length)
 }
 
-function tagEntries(entries, source, importance) {
-  return entries.map((entry) => ({
-    title: entry.title,
-    url: entry.url,
-    source: source.name,
-    tags: [...(source.tags || [])],
-    importance,
-    date: entry.date,
-    summary: (entry.summary || entry.title).slice(0, 700),
-    category: source.categories?.[0] || source.section || '',
-  }))
-}
-
 async function fetchText(url, fetchImpl, retries) {
   let lastError = 'fetch failed'
   const attempts = Math.max(1, retries)
@@ -466,10 +455,11 @@ async function fetchSource(source, fetchImpl, retries) {
   throw new Error(`unsupported adapter ${source.adapter || 'missing'}`)
 }
 
-function buildFeedDocument(siteFilter, articles, now) {
+function buildFeedDocument(siteFilter, articles, now, acquisition) {
   return {
     generated: new Date(now).toISOString(),
     site: siteFilter.name,
+    ...(acquisition ? { acquisition } : {}),
     article_count: articles.length,
     articles: articles.map((article) => ({
       title: article.title,
@@ -481,6 +471,7 @@ function buildFeedDocument(siteFilter, articles, now) {
       date: article.date,
       summary: article.summary,
       category: article.category,
+      metadata: article.metadata || [],
     })),
   }
 }
@@ -493,33 +484,49 @@ async function refreshRoutedFeed({
   now = new Date(),
   write = true,
   retries = 3,
+  statusPath = `${outputPath}.status.json`,
 }) {
   const { filters, sources } = loadPipeline(pipelineDir)
   const siteFilter = filters.sites[siteSlug]
   if (!siteFilter?.name) throw new Error(`Site filter ${siteSlug} is missing from site-filters.json.`)
+  let previous = null
+  try { previous = JSON.parse(fs.readFileSync(statusPath,'utf8')).coverage }
+  catch(error) { if(error.code !== 'ENOENT') throw error;
+    try { previous=JSON.parse(fs.readFileSync(outputPath,'utf8')).acquisition || null } catch(priorError){if(priorError.code!=='ENOENT')throw priorError}
+  }
+  if(previous) validateCoverage(previous)
+  const prior = new Map((previous?.sources || []).map(source=>[source.id,source]))
+  const attemptedAt = new Date(now).toISOString()
+  const outcomes = []
   const failures = []
   const tagged = []
   for (const source of sources) {
     try {
       const entries = await fetchSource(source, fetchImpl, retries)
-      tagged.push(...tagEntries(entries, source, Number(siteFilter.min_importance_score ?? 0)))
+      tagged.push(...tagEntries(entries, source))
+      outcomes.push({id:source.id,name:source.name||source.id,required:source.required===true,outcome:'success',attemptedAt,lastSuccessAt:attemptedAt})
       console.log(`${source.id}: fetched ${entries.length} dated entries`)
     } catch (error) {
       const message = `${source.id} (${source.name || source.id}) could not be fetched: ${error.message}`
       failures.push(message)
+      outcomes.push({id:source.id,name:source.name||source.id,required:source.required===true,outcome:'failure',attemptedAt,lastSuccessAt:prior.get(source.id)?.lastSuccessAt||null})
       console.error(`::warning title=Source fetch failed::${message}`)
     }
   }
-  if (!sources.length || failures.length >= Math.ceil(sources.length / 2)) {
-    return { wrote: false, failures, feed: null }
+  const coverage = validateCoverage(makeCoverage(outcomes))
+  if(write){
+    fs.mkdirSync(path.dirname(statusPath), {recursive:true})
+    fs.writeFileSync(statusPath, JSON.stringify({attemptedAt,coverage},null,2)+'\n','utf8')
   }
+  console.log(coverageMessage(coverage))
+  if(coverage.status === 'failed') return {wrote:false,failures,coverage,feed:null}
   const articles = applySiteFilter(tagged, siteFilter, now)
-  const feed = buildFeedDocument(siteFilter, articles, now)
+  const feed = buildFeedDocument(siteFilter, articles, now, coverage)
   if (write) {
     fs.mkdirSync(path.dirname(outputPath), { recursive: true })
     fs.writeFileSync(outputPath, `${JSON.stringify(feed, null, 2)}\n`, 'utf8')
   }
-  return { wrote: write, failures, feed }
+  return { wrote: write, failures, coverage, feed }
 }
 
 function parseArgs(argv) {
@@ -535,11 +542,12 @@ async function main() {
   if (!pipelineDir) {
     throw new Error('Pass --pipeline with the shared news config directory.')
   }
-  const result = await refreshRoutedFeed({ pipelineDir })
+  const result = await refreshRoutedFeed({ pipelineDir, statusPath:path.resolve('.local/routed-feed-status.json') })
   if (!result.feed) {
     process.exitCode = 1
     return
   }
+  if(result.coverage.status === 'degraded') console.warn('::warning title=Routed feed source coverage::'+coverageMessage(result.coverage))
   const newest = result.feed.articles[0]?.date
   console.log(
     `Wrote ${result.feed.article_count} articles to ${path.relative(process.cwd(), OUTPUT_PATH)}.${newest ? ` Newest: ${newest}.` : ''}`,

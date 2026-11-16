@@ -15,6 +15,7 @@ const now = new Date("2026-10-26T06:30:00.000Z");
 function feedAt(iso) {
   return {
     generated: iso,
+    acquisition:{status:'healthy',attempted:1,succeeded:1,failed:0,sources:[{id:'fixture',name:'Fixture',required:false,outcome:'success',attemptedAt:iso,lastSuccessAt:iso}]},
     site: "Repo Foundry",
     article_count: 1,
     articles: [{ title: "Release", url: "https://example.com/release", date: iso }],
@@ -37,6 +38,7 @@ test('a fresh empty feed does not warn', () => {
     ...feedAt(generated),
     article_count: 0,
     articles: [],
+    acquisition:{status:'healthy',attempted:1,succeeded:1,failed:0,sources:[{id:'fixture',name:'Fixture',required:false,outcome:'success',attemptedAt:generated,lastSuccessAt:generated}]},
   }, now)
 
   assert.equal(assessment.warn, false)
