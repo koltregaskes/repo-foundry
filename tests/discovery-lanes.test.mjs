@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { discoveryData, canonicalCategory } from '../src/lib/discovery.mjs';
+import { repositoryClaims } from '../src/assets/repo-claims.mjs';
 import { buildLaneDetailPage, buildTrendingPage, buildRepoDirectoryPage } from '../src/templates/public.mjs';
 const source=JSON.parse(fs.readFileSync('content/public/generated/site-data.json','utf8'));
 const data=discoveryData(source);
@@ -17,7 +18,8 @@ test('every listing default actually renders cards after browser initialisation'
  for(const build of [buildTrendingPage,buildRepoDirectoryPage])for(const archive of [false,true]){
   const html=build(data,archive),pageData=JSON.parse(html.match(/<script id="page-data" type="application\/json">(.*?)<\/script>/s)[1]);
   const root={innerHTML:'',after:()=>{}},document={getElementById:id=>id==='page-data'?{textContent:JSON.stringify(pageData)}:id==='publicList'?root:null,baseURI:'https://example.com/',createElement:()=>({addEventListener:()=>{}})};
-  vm.runInNewContext(fs.readFileSync('src/assets/public-app.js','utf8'),{document,URL});
+  // public-app.js is an ES module (it imports repo-claims.mjs): strip that import and supply it.
+  vm.runInNewContext(fs.readFileSync('src/assets/public-app.js','utf8').replace(/^import .*;$/m,''),{document,URL,repositoryClaims});
   assert.ok((root.innerHTML.match(/class="repo-card"/g)||[]).length>0,pageData.page+' empty default');
   assert.doesNotMatch(html,/Live signals/);assert.match(html,/class="repo-card/);
  }
