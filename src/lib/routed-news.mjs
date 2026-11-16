@@ -1,3 +1,5 @@
+import { classifyArticle } from "./article-relevance.mjs";
+import { validateCoverage } from "./source-coverage.mjs";
 import { slugify } from "./io.mjs";
 
 export const ROUTED_NEWS_PUBLIC_PATH = "content/public/generated/news-feed-latest.json";
@@ -114,6 +116,10 @@ export function assertRoutedNewsFeed(
     );
   }
 
+  const acquisition = feed.acquisition ? validateCoverage(feed.acquisition) : null;
+  if(acquisition?.status === 'failed') throw new Error('Routed news source coverage failed.');
+  if(!feed.articles.length && !acquisition) throw new Error('Empty routed feed requires successful source coverage.');
+  if(acquisition && acquisition.sources.some(source=>Date.parse(source.attemptedAt)!==Date.parse(feed.generated))) throw new Error('Source coverage dates differ from feed generation.');
   const nowDate = parseDate(now, "verification clock");
   const generatedAt = parseDate(feed.generated, "generated timestamp");
   const maxAgeMs = Number(maxAgeDays) * 86_400_000;
@@ -168,16 +174,18 @@ export function assertRoutedNewsFeed(
     generatedAt: generatedAt.toISOString(),
     newestItemAt: newestItemAt?.toISOString() ?? null,
     itemCount: feed.articles.length,
+    acquisition,
   };
 }
 
 export function compileRoutedNewsFeed(feed, options = {}) {
   const provenance = assertRoutedNewsFeed(feed, options);
   const news = feed.articles
+    .filter(article => classifyArticle(article).tags.includes("open_source"))
     .map((article) => {
       const publishedAt = parseDate(article.date, "article date").toISOString();
       const parsedUrl = new URL(article.url);
-      const tags = [...new Set([...(article.tags || []), ...(article.matching_tags || [])])]
+      const tags = [...new Set([...classifyArticle(article).tags])]
         .map((tag) => cleanPublicText(tag))
         .filter(Boolean);
       const summary = truncate(cleanPublicText(article.summary || article.title));
@@ -203,9 +211,7 @@ export function compileRoutedNewsFeed(feed, options = {}) {
     .sort((left, right) => new Date(right.publishedAt).getTime() - new Date(left.publishedAt).getTime())
     .slice(0, 12);
 
-  if (news.length === 0 && feed.articles.length > 0) {
-    throw new Error("Routed news feed produced no public-safe articles.");
-  }
+
 
   return { news, provenance: { ...provenance, consumedItems: news.length } };
 }

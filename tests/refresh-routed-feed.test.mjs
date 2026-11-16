@@ -189,7 +189,7 @@ test("an empty feed document is a successful fetch and a matched item is written
   ]);
   const bodies = {
     "https://export.arxiv.org/rss/cs.AI": "<rss version=\"2.0\"><channel><title>cs.AI</title></channel></rss>",
-    "https://huggingface.co/blog/feed.xml": "<rss version=\"2.0\"><channel><item><title>LitPivot</title><link>https://huggingface.co/blog/allenai/litpivot</link><pubDate>Fri, 23 Oct 2026 16:15:50 GMT</pubDate><description>Fetched from the feed.</description></item></channel></rss>",
+    "https://huggingface.co/blog/feed.xml": "<rss version=\"2.0\"><channel><item><title>LitPivot</title><link>https://huggingface.co/blog/allenai/litpivot</link><pubDate>Fri, 23 Oct 2026 16:15:50 GMT</pubDate><description>Open-source library release, fetched from the feed.</description></item></channel></rss>",
   };
   const result = await refreshRoutedFeed({
     pipelineDir: dir,
