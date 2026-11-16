@@ -1,0 +1,192 @@
+[
+  {
+    "id": "1.1",
+    "source": "<svg><style><img src=\"https://github.com/a.png\"></style></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.2",
+    "source": "<math><style><img src=\"https://x.com/a.gif\"></style></math>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.3",
+    "source": "<svg><title><img src=\"https://x.com/a.gif\"></title></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.4",
+    "source": "<![CDATA[ > <img src=\"https://github.com/a.png\"> ]]>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.5",
+    "source": "<svg><![CDATA[ <img src=\"https://github.com/a.png\"> ]]></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.6",
+    "source": "<![CDATA[ > <img src=\"https://github.com/a.png\">",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.7",
+    "source": "<svg><noscript><img src=\"https://github.com/a.png\"></noscript></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.8",
+    "source": "<svg><template><img src=\"https://github.com/a.png\"></template></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.9",
+    "source": "<math><mi><svg><style><img src=\"https://github.com/a.png\"></style></svg></mi></math>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.10",
+    "source": "<svg><foreignObject><img src=\"https://github.com/a.png\"></foreignObject></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.11",
+    "source": "<svg><desc><img src=\"https://github.com/a.png\"></desc></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.12",
+    "source": "<SVG><STYLE><IMG SRC=\"https://github.com/a.png\"></STYLE></SVG>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.13",
+    "source": "<svg></svg><style>body{color:red}</style>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.14",
+    "source": "<svg><textarea><img src=\"https://github.com/a.png\"></textarea></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.15",
+    "source": "<math><xmp><img src=\"https://github.com/a.png\"></xmp></math>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.16",
+    "source": "<svg><iframe><img src=\"https://github.com/a.png\"></iframe></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.17",
+    "source": "<math><noembed><img src=\"https://github.com/a.png\"></noembed></math>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.18",
+    "source": "<svg><noframes><img src=\"https://github.com/a.png\"></noframes></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "1.19",
+    "source": "<math><plaintext><img src=\"https://github.com/a.png\"></plaintext></math>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.1",
+    "source": "<svg><image href=\"/a.png\"><set attributeName=\"href\" to=\"https://github.com/a.png\"/></image></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.2",
+    "source": "<svg><image href=\"/a.png\"><animate attributeName=\"href\" values=\"https://github.com/a.png\"/></image></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.3",
+    "source": "<svg><image href=\"/a.png\"><animate attributeName=\"XLINK:HREF\" from=\"https://x.com/a.png\"/></image></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.4",
+    "source": "<svg><image href=\"/a.png\"><set attributeName=\"custom:HrEf\" by=\"https://x.com/a.png\"/></image></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.5",
+    "source": "<svg><svg:animate ns:attributeName=\"XLINK:HrEf\" values=\"/a;https://x.com/t\"/></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "2.6",
+    "source": "<svg><set a:attributeName=\"fill\" attributeName=\"href\" to=\"https://x.com/t\"/></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "3.1",
+    "source": "<link rel=\"stylesheet\" href=\"data:text/css,@import url(https://github.com/a.css);\">",
+    "expected": "resource"
+  },
+  {
+    "id": "3.2",
+    "source": "<link rel=\"stylesheet\" href=\"data:text/css;base64,Ym9keXtiYWNrZ3JvdW5kOnVybChodHRwczovL2dpdGh1Yi5jb20vYS5wbmcpfQ==\">",
+    "expected": "resource"
+  },
+  {
+    "id": "3.3",
+    "source": "<link rel=\"stylesheet\" href=\"data: text/css ;charset=utf-8,%40import%20url(https%3A%2F%2Fgithub.com%2Fa.css)%3B\">",
+    "expected": "resource"
+  },
+  {
+    "id": "3.4",
+    "source": "<style>@import url(data:text/css,body%7Bbackground:url(https://github.com/a.png)%7D);</style>",
+    "expected": "reject-or-resource"
+  },
+  {
+    "id": "3.5",
+    "source": "<iframe src=\"data:text/html,%3Clink%20rel%3Dstylesheet%20href%3D%22data%3Atext%2Fcss%2C%40import%20url(https%3A%2F%2Fgithub.com%2Fa.css)%22%3E\"></iframe>",
+    "expected": "resource"
+  },
+  {
+    "id": "4.1",
+    "source": "<script src=\"data:text/javascript,fetch(%27https://x.com/t%27)\"></script>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.2",
+    "source": "<svg><script href=\"data:text/x-javascript,fetch(%27https://x.com/t%27)\"></script></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.3",
+    "source": "<svg><script xlink:href=\"data:application/x-ecmascript,fetch(%27https://x.com/t%27)\"></script></svg>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.4",
+    "source": "<script href=\"data:,fetch(%27https://x.com/t%27)\"></script>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.5",
+    "source": "<script src=\" &#9;d&#97;ta&colon;text/plain,fetch(1)\"></script>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.6",
+    "source": "<script href=\"da&#10;ta:,fetch(1)\"></script>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.7",
+    "source": "<s:script x:href=\"data:,fetch(1)\"/>",
+    "expected": "rejected"
+  },
+  {
+    "id": "4.8",
+    "source": "<iframe srcdoc=\"&lt;svg&gt;&lt;script href=&quot;data:text/jscript,fetch(%27https://x.com/t%27)&quot;&gt;&lt;/script&gt;&lt;/svg&gt;\"></iframe>",
+    "expected": "rejected"
+  }
+]

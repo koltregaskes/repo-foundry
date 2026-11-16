@@ -10,6 +10,12 @@ ENTITY = re.compile(r"&(#(?:[xX][0-9a-fA-F]+|[0-9]+);?|[A-Za-z][A-Za-z0-9]*;?)")
 ATTRIBUTE = re.compile(r'''([^\s/=<>`]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?''')
 URL_ATTRIBUTES = {"href", "src", "action", "formaction", "poster", "data", "cite", "background", "longdesc", "manifest", "xlink:href"}
 ASCII_SPACE = "\t\n\f\r "
+# HTMLParser cannot establish HTML5 namespaces after tree-builder recovery.
+# Keep this conservative flag through end of input rather than guessing exits.
+FOREIGN_UNSUPPORTED = {"script", "style", "title", "desc", "foreignobject",
+                       "mi", "mo", "mn", "ms", "mtext", "annotation-xml",
+                       "noscript", "template", "textarea", "xmp", "iframe",
+                       "noembed", "noframes", "plaintext"}
 
 
 def refresh_destination(content):
@@ -65,8 +71,14 @@ class References(HTMLParser):
         self.base = None
         self.raw_kind = None
         self.raw_parts = []
+        self.foreign_seen = False
 
     def handle_starttag(self, tag, _):
+        local_tag = tag.rsplit(":", 1)[-1]
+        if local_tag in {"svg", "math"}:
+            self.foreign_seen = True
+        if self.foreign_seen and local_tag in FOREIGN_UNSUPPORTED:
+            raise ValueError("Unsupported foreign-content parsing context")
         raw = self.get_starttag_text()
         raw = raw[re.match(r"<\s*[^\s/>]+", raw).end():]
         attrs = {}
@@ -74,11 +86,21 @@ class References(HTMLParser):
             name = match[1].lower()
             if name not in attrs:  # HTML uses the first duplicate attribute.
                 attrs[name] = decode_attribute(next((v for v in match.groups()[1:] if v is not None), ""))
+        if local_tag == "script":
+            for name, value in attrs.items():
+                clean = value.translate(str.maketrans("", "", "\t\n\r")).strip("".join(map(chr, range(33))))
+                if name.rsplit(":", 1)[-1] in {"src", "href"} and clean.lower().startswith("data:"):
+                    raise ValueError("Data URL on script element is unsupported")
+        targets = [value for name, value in attrs.items()
+                   if name.rsplit(":", 1)[-1] == "attributename"]
+        if local_tag in {"set", "animate", "animatecolor", "animatetransform", "animatemotion"} and any(target.strip(ASCII_SPACE).rsplit(":", 1)[-1].lower() == "href" for target in targets):
+            raise ValueError("Unsupported SMIL href animation")
         if tag == "base" and self.base is None and "href" in attrs:
             self.base = attrs["href"]
         for name, value in attrs.items():
-            if name in URL_ATTRIBUTES:
-                self.references.append({"kind": "navigation" if (tag in {"a", "area"} and name == "href") or name in {"cite", "longdesc"} else "url", "value": value})
+            local_name = name.rsplit(":", 1)[-1]
+            if name in URL_ATTRIBUTES or local_name in {"href", "src"}:
+                self.references.append({"kind": "navigation" if (local_tag in {"a", "area"} and local_name == "href") or name in {"cite", "longdesc"} else "url", "value": value})
             elif name in {"srcset", "imagesrcset"}:
                 self.references.append({"kind": "srcset", "value": value})
             elif name == "ping":
@@ -101,6 +123,9 @@ class References(HTMLParser):
         self.handle_starttag(tag, attrs)
         if tag in {"script", "style"}:
             self.handle_endtag(tag)
+
+    def unknown_decl(self, data):
+        raise ValueError("Unsupported marked declaration")
 
     def handle_data(self, data):
         if self.raw_kind:
@@ -128,6 +153,8 @@ try:
     if sys.argv[1:] == ["--decode-text"]:
         print(json.dumps({"decodedText": decoded}))
     elif not sys.argv[1:]:
+        if re.search(r"<!\[CDATA\[", source, re.I):
+            raise ValueError("Unsupported CDATA syntax")
         parser = References()
         parser.feed(source)
         parser.close()

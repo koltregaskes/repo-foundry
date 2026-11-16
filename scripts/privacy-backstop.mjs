@@ -1,4 +1,5 @@
 import {decodeReferenceText} from './privacy-source-references.mjs';
+import {decodedTextViews,MAX_DOCUMENT_DEPTH} from './privacy-data-resources.mjs';
 
 // This sweep is deliberately independent of HTML/CSS/JS reference recognition.
 // Keep every normalisation view: decoding must never erase an earlier token.
@@ -12,7 +13,7 @@ function normaliseEscapes(source,kind) {
     });
 }
 
-export function backstopHosts(source,{baseURL='https://koltregaskesphotography.com/',decodedText}={}) {
+export function backstopHosts(source,{baseURL='https://koltregaskesphotography.com/',decodedText,decodedHosts=new Set()}={}) {
     const decoded=decodedText??decodeReferenceText(source);
     const views=new Set([decoded]);
     for(const kind of ['js','css']){
@@ -22,6 +23,20 @@ export function backstopHosts(source,{baseURL='https://koltregaskesphotography.c
             if(next===text)break;
             if(depth===7)throw Error('Backstop escape nesting exceeds the inspection limit');
             text=next;
+        }
+    }
+    const dataViews=new Set();
+    const queue=[...views].map(text=>({text,depth:0,data:false}));
+    for(let index=0;index<queue.length;index++){
+        const {text,depth,data}=queue[index],dataSources=[];
+        const candidates=[...decodedTextViews(text,{dataSources}),normaliseEscapes(text,'js'),normaliseEscapes(text,'css')];
+        if(/&(?:#|[a-z])/i.test(text))candidates.push(decodeReferenceText(text));
+        for(const candidate of candidates){
+            const fromData=data||dataSources.includes(candidate);
+            if(views.has(candidate)&&(!fromData||dataViews.has(candidate)))continue;
+            if(depth>=MAX_DOCUMENT_DEPTH)throw Error('Data URL inspection exceeds the nesting limit');
+            views.add(candidate);if(fromData)dataViews.add(candidate);
+            queue.push({text:candidate,depth:depth+1,data:fromData});
         }
     }
     const hosts=new Set();
@@ -38,6 +53,7 @@ export function backstopHosts(source,{baseURL='https://koltregaskesphotography.c
                 const url=new URL(candidate,baseURL);
                 if(!url.hostname)throw Error('Empty network host');
                 hosts.add(url.hostname);
+                if(dataViews.has(view))decodedHosts.add(url.hostname);
             } catch {throw Error('Cannot parse a backstop URL-like token');}
         }
     }
