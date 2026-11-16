@@ -18,7 +18,8 @@
     "build:internal": "node ./scripts/build-internal.mjs",
     "build:all": "node ./scripts/rebuild-all.mjs",
     "test:visual": "npm run build:public && playwright test ./tests/visual/repo-foundry.spec.js --workers=1 --browser=chromium --output=output/playwright/test-results",
-    "test:launch": "playwright test --config playwright.launch.config.mjs"
+    "test:launch": "playwright test --config playwright.launch.config.mjs",
+    "verify:privacy-hosts": "node ./scripts/check-privacy-hosts.mjs"
   },
   "engines": {
     "node": ">=22.23.4"

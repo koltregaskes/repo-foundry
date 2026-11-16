@@ -1,9 +1,11 @@
 import path from "node:path";
+import { PRIVACY_UPDATED } from "../src/lib/privacy.mjs";
 import { discoveryData } from "../src/lib/discovery.mjs";
 import { SITE_URL, escapeHtml } from "../src/templates/layout.mjs";
 
 import {
   buildAboutPage,
+  buildPrivacyPage,
   buildContactPage,
   buildCodexPage,
   buildLaneDetailPage,
@@ -80,6 +82,7 @@ await writePage(path.join("visualisations", "index.html"), buildVisualisationsPa
 await writePage(path.join("resources", "codex", "index.html"), buildCodexPage(siteData, "../../"));
 await writePage(path.join("about", "index.html"), buildAboutPage(siteData, "../"));
 await writePage(path.join("contact", "index.html"), buildContactPage(siteData, "../"));
+await writePage(path.join("privacy", "index.html"), buildPrivacyPage(siteData, "../"));
 
 for (const repo of siteData.repos) {
   await writePage(path.join("repos", repo.slug, "index.html"), buildRepoDetailPage(siteData, repo, "../../"));
@@ -103,6 +106,7 @@ const publicRoutes = [
   "resources/codex/",
   "about/",
   "contact/",
+  "privacy/",
   ...siteData.repos.map((repo) => `repos/${repo.slug}/`),
   ...siteData.categories.map((category) => `lanes/${category.id}/`),
 ];
@@ -114,7 +118,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${publicRoutes
   .map((route) => {
-    const lastmod = route === "" || route === "news/" ? newsLastmod : defaultLastmod;
+    const lastmod = route === "privacy/" ? PRIVACY_UPDATED : route === "" || route === "news/" ? newsLastmod : defaultLastmod;
     return `  <url><loc>${siteUrl}/${route}</loc><lastmod>${lastmod}</lastmod></url>`;
   })
   .join("\n")}
@@ -168,6 +172,7 @@ Repo Foundry is a public-safe discovery surface for high-signal open-source repo
 - [Visualisations](${siteUrl}/visualisations/): public-safe charts and snapshots.
 - [Codex resources](${siteUrl}/resources/codex/): Codex-adjacent references and public resources.
 - [About](${siteUrl}/about/): scope, public/private boundary, and editorial posture.
+- [Privacy notice](${siteUrl}/privacy/): hosting, external resources, storage and UK GDPR rights.
 
 - [RSS releases](${siteUrl}/feed.xml): source-dated release updates.
 
@@ -178,4 +183,7 @@ Repo Foundry is a public-safe discovery surface for high-signal open-source repo
 `,
 );
 
+const { inspectPrivacyHosts } = await import("./check-privacy-hosts.mjs");
+const privacyCheck = await inspectPrivacyHosts(PUBLIC_DIST_ROOT);
+if (privacyCheck.errors.length) throw new Error("Privacy host check failed: " + privacyCheck.errors.join("; "));
 console.log(`Built public site into ${PUBLIC_DIST_ROOT}`);

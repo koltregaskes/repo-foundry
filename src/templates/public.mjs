@@ -1,3 +1,4 @@
+import { PRIVACY_UPDATED, RESOURCE_HOSTS, NAVIGATION_HOSTS } from "../lib/privacy.mjs";
 import { coverageMessage } from "../lib/source-coverage.mjs";
 import { repositoryClaims } from "../assets/repo-claims.mjs";
 import { CONTACT_EMAIL, absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
@@ -885,4 +886,30 @@ export function buildContactPage(siteData, baseHref = "../") {
       { name: "Contact", path: "contact/" },
     ],
   });
+}
+
+export function buildPrivacyPage(siteData, baseHref = '../') {
+  const content = `<section class="content-section">
+    <p>Last updated: <time datetime="${PRIVACY_UPDATED}">16 November 2026</time>.</p>
+    <h2>Who runs this site</h2>
+    <p>Repo Foundry is run by Kol Tregaskes. For privacy requests, use the <a href="contact/">existing contact route</a> or email <a href="mailto:${escapeAttribute(CONTACT_EMAIL)}">${escapeHtml(CONTACT_EMAIL)}</a>.</p>
+    <h2>Hosting and request logs</h2>
+    <p>This build is prepared for GitHub Pages. GitHub may record visitors' IP addresses and request information for security when the site is served. We have not verified the host's log retention period. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages hosting information</a>. A Cloudflare proxy is a proposal only; it is not an active part of this build.</p>
+    <h2>Third-party resources</h2>
+    <p>Pages request a Google Fonts stylesheet from <code data-privacy-host="fonts.googleapis.com">fonts.googleapis.com</code> and font files from <code data-privacy-host="fonts.gstatic.com">fonts.gstatic.com</code>. These requests, including preconnections, disclose connection information such as your IP address and may include browser and referrer information. See <a href="https://policies.google.com/privacy">Google's privacy information</a>.</p>
+    <p>Styles, scripts, the favicon and social preview image are served from this site's own origin. This build does not request GitHub avatars or remote repository images: repository posters use text and CSS. Repository data contains locally generated SVG previews, rather than a GitHub image service. A future remote image host must be disclosed before it is enabled.</p>
+    <h2>Links and structured data</h2>
+    <p>External links open other services only when followed. Structured data also names external destinations and the schema vocabulary; it does not load them as page resources. These destinations have their own privacy practices. Navigation permission never authorises an image, script, font, preload, manifest or tracking request to the same host.</p>
+    <ul>${NAVIGATION_HOSTS.map(host=>`<li><code data-privacy-navigation-host="${escapeAttribute(host)}">${escapeHtml(host)}</code></li>`).join('')}</ul>
+    <h2>Browser storage and offline features</h2>
+    <p>The display controls store your chosen skin and accent in localStorage under <code>foundry.skin</code> and <code>foundry.accent</code>. These preferences stay in your browser until you clear them. This code sets no cookies, sessionStorage or IndexedDB records and registers no service worker. It contains no cache cleanup routine. Other sites on the shared koltregaskes.github.io origin can share browser storage or have previously installed workers; their state has not been inspected.</p>
+    <h2>Analytics</h2>
+    <p>No analytics collector, tracking pixel or analytics event sender is active in this code. Cookieless analytics is planned, not active. This statement does not mean that the hosting provider keeps no request logs.</p>
+    <h2>Contact information and purposes</h2>
+    <p>The contact form prepares a draft locally. It does not send a message to a server or save the message in browser storage. You choose whether to send it using your email software. If you send an email, its contents and your contact details are used to reply and deal with your request, and pass through email providers. Correspondence is kept only as needed for that purpose or applicable obligations.</p>
+    <p>Site delivery, security and responding to enquiries are supported by legitimate interests in running the site and answering requests. If a future optional service needs consent, it will require an updated notice and appropriate controls before activation.</p>
+    <h2>Your UK GDPR rights</h2>
+    <p>Where applicable, you can ask to access, correct or erase your personal data, restrict processing, object to processing or request data portability. If processing relies on consent, you can withdraw it. Contact Kol through the route above. You can also complain to the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office (ICO)</a>. These rights depend on the processing and legal basis involved.</p>
+  </section>`;
+  return buildDocument({audience:'public',title:'Privacy notice | Repo Foundry',description:'Privacy, hosting, external resources and browser preferences for Repo Foundry.',currentKey:'privacy',navItems:publicNav(),baseHref,canonicalPath:'privacy/',eyebrow:'Privacy',heroKicker:'Site information',heroTitle:'Privacy notice.',heroBody:'What this build does with visitor information and external services.',content,scriptPath:'assets/public-app.js',jsonLd:[pageSchema('WebPage','Repo Foundry privacy notice','Privacy, hosting and browser preferences.','privacy/')],breadcrumbs:[{name:'Home',path:''},{name:'Privacy notice',path:'privacy/'}]});
 }
