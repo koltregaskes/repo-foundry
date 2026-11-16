@@ -332,7 +332,7 @@
         "developer tools",
         "agent infrastructure"
       ],
-      "summary": "Historical reference. The supplied launch audit observed this repository archived on 3 October 2026, with no further updates expected; its README said development moved private in June.",
+      "summary": "Historical reference. The supplied launch audit observed this repository archived on 3 October 2026, with no further updates expected; its README said core development had been private since June.",
       "whyRelevant": "Historical architecture and workflow reference only. Recheck upstream for any successor.",
       "potentialUse": "Study the archived implementation; do not rely on this dossier as a current maintained-service recommendation.",
       "addedAt": "2026-06-19T14:06:41.655Z",
