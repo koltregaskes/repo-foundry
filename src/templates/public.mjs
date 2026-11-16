@@ -1,4 +1,5 @@
 import { coverageMessage } from "../lib/source-coverage.mjs";
+import { repositoryClaims } from "../assets/repo-claims.mjs";
 import { CONTACT_EMAIL, absoluteUrl, buildDocument, escapeAttribute, escapeHtml, siteGraph } from "./layout.mjs";
 
 function formatDate(value) {
@@ -74,8 +75,8 @@ function repoSchema(repo) {
     url: absoluteUrl(`repos/${repo.slug}/`),
     codeRepository: repo.repoUrl || undefined,
     programmingLanguage: repo.tags?.find((tag) => /python|typescript|javascript|rust|go|ruby/i.test(tag)) || undefined,
-    description: repo.summary,
-    dateModified: repo.refreshedAt,
+    description: `${repositoryClaims(repo).status} ${repositoryClaims(repo).editorial} ${repo.summary}`,
+    dateModified: repo.editorialReviewedAt || undefined,
     keywords: repo.tags || [],
   };
 }
@@ -128,11 +129,12 @@ function repoCard(record, options = {}) {
         <span class="pill pill--soft">${number(record.stars)} stars</span>
       </div>
       <h3 class="repo-card__title"><a href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(record.name)}</a></h3>
+      <p class="repo-card__detail">${escapeHtml(repositoryClaims(record).status)} ${escapeHtml(repositoryClaims(record).editorial)}</p>
       <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
       <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
       <div class="tag-row">${tagsMarkup(record.tags)}</div>
       <div class="repo-card__footer">
-        <span>Checked ${escapeHtml(formatShortDate(record.refreshedAt))}</span>
+        <span>${escapeHtml(repositoryClaims(record).checked)}</span>
         <a class="text-link" href="repos/${escapeAttribute(record.slug)}/">${escapeHtml(action)}</a>
       </div>
     </div>
@@ -147,6 +149,7 @@ function agentCard(record, index, selected = false) {
       ${selected ? `<span class="brk brk--tl"></span><span class="brk brk--tr"></span><span class="brk brk--bl"></span><span class="brk brk--br"></span>` : ""}
       <span class="agent-card__name">${escapeHtml(record.name.split("/").pop() || record.name)}</span>
       <span class="agent-card__role">${escapeHtml(role)}</span>
+      <span class="agent-card__role">${escapeHtml(repositoryClaims(record).status)} ${escapeHtml(repositoryClaims(record).checked)}</span>
       <span class="agent-card__stars">${number(record.stars)} stars</span>
     </a>
   </article>`;
@@ -264,6 +267,7 @@ function buildHomeContent(siteData) {
         <span class="brk brk--tl"></span><span class="brk brk--br"></span>
         <p class="eyebrow">Selected A01</p>
         <h2>${selected ? escapeHtml(selected.name) : "Repo Foundry"}</h2>
+        <p>${selected ? escapeHtml(repositoryClaims(selected).status + " " + repositoryClaims(selected).editorial) : ""}</p>
         <p>${selected ? escapeHtml(selected.summary) : escapeHtml(siteData.description)}</p>
         <div class="stat-lines">
           <span><b>HP</b><i class="stat-bar--92"></i></span>
@@ -421,13 +425,13 @@ function buildContactContent() {
 }
 
 function buildListingContent(siteData, items, page, archiveOnly = false) {
-  const cards = items.map((repo) => repoCard(repo)).join("");
+  const cards = items.length ? items.map((repo) => repoCard(repo)).join("") : `<p class="empty-state">No repositories in this view. Browse the full library or change the filter.</p>`;
   return `
     <section class="content-section" data-reveal>
       <div class="section-heading">
         <div>
           <p class="eyebrow">${archiveOnly ? "Archive" : "Library"}</p>
-          <h2>${page === "trending" ? "A freshness-first view of the public-safe research feed." : "The main browse surface for curated repositories."}</h2>
+          <h2>${page === "trending" ? "Repository additions ordered by their original added date, with older records retained." : "The main browse surface for curated repositories."}</h2>
         </div>
         <div class="action-row">
           ${archiveOnly ? `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/" : "repos/"}">Back to latest</a>` : `<a class="button-link button-link--ghost" href="${page === "trending" ? "trending/archive/" : "repos/archive/"}">Open archive</a>`}
@@ -465,11 +469,12 @@ export function buildPublicHome(siteData, baseHref = "./") {
 }
 
 export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../") {
-  const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
+  const ordered = [...siteData.repos].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt));
+  const items = archiveOnly ? ordered.filter(repo => Date.now() - new Date(repo.addedAt) > 7 * 86400000) : ordered;
   const path = archiveOnly ? "trending/archive/" : "trending/";
   return buildDocument({
     audience: "public",
-    title: `${siteData.workingTitle} | ${archiveOnly ? "Signals archive" : "Live signals"}`,
+    title: `${siteData.workingTitle} | ${archiveOnly ? "Additions archive" : "Recent additions"}`,
     description: "Recent additions across the public-safe research feed.",
     currentKey: "repos",
     baseHref,
@@ -477,28 +482,29 @@ export function buildTrendingPage(siteData, archiveOnly = false, baseHref = "../
     navItems: publicNav(),
     eyebrow: "Signal feed",
     heroKicker: "Repository radar",
-    heroTitle: archiveOnly ? "Signals archive." : "Live signals.",
-    heroBody: "A freshness-first view of the library for people who care about new arrivals more than the full archive.",
+    heroTitle: archiveOnly ? "Additions archive." : "Recent additions.",
+    heroBody: `Browse the curated snapshot by added date. Newest addition: ${formatDate(ordered[0]?.addedAt)}. Stars are a snapshot, not measured growth.`,
     content: buildListingContent(siteData, items, "trending", archiveOnly),
     pageData: {
       page: archiveOnly ? "trending-archive" : "trending",
-      items: siteData.repos,
-      defaults: { freshness: archiveOnly ? "archive" : "fresh", featuredOnly: false },
+      items: ordered,
+      defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
     jsonLd: [
-      pageSchema("CollectionPage", archiveOnly ? "Repo Foundry signals archive" : "Repo Foundry live signals", "Recent additions across the public-safe research feed.", path),
+      pageSchema("CollectionPage", archiveOnly ? "Repo Foundry signals archive" : "Repo Foundry recent additions", "Recent additions across the public-safe research feed.", path),
       itemListSchema("Repo Foundry signals", items, path, (repo) => ({ "@id": `${absoluteUrl(`repos/${repo.slug}/`)}#source-code` })),
     ],
     breadcrumbs: [
       { name: "Home", path: "" },
-      { name: archiveOnly ? "Signals archive" : "Live signals", path },
+      { name: archiveOnly ? "Additions archive" : "Recent additions", path },
     ],
   });
 }
 
 export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref = "../") {
-  const items = archiveOnly ? siteData.repos.slice(12) : siteData.repos.slice(0, 12);
+  const ordered = [...siteData.repos].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt));
+  const items = archiveOnly ? ordered.filter(repo => Date.now() - new Date(repo.addedAt) > 7 * 86400000) : ordered;
   const path = archiveOnly ? "repos/archive/" : "repos/";
   return buildDocument({
     audience: "public",
@@ -515,7 +521,7 @@ export function buildRepoDirectoryPage(siteData, archiveOnly = false, baseHref =
     content: buildListingContent(siteData, items, "repos", archiveOnly),
     pageData: {
       page: archiveOnly ? "repos-archive" : "repos",
-      items: siteData.repos,
+      items: ordered,
       defaults: { freshness: archiveOnly ? "archive" : "all", featuredOnly: false },
     },
     scriptPath: "assets/public-app.js",
@@ -581,7 +587,7 @@ export function buildLaneDetailPage(siteData, category, baseHref = "../../") {
     </section>
     ${sectionFrame(
       "Lane shortlist",
-      "Every current public-safe repo in this lane, with featured picks floated first.",
+      "Every public-safe repository snapshot in this lane, with featured picks floated first.",
       `<div class="card-grid">${items.length ? items.map((repo) => repoCard(repo)).join("") : `<p class="empty-state">No public-safe repos are currently pinned to this lane.</p>`}</div>`,
     )}
   `;
@@ -623,7 +629,11 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
         <span class="pill pill--soft">${number(repo.stars)} stars</span>
       </div>
       <h2>${escapeHtml(repo.name)}</h2>
+      <p>${escapeHtml(repositoryClaims(repo).status)}</p>
+      <p>${escapeHtml(repositoryClaims(repo).editorial)}</p>
       <p>${escapeHtml(repo.summary)}</p>
+      <p>${escapeHtml(repositoryClaims(repo).licence)} ${repo.licenseUrl ? `<a href="${escapeAttribute(repo.licenseUrl)}">Reported licence reference</a>` : ""}</p>
+      <p>Upstream description snapshot: ${escapeHtml(repo.upstreamDescription ?? "unverified")}</p>
       <div class="tag-row">${tagsMarkup(repo.tags)}</div>
       <div class="action-row">
         ${repo.repoUrl ? `<a class="button-link" href="${escapeAttribute(repo.repoUrl)}">Open repository</a>` : ""}
@@ -642,7 +652,7 @@ export function buildRepoDetailPage(siteData, repo, baseHref = "../../") {
       </article>
       <article class="detail-card">
         <p class="eyebrow">Freshness</p>
-        <p>Added ${escapeHtml(formatDate(repo.addedAt))} and refreshed ${escapeHtml(formatDate(repo.refreshedAt))}.</p>
+        <p>Added ${escapeHtml(formatDate(repo.addedAt))}. ${escapeHtml(repositoryClaims(repo).checked)} ${escapeHtml(repositoryClaims(repo).activity)}</p>
       </article>
     </section>
     ${sectionFrame("Related", "More repos from the same shelf.", `<div class="card-grid">${related.map((item) => repoCard(item)).join("")}</div>`)}

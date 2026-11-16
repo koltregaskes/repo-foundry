@@ -1,3 +1,5 @@
+import { repositoryClaims } from "./repo-claims.mjs";
+
 function readPageData() {
   const node = document.getElementById("page-data");
   if (!node?.textContent) return null;
@@ -50,12 +52,13 @@ function repoCard(record) {
         <span class="pill pill--soft">${Number(record.stars || 0).toLocaleString()} stars</span>
       </div>
       <h3 class="repo-card__title"><a href="${escapeAttribute(withBase(`repos/${record.slug}/`))}">${escapeHtml(record.name)}</a></h3>
+      <p class="repo-card__detail">${escapeHtml(repositoryClaims(record).status)} ${escapeHtml(repositoryClaims(record).editorial)}</p>
       <p class="repo-card__summary">${escapeHtml(record.summary)}</p>
       <p class="repo-card__detail"><strong>Why it matters:</strong> ${escapeHtml(record.whyRelevant)}</p>
       <p class="repo-card__detail"><strong>Potential use:</strong> ${escapeHtml(record.potentialUse)}</p>
       <div class="tag-row">${(record.tags || []).map((tag) => `<span class="tag-chip">${escapeHtml(tag)}</span>`).join("")}</div>
       <div class="repo-card__footer">
-        <span>Added ${new Date(record.addedAt).toLocaleDateString("en-GB")}</span>
+        <span>${escapeHtml(repositoryClaims(record).checked)}</span>
         ${record.repoUrl ? `<a class="text-link" href="${escapeAttribute(record.repoUrl)}">Open repo</a>` : `<a class="text-link" href="${escapeAttribute(withBase(`repos/${record.slug}/`))}">Read dossier</a>`}
       </div>
     </div>
@@ -129,7 +132,7 @@ function initRepoListing(data) {
   }
 
   function filteredItems() {
-    return data.items.filter((item) => {
+    return [...data.items].sort((a,b) => new Date(b.addedAt) - new Date(a.addedAt)).filter((item) => {
       const haystack = [item.name, item.summary, item.whyRelevant, item.potentialUse, ...(item.tags || [])]
         .join(" ")
         .toLowerCase();

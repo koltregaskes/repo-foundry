@@ -1,4 +1,5 @@
 import path from "node:path";
+import { discoveryData } from "../src/lib/discovery.mjs";
 import { SITE_URL, escapeHtml } from "../src/templates/layout.mjs";
 
 import {
@@ -36,13 +37,15 @@ const routedNews = await readJson(ROUTED_NEWS_PATH, {
   article_count: 0,
   articles: [],
 });
-const siteData = generatedSiteData.repos?.length
+const inputSiteData = generatedSiteData.repos?.length
   ? applyRoutedNewsFeed(generatedSiteData, routedNews, {
     allowStale: allowStaleRoutedNews,
   })
   : await compilePublicSiteData({
     allowStale: allowStaleRoutedNews,
   });
+
+const siteData = discoveryData(inputSiteData);
 
 await removeDir(PUBLIC_DIST_ROOT);
 await ensureDir(PUBLIC_DIST_ROOT);
@@ -53,6 +56,7 @@ await copyFile(path.join(process.cwd(), "src", "assets", "shared.css"), path.joi
 await copyFile(path.join(process.cwd(), "src", "assets", "tokens.css"), path.join(PUBLIC_DIST_ROOT, "assets", "tokens.css"));
 await copyFile(path.join(process.cwd(), "src", "assets", "shell.js"), path.join(PUBLIC_DIST_ROOT, "assets", "shell.js"));
 await copyFile(path.join(process.cwd(), "src", "assets", "favicon.svg"), path.join(PUBLIC_DIST_ROOT, "assets", "favicon.svg"));
+await copyFile(path.join(process.cwd(), "src/assets/repo-claims.mjs"), path.join(PUBLIC_DIST_ROOT, "assets/repo-claims.mjs"));
 await copyFile(path.join(process.cwd(), "src", "assets", "public-app.js"), path.join(PUBLIC_DIST_ROOT, "assets", "public-app.js"));
 await copyFile(path.join(process.cwd(), "src/assets/og-card.png"), path.join(PUBLIC_DIST_ROOT, "assets/og-card.png"));
 await writeText(path.join(PUBLIC_DIST_ROOT, ".nojekyll"), "");
@@ -155,7 +159,7 @@ Repo Foundry is a public-safe discovery surface for high-signal open-source repo
 
 ## Start Here
 - [Home](${siteUrl}/): public front door and current signal summary.
-- [Trending](${siteUrl}/trending/): current high-signal repository movement.
+- [Trending](${siteUrl}/trending/): repository additions ordered by their original date; stars are a snapshot.
 - [Repository directory](${siteUrl}/repos/): public repo dossiers and archive routes.
 
 ## Main Sections
