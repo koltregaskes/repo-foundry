@@ -9,6 +9,7 @@ import {
   INTERNAL_RUNTIME_PUBLIC_PREVIEW,
   INTERNAL_RUNTIME_ROOT,
   PUBLIC_DIST_ROOT,
+  REPO_ROOT,
 } from "../src/lib/constants.mjs";
 import { copyDirectory, copyFile, ensureDir, writeText } from "../src/lib/io.mjs";
 
@@ -81,7 +82,7 @@ await writeText(
 
 Generated from the canonical shared codebase at:
 
-\`W:\\Repos\\_My Open Source\\repo-foundry\`
+\`${REPO_ROOT}\`
 
 Primary route:
 

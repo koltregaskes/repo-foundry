@@ -18,11 +18,11 @@ Current rhythm:
 
 Preferred active source:
 
-- `W:\Repos\_local\surfaces\repo-foundry-internal\data`
+- the private internal runtime's `data` folder
 
 Legacy compatibility source:
 
-- `W:\Repos\_local\surfaces\repos-hub\local-hub\data`
+- the legacy private runtime's `data` folder
 
 Repo Foundry should prefer the active internal runtime path and only fall back to legacy compatibility when needed.
 

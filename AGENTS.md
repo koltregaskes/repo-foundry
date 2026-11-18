@@ -6,7 +6,7 @@ This repo is the canonical shared codebase for Repo Foundry.
 
 It builds:
 
-- the internal local runtime at `W:\Repos\_local\surfaces\repo-foundry-internal`
+- the internal local runtime at a private local folder (path kept off GitHub)
 - the public static site for GitHub Pages
 
 ## Rules
