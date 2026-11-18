@@ -28,7 +28,7 @@ test('real built output has declared hosts and privacy links',async()=>{
  }
  const result=await inspectPrivacyHosts('dist/public');assert.deepEqual(result.errors,[]);assert.equal(result.resourceHosts,2);
  const notice=await fs.readFile('dist/public/privacy/index.html','utf8');
- for(const word of ['GitHub Pages','Cloudflare','proposal only','fonts.googleapis.com','fonts.gstatic.com','GitHub avatars','foundry.skin','foundry.accent','no service worker','not active','UK GDPR','ICO','2026-11-16','hello@koltregaskes.com'])assert.ok(notice.includes(word),word);
+ for(const word of ['GitHub Pages','Cloudflare','proposal only','fonts.googleapis.com','fonts.gstatic.com','GitHub avatars','foundry.skin','foundry.accent','no service worker','not active','UK GDPR','ICO','2026-11-16','contact@elusionworks.com'])assert.ok(notice.includes(word),word);
  for(const file of ['sitemap.xml','llms.txt'])assert.match(await fs.readFile('dist/public/'+file,'utf8'),/\/privacy\//);
  assert.match(await fs.readFile('dist/public/sitemap.xml','utf8'),/<loc>https:\/\/koltregaskes.github.io\/repo-foundry\/privacy\/<\/loc><lastmod>2026-11-16<\/lastmod>/);
  for(const file of ['shell.js','public-app.js'])assert.doesNotMatch(await fs.readFile('dist/public/assets/'+file,'utf8'),/serviceWorker|caches\.(?:keys|delete)|sendBeacon|\bfetch\s*\(/);
