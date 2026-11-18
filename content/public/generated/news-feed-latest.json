@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17T14:26:21.631Z",
+  "generated": "2026-11-18T13:59:23.545Z",
   "site": "Repo Foundry",
   "acquisition": {
     "status": "healthy",
@@ -12,115 +12,136 @@
         "name": "TechCrunch AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "the-verge-ai",
         "name": "The Verge AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "ars-technica-ai",
         "name": "Ars Technica AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "anthropic-news",
         "name": "Anthropic News",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "deepmind-blog",
         "name": "Google DeepMind Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "meta-ai-blog",
         "name": "Meta AI Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "hugging-face-blog",
         "name": "Hugging Face Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "huggingnews",
         "name": "HuggingNews",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "mit-technology-review-ai",
         "name": "MIT Technology Review AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "arxiv-cs-ai",
         "name": "arXiv cs.AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "arxiv-cs-lg",
         "name": "arXiv cs.LG",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "venturebeat-ai",
         "name": "VentureBeat AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "digg-ai",
         "name": "Digg AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       },
       {
         "id": "bens-bites",
         "name": "Ben's Bites",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-17T14:26:21.631Z",
-        "lastSuccessAt": "2026-11-17T14:26:21.631Z"
+        "attemptedAt": "2026-11-18T13:59:23.545Z",
+        "lastSuccessAt": "2026-11-18T13:59:23.545Z"
       }
     ]
   },
-  "article_count": 0,
-  "articles": []
+  "article_count": 1,
+  "articles": [
+    {
+      "title": "Seeing with You: Perception-Reasoning Coevolution for Multimodal Reasoning",
+      "url": "https://arxiv.org/abs/2603.28618",
+      "source": "arXiv cs.AI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-18T05:00:00.000Z",
+      "summary": "arXiv:2603.28618v3 Announce Type: replace Abstract: Reinforcement learning with verifiable rewards (RLVR) has substantially enhanced the reasoning capabilities of multimodal large language models (MLLMs). However, existing RLVR approaches typically rely on outcome-driven optimization that updates both perception and reasoning using a shared reward based solely on the final answer. This shared reward blurs credit assignment, frequently improving reasoning patterns while failing to reliably enhance the accuracy of upstream visual evidence extraction. To address this perception bottleneck, we introduce PRCO (Perception-Reasoning Coevolution), a dual-role RLVR framework with a shared policy. PRC",
+      "category": "research-feed",
+      "metadata": [
+        "cs.AI"
+      ]
+    }
+  ]
 }
