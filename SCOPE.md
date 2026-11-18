@@ -11,12 +11,12 @@ This is **not** a design brief and not an implementation plan. The repo already 
 
 ## Product identity
 
-**Repo:** `repo-foundry` (on disk at `W:\Websites\sites\repo-foundry`)
+**Repo:** `repo-foundry` (local checkout path kept private)
 **Public brand:** Repo Foundry
 **Domain:** TBD
 **Stack:** Build pipeline (`scripts/` + `src/templates/` + `src/lib/` + `package.json`) — produces both internal and public outputs from a shared codebase. Per repo README: `dist/public/` is the GitHub Pages output.
 **Deploy:** GitHub Pages from `dist/public/`
-**Internal counterpart:** `W:\Repos\_local\surfaces\repo-foundry-internal` (operational console — out of scope here)
+**Internal counterpart:** a private local console (path kept off GitHub) (operational console — out of scope here)
 
 **One-sentence pitch:** Repo Foundry is a curated foundry floor for high-signal open-source repositories — trend watching, category mapping, and Codex-adjacent tooling references — written for operator-minded readers.
 

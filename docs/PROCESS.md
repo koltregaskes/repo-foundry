@@ -5,7 +5,7 @@
 Repo Foundry has two outputs from one codebase:
 
 - a public site in `dist/public`
-- an internal runtime in `W:\Repos\_local\surfaces\repo-foundry-internal`
+- an internal runtime in a private local folder (path kept off GitHub)
 
 ## Standard workflow
 

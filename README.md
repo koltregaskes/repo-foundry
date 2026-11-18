@@ -36,8 +36,8 @@ full public validation gate, and only commits when the snapshot changed.
 
 ## Outputs
 
-- Public build: `W:\Repos\_My Open Source\repo-foundry\dist\public`
-- Internal runtime: `W:\Repos\_local\surfaces\repo-foundry-internal`
+- Public build: `dist/public` in your checkout
+- Internal runtime: a private local folder (path kept off GitHub)
 
 ## Agent docs
 
