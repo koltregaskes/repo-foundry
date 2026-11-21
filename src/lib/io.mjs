@@ -14,7 +14,7 @@ export async function readJson(filePath, fallback = null) {
     const raw = await fs.readFile(filePath, "utf8");
     return JSON.parse(raw.replace(/^\uFEFF/, ""));
   } catch (error) {
-    if (fallback !== null) {
+    if (error.code === "ENOENT" && fallback !== null) {
       return fallback;
     }
     throw error;
