@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T15:36:46.152Z",
+  "generated": "2026-11-26T15:18:22.314Z",
   "site": "Repo Foundry",
   "acquisition": {
     "status": "healthy",
@@ -12,115 +12,179 @@
         "name": "TechCrunch AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "the-verge-ai",
         "name": "The Verge AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "ars-technica-ai",
         "name": "Ars Technica AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "anthropic-news",
         "name": "Anthropic News",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "deepmind-blog",
         "name": "Google DeepMind Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "meta-ai-blog",
         "name": "Meta AI Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "hugging-face-blog",
         "name": "Hugging Face Blog",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "huggingnews",
         "name": "HuggingNews",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "mit-technology-review-ai",
         "name": "MIT Technology Review AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "arxiv-cs-ai",
         "name": "arXiv cs.AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "arxiv-cs-lg",
         "name": "arXiv cs.LG",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "venturebeat-ai",
         "name": "VentureBeat AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "digg-ai",
         "name": "Digg AI",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       },
       {
         "id": "bens-bites",
         "name": "Ben's Bites",
         "required": false,
         "outcome": "success",
-        "attemptedAt": "2026-11-25T15:36:46.152Z",
-        "lastSuccessAt": "2026-11-25T15:36:46.152Z"
+        "attemptedAt": "2026-11-26T15:18:22.314Z",
+        "lastSuccessAt": "2026-11-26T15:18:22.314Z"
       }
     ]
   },
-  "article_count": 0,
-  "articles": []
+  "article_count": 3,
+  "articles": [
+    {
+      "title": "Luxical: High-Speed Lexical-Dense Text Embeddings",
+      "url": "https://arxiv.org/abs/2512.09015",
+      "source": "arXiv cs.LG",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-26T05:00:00.000Z",
+      "summary": "arXiv:2512.09015v3 Announce Type: replace-cross Abstract: Frontier language model quality increasingly hinges on our ability to organize web-scale text corpora for training. Today's dominant tools trade off speed and flexibility: lexical classifiers (e.g., FastText) are fast but limited to producing classification output scores, while the vector-valued outputs of transformer text embedding models flexibly support numerous workflows (e.g., clustering, classification, and retrieval) but are computationally expensive to produce. We introduce Luxical, a library for high-speed \"lexical-dense\" text embeddings that aims to recover the best properties of both approaches for web-scale text organizati",
+      "category": "research-feed",
+      "metadata": [
+        "cs.CL",
+        "cs.LG"
+      ]
+    },
+    {
+      "title": "Taming Hallucinations: Boosting MLLMs' Video Understanding via Counterfactual Video Generation",
+      "url": "https://arxiv.org/abs/2512.24271",
+      "source": "arXiv cs.AI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-26T05:00:00.000Z",
+      "summary": "arXiv:2512.24271v2 Announce Type: replace-cross Abstract: Multimodal Large Language Models (MLLMs) have made remarkable progress in video understanding. However, they suffer from a critical vulnerability: an over-reliance on language priors, which can lead to visual ungrounded hallucinations, especially when processing counterfactual videos that defy common sense. This limitation, stemming from the intrinsic data imbalance between text and video, is challenging to address due to the substantial cost of collecting and annotating counterfactual data. To address this, we introduce DualityForge, a novel counterfactual data synthesis framework that employs controllable, diffusion-based video edit",
+      "category": "research-feed",
+      "metadata": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    },
+    {
+      "title": "Think, Act, Build: An Agentic Framework with Vision Language Models for Zero-Shot 3D Visual Grounding",
+      "url": "https://arxiv.org/abs/2604.00528",
+      "source": "arXiv cs.AI",
+      "tags": [
+        "open_source",
+        "repo_update"
+      ],
+      "matching_tags": [
+        "repo_update",
+        "open_source"
+      ],
+      "importance": 0.7,
+      "date": "2026-11-26T05:00:00.000Z",
+      "summary": "arXiv:2604.00528v3 Announce Type: replace-cross Abstract: 3D Visual Grounding (3D-VG) aims to localize objects in 3D scenes via natural language descriptions. While recent advancements leveraging Vision-Language Models (VLMs) have explored zero-shot possibilities, they typically suffer from a static workflow relying on preprocessed 3D point clouds, essentially degrading grounding into proposal matching. To bypass this reliance, our core motivation is to decouple the task: leveraging 2D VLMs to resolve complex spatial semantics, while relying on deterministic multi-view geometry to instantiate the 3D structure. Driven by this insight, we propose \"Think, Act, Build (TAB)\", a dynamic agentic fr",
+      "category": "research-feed",
+      "metadata": [
+        "cs.CV",
+        "cs.AI"
+      ]
+    }
+  ]
 }
